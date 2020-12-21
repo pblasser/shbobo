@@ -55,7 +55,7 @@ try to call st-link or texane to flash the st chip.
 * **sqush** is a simple shred of code to read the shnth
 and pipe granular microsound notes to csound.
 
-##thanks
+## thanks
 thanks to everyone who works on this or uses it. i pray that
 you have a healthy internet and a safe home. note that all the 
 shbobo code is now open source, including the device initialization
