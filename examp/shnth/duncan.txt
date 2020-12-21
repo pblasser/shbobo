@@ -1,0 +1,53 @@
+;silence
+{
+;([jump] ([minor a] 1))
+(jump (minorb 1 )(minorc 2 )(minord 3 ))
+};processes
+{
+(left (left (left 
+(wave (horn 
+(corpb 20 20 );20 
+30 (wind ))8 16 )
+)))
+(right (right (right 
+(waveb (hornb 
+(corp 20 21 );21 
+30 (wind ))8 20 )
+)))
+(jump (minor 3 )(minorc 1 )(minord 2 ))
+};for
+{
+(left (left (left 
+(comb (horn 
+(corpb 40 51 );50 
+30 (wind ))1 (corp 20 22 )120 )
+)))
+(right (right (right 
+(combb (hornb 
+(corpb 40 55 ); 55 
+30 
+(wind 127 
+(fog (dust (bar ))20 80 (smokeb 20 100 )80 )
+)
+)1 
+20 120 )
+)))
+(jump (minor 2 )(minorb 3 )(minord 1 ))
+};flutist
+{
+(left (left (left 
+(wave (horn 
+(corp 40 20 );20 
+43 
+(wind ))
+8 18 )
+)))
+(right (right (right 
+(waveb (hornb 
+(corpb 40 21 )
+41 
+(wind ))
+8 20 )
+)))
+(jump (minor 1 )(minorb 2 )(minorc 3 ))
+}

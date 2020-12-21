@@ -1,0 +1,8 @@
+;SLAVE is for making drum machines?
+ ;It counts TRIGs for as many ticks as DENO,
+ ;then changes direction. Then,
+ ;It can be used as a trigger for something slower
+ {(left 
+ (smoke (slave (dust 10) 10)) 
+ (swoop (slave) 4 40 (horn 64 64)))}
+doubleclick

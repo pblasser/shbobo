@@ -1,0 +1,9 @@
+;bb
+{(left (swoopc (dust (major 13 ))3 12 (smoke ))
+(bar (hornc 84 47 ))(barc (horn 21 10 ))
+(arab (fog (dustb (majorb 18 ))2 86 
+(togo (dustb )74 84 21 42 168 )(togob (dustb )74 33 47 66 68 22 100 ))))
+(right (swoop (minor )2 -62 (saw 21 47 ))
+(swoopb (minorb )88 120 (sawb 21 66 ))
+(barb (hornb 42 22 ))(toggleb (minorc )(horng 21 47 ))(bard (hornd 84 33 )))
+(srate 22 )}

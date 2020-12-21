@@ -1,0 +1,17 @@
+;There are four HORSES, and this is not a granular assemblage.
+ ;Rather, they are to emulate FOURSES, their boundaries contingent.
+ ;Thus a horse has four inputs:
+ ;Two for bounce speed up and down UPNU DNNU
+ ;Two for bounds on the top and bottom UPDE DNDE
+ ;To emulate FOURSES, the HORSES must be used as references,
+ ;Within each other at the UPDE DNDE, the boundaries:
+ {(srate 3) ;at high frequency
+ (left 
+ (horse (corpb) 56 100 (horseb)) 
+ (horseb 55 (corp) (horse) (horsec)) 
+) 
+ (right 
+ (horsec (corp) 54 (horseb) (horsed)) 
+ (horsed 10 (corpb) (horsec) -100) 
+)}
+doubleclick

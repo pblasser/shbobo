@@ -1,0 +1,8 @@
+;STEEL [a-d] are the steel frets on SHTAR
+ {(left 
+ (horn 64 64 (steel)) 
+ (hornc 68 64 (steelc))) (right 
+ (hornb 66 64 (steelb)) 
+ (hornd 70 64 (steeld))) 
+}
+doubleclick

@@ -1,0 +1,43 @@
+;DOUBLECLICK is how to use FISH.
+ ;This is a comment, in italics. But this is not:
+ doubleclick 
+ ;It is a symbol that you doubleclicked upon.
+ ;And it opened this file, which is help.
+ ;A FISH is an expression of symbols,
+ ;Or other expressions, within parentheses:
+ (left (horn 64 64)) 
+ ;You can upload it by selecting the outer expression,
+ ;And Shbobo->upload selected.
+ ;A SOUP is such an expression, with curly braces.
+ ;It is also thought of as a preset, to organize patches:
+ {(left (horn 64 64))} 
+ ;Upload it the same way.
+ ;There is a help file for each opcode. Doubleclick it. 
+ ;Here is a list made by dragging them each here:
+ (wind) (finger) (corp) (plank) (bar) 
+ (top) (bot) (heart) (bridge) (minor) 
+ (brass) (major) (steel) (horn -50 -93) 
+ (saw -55 71) (toggle 82) (togo -64 -4) 
+ (swoop -119 -9 -107) (mount -36 -29) 
+ (smoke) (dust 21) (fog -72 -71 -72 -8 98) 
+ (haze -103 -101 -110 -53 -45) 
+ (swamp -76 -98 -93 12 32) 
+ (string -112 -95 -109 113) 
+ (comb -40 125 -85 -115) 
+ (zither 35 -76) (wave 16 111 -124) 
+ (water 111 100 19) (salt 39 18 68) 
+ (horse -27 -121 -110 126) 
+ (slew -44 96 -104) (wheel -118 124) 
+ (slave 118 15) (pulse -72 -85) 
+ (sauce 43 14) (salsa 98 -19) 
+ (melody -42 -69 -43) (worm -98) 
+ (scale -88) (ladder -16) 
+ (press -34 -18 -86 -51) (leak 101 36) 
+ (reflect -65 -95) (return -56 -39) 
+ (and 38 72) (xor -41 70) (negwon) 
+ (left) (right) (square 58 -23) 
+ (modo 98 81) (srate 13) (mul 15) 
+ (add) (tar) (bend -15) (jump -116) 
+ (pan 79 40) (short -77 -88) 
+ (dirac) (arab) (lights -103)
+doubleclick

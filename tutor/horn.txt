@@ -1,0 +1,14 @@
+;HORN is a triangle wave
+ ;NUME is its harmonic speed
+ ;DENO is its loudness and profundity:
+ ;its UNDERTONE
+ {(left 
+ (horn 64 64))} 
+ ;MUL is multiply or VCA
+ {(left 
+ (horn 64 64 (bar)))} 
+ ;ADD is for mixing others
+ {(left 
+ (horn 64 64 (bar) 
+ (hornb 66 64 (barb))))}
+doubleclick

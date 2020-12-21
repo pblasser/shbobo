@@ -1,0 +1,152 @@
+;plein
+{
+(srate 27 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )60 60 60 30 30 )20 14 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )60 60 60 30 30 )20 20 ))
+(right (left (wavec (modo (horn (sauce )15 (corp ))4 120 (saw 60 120 (barb (smokec 80 30 ))(sawb 15 120 (barc (smokec 20 30 )))))100 40 )
+(waved (modo (hornb (sauceb )15 (corpb ))4 120 (sawc 30 120 (bard (smokec 80 30 ))(sawd 60 120 (bar (smokec 20 30 )))))100 40 )
+(modo (slew (minor )100 1 (hornc 60 (toggle (minorb )30 30 )
+(hornd 120 (toggleb (minorc )30 30 )
+(horne 121 (togglec (minord )30 30 )))))
+10 )
+))
+(jump (major 1 ))};plein
+{
+(srate 27 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )60 60 60 30 30 )20 14 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )60 60 60 30 30 )20 20 ))
+(right (left (wavec (modo (horn (sauce )15 (corp ))4 120 (saw 60 120 (barb (smokec 80 30 ))(sawb 15 120 (barc (smokec 20 30 )))))100 40 )
+(waved (modo (hornb (sauceb )15 (corpb ))4 120 (sawc 30 120 (bard (smokec 80 30 ))(sawd 60 120 (bar (smokec 20 30 )))))100 40 )
+(modo (slew (minor )100 1 (hornc 60 (toggle (minorb )30 30 )
+(hornd 120 (toggleb (minorc )30 30 )
+(horne 121 (togglec (minord )30 30 )))))
+10 )
+))
+(jump (major 1 ))};enharmonic
+{
+(srate 27 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )60 63 64 80 )20 13 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )60 63 64 80 )20 13 ))
+(right (left (wavec (modo (horn (sauce )15 (corp ))4 120 (saw 63 120 (barb (smokec 80 30 ))(sawb 64 120 (barc (smokec 20 30 )))))100 40 )
+(waved (modo (hornb (sauceb )15 (corpb ))4 120 (sawc 80 120 (bard (smokec 80 30 ))(sawd 60 120 (bar (smokec 20 30 )))))100 40 )
+(modo (slew (minor )100 1 (hornc 60 (toggle (minorb )30 30 )
+(hornd 63 (toggleb (minorc )30 30 )
+(horne 64 (togglec (minord )30 30 )))))
+10 )
+))
+(jump (major 1 ))};chromatic
+{
+(srate 27 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )16 15 14 12 )20 13 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )16 15 14 12 )20 13 ))
+(right (left (wavec (modo (horn 64 (sauce )(corp ))4 120 (saw 32 60 (barb (smokec 80 60 ))(sawb 32 56 (barc (smokec 20 60 )))))100 40 )
+(waved (modo (hornb 64 (sauceb )(corpb ))4 120 (sawc 32 48 (bard (smokec 80 60 ))(sawd 32 64 (bar (smokec 20 60 )))))100 40 )
+(modo (slew (minor )100 1 (hornc (toggle (minorb )32 32 )64 
+(hornd (toggleb (minorc )32 32 )56 
+(horne (togglec (minord )32 32 )60 ))))
+10 )
+))
+(jump (major 1 ))};diatonicTRANSPARENTwar
+{
+(srate 27 )(mount 100 1 )(slave (mount )6 )(slaveb (mount )7 )
+(togo (slave )84 84 80 72 63 )
+(togob (slaveb )84 84 80 72 63 )
+(right (left (horn 84 (togo )(corp (modo (slave )8 )))
+(hornb 84 (togob )(corpb (modo (slaveb )8 )))
+(pulseb (slaveb )100 (hornc 84 84 
+(hornd 84 80 
+)))(pulse (slave )100 (horne 84 72 
+(hornf 84 63 
+)))
+(sawc 21 63 (bard (smokec 80 60 ))(sawd 21 84 (bar (smokec 20 60 ))))
+(saw 21 80 (barb (smokec 80 60 ))(sawb 21 72 (barc (smokec 20 60 ))))))(jump (major 1 ))};blues
+{
+(srate 27 )(mount 100 1 )
+(slave (mount )6 )(slaveb (mount )7 )
+(slavec (mount )8 )(slaved (mount )9 )
+(togo (slave )(slaved )42 40 36 30 )
+(togob (slaveb )(slavec )42 40 36 30 )
+(right (left (horn 84 (togo )(corp (modo (slave )30 )))
+(hornb 84 (togob )(corpb (modo (slaveb )30 )))
+(pulse (slave )(corp )(hornd 84 80 (smokee 20 60 
+)
+))
+(pulseb (slaveb )(corpb )(hornc 84 84 (smoked 20 60 
+)
+))
+(pulsec (slavec )(corpb )(horne 84 60 (smoke 20 60 
+)
+))
+(pulsed (slaved )(corp )(hornf 84 72 (smokeb 20 60 
+)
+))
+(pulsee (mount )4 (smoke 
+
+))
+(wave (sawc 21 60 (bard 60 )(sawd 21 84 (bar 60 )))10 (corpb ))
+(wave (saw 21 80 (barb 60 )(sawb 21 72 (barc 60 )))10 (corp ))
+))
+(jump (major 1 ))};lalit
+{
+(srate 27 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )21 20 17 15 )15 13 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )21 20 17 15 )15 13 ))
+(right (left (wavec (horn 84 (sauce )(corp )(saw 42 40 (barb (smokec 80 60 ))(sawb 42 34 (barc (smokec 20 60 )))))100 40 )
+(waved (hornb 84 (sauceb )(corpb )(sawc 42 30 (bard (smokec 80 60 ))(sawd 42 42 (bar (smokec 20 60 )))))100 40 )
+(modo (slew (minor )100 1 (hornc (toggle (minorb )21 21 )42 
+(hornd (toggleb (minorc )21 21 )34 
+(horne (togglec (minord )21 21 )30 ))))
+10 )
+))(jump (major 1 ))};frenshIMPRESSIONIST
+{
+(srate 27 )
+(sauce (corp 40 )(wave (togo (dust 21 )(dustb 22 )32 28 24 20 )15 13 ))
+(sauceb (corpb 40 )(waveb (togob (dustc 17 )(dustd 19 )32 28 24 20 )15 13 ))
+(right (left (wavec (horn 64 (sauce )(corp )(saw 32 56 (barb (smokec 80 60 ))(sawb 32 48 (barc (smokec 20 60 )))))100 40 )
+(waved (hornb 64 (sauceb )(corpb )(sawc 32 40 (bard (smokec 80 60 ))(sawd 32 64 (bar (smokec 20 60 )))))100 40 )
+(modo (slew (minor )100 1 (hornc (toggle (minorb )32 32 )64 
+(hornd (toggleb (minorc )32 32 )56 
+(horne (togglec (minord )32 32 )40 ))))
+10 )
+))
+(jump (major 1 ))};falunDAFA
+{
+(srate 27 )
+
+
+(slaved (mount )9 )(slavec (mount )8 )
+(slaveb (mount )7 )(slave (mount )6 )
+(mount 100 1 )
+(wave (togo (slave )(slaved )72 64 54 48 )40 1 )
+(waveb (togob (slaveb )(slavec )72 64 54 48 )40 1 )
+(right (left (wavec (modo (horn (wave )12 (corp ))4 120 (saw 27 48 (barb (smokec 80 100 )(minorb ))(sawb 32 48 (barc (smokec 80 100 )(minorc )))))100 40 )
+(waved (modo (hornb (waveb )12 (corpb ))4 120 (sawc 36 48 (bard (smokec 80 100 )(minord ))(sawd 24 48 (bar (smokec 80 100 )(minor )))))100 40 )
+
+(pulsed (slaved )(corp 120 100 )(hornf 24 24 (smokeb 20 60 
+)
+))
+(pulsec (slavec )(corpb 120 100 )(horne 27 24 (smoke 20 60 
+)
+))
+(pulseb (slaveb )(corpb 120 100 )(hornc 32 24 (smoked 20 60 
+)
+))
+(pulse (slave )(corp 120 100 )(hornd 36 24 (smokee 20 60 
+)
+))(pulsee (mount )4 (smoke 
+
+))
+))
+(jump (major 1 ))};plein
+{
+(srate 54 )
+(sauce (corp 80 )(wave (togo (dust 21 )(dustb 22 )60 60 60 30 30 )20 14 ))
+(sauceb (corpb 80 )(waveb (togob (dustc 17 )(dustd 19 )60 60 60 30 30 )20 20 ))
+(right (left (wavec (modo (horn (sauce )15 (corp ))8 120 (saw 60 120 (barb (smokec 80 30 ))(sawb 120 120 (barc (smokec 20 30 )))))100 40 )
+(waved (modo (hornb (sauceb )15 (corpb ))8 120 (sawc 120 120 (bard (smokec 80 30 ))(sawd 60 120 (bar (smokec 20 30 )))))100 40 )
+(modo (slew (minor )100 1 (hornc 60 (toggle (minorb )30 30 )
+(hornd 120 (toggleb (minorc )30 30 )
+(horne 121 (togglec (minord )30 30 )))))
+10 )
+))
+(jump (major 1 ))}

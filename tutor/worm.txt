@@ -1,0 +1,10 @@
+;WORM is now a rectifier, analog to some diodes and a capacitor.
+ ;simply INN MUL ADD. outputs the absolute value and has a decay.
+ ;Note that finger means wind, as in put your mouth to the mike.
+ {
+ (left (square (horn (scale (finger)) 64) 1 (worm (bridge)))) 
+ (right (hornb (scale (finger)) 26 (worm))) 
+ (right (square (hornc (scale (finger)) 4) 1 (wormb (heart)))) 
+} 
+ 
+ doubleclick 

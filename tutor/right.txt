@@ -1,0 +1,14 @@
+;RIGHT put sound out RIGHT speaker!
+ {(right 
+ (horn 64 64) 
+)} 
+ ;mono:
+ {(left 
+ (right 
+ (horn 64 64)))} 
+ ;that's because it returns what it gets.
+ ;The sound of silence:
+ {(right (mul -128 (right (horn 64 64))))} 
+ ;How now, computer musician?
+
+doubleclick

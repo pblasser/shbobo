@@ -1,0 +1,11 @@
+{(srate 20) 
+ 
+ (left 
+ (wave (pulse (mountb 56 4) 100) 1 (finger)) 
+ (fog (dust (heart 64)) (smoke 4 1) (smokeb) 
+ (smokec (short 0 64) (scale (finger))) 9)) 
+ 
+ (right 
+ (string (mount 57 4) 1 (finger)) 
+ (fogb (dustb (heart 64)) (smoke 4 1) (smokeb) 
+ (smokec (short 0 64) (scale (finger))) 36))}

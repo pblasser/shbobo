@@ -1,0 +1,6 @@
+;TOGGLE [a-h] is a triggered flip-flop
+ ;TRIG is its input
+ {(left 
+ (toggle (minor) (horn 64 64)) 
+)}
+doubleclick

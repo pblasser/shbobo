@@ -1,0 +1,5 @@
+;bb
+{(left (wave (sauceb 3 (comb (modo (leakb (bard )26 )3 )1 120 120 ))20 (wind 80 20 )))
+(right (waveb (saw (200 (wind )(toggle (minorb )64 64 ))96 64 )20 (barc 40 )))(srate 20 )};bb
+{(left (wave (modo (leak (bard )13 )5 )20 (mount 120 30 120 20 )))};bb
+{(right (hornb 88 30 ))}

@@ -1,0 +1,14 @@
+;WATER [a-d], like fog, is a cluster of four...
+ ;WAVES, or resonant filters.
+ ;TRIG is obvious, so is Q, and rate is too!
+ {(left 
+ (water (dust (bar 64)) 4 (smoke 10 34)) 
+ (waterb (dustb (barb 64)) 3 (smoke 10 20)) 
+) 
+ (right 
+ (waterc (dustc (barc 64)) 2 (smoke 99 111)) 
+ (waterd (dustd (bard 64)) 1 (smoke 20 71)) 
+) 
+} 
+
+doubleclick

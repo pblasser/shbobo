@@ -1,0 +1,8 @@
+;MAJOR [a-d] are the lower buttons on SHNTH
+ {(left 
+ (horn 64 64 (major)) 
+ (hornc 68 64 (majorc))) (right 
+ (hornb 66 64 (majorb)) 
+ (hornd 70 64 (majord))) 
+}
+doubleclick

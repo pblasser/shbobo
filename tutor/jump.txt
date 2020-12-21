@@ -1,0 +1,21 @@
+;JUMP, along with BEND
+ ;is how to change SOUPs
+ ;or presets. JUMP only jumps once per cycle, so it is easier to control.
+ ;It does nothing on zero INN
+ ;Nonzero INN makes it jump relative to the current preset.
+ ;Multiply the TRIG by 1 to make it jump exactly one.
+ {(left 
+ (horn 64 64)) 
+ (jump (tar 1))} {(left 
+ (smoke)) 
+ (jump (tar 1))} {(left 
+ (horn 24 64)) 
+ (jump (tar 1))} 
+ {(left 
+ (horn 12 64)) 
+ (jump (tar 1))} {(left 
+ (smoke)) 
+ (jump (tar 1))} {(left 
+ (horn 67 64)) 
+ (jump (tar 1))}
+doubleclick

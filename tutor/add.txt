@@ -1,0 +1,14 @@
+;ADD is the same as the ADD that every (finite) opcode has at its tail.
+ ;It superposes, or mixes sounds.
+ ;The phollowing are equivalent:
+ {(left 
+ (add 
+ (horn 64 64 (bar)) 
+ (hornb 63 64 (barb))))} 
+ 
+ {(left 
+ (horn 64 64 (bar) 
+ (hornb 63 64 (barb))))} 
+ 
+
+doubleclick

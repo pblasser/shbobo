@@ -1,0 +1,11 @@
+;COMB [a-d] is a short delay.
+ ;INN is the input
+ ;NUME should be 1
+ ;DENO is the pitch control (delay length)
+ ;Put FB as a high number like 120
+ {(left 
+ (comb (saw 12 64 (bar)) 1 64 120) 
+) 
+} 
+
+doubleclick

@@ -1,0 +1,17 @@
+;BRIDGE is the bridge sensor on a SHTAR.
+ ;use it for pitch:
+ {(left 
+ (horn (bridge) 64)) 
+} 
+ ;or a filter:
+ {(left 
+ (wave (saw 12 64) 1 (bridge)))} 
+ ;or of course as envelope:
+ {(left 
+ (horn 64 64 (bridge)))} 
+ ;equivalent to:
+ {(left 
+ (bridge (horn 64 64)))} 
+ 
+
+doubleclick

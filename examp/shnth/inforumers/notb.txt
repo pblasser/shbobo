@@ -1,0 +1,235 @@
+;FEELIN
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )-48 -28 -100 18 )(minorc )(majorc ))-97 120 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount -83 (short 1 (add (corp )89 )))(mountb -117 (add (barb )-48 ))
+(mountc -76 (short 1 (add (corpb )-122 )))(mountd -90 (add (barc )-99 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))23 -111 -93 25 -10 3 -7 )
+(togoc (square (mountd ))(square (mountc ))-27 -117 24 8 124 -23 -56 -124 46 -106 89 )
+;main oscs and modo squish magic
+(left (hornf -53 (togob )(slewe (zither (square (mount ))117 -94 )106 -13 )(zitherc ))
+(horn 30 58 (hornf )(bard (modo (hornd )117 )))
+(hornb 37 -117 (zitherb (square (mountb ))-16 -25 )(barb (modo (hornc )17 )))
+(horse (togob )23 26 (togoc )(slewf )(barc (modo (horseb )52 )))
+(wave (smoke (slew (zither )-93 -32 )(zitherb ))18 -1 )
+(wavec (horsed )-80 (slewc (zitherc )113 -71 ))
+)
+(right (horng -48 (togoc )(slewf (zitherc (square (mountc ))-46 -93 )123 -32 )(zither ))
+(hornc 33 -106 (horng )(barc (modo (hornb )-55 )))
+(hornd 3 -124 (zitherd (square (mountd ))-63 -83 )(bar (modo (horn )-90 )))
+(horseb 67 (togoc )(togob )-43 (slewe )(barb (modo (horse )-119 )))
+(waveb (smokeb (slewb (zitherc )116 34 )(zitherd ))-11 -105 )
+(waved (horsec )-92 (slewd (zither )-98 -98 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )51 101 (corp )(modo (horsed )-109 ))
+(wavee (wind )25 (corp )(minord ))
+)
+(right (horsed -105 (corpb )(corp )4 (modo (horsec )-122 ))
+(wavef (wind )-8 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+};FRESH
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )115 -123 -79 -50 )(minorc )(majorc ))-119 112 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount 79 (short 0 (add (corp )-117 )))(mountb -75 (add (barb )73 ))
+(mountc 48 (short 1 (add (corpb )57 )))(mountd 21 (add (barc )74 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))22 91 -126 -110 124 64 -112 )
+(togoc (square (mountd ))(square (mountc ))-98 108 -107 42 -96 67 -109 78 -61 -63 2 )
+;main oscs and modo squish magic
+(left (hornf -17 (togob )(slewe (zither (square (mount ))-79 68 )-13 124 )(zitherc ))
+(horn -27 29 (hornf )(bard (modo (hornd )-11 )))
+(hornb 29 -81 (zitherb (square (mountb ))85 55 )(barb (modo (hornc )27 )))
+(horse (togob )111 -49 (togoc )(slewf )(barc (modo (horseb )-60 )))
+(wave (smoke (slew (zither )123 100 )(zitherb ))-81 83 )
+(wavec (horsed )93 (slewc (zitherc )-103 -35 ))
+)
+(right (horng -30 (togoc )(slewf (zitherc (square (mountc ))7 78 )19 -3 )(zither ))
+(hornc -58 111 (horng )(barc (modo (hornb )-44 )))
+(hornd 9 0 (zitherd (square (mountd ))-20 -73 )(bar (modo (horn )88 )))
+(horseb -96 (togoc )(togob )-3 (slewe )(barb (modo (horse )-37 )))
+(waveb (smokeb (slewb (zitherc )108 66 )(zitherd ))-73 -122 )
+(waved (horsec )-77 (slewd (zither )-65 121 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )-95 -124 (corp )(modo (horsed )-7 ))
+(wavee (wind )16 (corp )(minord ))
+)
+(right (horsed -75 (corpb )(corp )86 (modo (horsec )25 ))
+(wavef (wind )15 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+};TO
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )40 -85 84 -2 )(minorc )(majorc ))-98 114 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount -10 (short 1 (add (corp )-49 )))(mountb -99 (add (barb )93 ))
+(mountc -63 (short 0 (add (corpb )-17 )))(mountd 72 (add (barc )21 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))71 63 -25 85 -24 -85 106 )
+(togoc (square (mountd ))(square (mountc ))96 71 -66 7 -43 -95 -65 50 -71 116 -60 )
+;main oscs and modo squish magic
+(left (hornf -75 (togob )(slewe (zither (square (mount ))82 70 )115 52 )(zitherc ))
+(horn 33 -120 (hornf )(bard (modo (hornd )108 )))
+(hornb 81 15 (zitherb (square (mountb ))86 -1 )(barb (modo (hornc )-56 )))
+(horse (togob )34 50 (togoc )(slewf )(barc (modo (horseb )-76 )))
+(wave (smoke (slew (zither )45 81 )(zitherb ))-43 -51 )
+(wavec (horsed )-75 (slewc (zitherc )-57 52 ))
+)
+(right (horng 65 (togoc )(slewf (zitherc (square (mountc ))-97 -92 )9 -44 )(zither ))
+(hornc -81 37 (horng )(barc (modo (hornb )55 )))
+(hornd 78 -31 (zitherd (square (mountd ))-87 -123 )(bar (modo (horn )0 )))
+(horseb -94 (togoc )(togob )124 (slewe )(barb (modo (horse )1 )))
+(waveb (smokeb (slewb (zitherc )13 78 )(zitherd ))-5 -6 )
+(waved (horsec )-92 (slewd (zither )-52 -39 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )114 43 (corp )(modo (horsed )-31 ))
+(wavee (wind )36 (corp )(minord ))
+)
+(right (horsed 102 (corpb )(corp )-126 (modo (horsec )-78 ))
+(wavef (wind )87 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+};DEATH
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )82 -25 29 2 )(minorc )(majorc ))84 -43 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount -70 (short 0 (add (corp )-67 )))(mountb -71 (add (barb )-86 ))
+(mountc 14 (short 0 (add (corpb )-51 )))(mountd -39 (add (barc )-14 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))93 -24 -42 91 -55 4 -123 )
+(togoc (square (mountd ))(square (mountc ))-28 -9 101 -82 -51 -73 82 -85 55 -54 55 )
+;main oscs and modo squish magic
+(left (hornf 86 (togob )(slewe (zither (square (mount ))113 -16 )-94 -19 )(zitherc ))
+(horn -31 103 (hornf )(bard (modo (hornd )71 )))
+(hornb 65 117 (zitherb (square (mountb ))109 -112 )(barb (modo (hornc )108 )))
+(horse (togob )-88 -120 (togoc )(slewf )(barc (modo (horseb )89 )))
+(wave (smoke (slew (zither )87 106 )(zitherb ))-119 98 )
+(wavec (horsed )78 (slewc (zitherc )-112 48 ))
+)
+(right (horng -105 (togoc )(slewf (zitherc (square (mountc ))105 2 )-53 35 )(zither ))
+(hornc 19 -30 (horng )(barc (modo (hornb )-81 )))
+(hornd -93 105 (zitherd (square (mountd ))88 -112 )(bar (modo (horn )50 )))
+(horseb 58 (togoc )(togob )59 (slewe )(barb (modo (horse )98 )))
+(waveb (smokeb (slewb (zitherc )-64 118 )(zitherd ))-51 116 )
+(waved (horsec )-7 (slewd (zither )52 -78 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )80 -117 (corp )(modo (horsed )-69 ))
+(wavee (wind )111 (corp )(minord ))
+)
+(right (horsed -101 (corpb )(corp )46 (modo (horsec )40 ))
+(wavef (wind )6 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+};TAHDE
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )25 11 99 0 )(minorc )(majorc ))120 44 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount 87 (short 0 (add (corp )-20 )))(mountb 123 (add (barb )-126 ))
+(mountc -73 (short 0 (add (corpb )84 )))(mountd -49 (add (barc )6 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))-59 -119 -9 19 -114 -25 -108 )
+(togoc (square (mountd ))(square (mountc ))-36 119 -5 -111 50 12 105 -10 -21 87 -86 )
+;main oscs and modo squish magic
+(left (hornf -63 (togob )(slewe (zither (square (mount ))15 104 )84 -109 )(zitherc ))
+(horn 54 -53 (hornf )(bard (modo (hornd )-115 )))
+(hornb 11 -70 (zitherb (square (mountb ))9 -72 )(barb (modo (hornc )28 )))
+(horse (togob )20 19 (togoc )(slewf )(barc (modo (horseb )37 )))
+(wave (smoke (slew (zither )-75 -98 )(zitherb ))-102 -51 )
+(wavec (horsed )14 (slewc (zitherc )9 48 ))
+)
+(right (horng -69 (togoc )(slewf (zitherc (square (mountc ))122 -66 )72 100 )(zither ))
+(hornc -9 117 (horng )(barc (modo (hornb )-28 )))
+(hornd 107 105 (zitherd (square (mountd ))-52 -123 )(bar (modo (horn )-102 )))
+(horseb -51 (togoc )(togob )17 (slewe )(barb (modo (horse )-73 )))
+(waveb (smokeb (slewb (zitherc )12 51 )(zitherd ))17 76 )
+(waved (horsec )96 (slewd (zither )-43 -72 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )-109 90 (corp )(modo (horsed )-91 ))
+(wavee (wind )-97 (corp )(minord ))
+)
+(right (horsed -102 (corpb )(corp )-40 (modo (horsec )25 ))
+(wavef (wind )8 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+};TADHE
+{;vary the srate with butans bc i like that. freeze add value for better corps
+(srate (add 2 (slewb (mul (togo (minorc )(majorc )122 109 77 13 )(minorc )(majorc ))-43 39 )))
+(jump (minor 1 (major -1 )));freeze muls for single steps
+(bend (corp (minorb 1 (corpb (majorb -1 )))))
+;the backbone LFOs: freeze both biggs for tempo
+(mount -88 (short 0 (add (corp )42 )))(mountb 13 (add (barb )9 ))
+(mountc -70 (short 0 (add (corpb )-65 )))(mountd -104 (add (barc )-119 ))
+;random tone seqs
+(togob (square (mount ))(square (mountb ))104 -127 112 44 124 66 -53 )
+(togoc (square (mountd ))(square (mountc ))-1 -109 -75 50 87 -111 44 -5 -12 39 -127 )
+;main oscs and modo squish magic
+(left (hornf 122 (togob )(slewe (zither (square (mount ))12 116 )-28 -46 )(zitherc ))
+(horn 83 57 (hornf )(bard (modo (hornd )53 )))
+(hornb 68 43 (zitherb (square (mountb ))-92 -81 )(barb (modo (hornc )115 )))
+(horse (togob )-28 82 (togoc )(slewf )(barc (modo (horseb )6 )))
+(wave (smoke (slew (zither )-30 -40 )(zitherb ))-33 68 )
+(wavec (horsed )-81 (slewc (zitherc )-69 -83 ))
+)
+(right (horng -10 (togoc )(slewf (zitherc (square (mountc ))-40 110 )77 -126 )(zither ))
+(hornc -126 52 (horng )(barc (modo (hornb )-80 )))
+(hornd -64 -120 (zitherd (square (mountd ))-118 104 )(bar (modo (horn )-99 )))
+(horseb -26 (togoc )(togob )-120 (slewe )(barb (modo (horse )75 )))
+(waveb (smokeb (slewb (zitherc )-31 38 )(zitherd ))27 52 )
+(waved (horsec )115 (slewd (zither )115 -29 ))
+)
+;theremin ish horseys and windy butans
+(left (horsec (corpb )-103 37 (corp )(modo (horsed )-127 ))
+(wavee (wind )16 (corp )(minord ))
+)
+(right (horsed -43 (corpb )(corp )98 (modo (horsec )79 ))
+(wavef (wind )-103 (corpb )(majord ))
+)
+;first 4 lights watch lfos, other 4 LR output: freeze muls for sanity, oths can change VU behavior
+(lights (add (mul (square (mount ))1 )(mul (square (mountb ))2 )
+(mul (square (mountc ))4 )(mul (square (mountd ))8 )
+(mul (square (left )101 )16 )(mul (square (left )64 )32 )
+(mul (square (right )64 )64 )(mul (square (right )101 )128 )
+))
+}

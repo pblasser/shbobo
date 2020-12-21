@@ -1,0 +1,38 @@
+;MELODY is a recorder for 8bit riffs on SHTAR
+ ;Upload a new fruitcake (cuisine) if its 2019!
+ ;Or any other bobo gesture really. Inputs:
+ ;1. GATE, which opens when greater than zero.
+ ;2. INN, the signal thus recorded.
+ ;3. NUME is the speed. Positive is forwards.
+ ;----Negative NUME goes backwards (retrograde).
+ ;4. Skip is a trigger to cause the melody to skip
+ {;insertion function focused on finger-gating the finger
+ (melody (finger) (finger)) 
+ ;and bridge-gating the bridge
+ (melodyb (bridge 100 -10) (bridge)) 
+ (left 
+ (saw 
+ (scale (finger)) 32 ;try replace finger with melody
+ ;erasure function takes the nume, thus it takes precedence.
+ (slew (melodyb (tar) () (bot)) 20 20) 
+ ;shnth, try replacing (bot) with 100
+) 
+ (hornb 
+ ;twist bot negative to retrograde melody 
+ (scale (melody (tar) () (bot))) 64 
+) 
+) 
+} 
+ ;So, notice there are two calls to each melody:
+ ;1. uses finger to gate finger in. this is the INSERTION FUNCTION
+ ;2. uses tar to gate (), or 0, thus it is the ERASURE FUNCTION
+ ;If you use the erasure function then you will instantly hear the clear.
+ ;Melodyb works on the bridge to create envelopes that loop a drone.
+ ;Note that it is slewed to smooth its 8-bit nature.
+ ;This opcode uses the same buffer space as:
+ zither 
+ string 
+ comb 
+ doubleclick 
+ ;I'm going to go eat fruitcake now. What is worm now? doubleclick:
+ worm 

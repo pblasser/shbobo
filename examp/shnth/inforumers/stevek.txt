@@ -1,0 +1,153 @@
+;G2
+{(srate (short 44 108 ))
+(pan (mul (wavec (add (mul (horn (togob (major )35 110 50 80 )30 )
+(sauce 14 (pulseb (dustg (togob (major )35 1 9 12 ))62 )))
+(mul (hornc (togo (majorb )35 70 110 )30 )
+(sauceg 12 (pulsec (dust (togo (majorb )35 5 7 ))64 )))
+)
+24 (add 80 (mountg 18 40 ))))(mountb 24 -120 ))
+(pan (wave (add (mul (hornb (togoc (majorc )-75 90 60 )30 )
+(sauceb 11 (pulsed (dusth (togoc (majorc )-75 11 7 ))65 )))
+(mul (hornd (togod (majord )-98 100 120 )30 )
+(sauceh 13 (pulseg (duste (togod (majord )-98 9 6 ))63 ))))
+24 (add 80 (mountg )))(mount 36 120 ))
+(left (waveb (add (modo (saw 20 60 (saucec 56 (slew (bar )8 24 )))2 )(modo (sawb 30 60 (sauced 60 (slewb (barb )8 24 )))2 ))24 (corp 10 60 )))
+(right (wavec (add (modo (sawc 40 60 (saucee 70 (slewc (barc )8 24 )))2 )(modo (sawd 80 60 (saucef 64 (slewd (bard )8 24 )))2 ))24 (corpb 10 60 )))};diatonic organ
+{(jump (minord (tar 1 )));jump by holding down minord and tar at the same time
+;press tar to change fundamental pitch, use major/minor to scroll through ratios
+(srate (togoe (tar )29 (short 35 76 )(short 33 76 )(short 29 119 )(short 26 85 )(short 25 21 )(short 22 54 )))
+(left (horn (togo (major )(minor )48 54 60 64 72 80 90 96 )48 (leak (bar )4 )));togo sequences through different tunings with each button press
+(left (hornb (togob (majorb )(minorb )48 54 60 64 72 80 90 96 )48 (leakb (barb )4 )));major moves up through the sequence, minor moves down
+(right (hornc (togoc (majorc )(minorc )48 54 60 64 72 80 90 96 )48 (leakc (barc )4 )));leak just cuts off bar vibration at rest
+(right (hornd (togod (majord )(minord )48 54 60 64 72 80 90 96 )48 (leakd (bard )4 )))};random tuning
+{(jump (minord (tar 1 )))
+;random pitches - press major to reset nume,  minor to reset deno
+(srate (short 29 119 ))
+(left (horn (salsa (major )(smoke ))(salsab (minor )(smokeb ))(leak (bar )4 )));salsa is sample& hold - pressing a button samples smoke (white noise)
+(left (hornb (salsac (majorb )(smokec ))(salsad (minorb )(smoked ))(leakb (barb )4 )));leak just cuts off bar vibration at rest
+(right (hornc (salsae (majorc )(smokee ))(salsaf (minorc )(smokef ))(leakc (barc )4 )))
+(right (hornd (salsag (majord )(smokeg ))(salsah (minord )(smokeh ))(leakd (bard )4 )))};random with mod
+{(jump (minord (tar 1 )))
+;press major to retune nume
+;press minor to turn on modulation
+;corp b controls mod amount
+(srate (short 22 54 ))
+(lights (add (mul (toggle )2 )(mul (toggleb )8 )(mul (togglec )32 )(mul (toggled )128 )));if moduluation is toggled on, display 2nd led on that bar
+(left (horn (add (salsa (major )(smoke ))(mul (mul (sawd )(corpb 90 ))(toggle (minor 1 ))))50 (leak (bar )4 )));simple modulation here, just add previous horn to this nume
+(left (sawb (salsac (majorb )(smokec ))(add 45 (mul (mul (horn )(corpb 80 ))(toggleb (minorb ))))(leakb (barb )4 )));<--here its added to deno
+(right (hornc (add (salsae (majorc )(smokee ))(mul (mul (sawb )(corpb 90 ))(togglec (minorc ))))50 (leakc (barc )4 )));we mul the modulating horn by corp to control the amount
+(right (sawd (salsag (majord )(smokeg ))(add 40 (mul (mul (hornc )(corpb 80 ))(toggled (minord ))))(leakd (bard )4 )));we mul the whole modulation by toggle to switch that section on or off
+};welltuned opening
+{(jump (minor 1 ))(srate (short 28 32 ))(lights (saucee ))
+(left 
+(mul (arab (horn 128 128 ))(sauce 33 (comb (bar )1 105 (corp -100 25 ))))
+(mul (arab (hornc 147 128 ))(saucec 33 (combc (barc )1 105 (corp -100 25 ))))
+)
+(right 
+(mul (arab (hornb (short 255 186 )255 ))(sauceb 33 (combb (barb )1 105 (corp -100 25 ))))
+(mul (arab (hornd (short 103 92 )(short 80 )))(sauced 33 (combd (bard )1 105 (corp -100 25 ))))
+)
+(pan (wavec (horne 50 50 )46 (smokeb 4 (corpb -20 55 )))(saucee 20 (swoopb (minorb )1 64 )))
+};welltuned magic
+{(jump (minor 1 ))(srate (short 22 54 ))(lights (mountc ))
+(left 
+(mul (arab (horn 192 128 ))(sauce 33 (comb (bar )1 105 (corp -100 25 ))))
+(mul (arab (hornc 224 128 ))(saucec 33 (combc (barc )1 105 (corp -100 25 ))))
+)
+(right 
+(mul (arab (hornb 252 128 ))(sauceb 33 (combb (barb )1 105 (corp -100 25 ))))
+(mul (arab (hornd (short 88 152 )128 ))(sauced 33 (combd (bard )1 105 (corp -100 25 ))))
+)
+(pan (wavec (horne 50 50 )76 (smokeb 4 (corpb -30 55 )))(mountc 16 64 ))
+};welltuned bose
+{(jump (minor 1 ))(srate (short 29 119 ))(lights (mountc ))
+(left 
+(mul (arab (horn 144 128 ))(sauce 33 (comb (bar )1 105 (corp -100 25 ))))
+(mul (arab (hornc 189 128 ))(saucec 33 (combc (barc )1 105 (corp -100 25 ))))
+)
+(right 
+(mul (arab (hornb 168 128 ))(sauceb 33 (combb (barb )1 105 (corp -100 25 ))))
+(mul (arab (hornd 196 128 ))(sauced 33 (combd (bard )1 105 (corp -100 25 ))))
+)
+(pan (wavec (horne 50 50 )76 (smokeb 4 (corpb -30 55 )))(mountc 16 64 ))
+};tritussy
+{(srate (corp 10 15 ))(lights (togo (major )19 4 16 64 ))
+(hornb (add (corp 62 )(mul (salsah )(corpb )))(togof (majorb )41 122 67 7 ))(salsab (square (hornb ))(hornd ))(salsaf (square (hornc ))(salsab ))
+(hornc (add (corp 60 )(mul (salsaf )(corpb )))(togog (majorc )41 120 56 3 ))(salsac (square (hornc ))(hornb ))(salsag (square (hornd ))(salsac ))
+(hornd (add (corp 60 )(mul (salsag )(corpb )))(togoh (majord )41 125 61 9 ))(salsad (square (hornd ))(hornc ))(salsah (square (hornb ))(salsad ))
+(left (right (modo (togo (major )19 (hornb )(hornc )(hornd ))4 )))
+};wave delay
+{(srate (corp 10 15 ))(lights (add (togo (major )19 4 16 64 )(mul (toggle )128 )))
+(hornb (add (corp 62 )(mul (salsah )(corpb )))(togof (majorb )41 122 67 7 ))(salsab (square (hornb ))(hornd ))(salsaf (square (hornc ))(salsab ))
+(hornc (add (corp 60 )(mul (salsaf )(corpb )))(togog (majorc )41 120 56 3 ))(salsac (square (hornc ))(hornb ))(salsag (square (hornd ))(salsac ))
+(hornd (add (corp 60 )(mul (salsag )(corpb )))(togoh (majord )41 125 61 9 ))(salsad (square (hornd ))(hornc ))(salsah (square (hornb ))(salsad ))
+(left (right (combc (waveb (togo (major )19 (hornb )(hornc )(hornd ))(mul (salsag )49 )(add (salsad )30 ))1 105 (corpb 20 (sauceh 8 (slew (toggle (square (bard )70 )-102 )20 5 ))))))
+};water
+{(srate (corp 10 15 ))(lights (togo (major )19 4 16 64 ))
+(hornb (add (corp 62 )(mul (salsah )(corpb )))(togof (majorb )41 122 67 7 ))(salsab (square (hornb ))(hornd ))(salsaf (square (hornc ))(salsab ))
+(hornc (add (corp 60 )(mul (salsaf )(corpb )))(togog (majorc )41 120 56 3 ))(salsac (square (hornc ))(hornb ))(salsag (square (hornd ))(salsac ))
+(hornd (add (corp 60 )(mul (salsag )(corpb )))(togoh (majord )41 125 61 9 ))(salsad (square (hornd ))(hornc ))(salsah (square (hornb ))(salsad ))
+(left (right (water (togo (major )19 (hornb )(hornc )(hornd ))(mul (salsag )49 )(add (salsad )30 ))))
+};zither
+{(srate (corp 10 15 ))(lights (togo (major )19 4 16 64 ))
+(hornb (add (corp 62 )(mul (salsah )(corpb )))(togof (majorb )41 122 67 7 ))(salsab (square (hornb ))(hornd ))(salsaf (square (hornc ))(salsab ))
+(hornc (add (corp 60 )(mul (salsaf )(corpb )))(togog (majorc )41 120 56 3 ))(salsac (square (hornc ))(hornb ))(salsag (square (hornd ))(salsac ))
+(hornd (add (corp 60 )(mul (salsag )(corpb )))(togoh (majord )41 125 61 9 ))(salsad (square (hornd ))(hornc ))(salsah (square (hornb ))(salsad ))
+(left (right (zither (salsab )(togo (major )19 (salsaf )(salsag )(salsah )))))
+};tussy delay
+{(srate (corp 10 15 ))(lights (add (togo (major )19 4 16 64 )(mul (toggle )128 )))
+(hornb (add (corp 62 )(mul (salsah )(corpb )))(togof (majorb )41 122 67 7 ))(salsab (square (hornb ))(hornd ))(salsaf (square (hornc ))(salsab ))
+(hornc (add (corp 60 )(mul (salsaf )(corpb )))(togog (majorc )41 120 56 3 ))(salsac (square (hornc ))(hornb ))(salsag (square (hornd ))(salsac ))
+(hornd (add (corp 60 )(mul (salsag )(corpb )))(togoh (majord )41 125 61 9 ))(salsad (square (hornd ))(hornc ))(salsah (square (hornb ))(salsad ))
+(left (right (combc (togo (major )19 (hornb )(hornc )(hornd ))1 105 (corpb 20 (sauceh 8 (slew (toggle (square (bard )70 )-102 )20 5 ))))))
+};horseorgan
+{(srate 24 )(pan (pan (horse 
+(add (salsa (major )(smoke ))(mul (mul (horsed )(corp ))(toggle (minor ))));minor: mod with previous horse, corp controls amt
+(add (horn (major 64 )127 )(mul (mul (horse )(bar (square (bar )0 )))(toggleb (minorb ))));minorb: self-mod with bar press
+(add (salsae (major )(bar ))(mul (mul (horseb )(corpb ))(togglec (minorc ))));minorc:  mod with next horse, corpb controls amt
+(add (mount (major 127 )64 )(mul (mul (horsec )(mul (bar -128 )(square (bar -128 )0 )))(toggled (minord ))));minord: mod with bar release of 2nd horse over
+)(bar )
+)(bar ))
+(pan (pan (horseb 
+(add (salsab (majorb )(smokeb ))(mul (mul (horse )(corp ))(toggle (minor ))))
+(add (hornb (majorb 64 )127 )(mul (mul (horseb )(barb (square (barb )0 )))(toggleb (minorb ))))
+(add (salsaf (majorb )(barb 127 1 ))(mul (mul (horsec )(corpb ))(togglec (minorc ))))
+(add (mountb (majorb 127 )64 )(mul (mul (horsed )(mul (barb -128 )(square (barb -128 )0 )))(toggled (minord )))))(barb ))(barb ))
+(pan (pan (horsec 
+(add (salsac (majorc )(smokec ))(mul (mul (horseb )(corp ))(toggle (minor ))))
+(add (hornc (majorc 64 )127 )(mul (mul (horsec )(barc (square (barc )0 )))(toggleb (minorb ))))
+(add (salsag (majorc )(barc 127 1 ))(mul (mul (horsed )(corpb ))(togglec (minorc ))))
+(add (mountc (majorc 127 )64 )(mul (mul (horse )(mul (barc -128 )(square (barc -128 )0 )))(toggled (minord )))))(barc ))(barc ))
+(pan (pan (horsed 
+(add (salsad (majord )(smoked ))(mul (mul (horsec )(corp ))(toggle (minor ))))
+(add (hornd (majord 64 )127 )(mul (mul (horsed )(bard (square (bard )0 )))(toggleb (minorb ))))
+(add (salsah (majord )(bard ))(mul (mul (horse )(corpb ))(togglec (minorc ))))
+(add (mountd (majord 127 )64 )(mul (mul (horseb )(mul (bard -128 )(square (bard -128 )0 )))(toggled (minord )))))(bard ))(bard ))
+(lights (add (mul (toggle )2 )(mul (toggleb )8 )(mul (togglec )32 )(mul (toggled )128 )
+))
+(left (left (mul (horse )(major ))(mul (horseb )(majorb ))(mul (horsec )(majorc ))(mul (horsed )(majord ))))};trio
+{
+(left (left 
+(water (square (bar )50 )1 (salsa (square (bar )50 )(smoke 44 )))
+(hornd (salsad (square (bard )50 )(mul (hornd )64 60 ))80 (sauced 13 (slewd (bard )40 10 )))
+(arab 
+(salt (smoked (swoop (majorb )250 160 ))80 225 ))
+))
+(right 
+(mul (zitherb (saucec 4 (dust (square (barb )90 )))(salsab (square (barb )50 )(smokeb (corp 30 )48 ))126 )80 )
+(mul (zitherc (square (barc )50 )(salsac (square (barc )50 )(smokec 20 104 ))126 )80 )
+(string (majord )110 110 ))
+
+};zithering
+{
+(srate 12 )
+(togo (minor )10 15 30 )
+(togob (minorb )48 60 72 )
+(togoc (minorc )32 40 48 )
+(togod (minord )()-36 )
+(left 
+(zitherb (square (swoopb (swoopb 1 )(slew (togo )4 4 )100 )1 )(togob )30 118 ))
+(right 
+(zitherc (square (swoopc (swoopc 1 )(slew )(add 100 (togod )))1 )(togoc )70 118 ))
+
+}

@@ -1,0 +1,13 @@
+;bb
+{(left (horn 118 77 ))(srate (corp 120 (top )))(right (hornb 114 76 ))};bb
+{(left (hornb (tar -76 )107 )(hornb (brass -76 )107 )
+(hornd (brassc 45 )76 )(horne (steel 86 )99 )(hornd (steelb 86 )87 ))
+(right (horn (brassb 70 )120 )(hornf (brassd 77 )78 )(horng (steelc 34 )108 
+)
+(hornc 34 122 (steeld )))};bb
+{(left (hornb (tar -76 )107 )(hornb (brass -76 )107 )
+(hornd (brassc 45 )76 )(horne (steel 86 )99 )(hornd (steelb 86 )87 ))
+(right (horn (brassb 70 )120 )(hornf (brassd 77 )78 )(horng (steelc 34 )108 
+)
+(hornc 34 122 (steeld )))};bb
+{(left (horn 118 77 (slew (modo (bridge )8 )120 1 )))(right (hornb 114 76 (slew )))}

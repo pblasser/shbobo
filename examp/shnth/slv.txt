@@ -1,0 +1,21 @@
+;slaving
+{(horn 12 10 )
+(right (water (slave (horn )(bar 12 
+44 ))2 12 )(fog (slaveb (horn )(barb 44 44 ))105 88 -83 -47 ))
+(left (zither (slavec (horn )(barc -89 88 ))-120 39 )(swampb (slaved (horn )(bard 88 88 ))2 44 55 44 ))
+};pulseing
+{(horn 12 10 )(srate 54 )
+(right (hornb 121 124 (pulse (slave (horn )(bar 12 
+44 ))(corp ))))
+(left (hornc -21 -7 (pulseb (slaveb (horn )(barc -89 88 ))(corpb ))))
+};square pulseing
+{(horn 12 10 )(srate 54 )
+(right (hornb 121 124 (square (pulse (slave (horn )(bar 12 
+44 ))(corp 4 4 )))))
+(left (hornc -21 -7 (square (pulseb (slaveb (horn )(barc -89 88 ))(corpb 5 6 )))))
+};sleeving
+{(horn 12 10 )
+(right (hornb 10 (160 ))(slave (horn )(bar 12 
+44 ))(slaveb (horn )(barb 44 44 )))
+(left (slavec (horn )(barc -89 88 ))(hornc 10 (161 ))(slaved (horn )(bard 88 88 )))
+}

@@ -1,0 +1,11 @@
+;LEFT put sound out LEFT speaker!
+ {(left 
+ (horn 64 64) 
+)} 
+ ;twice as loud:
+ {(left 
+ (left 
+ (horn 64 64)))} 
+ ;that's because it returns what it gets.
+
+doubleclick

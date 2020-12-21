@@ -1,0 +1,89 @@
+;rungnnATADi
+{(srate -67 )(jump (major 1 ))
+(left (horne (slew (minor )95 39 121 22 )(corp 124 -98 )(minor ))
+(hornf (slew (minor )96 -26 -84 -114 )(corp -5 12 )(minor ))
+(pulseb (mountb 74 -80 -62 15 )60 (dust 31 ))
+(comb (pulse (mountb -5 78 )81 (smokeb ))56 49 7 )
+(hornc (bard 108 10 )(slaved (mountb 86 59 -82 -107 )-29 
+)(corp ))
+(hornd (bar -114 -68 )(slave (mountb 92 36 -70 -6 )-122 
+)(corpb ))
+)
+(right (pulsed (mountb -96 39 19 -101 )-76 (smokeb ))
+(pulsec (mountb 93 -52 117 108 )8 (dust 22 ))
+(hornb (barb -24 86 )(slaveb (mountb -24 32 -119 -17 )14 
+)(corp ))
+(horn (barc 19 -57 )(slavec (mountb 73 -63 91 44 )79 
+)(corpb )))};nDruAnngiAT
+{(srate -21 )(jump (major 1 ))
+(left (horne (slew (minor )85 -39 97 -20 )(corp 65 57 )(minor ))
+(hornf (slew (minor )-43 -29 -62 -60 )(corp -15 -43 )(minor ))
+(pulseb (mountb -117 58 23 102 )-24 (dust -25 ))
+(comb (pulse (mountb 126 -15 )-37 (smokeb ))-48 -10 -43 )
+(hornc (bard 66 -94 )(slaved (mountb -29 -49 -126 78 )40 
+)(corp ))
+(hornd (bar 88 39 )(slave (mountb -118 -59 -22 -61 )-102 
+)(corpb ))
+)
+(right (pulsed (mountb -51 5 -33 -66 )91 (smokeb ))
+(pulsec (mountb -22 120 -13 81 )-31 (dust -38 ))
+(hornb (barb 80 -45 )(slaveb (mountb -75 -95 73 10 )-29 
+)(corp ))
+(horn (barc 108 -19 )(slavec (mountb 50 110 60 90 )-57 
+)(corpb )))};daimonEKI
+{(left (hornb (barb 12 34 )23 )
+(wave (smoke )100 (square (mount 33 85 )1 5 14 ))
+(hornd (bard 12 34 )23 )
+)
+(jump (major 1 ))
+(right (horn (bar 12 34 )23 )
+(waveb (smoke )100 (square (mount 33 55 )1 3 16 ))
+(hornc (barc 12 34 )23 )
+)};moduTUNNEL
+{(left (hornc (horn (salsac (mount 28 3 )(smoked ))50 )46 (minorb ))
+(hornd (hornb (salsab (mountd 25 3 )(smoked ))56 )45 (minorc ))
+(smoked (barc (sawc 4 43 )))(smokee (bard (sawb 2 50 )))
+(fog (dustb (corpb ))(smokeh )(smokeh )(smokeh )(smokeh ))
+(stringb (majorb )1 12 )(stringc (major )1 12 )
+)
+(jump (major 1 ))
+(right (string (majorc )2 12 )(stringd (majord )1 57 )
+(fogb (dustc (corp ))(smokeh )(smokeh )(smokeh )(smokeh ))
+(smokef (bar (sawd 3 109 )))(smokeg (barb (sawe 4 -96 )))
+(horne (hornh (salsa (mountc 26 3 )(smokec ))50 )46 (minor ))
+(hornf (horng (smokec (mountc 26 3 8 8 ))56 )45 (minord )))};runningDATA
+{(srate 28 )(jump (major 1 ))
+(left (horne (slew (minor )1 88 12 93 )(corp 3 68 )(minor ))
+
+(pulseb (mountb 33 11 100 -8 )55 (dust 120 ))
+(comb (pulse (mountb 33 11 )22 (smokeb ))1 88 120 )
+(hornc (bard -67 -40 )(slaved (mountb 33 11 88 4 )8 
+)(corp ))
+(hornd (bar -46 -22 )(slave (mountb 33 11 66 4 )8 
+)(corpb ))
+)
+(right (pulsed (mountb 33 11 -120 -3 )33 (smokeb ))
+(hornf (slew (minor )1 88 12 92 )(corp 3 68 )(minor ))
+(pulsec (mountb 33 11 100 4 )55 (dust -97 ))
+(hornb (barb 109 -54 )(slaveb (mountb 33 11 100 4 )8 
+)(corp ))
+(horn (barc 25 -101 )(slavec (mountb 33 11 100 5 )8 
+)(corpb )))};EmdKIaino
+{(left (hornb (barb -66 -113 )11 )
+(wave (smoke )9 (square (mount -80 87 )-65 20 0 ))
+(hornd (bard -15 -51 )-89 )
+)
+(jump (major 1 ))
+(right (horn (bar 20 -16 )70 )
+(waveb (smoke )94 (square (mount -109 73 )-44 -53 86 ))
+(hornc (barc -90 110 )-33 )
+)};IdEaimnKo
+{(left (hornb (barb -38 -116 )-44 )
+(wave (smoke )36 (square (mount 41 91 )-63 26 90 ))
+(hornd (bard -88 -11 )-28 )
+)
+(jump (major 1 ))
+(right (horn (bar -85 -117 )-69 )
+(waveb (smoke )16 (square (mount -111 35 )-11 -108 120 ))
+(hornc (barc -74 -104 )107 )
+)}

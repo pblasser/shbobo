@@ -1,0 +1,51 @@
+;I'll have that to go
+{(lights 1 )(srate (short 30 55 ))(jump (minor 1 ))
+(left (right (wave (add (zither (sawb 1 128 )(togo )48 127 )
+(left (right (saw (togo (square (sawb 1 128 )1 )-86 24 32 64 48 )64 (slew (swoop (square (sawb 1 120 )1 )120 188 )81 45 17 )))))(corp )(corpb ))))};you got a smoke?
+{(lights 2 )(srate (short 30 55 ))(jump (minor 1 ))
+(pan (wavef (comb (salt (xor (smokef (mul 2 ))4 )30 120 )55 7 133 )20 77 )(salsa (sawb )(smoke )))
+(left (right (wave (add (zither (sawb 1 128 )(togo )48 127 )
+(left (right (saw (togo (square (sawb 1 128 )1 )-86 24 32 64 48 )64 (slew (swoop (square (sawb 1 120 )1 )120 188 )81 45 17 )))))(corp )(corpb ))))};this is taking forever
+{(lights 4 )(srate (short 30 55 ))(jump (minor 1 ))
+(pan (slew (salsa (sawb )(smoke ))87 123 )(smokeh 25 ))
+(left (right (wave (add (zither (sawb 1 128 )(togo )48 127 )
+(left (right (saw (togo (square (sawb 1 128 )1 )-86 24 32 64 48 )64 (slew (swoop (square (sawb 1 120 )1 )120 188 )81 45 17 )))))(corp )(corpb ))))};yes or no?
+{(lights 8 )(srate (short 30 55 ))(jump (minor 1 ))
+(pan (square (smokec )-125 )(slew (salsa (sawb )(smoke ))123 119 ))
+(left (right (wave (add (zither (sawb 1 128 )(togo )48 127 )
+(left (right (saw (togo (square (sawb 1 128 )1 )-86 24 32 64 48 )64 (slew (swoop (square (sawb 1 120 )1 )120 188 )81 45 17 )))))(corp )(corpb ))))};just give me a water
+{(lights 16 )(srate (short 30 55 ))(jump (minor 1 ))
+(pan (waterb (sawb )(smokeg )(smokef ))(slew (salsa (sawb )(smoke ))123 119 ))
+(left (right (wave (add (zither (sawb 1 128 )(togo )48 127 )
+(left (right (saw (togo (square (sawb 1 128 )1 )-86 24 32 64 48 )64 (slew (swoop (square (sawb 1 120 )1 )120 188 )81 45 17 )))))(corp )(corpb 71 87 ))))};bent fb noise machine
+{(srate (barb )(33 ))(bend (salsa (dust -90 )(smokeb )))(lights -109 )
+(left (right (wave (modo (comb (xor (right (left ))(horn (bar )(saw )))(saw (bard )(horn ))(corp )(corp ))33 )(barc )(corpb ))))};bb
+{(srate (barb )(-14 ))(bend (salsa (dust -60 )(smokeb )))(lights 30 )
+(left (right (wave (modo (comb (xor (right (left ))(horn (bar )(saw )))(saw (bard )(horn ))(corp )(corp ))60 )(barc )(corpb ))))};bb
+{(srate (barb )(-48 ))(bend (salsa (dust -26 )(smokeb )))(lights -90 )
+(left (right (wave (modo (comb (xor (right (left ))(horn (bar )(saw )))(saw (bard )(horn ))(corp )(corp ))-81 )(barc )(corpb ))))};bb
+{(srate (barb )(14 ))(bend (salsa (dust -49 )(smokeb )))(lights 47 )
+(left (right (wave (modo (comb (xor (right (left ))(horn (bar )(saw )))(saw (bard )(horn ))(corp )(corp ))32 )(barc )(corpb ))))};bb
+{(srate (barb )(-4 ))(bend (salsa (dust -14 )(smokeb )))(lights 69 )
+(left (right (wave (modo (comb (xor (right (left ))(horn (bar )(saw )))(saw (bard )(horn ))(corp )(corp ))-96 )(barc )(corpb ))))};syrligt
+{(srate (short (wheel (majord 11 )(minord -11 ))55 ))
+(pan (salt (smokeb (square (sawc 2 128 )96 )-44 )1 3 )(mount 22 44 ))
+(left (water (pulse )(corp )(smoke )))
+(right (wave (square (saw (togo (pulse (sawb 1 64 )24 )(dustb -4 )32 28 48 24 )128 
+)(mount 29 -74 -60 40 )(slew (swoop )1 64 ))(corpb )(slew (swoop (pulse )128 64 66 8 ))))
+};demented pinball
+{(left (string (sauceb 3 (dust (bar 63 ))(square (bar )-41 ))6 (add 45 (corp )-6 )134 )(combd (waveb (xor (saw 6 (add 45 (corp )-6 ))70 )(slewb (bar -66 )-19 97 )(sauced -48 (bard -33 )))80 122 81 )(water (sauceg 153 (sawb -77 -7 ))-3 16 ))
+(right (stringb (saucec 3 (dustb (bard 63 ))(square (bard )-41 ))6 (add 45 (corp )-6 )137 )(combc (wavec (xor (sawb 24 (add 45 (corp )-6 ))-54 )(slew (barb 73 )-120 27 )(saucee 88 (bar -40 )))-81 -68 -82 )(waterb (saucef 149 (sawc 74 -48 ))-64 12 ))(srate 77 (corpb -4 ))
+(jump (barb 1 ))(jump (barc -1 ))};bb
+{(left (string (sauceb -5 (dust (bar 99 ))(square (bar )-2 ))-89 (add -65 (corp )78 )88 )(combd (waveb (xor (saw 71 (add -99 (corp )62 ))-84 )(slewb (bar 37 )-49 -115 )(sauced -109 (bard -43 )))94 37 109 )(water (sauceg -128 (sawb 57 -87 ))-84 -41 ))
+(right (stringb (saucec -125 (dustb (bard -44 ))(square (bard )-63 ))-113 (add 113 (corp )39 )-49 )(combc (wavec (xor (sawb 49 (add 111 (corp )123 ))95 )(slew (barb 97 )-45 81 )(saucee 121 (bar 86 )))100 125 39 )(waterb (saucef 34 (sawc 60 69 ))37 13 ))(srate 120 (corpb -109 ))
+(jump (barb 1 ))(jump (barc -1 ))};bb
+{(left (string (sauceb 98 (dust (bar 45 ))(square (bar )67 ))10 (add 99 (corp )-57 )120 )(combd (waveb (xor (saw -2 (add -51 (corp )68 ))-90 )(slewb (bar 16 )91 -116 )(sauced -60 (bard -72 )))92 29 65 )(water (sauceg 84 (sawb -62 30 ))-14 -65 ))
+(right (stringb (saucec 4 (dustb (bard 11 ))(square (bard )-80 ))-38 (add 41 (corp )117 )122 )(combc (wavec (xor (sawb 34 (add -63 (corp )-58 ))-8 )(slew (barb 28 )-16 -90 )(saucee 52 (bar 113 )))62 -11 30 )(waterb (saucef -54 (sawc 30 -3 ))46 80 ))(srate 49 (corpb -98 ))
+(jump (barb 1 ))(jump (barc -1 ))};bb
+{(left (string (sauceb -56 (dust (bar -1 ))(square (bar )20 ))86 (add 49 (corp )-56 )-54 )(combd (waveb (xor (saw -53 (add -35 (corp )-20 ))-95 )(slewb (bar 10 )122 45 )(sauced -79 (bard -32 )))42 -114 109 )(water (sauceg 100 (sawb -100 -26 ))2 -98 ))
+(right (stringb (saucec -17 (dustb (bard 32 ))(square (bard )-25 ))87 (add 122 (corp )55 )75 )(combc (wavec (xor (sawb 75 (add 18 (corp )-118 ))-34 )(slew (barb 27 )56 84 )(saucee 56 (bar -124 )))89 21 -57 )(waterb (saucef -8 (sawc -19 -25 ))-103 -128 ))(srate -100 (corpb -78 ))
+(jump (sauce -3 ((smokeb (barb )1 ))))(jump (sauceh -105 ((smoke (barc )-1 ))))};bb
+{(left (string (sauceb -63 (dust (bar 7 ))(square (bar )-40 ))111 (add 126 (corp )-50 )-18 )(combd (waveb (xor (saw -123 (add -81 (corp )-65 ))-85 )(slewb (bar -126 )125 -38 )(sauced 106 (bard -8 )))-31 83 52 )(water (sauceg 73 (sawb -123 -60 ))-50 57 ))
+(right (stringb (saucec -18 (dustb (bard -81 ))(square (bard )75 ))-6 (add -6 (corp )73 )117 )(combc (wavec (xor (sawb 117 (add -9 (corp )-86 ))-102 )(slew (barb -41 )21 102 )(saucee -87 (bar -116 )))-15 -126 -98 )(waterb (saucef 11 (sawc -78 -75 ))-33 -52 ))(srate 51 (corpb -19 ))
+(jump (sauce 62 ((smokeb (barb )86 ))))(jump (sauceh -40 ((smoke (barc )-39 ))))}

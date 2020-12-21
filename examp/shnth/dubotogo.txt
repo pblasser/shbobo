@@ -1,0 +1,51 @@
+; 
+{
+(lights (left 
+(sauce 10 ((corp 4 saw )21 32 ))
+((corp 4 saw )21 32 )
+)(right 
+((bar 4 dust )21 )
+)
+(jump (minor 1 )))
+}; 
+{
+(arab 
+(left 
+(reflect (bar (horn 30 130 ))(mount 10 11 ))
+;([string a] ([mount d] 20 10) 1 21)
+(string (mountd 20 10 )(corp 6 6 )(corpb 40 40 ));254)
+(stringc (mountd 20 10 )(corp 6 8 )(corpb 40 45 ));254)
+)(right 
+(reflect (barb (hornb 31 130 ))(mountb 12 11 ))
+;([string b] ([mount c] 20 8) 1 30)
+(stringb (mountc 20 8 )(corpb 6 6 )(corp 40 40 ));254)
+(stringd (mountc 20 8 )(corpb 6 8 )(corp 40 46 ));254)
+)(jump (minor 1 )))
+}; 
+{(left 
+(return (bar (horn 30 130 ))(mount 10 11 ))
+(string (mountd 20 20 )(corp 6 6 )(corpb 40 40 ))
+)
+(right 
+(return (barb (hornb 31 130 ))(mountb 12 11 ))
+(stringb (mountc 20 21 )(corpb 6 6 )(corp 40 40 ))
+)(jump (minor 1 ))
+}; 
+{(left 
+(and (bar (horn 30 130 ))(mount 10 11 ))
+(string (mountd 20 20 )(corp 6 6 )(corpb 40 40 ))
+)
+(right 
+(and (barb (hornb 31 130 ))(mountb 12 11 ))
+(stringb (mountc 20 21 )(corpb 6 6 )(corp 40 40 ))
+)(jump (minor 1 ))
+}; 
+{(left 
+(xor (bar (horn 30 130 ))(mount 10 11 ))
+(string (mountd 20 20 )(corp 6 6 )(corpb 40 40 ))
+)
+(right 
+(xor (barb (hornb 31 130 ))(mountb 12 11 ))
+(stringb (mountc 20 21 )(corpb 6 6 )(corp 40 40 ))
+)(jump (minor 1 ))
+}

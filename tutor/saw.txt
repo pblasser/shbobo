@@ -1,0 +1,18 @@
+;SAW is a sawtooth wave
+ ;It has more timbre than HORN
+ ;NUME is its harmonic speed
+ ;DENO is its loudness and profundity:
+ ;its UNDERTONE
+ {(left 
+ (saw 64 64))} 
+ ;Try filtering it:
+ {(left 
+ (wave (saw 12 64) 1 (bar)))} 
+ ;MUL is multiply or VCA
+ {(left 
+ (saw 64 64 (bar)))} 
+ ;ADD is for mixing others
+ {(left 
+ (saw 64 64 (bar) 
+ (sawb 66 64 (barb))))}
+doubleclick

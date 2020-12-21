@@ -1,0 +1,3 @@
+;bb
+{(left (waveb (saw (200 (bar ))80 )20 (barc -30 30 ))(hornb (200 (barb ))80 ))
+(right (hornc (200 (barb ))120 )(wave (sawb (200 (bar ))30 )20 (barc 30 30 )))}

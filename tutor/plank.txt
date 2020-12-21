@@ -1,0 +1,11 @@
+;PLANK is the raw fret data on SHTAR
+ ;It is 32 bits full of any frets activated, so,
+ ;It can be a sophisticated jam.
+ ;There are two [a-b], for bottom and top octaves.
+ {(left 
+ (saw (plank) 64)) 
+ (right 
+ (sawb (plankb) 64))} 
+ doubleclick 
+
+doubleclick

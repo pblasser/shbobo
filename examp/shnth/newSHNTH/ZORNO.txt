@@ -1,0 +1,9 @@
+;bb
+{(srate 160 )
+(left (horn 35 23 (bar ))(hornb 34 -43 (barb ))
+(hornc -45 62 (barc ))(hornd 113 124 (bard ))
+(wave (tar )0 (waved (corpb )5 1 )(corp ))(waveb -46 0 (wavec (corp )5 1 )(corpb ))
+
+(square (horne -41 -89 (minor )))(square (hornf 84 80 (minorb )))
+(square (horng -9 -11 (minorc )))(square (hornh -54 109 (minord ))))};bb
+{}

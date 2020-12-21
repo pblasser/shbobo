@@ -1,0 +1,7 @@
+;SAUCE is like a bubble of low sample rate.
+ ;Put it around something, and give it a period...
+ ;In sample ticks, so PER of 2 is twice as slow.
+ {(left 
+ (sauce 10 (smoke)) 
+)}
+doubleclick

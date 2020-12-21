@@ -1,0 +1,1121 @@
+
+
+struct Barre {
+ SDL_Rect r;
+ Gambit g[32];
+ Barre() {}
+ 
+ void resized(int x, int y) {
+  r.x = 0;
+  r.y=y-10;
+  r.w=x;
+  r.h=20;
+
+  int error = x&16;
+  error = error + (x>>6);
+  for (int i = 0; i < 32; i++)
+   g[i].resized(i*(x>>5)+error,y);
+ }
+ void random() {
+  for (int i = 0; i < 32; i++)
+   g[i].random();
+ }
+ void paint(SDL_Renderer * rn) {
+  //SDL_SetRenderDrawColor(rn,rand(),rand(),rand(),255);
+  //SDL_RenderFillRect(rn,&r);
+  for (int i = 0; i < 32; i++)
+ //  if (rand()%17==0)
+   g[i].paint(rn);
+ }
+};//helper funk!
+void SDL_SetRenderBalto(SDL_Renderer* r, SDL_Color s) {
+  SDL_SetRenderDrawColor(r,s.r,s.g,s.b,255);
+}
+
+struct Carre {
+ int position;
+ SDL_Color maryflag[4];
+ SDL_Color flagger(Uint8 r,Uint8 g,Uint8 b) {
+  SDL_Color c={r,g,b,255};
+  return c;
+ }
+ Carre() : position(rand()&7) {
+  maryflag[0]=flagger(245,0,0);
+  maryflag[1]=flagger(245,245,245);
+  maryflag[2]=flagger(245,255,0);
+  maryflag[3]=flagger(0,0,0);
+ }
+ 
+ void keyPress(SDL_Keycode k) {
+  if (k==SDLK_m) 
+   position=(position+1)&7;
+   //break;
+ }
+ void draw(SDL_Renderer*r,int x, int y){
+  SDL_Rect rrr; 
+  for (int i =6;i>0;i--) {
+   rrr.x=x-i;
+   rrr.y=y-i;
+   rrr.w=rrr.h=i<<1;
+   SDL_SetRenderBalto(r,maryflag[((i+(position>>2))%4)]);
+   SDL_RenderFillRect(r,&rrr);
+   i-=(position%3);
+  }
+ }
+}; //#pragma once
+
+//static signed char gwonzulate[8];
+//static unsigned char mastroBarcode =0;
+
+
+struct Chub {
+ bool endor;
+ signed char gwonz[8];
+ bool chubINIT();
+ void chubRUN();
+ virtual void gwonzINIT(int id) {}
+ virtual void chubCALL() {}
+ virtual bool chubShouldEnd(){return endor;}
+ void chubSENDATE(unsigned char * rept);
+ void chubSENDEND();
+ void chubCLOZ();
+};
+
+
+
+struct ChubberySituation {
+ Corpicabao corp;
+ Ginger g[4];
+ ChubberySituation() {
+  FORI 
+   g[i].others=g;
+ }
+ 
+ void ging(int * a, int ind, int len) {
+  FORI g[i].ging(a, ind, len);
+ }
+ 
+ void collide(signed char * gwonz) {
+  g[0].collide(gwonz[2]);
+  g[1].collide(gwonz[0]);
+  g[2].collide(gwonz[1]);
+  g[3].collide(gwonz[3]);
+   //g[i].collide(gwonz[i]);
+  corp.collide((gwonz[7]<<24)|(gwonz[6]<<16)|(gwonz[5]<<8)|gwonz[4]);
+ // printf("chub%d\n",c.gwonz[0]);
+ }
+
+ void prepaint(SDL_Renderer * rn) {
+  FORI g[i].prepaint(rn);
+ }
+ void paint(SDL_Renderer * rn) {
+  FORI g[i].paint(rn);
+ }
+ 
+};
+struct Corpicabao {
+ void collide(unsigned int i) {
+  //printf("chink%d\n",i);
+ }
+};
+
+struct Gambit {
+ RatChord * dursz;
+ int x,y;
+ int wraparound;
+ Gambit() : wraparound(1) {
+  dursz = poe.getQuid(rand(),rand());
+ }
+ int kingalNume(int i) {
+  RatChord*r = poe.kingalNume(dursz,i);
+  if (r) {
+   dursz=r;
+   return 1;
+  }
+  return 0;
+ }
+ int kingalDeno(int i) {
+  RatChord*r = poe.kingalDeno(dursz,i);
+  if (r) {
+   dursz=r;
+   return 1;
+  }
+  return 0;
+ }
+ int queenalis(int i) {
+  RatChord*r = poe.queenalis(dursz,i);
+  if (r) {
+   dursz=r;
+   return 1;
+  }
+  return 0;
+ }
+ void resized(int xx, int yy) {
+  x=xx;y=yy;
+ }
+  void random() {
+  dursz = poe.getQuid(rand(),rand());
+ }
+ void prepaint(SDL_Renderer * r, int v) {
+  //printf("nume:%d\n",dursz->nume->value);
+  v = v>>5;
+  int sprank=128+rand()%8;
+  if (v>0)
+   SDL_SetRenderDrawColor(r,sprank+v+(v>>1),sprank+(v>>1),sprank,sprank);
+  if (v<0)
+   SDL_SetRenderDrawColor(r,sprank,sprank-(v>>1),sprank-v-(v>>1),sprank);
+  dursz->nume->drawNume(r,x,y-6);
+  dursz->deno->drawDeno(r,x,y+6);
+ }
+ void paint(SDL_Renderer * r) {
+ // dursz = poe.getQuid(rand(),rand());
+  dursz->nume->drawDominoX(r,x,y-6,-1);
+  dursz->deno->drawDominoX(r,x,y+6,1);
+ }
+};
+
+struct Ginger {
+ Gambit * game;
+ Ginger * others;
+ RoyalMoutarde rm;
+ RoyalMinister rmi;
+ Carre car;
+ 
+ //char ministersANDmoutardes;
+ int quiznoquantan;
+ int placz;
+ int hys, osc, mus;
+ int numeMustard, denoMustard;
+  int olde, vale;
+ int signales,knume,kdeno,qwrth;
+ Ginger() : game(0) , 
+ //ministersANDmoutardes(rand()) ,
+ numeMustard(0), denoMustard(0),
+ hys(0), osc(0), quiznoquantan(0),
+ knume(0), kdeno(0),qwrth(0)
+ {}
+
+ void collide(signed char s) {
+  olde=vale;
+  vale=((int)s)<<4;
+  signales=vale-olde;
+  if (game==0) return;
+  int squirt=128;
+  if (1&rmi.intensity)squirt=181;
+  FORI {
+   if((1<<i)&rmi.nume_status) {
+    knume+=(squirt*others[i].signales);
+    qwrth+=(squirt*others[i].signales);
+   }
+   if((1<<i)&rmi.deno_status) {
+    kdeno+=(squirt*others[i].signales);
+    qwrth-=(squirt*others[i].signales);
+   }
+  }
+  if (car.position&1)
+   if (game->kingalNume(knume>>(14-(rmi.intensity))))
+    knume=0;
+  if (car.position&2)
+   if (game->kingalDeno(kdeno>>(14-(rmi.intensity))))
+    kdeno=0;
+  if (car.position&4)
+   if (game->queenalis(qwrth>>(14-(rmi.intensity))))
+    qwrth=0;  
+ }
+ //#define 
+ void ging(int * a, int ind, int len) {
+  if (game==0) return;
+  //if (ind==0) collide();
+  numeMustard=denoMustard=0;
+  int squirt=128;
+  if (1&rm.intensity)squirt=181;
+  FORI {
+   if((1<<i)&rm.nume_status)
+    numeMustard+=(squirt*others[i].mus)>>(28-(rm.intensity>>1));
+   if((1<<i)&rm.deno_status)
+    denoMustard+=(squirt*others[i].mus)>>(28-(rm.intensity>>1));
+  }
+  
+  int height=(denoMustard+game->dursz->deno->value)<<8;
+  if (osc>height) hys=0;
+  if (osc<-height) hys=1;
+  
+
+  int spoddy=(numeMustard+game->dursz->nume->value)*poe.strittle;
+   
+  if (spoddy<1) spoddy=1;
+  
+  if (hys==1) osc+= spoddy;
+  else osc-=spoddy;
+  
+  
+  int differosc=osc-height;
+  int pluserosc= -(osc+height);
+  
+  
+  if (quiznoquantan) {
+   hys=1;
+   if (differosc>=0) 
+    osc=differosc-height;
+  } else {
+   if ((differosc>=0)&&(hys==1)) {
+     hys=0;
+     osc=height-differosc;
+    
+   }
+   if ((pluserosc>=0)&&(hys==0)) {
+     hys=1;
+     osc=pluserosc-height;
+    
+   }
+  }
+   #define TRINGING(ting) ((ting>3?ting-3:0)+(ting<-3?ting+3:0))
+  #define GINGFADE ((vale-olde)*ind/(len))+olde
+  int gwonz=TRINGING(GINGFADE);
+  mus = gwonz*osc;
+  if (gwonz>0)a[0]+=(mus);//>>4;
+  else a[1]+=(mus);//>>4;
+ // int height
+ }
+ 
+ void prepaint(SDL_Renderer * rn) {
+  if (game==0) return;
+  SDL_SetRenderDrawBlendMode(rn,SDL_BLENDMODE_BLEND);
+  game->prepaint(rn, vale);
+ }
+ void paint(SDL_Renderer * rn) {
+  if (game==0) return;
+ rm.drawMustardX(rn,game->x,game->y);
+ rmi.drawMustardX(rn,game->x,game->y);
+ car.draw(rn,game->x,game->y);
+ }
+
+ void mouseButt(int x, int y) {
+  if (game==0) return;
+  rm.mouseButt(x-game->x,y-game->y);
+  rmi.mouseButt(x-game->x,y-game->y);
+ }
+ void keyPress(SDL_Keycode k) {
+  if (game==0) return;
+  if (k==SDLK_SLASH) quiznoquantan=!quiznoquantan;
+  rm.keyPress(k);
+  rmi.keyPress(k);
+  car.keyPress(k);
+ }
+};
+
+struct Multaple {
+ Prime * valence;
+ int occurance;
+ Multaple * tail;
+ int powerful;
+ 
+ Multaple(Prime *v, Multaple *tel) : 
+  valence(v), tail(tel), 
+  occurance(1) {
+   powerful=valence->value;
+  }
+ ~Multaple(){}// if (tail) delete(tail);}
+ int increment() { 
+  occurance++; 
+  powerful*=valence->value;
+  return 0;
+  if (powerful>URPRIMLIM) return 1;
+  return 0;
+ }
+ 
+ void prf() {
+  printf("%d^^%d ",valence->value, occurance);
+  if (tail) tail->prf();
+ }  
+ static int compare(Multaple*king,Multaple*quonk) {
+  if (king==0) return 1;
+  if (king->valence->value==2) return 1;
+  if (quonk==0) return 0;
+  if (king->valence->value>quonk->valence->value) 
+   return 0;
+  if (king->valence->value<quonk->valence->value)
+   return compare(king,quonk->tail);
+  if (king->valence->value==quonk->valence->value)
+   return 1; 
+  //if (king->occurance>quonk->occurance) return 0;
+  return compare(king->tail,quonk->tail);
+ }
+ 
+ int drawHead(SDL_Renderer*r,int x, int y, int d){
+  for (int i =0;i<occurance;i++)
+   valence->headVisit(r,x,y+d*i*2, d);
+  return valence->getValue()+occurance*2;
+ }
+};
+//MISTER P, the POTENTIATOR
+//sits at the top of the "original 
+//application deliverable code".
+//He interacts much with the library
+//he inherits the AbstractChubEngine
+//which is a callback class for
+//ging grax and chub.
+
+
+struct MultiplexPotentiator : Chub {
+ int amt;
+ int sr;
+ int sterge[2];
+ int oneatatime;
+ int offset;
+ std::vector<ChubberySituation*> chubbies; 
+ SDL_Rect r;
+ Barre b[4];
+ MultiplexPotentiator(){
+  endor=false;
+  offset = 0;
+  oneatatime = 0;
+  chubbies.push_back(new ChubberySituation());
+  amt = 1;
+ }
+ ~MultiplexPotentiator() {
+  endor=true;
+  
+ }
+ void resized(int x, int y) {
+  r.x = 0;
+  r.y=0;
+  r.w=x;
+  r.h=y;
+  
+  for (int i = 0; i < 4; i++)
+   b[i].resized(x,(i*(y>>2))+(y>>3));
+ }
+ void mouseButt(int x, int y) {
+  FORI 
+   chubbies[0]->g[i].mouseButt(x,y);
+ }
+ void keyPress(SDL_Keycode k) {
+  FORI 
+   chubbies[0]->g[i].keyPress(k);
+ }
+ 
+ 
+ #define FORIT(type,obje) \
+ for (std::vector<type>::iterator it = obje.begin(); it != obje.end(); ++it)
+ char clz(unsigned int x) {
+    int n = 0;
+    for (;x;n++) 
+     x >>= 1;
+    return n%32;
+ }
+ #define UCH(i) (((unsigned char)gwonz[4+i])<<(i*8))
+ void collide() {
+  int fret = clz(UCH(0)|UCH(1)|UCH(2)|UCH(3));
+  //printf("%d\n",fret);
+  FORI 
+   chubbies[0]->g[i].game=&b[i].g[fret];
+   
+  FORIT(ChubberySituation*,chubbies) 
+   (*it)->collide(gwonz); 
+  //for (int i = 0; i < 4; i++)
+  // b[i].random();
+ }
+ 
+ 
+ 
+ int oldgwonz[4];
+ int gingwonz[4];
+  int nowgwonz[4];
+ 
+ void ging(Uint8*stream,int len) {
+  collide();
+  
+  static float * finstream =(float*)stream;
+  static int sinlength = len >> 3;
+  //printf("audiolen=%d\n",sinlength);
+  int acc[2] = {0,0};
+  //printf("sinlen%d\n",sinlength);
+  
+  //FORI nowgwonz[i]=gwonz[i]<<4;
+  //FORI nowgwonz[i]=TRINGING(nowgwonz[i]);
+  for (int ind=0; ind<sinlength;) {
+   acc[0]=acc[1]=0;
+   //FORI gingwonz[i]= GINGFADE;
+   FORIT(ChubberySituation*,chubbies) 
+    (*it)->ging(acc, ind, sinlength); 
+   acc[0]=acc[0]>>12;
+    acc[1]=acc[1]>>12;
+   finstream[(ind<<1)]=(float)(acc[0])/(256*256);
+   //if (KOMPRESS
+   finstream[(ind<<1)+1]=(float)(acc[1])/(256*256);
+   ind++;
+  }
+  FORI oldgwonz[i] = nowgwonz[i];
+ }
+ void paint(SDL_Renderer * rn) {
+  SDL_SetRenderDrawColor(rn,64,64,64,255);
+  SDL_RenderFillRect(rn,&r);
+  poe.paint(rn,r.w>>1,r.h>>1);
+  FORIT(ChubberySituation*,chubbies) 
+   (*it)->prepaint(rn); 
+  for (int i = 0; i < 4; i++)
+   b[i].paint(rn);
+  FORIT(ChubberySituation*,chubbies) 
+   (*it)->paint(rn); 
+ }  
+};
+
+
+struct Limba {
+ int value;
+ Multaple * multna;
+ SDL_Texture * numer;
+ Limba() { }
+ SDL_Texture * doTexture(SDL_Renderer*r, int x, int y, int d) {
+  SDL_Texture * tex;
+  SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY,"0");
+  tex = SDL_CreateTexture( r, 
+   SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 
+    x,y );
+    SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
+  SDL_SetRenderTarget(r, tex);
+  SDL_SetRenderDrawColor(r,0,0,0,0);
+  SDL_SetRenderDrawBlendMode(r,SDL_BLENDMODE_NONE);
+  SDL_RenderClear(r);
+  SDL_SetRenderDrawColor(r,rand(),rand(),rand(),255);
+  drawDomino(r,x>>1,(y>>1)-(d*(y>>1)),d);
+  SDL_SetRenderTarget(r,NULL);
+  return tex;
+ }
+ void init(SDL_Renderer*r){
+   numer=doTexture(r, 256, 256, 0);
+ }
+ ~Limba() {
+  //if (multna) delete(multna);
+ } 
+ void drawDomino(SDL_Renderer*r,int x, int y, int d){
+  int acc = y;
+  Multaple * m = multna;
+  while(m) {
+   acc += d*m->drawHead(r,x,acc,(d==0?1:d));
+   m=m->tail;
+  }
+ }
+ void drawDominoX(SDL_Renderer*r,int x, int y){
+    SDL_Rect rrr={x-128,y-128,256,256};
+    SDL_RenderCopy(r, numer, NULL, &rrr);
+ }
+};
+
+struct Numba : Limba {
+ SDL_Texture *denor;
+ Numba() {}
+ void init(SDL_Renderer*r){
+   numer=doTexture(r, 32, 128, 1);
+    denor=doTexture(r, 32, 128, -1);
+ }
+ ~Numba() {
+  //if (multna) delete(multna);
+ } 
+ void drawNume(SDL_Renderer*r,int x, int y){
+ 
+  SDL_Rect rrr = {x-16,y-(value>>1),32,value>>1};
+  
+  //SDL_SetRenderDrawColor(r,rand(),rand(),rand(),128);
+  
+  SDL_RenderFillRect(r,&rrr);
+ }
+  void drawDeno(SDL_Renderer*r,int x, int y){
+  SDL_Rect rrr = {x-16,y,32,value>>1};
+  //SDL_SetRenderDrawBlendMode(r,SDL_BLENDMODE_BLEND);
+  //SDL_SetRenderDrawColor(r,rand(),rand(),rand(),128);
+  SDL_RenderFillRect(r,&rrr);
+ }
+
+ 
+  void drawDominoX(SDL_Renderer*r,int x, int y, int d){
+   //SDL_Rect rr = {0,0,100,200};
+   //SDL_Rect rrr={x,y,32,64};
+//   printf("hoemanydra\n");
+   //SDL_SetTextureAlphaMod(numer,rand());
+   if (d>0) {
+    SDL_Rect rrr={x-16,y,32,128};
+    SDL_RenderCopy(r, numer, NULL, &rrr);
+   } else {
+    SDL_Rect rrr={x-16,y-128,32,128};
+    SDL_RenderCopy(r, denor, NULL, &rrr);
+   }
+ }
+ 
+};
+
+
+//PerspexStabile is hollow-form,
+//yet it has exponential surface area
+//in the form of quadrangularis,
+//a doubly linked list of queenal gradation
+//and the quid, a rigid "numerist"
+//interpretation of all possible numes
+//and denos.
+//the form for a ratio is RatChord.
+struct PerspexStabile {
+	RatChord * quadrangularis;
+	RatChord ** quid;
+	Numba gyou[256];
+ Limba quonks[256];
+ //RoyalMoutarde dinks[16];
+	Prime * primes;
+ int strittle;
+	//HGRAXBRUSH MarylandAnnex[256];
+	//HGRAXBRUSH CardinalAccent;
+	//quadrangularis is the "lyst-pointer", 
+	//as in the sense that it points to 1/1
+	//then quid is s'posed to be a quad format
+	//i.e. an array of an array
+	//brings up an interesting question,
+	//can anyone explain how to implement:
+	//RatChord *** quidquid? i.e. tripple pointr
+
+
+
+PerspexStabile(): strittle(16) {
+		primes = gimmeTruth(URPRIMLIM, URPRIMLIM, 0);
+		makeNumbarz();
+  printf("numbarz\n");
+  
+  makeQuonkz();
+printf("quonkz\n");
+		quid =  new RatChord*[URPRIMLIM*URPRIMLIM];
+		quadrangularis = new RatChord(&gyou[0],&gyou[0]);
+		RatChord * oldPrincipal = quadrangularis;//[0][0];
+		RatChord * oldUndertown = quadrangularis;//[0][0];
+		for (int i = 0; i < 256; i++) {
+			//creating both the quadrangularis organoform
+			//as well as the quid array of array quad;
+			//the dialect here is of Baron von Depressus.
+			RatChord * principal_hvarmonik = 
+    new RatChord(&gyou[i], &gyou[0]);
+			quid[i*256] = principal_hvarmonik;
+			oldPrincipal->ouster(principal_hvarmonik);
+			oldPrincipal = principal_hvarmonik;
+			oldUndertown = principal_hvarmonik;
+			for (int j = 1; j<256; j++) {
+				RatChord * underbourg_piez = 
+     new RatChord(&gyou[i],&gyou[j]);
+				oldUndertown->insert(underbourg_piez);
+				oldUndertown = underbourg_piez;
+				quid[i*256+j] = underbourg_piez;
+			} 
+		}
+	}
+
+ 	void PerspexStabilee() {
+  delete (primes);
+  for (int i = 0; i < 256; i++) 
+   for (int j = 0; j < 256; j++) 
+    delete(quid[i*256+j]);
+ }
+ 
+ 
+	 static Prime * gimmeTruth(int range, int tst, Prime * hed) {
+		Prime * pote = hed;
+		int potest = 1;
+		for (int i = 2; i < tst; i++) {
+			if ((tst % i) == 0) potest = 0; 
+		} 
+		if (potest) {
+			int w = 0;
+			for (int j = 2; j < range; j++) 
+				if ((j % tst) == 0) w++;
+			pote = new Prime(tst, w, hed);
+		}
+		if (tst == 2) return pote;
+		else return gimmeTruth(range, tst-1, pote);
+	}
+
+	Multaple * computeMultnas(int v, Multaple * m, Prime * strng){
+		int p = 1;
+  if (!strng || v < 2) return m;
+		if (strng) p = strng->value;
+		Multaple * mm = m;
+		if ((v % p) == 0) {
+			if (m && (m->valence == strng)) {
+				if(m->increment()) {
+     printf("killdhjeree");
+     delete(m);
+     return 0;
+    }
+			} else mm = new Multaple(strng, m);
+			return computeMultnas(v/p,mm,strng);
+		} else return computeMultnas(v, m, strng->tail);
+	}
+
+ 
+ void makeQuonkz() {
+  int placz = 0;
+  int p = 1;
+  while (placz<URPRIMLIM) {
+   Multaple * m = computeMultnas(p,0,primes);
+   if (m) {
+    if (m->tail==0) delete(m);
+   //swweerlord!@ else if (m->tail->tail==0) delete(m);
+    else {
+     printf("p%d,%d ",placz,p);
+     m->prf();
+     printf("\n");
+     //quonks[placz]=new Limba();
+     quonks[placz].value=p;
+     quonks[placz++].multna=m;
+    }
+   }
+   p = p+2;
+   
+  }
+ }
+ 
+	void makeNumbarz() { //call first!
+		for (int i = 0; i < URPRIMLIM; i++) {
+			gyou[i].value = (i<1?1:i);
+   gyou[i].multna = computeMultnas(i,0,primes);
+  }
+ }
+ 
+ void paint(SDL_Renderer*rn,int x,int y) {
+  quonks[3].drawDominoX(rn,x,y);
+ }
+	void init(SDL_Renderer*rn) {
+  for (int i = 0; i < URPRIMLIM; i++) 
+   gyou[i].init(rn);
+  for (int i = 0; i < URPRIMLIM; i++)
+   quonks[i].init(rn);
+  RoyalMoutarde::init(rn);
+ }
+ 
+		#define LIMRAP(x) (x%URPRIMLIM)
+ Numba * getNumba(int i) {
+		return &gyou[LIMRAP(i)];
+	}
+
+ RatChord * getQuadrangularis() {
+		return quadrangularis;
+	}
+
+	RatChord * getQuid(int n, int d) {
+		n = LIMRAP(n)*URPRIMLIM;//n %= URPRIMLIM;
+		d = LIMRAP(d);// %= URPRIMLIM;
+		//if (n < 1) n = 1;
+		//if (d < 1) d = 1;
+		return quid[n+d];
+	}
+ RatChord * kingalNume(RatChord*r,int n) {
+  if (r==0) return 0;
+  if (n==0) return 0;
+  int curs = r->nume->value;
+  int newt = curs+n;
+  if (newt<0) newt=URPRIMLIM-((-newt)%URPRIMLIM);
+  Numba * num = 0;
+  while (curs!=newt) {
+   Numba * numn = getNumba(curs);
+   if (Multaple::compare(numn->multna, quonks[3].multna)) num=numn;
+   curs+=(curs<newt?1:-1);
+  } 
+  if (num) return getQuid(num->value,r->deno->value);
+  return 0;
+ }
+ RatChord * kingalDeno(RatChord*r,int n) {
+  if (r==0) return 0;
+  if (n==0) return 0;
+  int curs = r->deno->value;
+  int newt = curs+n;
+  if (newt<0) newt=URPRIMLIM-((-newt)%URPRIMLIM);
+  Numba * num = 0;
+  while (curs!=newt) {
+   Numba * numn = getNumba(curs);
+   if (Multaple::compare(numn->multna, quonks[2].multna)) num=numn;
+   curs+=(curs<newt?1:-1);
+  } 
+  if (num) return getQuid(r->nume->value,num->value);
+  return 0;
+ }
+ RatChord * queenalis(RatChord*r,int n) {
+  if (r==0) return 0;
+  if (n==0) return 0;
+  RatChord * curs=r;
+  RatChord * begg=0;
+  while (n!=0) {
+   if (n>0) {
+    if (curs->next==0) 
+     return curs;
+    n--;curs=curs->next;
+   }
+   else {
+    if (curs->prev==0) 
+     return curs;
+    n++; curs=curs->prev;
+   }
+   
+   if (Multaple::compare(curs->nume->multna, quonks[2].multna) && Multaple::compare(curs->deno->multna, quonks[2].multna)) begg=curs;
+  } 
+  if (begg) return begg;
+  return 0;
+ }
+	
+	Prime * getTruth() { return primes; }
+};
+
+#define URPRIMLIM 256
+
+struct Prime {
+ int value;
+ int weight;
+ int scale;
+ Prime * tail;
+ int coss[URPRIMLIM];
+ int sinn[URPRIMLIM];
+ int chinkwonk; 
+ 
+ Prime(int v, int w, Prime * tel) {
+  value = v;
+  weight = w;
+  printf("Prime:%d,%d\n",v,w);
+  scale =URPRIMLIM/((value+1)*(value+1));
+ //scale = scale>>1;
+  scale = (scale<1?1:scale);
+  tail = tel;
+  chinkwonk = value/3;
+  for (int i = 0; i<value; i++) {
+   sinn[i] = 0.5*(double)value*sin((((double)i)/(double)value)*3.14159*2);
+   coss[i] = 0.5*(double)value*cos((((double)i)/(double)value)*3.14159*2);
+  }
+ }
+ 
+ ~Prime(){}
+ int getValue() {
+  return (value*scale)>>1;
+ }
+ void headVisit(SDL_Renderer*r,int x, int y, int d, int c){
+  int off = 0;
+  if (value==2) {
+   SDL_RenderDrawLine(r,x-4,y,x+4,y);
+  } else
+  for (int i=0;i<value;i++) {
+   int oldoff = off;
+   off+=c;
+   off %= value;
+   SDL_RenderDrawLine(r,
+    x+d*(sinn[oldoff])*scale,y+d*(coss[oldoff])*scale,
+    x+d*(sinn[off])*scale,y+d*(coss[off])*scale);
+  }
+ } 
+ void headVisit(SDL_Renderer*r,int x, int y, int d){
+  headVisit(r,x,y,d,chinkwonk);
+ }
+};
+struct RatChord {
+ Numba*nume;
+ Numba*deno;
+ RatChord*next;
+ RatChord*prev;
+ float technicalValue;
+ 
+ RatChord(Numba*n,Numba*d) :
+  nume(n), deno(d), next(0), prev(0) {
+  technicalValue=(float)(nume->value)/
+  (float)(deno->value);
+ }
+
+ void insert(RatChord *insertion) {
+  if (!prev) {
+   prev = insertion;
+   insertion->next=this;
+   return;
+  }
+  if (insertion->technicalValue<=prev->technicalValue) 
+   prev->insert(insertion);
+  else {
+   insertion->prev=prev;
+   prev->next=insertion;  
+   prev=insertion;
+   insertion->next=this;
+  }
+ }
+ 
+ void ouster(RatChord*oustron) {
+  if (!next) {
+   next=oustron;
+   oustron->prev=this;
+   return;
+  }
+  if (oustron->technicalValue>=next->technicalValue)
+   next->ouster(oustron);
+  else {
+   oustron->next=next;
+   next->prev=oustron;
+   next=oustron;
+   oustron->prev=this;
+  }
+ }
+  void prf() { printf("%d %d\n",nume->value,deno->value);}
+ void draw(SDL_Renderer*r,int x, int y){
+  //SDL_SetRenderDrawColor(r,rand(),rand(),rand(),255);
+  //nume->drawNume(r,x,y);
+  nume->drawDominoX(r,x,y,-1);
+  //SDL_SetRenderDrawColor(r,rand(),rand(),rand(),255);
+  //deno->drawDeno(r,x,y);
+  deno->drawDominoX(r,x,y,1);
+  
+ }  
+};
+
+struct RoyalMinister : RoyalMoutarde {
+
+ void drawMustardX(SDL_Renderer*r,int x, int y){
+  SDL_Rect rrr={x-16,y,16,64};
+  SDL_SetTextureAlphaMod(donks[deno_status%16],intensity*20);
+  SDL_RenderCopy(r, donks[deno_status%16], NULL, &rrr);
+  rrr={x-16,y-64,16,64};
+  SDL_SetTextureAlphaMod(donks[nume_status%16],intensity*20);
+  SDL_RenderCopy(r, donks[nume_status%16], NULL, &rrr);
+ }
+ void mouseButt(int x, int y) {
+  if ((x<0)&&(x>-16)) {
+   FORI
+    if ((y>(16*i))&&(y<(16*(i+1))))
+     deno_status ^= 1<<i;
+   y = 0-y;
+   FORI
+    if ((y>(16*(3-i)))&&(y<(16*(4-i))))
+     nume_status ^= 1<<i;
+  }
+ }
+ void keyPress(SDL_Keycode k) {
+  switch (k) {
+   case SDLK_a: intensity=0; break;
+   case SDLK_s: intensity=1;break;
+   case SDLK_d: intensity=2;break;
+   case SDLK_f: intensity=3;break;
+   case SDLK_g: intensity=4;break;
+   case SDLK_h: intensity=5;break;
+   case SDLK_j: intensity=6;break;
+   case SDLK_k: intensity=7;break;
+   case SDLK_l: intensity=8;break;
+
+  }
+  //printf("intensityu:%d\n",intensity);
+ }
+};
+
+struct RoyalMoutarde {
+ static SDL_Texture * dinks[16];
+ static SDL_Texture * donks[16];
+ int deno_status,nume_status;
+ int intensity;
+  static void noise(SDL_Renderer*r) {
+  
+ }
+ RoyalMoutarde() : deno_status(0),
+ nume_status(0), intensity(0) {}
+	static bool testGerono(SDL_Renderer*r, double x, double y, int n) {
+  x = (x/16.0);
+  y = y/16.0;
+ //printf("x%f y%f\n",x,y);
+  double p = pow(y,2)-pow(x,4)-pow(x,2)-pow(y,4);
+  if (p > 0) SDL_SetRenderDrawColor(r,rand()%n,rand()%n,rand()%n,p*1000);
+  return p>0;
+ }
+ static void drawGerono(SDL_Renderer*r, int x, int y, int d, int n) {
+  for (int i = -8; i < 8; i++)
+    for (int j = -8; j < 8; j++)
+     if(testGerono(r,i,j+(d*8),n)) {
+      
+      SDL_RenderDrawPoint(r,x+i,y+j);
+     }
+ }
+ static bool testCircle(SDL_Renderer*r, double x, double y, int n) {
+  x = (x/8.0);
+  y = y/8.0;
+  double p = 1.0-pow(x,2)-pow(y,2);
+  if (p > 0) SDL_SetRenderDrawColor(r,rand()%n,rand()%n,rand()%n,p*256);
+  return p>0;
+ }
+ static void drawCircle(SDL_Renderer*r, int x, int y, int n) {
+  for (int i = -8; i < 8; i++)
+    for (int j = -8; j < 8; j++) 
+     if(testCircle(r,i,j,n)) {
+     
+      SDL_RenderDrawPoint(r,x+i,y+j);
+     }
+ }
+ static void init(SDL_Renderer*r){
+   for (int i =0; i<16; i++)
+    dinks[i]=doTexture(r, 16, 64, i, 255);
+   for (int i =0; i<16; i++)
+    donks[i]=doTexture(r, 16, 64, i, 16);
+ }
+ static SDL_Texture * doTexture(SDL_Renderer*r, int x, int y, int n, int back) {
+  SDL_Texture * tex;
+  SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY,"0");
+  tex = SDL_CreateTexture( r, 
+   SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 
+    x,y );
+    SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
+  SDL_SetRenderTarget(r, tex);
+  SDL_SetRenderDrawColor(r,0,0,0,0);
+  SDL_SetRenderDrawBlendMode(r,SDL_BLENDMODE_NONE);
+  SDL_RenderClear(r);
+  
+  if (n&1) drawGerono(r,x>>1,(y>>3),-1, back);
+  if (n&2) drawCircle(r,x>>1,(y>>2)+(y>>3), back);
+  if (n&4) drawCircle(r,x>>1,(y>>1)+(y>>3), back);
+  if (n&8) drawGerono(r,x>>1,y-(y>>3),1, back);
+  SDL_SetRenderTarget(r,NULL);
+  return tex;
+ }
+ virtual void drawMustardX(SDL_Renderer*r,int x, int y){
+  SDL_Rect rrr={x,y,16,64};
+  SDL_SetTextureAlphaMod(dinks[deno_status%16],intensity*20);
+  SDL_RenderCopy(r, dinks[deno_status%16], NULL, &rrr);
+  rrr={x,y-64,16,64};
+  SDL_SetTextureAlphaMod(dinks[nume_status%16],intensity*20);
+  SDL_RenderCopy(r, dinks[nume_status%16], NULL, &rrr);
+ }
+ virtual void mouseButt(int x, int y) {
+  if ((x>0)&&(x<16)) {
+   FORI
+    if ((y>(16*i))&&(y<(16*(i+1))))
+     deno_status ^= 1<<i;
+   y = 0-y;
+   FORI
+    if ((y>(16*(3-i)))&&(y<(16*(4-i))))
+     nume_status ^= 1<<i;
+  }
+ }
+ void keyPress(SDL_Keycode k) {
+  switch (k) {
+   case SDLK_q: intensity=0; break;
+   case SDLK_w: intensity=1;break;
+   case SDLK_e: intensity=2;break;
+   case SDLK_r: intensity=3;break;
+   case SDLK_t: intensity=4;break;
+   case SDLK_y: intensity=5;break;
+   case SDLK_u: intensity=6;break;
+   case SDLK_i: intensity=7;break;
+   case SDLK_o: intensity=8;break;
+   case SDLK_p: intensity=9;break;
+   case SDLK_LEFTBRACKET: intensity=10;break;
+   case SDLK_RIGHTBRACKET: intensity=11;break;
+  }
+  //printf("intensityu:%d\n",intensity);
+ }
+};
+
+ SDL_Texture * RoyalMoutarde::dinks[16];
+  SDL_Texture * RoyalMoutarde::donks[16];
+#if defined(STDTR)
+#include <tr1/memory>
+#define TRCOLO std::tr1::
+#else
+#include <memory>
+#define TRCOLO std::
+#endif
+
+#define GL_GLEXT_PROTOTYPES
+
+#include <cmath>
+#include <vector>
+#include "SDL.h"
+//#undef main
+//#include "SDL2/SDL_video.h"
+
+//#include "SDL.h"
+
+bool testGerono(double x, double y) {
+ x = (x/100.0)- 0.5;
+ y = y/100.0;
+ printf("x%f y%f\n",x,y);
+ return (pow(y,4)<(pow(y,2)-pow(x,4)-pow(x,2)));
+}
+    SDL_Renderer *renderer = NULL;
+    SDL_Texture *bitmapTex = NULL;
+   SDL_Rect srcrect;
+Uint32 my_callbackfunc(Uint32 interval, void *param)
+{
+
+    return(10);
+}
+
+
+int main(int argc, char *argv[]) {
+    SDL_Window *win = NULL;
+ SDL_Surface *surface = NULL;
+    int posX = 100, posY = 100, width = 320, height = 240;
+
+    SDL_Init(SDL_INIT_VIDEO);
+
+    win = SDL_CreateWindow("Hello World", posX, posY, width, height, 
+    SDL_WINDOW_RESIZABLE);
+
+    renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
+
+srcrect.x=0;
+srcrect.y=0;
+srcrect.w=100;
+srcrect.h=100;
+
+    surface = SDL_CreateRGBSurface(0, 100, 100, 32, 0, 0, 0, 0);
+    SDL_LockSurface(surface);
+
+    /* This assumes that color value zero is black. Use
+       SDL_MapRGBA() for more robust surface color mapping! */
+    /* height times pitch is the size of the surface's whole buffer. */
+    SDL_memset(surface->pixels, 0, surface->h * surface->pitch);
+  	for (int i = 0; i < surface->h; i++)
+  	 for (int j = 0; j < surface->w; j++) {
+  	  int offset = i * surface->w + j ;
+  	  
+  	  int *target_pixel = (int *)surface->pixels+offset ;
+      if(testGerono(j,i)) *(Uint32 *)target_pixel = rand();
+  	 }// int*ix = surface->pixels + 
+  	 //((int*)surface->pixels))[i] = rand();
+  	 
+    SDL_UnlockSurface(surface);
+
+    bitmapTex = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_FreeSurface(surface);
+    SDL_TimerID my_timer_id = SDL_AddTimer(10, my_callbackfunc, NULL);
+					 SDL_Rect sss = {(char)rand(),(char)rand(),(char)rand(),(char)rand()};
+    while (1) {
+        SDL_Event e;
+        if (SDL_PollEvent(&e)) {
+            if (e.type == SDL_QUIT) 
+                break;
+            if (e.type==SDL_WINDOWEVENT) 
+              if (e.window.event==SDL_WINDOWEVENT_SIZE_CHANGED) {
+				  srcrect.x=0;
+srcrect.y=0;
+                srcrect.w = e.window.data1;
+                srcrect.h = e.window.data2;
+              }
+
+			        
+
+        }
+			  		 
+					 SDL_SetRenderDrawColor(renderer,0,0,0,255);
+					  SDL_RenderClear(renderer);
+//SDL_RenderFillRect(renderer,&srcrect);
+					 SDL_SetRenderDrawColor(renderer,rand(),rand(),rand(),255);
+
+SDL_RenderFillRect(renderer,&sss);
+        SDL_SetTextureBlendMode(bitmapTex, SDL_BLENDMODE_BLEND); 
+        SDL_SetTextureAlphaMod(bitmapTex,rand());
+        SDL_RenderCopy(renderer, bitmapTex, NULL, &srcrect);
+        SDL_RenderPresent(renderer);
+		SDL_Delay(33);
+
+    }
+
+    SDL_DestroyTexture(bitmapTex);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(win);
+
+    SDL_Quit();
+
+    return 0;
+}

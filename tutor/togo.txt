@@ -1,0 +1,10 @@
+;TOGO [a-h] is a sequence.
+ ;It has a trigger to make it advance,
+ ;And also a trigger for retreat.
+ ;Here, it is used as a reference for pitch:
+ {(togo (minor) (minorb) 
+ 24 25 32 33 36 40 48 
+) 
+ (left 
+ (horn (togo) 64))}
+doubleclick

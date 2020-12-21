@@ -1,0 +1,16 @@
+;FINGER is the active fret on SHTAR
+ ;It is one of 32 values, so,
+ ;It steps in increments of four or eight,
+ ;Depending on mode ARAB or DIRAC.
+ {(left 
+ (horn (finger) 22))} 
+ ;For 17tet, use it with SCALE:
+ {(left 
+ (horn (scale (finger)) 22)) 
+ (right 
+ (hornb (scale (finger)) 33))} 
+ ;this is the standard SHTAR tuning,
+ ;if you use a DENO of 22 and 33,
+ ;that makes a power chord reference
+ doubleclick
+doubleclick

@@ -1,0 +1,9 @@
+ALL ASSEMBLY, NO RULES!
+Shnth Assemblage copyright and copyleft Shbobo LLC.
+
+What does this mean?
+Shbobo reserves all rights to the interface and system design of the device known as the Shnth.  The DSP portion of the interface may be rewritten with users' codes, and this is where the copyleft comes in.  We want to allow users to mutate the sounds, and thus creative coding is encouraged here.  If you bought a Shnth, you are OK to reprogram it because you own it. 
+
+"wanilla" is copylefted.  It is the first version of the sound machinery for the Shnth, and your creativity is needed to evolve new "matrices".  It is wanilla, because it sounds polish, and alphabetically, the name "vanilla" would go before the "vectors", so it was decided that future matrices must have names that begin with w, x, y, and z.  Get creative: write wasabi, xexoctl.
+
+Shbobo reserves all rights to the language definition "Shlisp".

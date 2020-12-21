@@ -1,0 +1,17 @@
+;BAR is the four bar sensors on SHNTH.
+ ;There are four [a-d], use it for pitch
+ {(left 
+ (horn (bar) 64)) 
+ (right 
+ (hornb (barb) 64))} 
+ ;or a filter:
+ {(left 
+ (wave (saw 12 64) 10 (bar)))} 
+ ;or of course as envelope:
+ {(left 
+ (horn 64 64 (bar)))} 
+ ;equivalent to:
+ {(left 
+ (bar (horn 64 64)))} 
+ doubleclick
+doubleclick

@@ -1,0 +1,9 @@
+;MODO is like MUL but makes things super loud!
+ ;Also, when it goes past the boundaries, it RETURNs,
+ ;So it is kindof like waveshaping.
+ {(left 
+ (modo 
+ (horn 64 64) (corp)))} 
+ ;Note, attenuate with MUL to not break ears!
+
+doubleclick

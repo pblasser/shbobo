@@ -1,0 +1,5 @@
+;WHEEL is a variable voltage reference,
+ ;that you change by giving it UPP or DON
+ {(left 
+ (horn (wheel (barc) (bard)) 64))}
+doubleclick

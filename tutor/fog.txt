@@ -1,0 +1,14 @@
+;FOG [a-d] is four triangular grains:
+ ;A simple granular synthesis.
+ ;TRIG fires off another one.
+ ;SWNU is the speed of envelopes
+ ;SWDE is the width of envelopes
+ ;HONU is the speed of horns
+ ;HODE is the DENO of horns.
+ {(left 
+ (fog (dust (bar)) 
+ 12 64 ;constant envelopes
+ (smoke 4 35) ;random pitch
+ 64) 
+)}
+doubleclick

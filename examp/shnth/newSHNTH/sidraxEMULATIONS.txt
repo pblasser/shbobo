@@ -1,0 +1,26 @@
+;iocdssh
+{(jump (major 1 ))
+(pan (horn (horne (minor 49 )7 108 10 )(corp (hornd )86 ))(bar ))
+(pan (hornb (hornf (minorb 59 )-82 -107 -29 )(corpb (horn )-114 ))(barb ))
+(pan (hornc (horng (minorc -68 )92 36 -70 )(corp (hornb )-6 ))(barc ))
+(pan (hornd (hornh (minord -122 )-96 39 19 )(corpb (hornc )-101 ))(bard ))};sidsweet
+{(jump (major 1 ))
+(pan (horn (horne (minor 20 )100 100 50 )100 )(bar ))
+(pan (hornb (hornf (minorb 20 )100 100 50 )100 )(barb ))
+(pan (hornc (horng (minorc 20 )100 100 50 )100 )(barc ))
+(pan (hornd (hornh (minord 20 )100 100 50 )100 )(bard ))};wetesids
+{(jump (major 1 ))
+(pan (horn (horne (minor 86 )-24 32 -119 )-17 )(bar ))
+(pan (hornb (hornf (minorb 14 )19 -57 73 )-63 )(barb ))
+(pan (hornc (horng (minorc 91 )44 79 23 )9 )(barc ))
+(pan (hornd (hornh (minord 115 )-47 -123 -7 )-15 )(bard ))};sidchos
+{(jump (major 1 ))
+(pan (horn (horne (minor 20 )100 100 50 )(corp (hornd )60 ))(bar ))
+(pan (hornb (hornf (minorb 20 )100 100 50 )(corpb (horn )60 ))(barb ))
+(pan (hornc (horng (minorc 20 )100 100 50 )(corp (hornb )60 ))(barc ))
+(pan (hornd (hornh (minord 20 )100 100 50 )(corpb (hornc )60 ))(bard ))};shoicsd
+{(jump (major 1 ))
+(pan (horn (horne (minor 79 )78 -93 -67 )(corp (hornd )-89 ))(bar ))
+(pan (hornb (hornf (minorb 95 )39 121 22 )(corpb (horn )124 ))(barb ))
+(pan (hornc (horng (minorc -98 )96 -26 -84 )(corp (hornb )-114 ))(barc ))
+(pan (hornd (hornh (minord -5 )12 74 -80 )(corpb (hornc )-62 ))(bard ))}

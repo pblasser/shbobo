@@ -1,0 +1,7 @@
+;RETURN, a nut, processes two inputs
+ ;As named, it folds the INN off the other.
+ ;...waveshaping.
+ {(left 
+ (reflect (horn 64 64) (corp)) 
+)}
+doubleclick

@@ -1,0 +1,28 @@
+;moduTUNNEL
+{(left 
+(smoked (barc (hornc 4 43 )))(smokee (bard (hornb 2 50 )))
+(fog (dustb (corpb ))(smokeh 10 )(smokeh )(smokeh 1 64 )(smokeh 1 44 ))
+(stringb (majorb )1 11 )(stringc (major )1 33 )
+)
+(right (string (majorc )2 11 )(stringd (majord )1 22 )
+(fogb (dustc (corp ))(smokeh 10 )(smokeh 60 60 )(smokeh 1 64 )(smokeh 1 33 ))
+(smokef (bar (sawd 3 109 )))(smokeg (barb (sawe 4 -96 )))
+(horne (hornh (salsa (mountc 26 3 )(smokec ))50 )46 (minor ))
+(hornf (horng (smokec (mountc 26 3 8 8 ))56 )45 (minord )))};daimonEKI
+{(left (hornb 34 23 )
+(wave (smoke 64 )100 (square (mount 33 85 )1 5 14 ))
+(hornd 34 23 )
+)
+(jump (major 1 ))
+(right (horn 32 22 )
+(waveb (smoke 64 )100 (square (mount 33 55 )1 3 16 ))
+(hornc 32 22 )
+)};bb
+{(left (right (waveb (hornb (scale (finger )64 )22 )66 (slew (bridge )120 1 ))
+(wave (horn (scale (finger )64 )33 )66 (slewb (heart )120 1 ))))
+};bb
+{(right (horn (slewc (scale (ladder (mountb -33 32 )0 8 56 68 76 124 ))61 17 )22 (mount 37 -95 ))
+(waveb (saw 2 22 )100 (mounte 33 30 )))
+(left 
+(hornb (slew (scale (ladderb (mountc 22 32 )0 8 56 68 76 124 ))2 89 )33 (mountd 89 -95 )))};bb
+{(left (right (comb (salt (bridge )-81 10 )1 120 120 )))(srate 20 )}

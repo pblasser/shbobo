@@ -1,0 +1,188 @@
+; 
+{
+(srate (corp 10 100 ))
+(left (left (left (left ; -12
+(comb 
+(wave 
+(dust 2 5 )
+1 
+(corp 60 60 ))
+1 100 100 )
+(arab (combb (add (haze 
+(dustb (barb 80 ))
+(smokeb 1 3 )
+10 
+(smokeb 10 60 )
+80 )
+(hazeb 
+(dustb (barc 80 ))
+(smokeb 1 3 )
+10 
+(smokeb 10 60 )
+80 ))1 200 200 ))
+))))
+(right (right (right (right ; -12
+(combc 
+(waveb 
+(dustc 2 5 )
+1 
+(corpb 60 60 ))
+1 100 100 )
+(arab (combd (add (hazec 
+(hornf (bar 80 ))
+(smokeb 1 3 )
+10 
+(smokeb 10 60 )
+80 )
+(hazeb 
+(horne (bard 80 ))
+(smokeb 1 3 )
+10 
+(smokeb 10 60 )
+80 ))1 200 200 ))
+))))
+(jump (minor 1 ))
+(lights (corp ))
+}; 
+{
+;this is to brake it
+;(srate (corp 4 2))
+;(corp 120 64))
+(left (left 
+(swamp (dust (bar 30 ))
+(smoke 1 8 )
+40 
+(smoke 10 100 )
+50 
+)
+(swampc (dustc (barc 30 ))
+(smoke 1 8 )
+40 
+(smoke 10 100 )
+50 
+)
+))
+(right (right 
+(swampb (dustb (barb 30 ))
+(smoke 1 3 )
+10 
+(smoke 10 60 )
+20 
+)
+(swampd (dustd (bard 30 ))
+(smoked 1 3 )
+10 
+(smoked 10 60 )
+20 
+)
+))
+(jump (minor 1 ))
+}; 
+{
+(srate 12 )
+(left -120 (arab 
+(swamp (dust (bar 30 ))
+(smoke 1 3 )
+80 
+(smoke 10 60 )
+200 
+)
+(swampc (dustc (barc 30 ))
+(smoke 1 3 )
+80 
+(smoke 10 60 )
+200 
+)
+))
+(right -120 (arab 
+(swampb (dustb (barb 30 ))
+(smoke 1 3 )
+80 
+(smoke 10 60 )
+200 
+)
+(swampd (dustd (bard 30 ))
+(smoke 1 3 )
+80 
+(smoke 10 60 )
+200 
+)
+))
+(jump (minor 1 ))
+}; 
+{
+(left 
+(string (dust 5 ))
+(stringb 
+(dustb 2 )1 
+(mul (stringd )30 10 ))
+)
+(right 
+(stringc (dustc 4 ))
+(stringd 
+(dustd 3 )1 
+(mul (stringb )30 10 ));10)
+)
+(srate (corp -28 28 ))
+(jump (minor 1 ))
+}; 
+{
+(jump (minor 1 ))
+}; 
+{
+(jump (minor 1 ))
+(togo (square (bar ))5 8 13 11 22 27 )
+(togob (square (barb ))10 14 8 18 16 22 27 )
+(togoc (square (barc ))22 28 11 18 32 22 27 )
+(togod (square (bard ))26 36 31 43 24 29 22 27 )
+(srate 12 )
+(left 
+(wave (square (bar )50 10 )
+1 
+(togo ))
+(wavec (square (barc )50 10 )
+1 
+(togoc ))
+)
+(right 
+(waveb 
+(square (barb )50 10 )
+1 
+(togob ))
+(waved (square (bard )50 10 )
+1 
+(togod ))
+)
+}; 
+{
+(left 
+(horn 54 (short 45 115 )
+(smoke 10 (bar )))
+(hornb 54 (short 45 126 )
+(smokeb 10 (barb )))
+)
+(right 
+(hornc 81 (short 45 134 )
+(smokeb 10 (barc )))
+(hornd 81 (short 45 143 )
+(smokeb 10 (bard )))
+)
+(srate (corp -28 28 ))
+(jump (minor 1 ))
+}; 
+{
+(left 
+(horn 54 (short 45 145 )
+(smoke 10 80 ))
+(hornb 54 (short 45 146 )
+(smokeb 10 80 ))
+)
+(right 
+(hornc 81 (short 45 144 )
+(smokeb 10 80 ))
+(hornd 81 (short 45 143 )
+(smokeb 10 80 ))
+)
+(srate (corp -28 28 ))
+(jump (minor 1 ))
+}

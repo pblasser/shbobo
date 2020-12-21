@@ -1,0 +1,20 @@
+;BEND, along with JUMP
+ ;is how to change SOUPs
+ ;or presets. BEND is more raw and hackerly than JUMP
+ ;BEND does nothing on zero INN
+ ;Nonzero INN makes it go!
+ {(left 
+ (horn 64 64)) 
+ (bend (bar))} {(left 
+ (smoke)) 
+ (bend (bar))} {(left 
+ (horn 24 64)) 
+ (bend (bar))} 
+ {(left 
+ (horn 12 64)) 
+ (bend (bar))} {(left 
+ (smoke)) 
+ (bend (bar))} {(left 
+ (horn 67 64)) 
+ (bend (bar))}
+doubleclick

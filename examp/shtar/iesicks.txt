@@ -1,0 +1,23 @@
+;cc
+{
+(left (salt (add (horn 114 (minor 50 50 )(corp ))
+(hornb 114 (major 34 34 )(bar ))
+(hornc 114 (majorb 47 47 )(corpb ))
+(hornd 114 (minorb 33 33 )(barb ))
+(horne 114 (majorb 22 22 )(corp ))
+(hornf 114 (majorc 15 15 )(corpb ))
+(horng 114 (minorc 10 10 )(barc ))
+(hornh 57 75 (bard )))40 (mountb 32 120 )))};cc
+{(left (wave (add (saw 57 (minor 50 50 )(corp ))
+(sawb 57 (major 34 34 )(bar ))
+(sawc 57 (majorb 47 47 )(corpb ))
+(sawd 57 (minorb 33 33 )(barb ))
+(sawe 57 (majorb 22 22 )(corp ))
+(sawf 57 (majorc 15 15 )(corpb ))
+(sawg 57 (minorc 10 10 )(barc ))
+(sawh 28 75 (bard )))40 (mount 33 120 )))
+(srate 64 )
+};bb
+{(left (waveb (zither (dust (bar 20 ))(togo (dustb 61 )-2 100 68 47 33 22 15 10 ))100 (bar 30 50 ))
+(stringb (barb 100 10 )4 100 )(stringc (barc 100 10 )4 68 )(stringd (bard 100 10 )2 75 ))
+(srate 18 )}

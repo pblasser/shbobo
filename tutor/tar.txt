@@ -1,0 +1,6 @@
+;TAR gives you the TAR button;
+ ;It is orange on SHNTH,
+ ;and top fret on SHTAR.
+ {(left 
+ (horn 64 64 (tar)))}
+doubleclick

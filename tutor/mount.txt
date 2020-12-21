@@ -1,0 +1,7 @@
+;MOUNT [a-h] is a slow triangle wave.
+ ;NUME is how fast it rises and falls.
+ ;DENO is how far it rises and falls.
+ {(left 
+ (mount 64 64 (horn 64 64)) 
+)}
+doubleclick

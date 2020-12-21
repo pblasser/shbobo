@@ -1,0 +1,14 @@
+;NEGWON only outputs negative one!
+ {(left 
+ (horn (negwon) 61) 
+)} 
+ ;equivalent to:
+ {(left 
+ (horn -1 61) 
+)} 
+ ;BTW, shlisp will make the -1 into (negwon)
+ ;It's because -1 is the bytecode for "("
+ ;or, "begin fish."
+ ;go away!
+
+doubleclick

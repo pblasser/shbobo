@@ -1,0 +1,60 @@
+;bb
+{(bend (finger 32 ))(srate 45 )};kjhf
+{(bend (tar ))(left 
+(horn (scale (finger ))33 (top )))
+
+(right 
+(hornb (scaleb (finger ))22 (bot )))};tarfog
+{(srate 20 )(bend (tar ))
+(left 
+(water (mountb 56 4 )(smoked 1 )(finger ))
+(fog (dust (heart 64 ))(smoke 11 1 )(smokeb )
+(smokec (short 0 64 )(scale (finger )))36 ))
+(
+right (string (mount 57 4 )1 (finger ))
+(fogb (dustb (heart 64 ))(smoke 11 1 )(smokeb )
+(smokec (short 0 64 )(scale (finger )))24 ))};moduTUNNEL
+{(bend (tar ))(left 
+(smoked (hornc 4 43 5 ))(smokee (hornb 2 50 5 ))
+(fog (dustb (corpb ))(smokeh 10 )(smokeh )(smokeh 1 64 )(smokeh 1 44 ))
+(stringb (majorb )1 11 )(stringc (major )1 33 )
+)
+(right (string (majorc )2 11 )(stringd (majord )1 22 )
+(fogb (dustc (corp ))(smokeh 10 )(smokeh 60 60 )(smokeh 1 64 )(smokeh 1 33 ))
+(smokef (sawd 3 109 5 ))(smokeg (sawe 4 -96 5 ))
+(horne (hornh (salsa (mountc 26 3 )(smokec ))50 )46 (minor ))
+(hornf (horng (smokec (mountc 26 3 8 8 ))56 )45 (minord )))};cc
+{(bend (tar ))(left (wave (add (saw 57 (minor 50 50 )(corp ))
+(sawb 57 (major 34 34 )(bar ))
+(sawc 57 (majorb 47 47 )(corpb ))
+(sawd 57 (minorb 33 33 )(barb ))
+(sawe 57 (majorb 22 22 )(corp ))
+(sawf 57 (majorc 15 15 )(corpb ))
+(sawg 57 (minorc 10 10 )(barc ))
+(sawh 28 75 (bard )))40 (mount 33 120 )))
+(srate 64 )
+};bb
+{(bend (tar ))(left (waveb (zither (dust (bar 20 ))(togo (dustb 61 )-2 100 68 47 33 22 15 10 ))100 (bar 30 50 ))
+(stringb (barb 100 10 )4 100 )(stringc (barc 100 10 )4 68 )(stringd (bard 30 
+16 20 )2 75 ))
+(srate 18 )};bb
+{(bend (tar ))(left (right (waveb (hornb (scale (finger )64 )22 )66 (slew (bridge )120 1 ))
+(wave (horn (scale (finger )64 )33 )66 (slewb (heart )120 1 ))))
+};bb
+{(bend (tar ))(right (horn (slewc (scale (ladder (mountb -33 32 )0 8 56 68 76 124 ))61 17 )22 (mount 37 -95 ))
+(waveb (saw 2 22 )100 (mounte 33 30 )))
+(left 
+(hornb (slew (scale (ladderb (mountc 22 32 )0 8 56 68 76 124 ))2 89 )33 (mountd 89 -95 )))};bb
+{(left (wave 
+(sauce 3 (comb 
+(leak (bridge )100 )1 100 126 ))
+34 (bot ))
+)
+(right (waveb (saw 23 100 20 
+)20 (slew (brass 60 )30 1 ))
+(wavec (steel 50 )1 12 ))
+(bend (tar ))};bb
+{(bend (tar ))(left (right (comb (salt (bridge )-81 10 )1 120 120 )))(srate 20 )};bb
+{(bend (tar ))(left (hornc (corp 1 1 )(mount 120 88 )))(right (horn (corpb 1 1 )(mountb 120 99 )))};bb
+{(bend (tar ))(left (wave (modo (leak (bard )13 )5 )20 (mount 120 30 120 20 )))};bb
+{(bend (tar ))(left (square (slew )1 (slew (bard -126 26 )1 126 )))}

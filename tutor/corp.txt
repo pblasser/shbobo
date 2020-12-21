@@ -1,0 +1,20 @@
+;CORP is the antenna on the SHNTH
+ ;There are two [a-b]. Here it controls NUME:
+ {(left 
+ (horn (corp) 64)) 
+ (right 
+ (hornb (corpb) 64))} 
+ ;don't forget to tare it, press orange button.
+ ;Or use it as a multiply for drones:
+ {(left 
+ (horn 64 64 (corp))) 
+ (right 
+ (hornb 66 64 (corpb)))} 
+ ;Equivalent to:
+ {(left 
+ (corp (horn 64 64))) 
+ (right 
+ (corpb (hornb 66 64)))} 
+ doubleclick 
+
+doubleclick

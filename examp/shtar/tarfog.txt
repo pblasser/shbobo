@@ -1,0 +1,4 @@
+;tarfog
+{(srate 20 )(left (water (mountb 56 4 )(smoked 1 )(finger ))(fog (dust (heart 64 ))(smoke 11 1 )(smokeb )(smokec (short 0 64 )(scale (finger )))36 ))
+(
+right (string (mount 57 4 )1 (finger ))(fogb (dustb (heart 64 ))(smoke 11 1 )(smokeb )(smokec (short 0 64 )(scale (finger )))36 ))}

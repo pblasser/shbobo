@@ -1,0 +1,7 @@
+;PULSE is kindof like the opposite of SLAVE
+ ;TRIGger it to its DENO, and then it decays,
+ ;It can be used as a trigger for something slower
+ {(left 
+ (smoke (pulse (dust 10) 40)) 
+ (swoop (pulse) 4 40 (horn 64 64)))}
+doubleclick

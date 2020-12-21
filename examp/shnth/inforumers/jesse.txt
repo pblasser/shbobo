@@ -1,0 +1,93 @@
+;saltzstringz
+{(jump (tar 1 ))(lights 2 )
+(left 
+(salt (string (bar 100 40 )1 (corp 1 (wheel (major 120 )(minor 120 ))))(corp 12 8 ))
+(saltc (stringc (barc 100 40 )1 (corpb 1 (wheelc (majorc 120 )(minorc 120 ))))(corpb 12 8 )1 )
+)
+(right 
+(saltb (stringb (barb 100 40 )1 (corp 15 (wheelb (majorb 120 )(minorb 120 ))))(corp 12 8 )2 )
+(saltd (stringd (bard 100 50 )1 (corpb 20 (wheeld (majord 120 )(minord 120 ))))(corpb 12 8 )3 )
+)
+};zitherrrr
+{
+(jump (tar 1 ))(lights 1 )(srate (short 25 21 ))
+(left 
+(zitherb (barb 100 40 )(corp 15 (wheelb (majorb 120 )(minorb 120 )))90 )
+(zither (bar 100 40 )(corp 20 (wheel (major 120 )(minord 120 )))90 )
+)
+(right 
+(zitherc (barc 100 40 )(corpb 15 (wheelc (majorc 120 )(minorc 120 )))90 )
+(zitherd (bard 100 40 )(corpb 20 (wheeld (majord 120 )(minord 120 )))90 ))
+};saltystringss
+{(jump (tar 1 ))(lights 16 )
+(left 
+(saltb (stringb (square ((return corp -10 ))-10 )(-1 (togob (square (majorb ))10 2 3 4 ))(barb 20 40 ))(barb 20 40 )(corp ))
+(salt (string (square ((return corp -60 ))-60 )(-1 (togo (square (major ))10 1 2 3 ))(bar 20 40 ))(bar 20 40 )(corp ))
+)
+(right 
+(saltd (stringd (square ((return corpb -10 ))-10 )(-1 (togod (square (majord ))10 4 5 ))(bard 20 40 ))(bard 20 40 )(corpb ))
+(saltc (stringc (square ((return corpb -60 ))-60 )(-1 (togoc (square (majorc ))10 3 4 5 ))(barc 20 40 ))(barc 20 40 )(corpb ))
+)};pluckstrings
+{(jump (tar 1 ))(srate (short 19 125 ))
+(left 
+(saltb (stringb (square ((return corp -10 ))-10 )(-1 (togob (square (majorb ))10 2 3 4 ))(barb 20 40 ))(barb 20 40 )(corp ))
+(salt (string (square ((return corp -60 ))-60 )(-1 (togo (square (major ))10 1 2 3 ))(bar 20 40 ))(bar 20 40 )(corp ))
+)
+(right 
+(saltd (stringd (square ((return corpb -10 ))-10 )(-1 (togod (square (majord ))10 4 5 ))(bard 20 40 ))(bard 20 40 )(corpb ))
+(saltc (stringc (square ((return corpb -60 ))-60 )(-1 (togoc (square (majorc ))10 3 4 5 ))(barc 20 40 ))(barc 20 40 )(corpb ))
+)};waveystrings
+{(jump (tar 1 ))(lights 8 )
+(left 
+(waveb (stringb (square ((return corp -10 ))-10 )(-1 (togob (square (majorb ))10 2 3 4 ))(barb 20 40 ))25 20 )
+(wave (string (square ((return corp -60 ))-60 )(-1 (togo (square (major ))10 1 2 3 ))(bar 20 40 ))25 25 )
+)
+(right 
+(waved (stringd (square ((return corpb -10 ))-10 )(-1 (togod (square (majord ))10 4 5 ))(bard 20 40 ))25 30 )
+(wavec (stringc (square ((return corpb -60 ))-60 )(-1 (togoc (square (majorc ))10 3 4 5 ))(barc 20 40 ))25 35 )
+)};stringystrings
+{(jump (tar 1 ))(lights 4 )
+(left 
+(string (square ((return corp -60 ))-60 )(-1 (togo (square (major ))10 1 2 3 4 ))(bar 20 40 ))
+(stringb (square ((return corp -10 ))-10 )(-1 (togob (square (majorb ))10 3 4 5 6 ))(barb 20 40 )))
+(right 
+(stringc (square ((return corpb -60 ))-60 )(-1 (togoc (square (majorc ))10 5 6 7 8 ))(barc 20 40 ))
+(stringd (square ((return corpb -10 ))-10 )(-1 (togod (square (majord ))10 7 8 9 10 ))(bard 20 40 )))};saltedstrings
+{(jump (tar 1 ))
+(left 
+(salt (string (square (sauce 10 (swoop (square ((return corpb -10 ))-10 )30 127 ))31 )1 (corp ))10 )
+(saltb (stringb (square (sauce )108 )2 (corp ))10 )
+)
+(right 
+(saltd (stringd (square (sauce )106 )4 (corp ))10 )
+(saltc (stringc (square (sauce )104 )6 (corp ))10 ))};stringz
+{(jump (tar 1 ))(lights 1 )(srate (short 25 21 ))
+(left 
+(string (square ((return corp -10 ))-10 )2 (bar 20 40 ))
+(stringb (square ((return corp -60 ))-60 )1 (barb 20 40 ))
+)
+(right 
+(stringc (square ((return corpb -10 ))-10 )4 (barc 20 40 ))
+(stringd (square ((return corpb -60 ))-60 )3 (bard 20 40 ))
+)
+};stringb
+{(jump (tar 1 ))(lights 1 )(srate (short 19 125 ))
+(left 
+(string (square ((return corp -10 ))-10 )2 (bar 20 40 ))
+(stringb (square ((return corp -60 ))-60 )1 (barb 20 40 ))
+)
+(right 
+(stringc (square ((return corpb -10 ))-10 )4 (barc 20 40 ))
+(stringd (square ((return corpb -60 ))-60 )3 (bard 20 40 ))
+)
+};string
+{(jump (tar 1 ))(lights 1 )(srate (short 16 102 ))
+(left 
+(string (square ((return corp -10 ))-10 )2 (bar 20 40 ))
+(stringb (square ((return corp -60 ))-60 )1 (barb 20 40 ))
+)
+(right 
+(stringc (square ((return corpb -10 ))-10 )4 (barc 20 40 ))
+(stringd (square ((return corpb -60 ))-60 )3 (bard 20 40 ))
+)
+}

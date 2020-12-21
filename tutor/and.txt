@@ -1,0 +1,7 @@
+;AND, a nut, processes two inputs
+ ;As named, it ANDs the INN off the other.
+ ;...waveshaping.
+ {(left 
+ (and (horn 64 64) (corp)) 
+)}
+doubleclick

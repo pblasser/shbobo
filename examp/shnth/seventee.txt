@@ -1,0 +1,67 @@
+;cadence
+{(srate 38 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights 128 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (modo (left (horn (togo (minor )(minorb )4 7 13 12 )(togo (minor )(minorb )3 6 12 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )11 12 12 12 )(togo (minor )(minorb )6 6 8 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))5 ))
+(right (modo (right (hornc (togo (minor )(minorb )12 12 8 7 )(togo (minor )(minorb )4 4 3 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )13 12 11 12 )(togo (minor )(minorb )3 3 3 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)5 ))
+};cadenceb
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights 64 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (horn (togo (minor )(minorb )13 28 12 )(togo (minor )(minorb )12 27 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )12 12 12 )(togo (minor )(minorb )8 8 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))
+(right (hornc (togo (minor )(minorb )8 8 7 )(togo (minor )(minorb )3 3 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )11 23 12 )(togo (minor )(minorb )3 6 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)};cadencec
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights 32 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (horn (togo (minor )(minorb )13 28 12 )(togo (minor )(minorb )12 27 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )12 14 12 )(togo (minor )(minorb )8 9 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))
+(right (hornc (togo (minor )(minorb )8 22 7 )(togo (minor )(minorb )3 9 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )11 23 12 )(togo (minor )(minorb )3 6 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)};cadenced
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights 16 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (horn (togo (minor )(minorb )8 13 28 12 )(togo (minor )(minorb )7 12 27 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )12 12 12 12 )(togo (minor )(minorb )8 8 8 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))
+(right (hornc (togo (minor )(minorb )8 8 8 7 )(togo (minor )(minorb )3 3 3 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )14 11 23 12 )(togo (minor )(minorb )4 3 6 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)};cadencee
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights -64 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (horn (togo (minor )(minorb )8 13 28 12 )(togo (minor )(minorb )7 12 27 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )12 12 12 12 )(togo (minor )(minorb )8 8 8 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))
+(right (hornc (togo (minor )(minorb )8 18 22 7 )(togo (minor )(minorb )3 7 9 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )14 11 23 12 )(togo (minor )(minorb )4 3 6 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)};cadencee
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights -32 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (saw (togo (minor )(minorb )8 13 28 12 )(togo (minor )(minorb )7 12 27 12 )(add (slew )(minorb )(bard (modo (sawd )44 ))))
+(sawb (togo (minor )(minorb )12 12 12 12 )(togo (minor )(minorb )8 8 8 8 )(add (slew )(minorb )(bar (modo (saw )44 )))))
+(right (sawc (togo (minor )(minorb )8 18 22 7 )(togo (minor )(minorb )3 7 9 3 )(add (slew )(minorb )(barb (modo (sawb )44 
+))))
+(sawd (togo (minor )(minorb )14 11 23 12 )(togo (minor )(minorb )4 3 6 3 )(add (slew )(minorb )(barc (modo (sawc )44 ))))
+)};ncedace
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;newmodo mastr1816 asr8
+;retick in juliatabs inherited to julia
+;note that one togo is used for everything.  it is reused
+(lights (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (horn (togo (minor )(minorb )84 80 -46 2 )(togo (minor )(minorb )-9 -11 -101 25 )(add (slew )(minorb )(bard (modo (hornd )-54 ))))
+(hornb (togo (minor )(minorb )109 -40 -67 -22 )(togo (minor )(minorb )-46 -74 85 -92 )(add (slew )(minorb )(bar (modo (horn )-54 )))))
+(right (hornc (togo (minor )(minorb )-24 14 45 21 )(togo (minor )(minorb )-33 -68 -75 53 )(add (slew )(minorb )(barb (modo (hornb )68 
+))))
+(hornd (togo (minor )(minorb )12 93 -20 -111 )(togo (minor )(minorb )-78 -67 98 52 )(add (slew )(minorb )(barc (modo (hornc )52 ))))
+)}

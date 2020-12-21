@@ -1,0 +1,80 @@
+;noisus
+{(jump (minor 1 (major -1 )))(lights 1 )(srate (short 40 -40 
+))
+(left (right (salt (dust 2 (salsa (horn (dustf 2 32 44 )55 )(smoke 16 ))
+(dustb (dustd 1 9 )))
+50 (dustc 2 ))
+(waveb (saw 12 44 (bar ))40 22 );12/11
+(wavec (sawb 22 44 (bard ))40 22 );11/11
+))};parisoto
+{(jump (minor 1 (major -1 )))(lights 2 )(srate (short 20 -20 ));tunue to a 440
+(left (right (horn (corpb (hornb )44 )44 (bar ));11/11
+(hornb (corp (hornc )48 )44 (barb ));12/11
+(hornc (corpb (hornd )56 )44 (barc ));14/11
+(hornd (corp (horn )64 )44 (bard ));16/11
+)
+)};parisran
+{(jump (minor 1 (major -1 )))(lights 4 )(srate (short 40 -40 
+));tunue to a 440
+(left (fog (dust (bar ))(corpb 40 42 )48 96 (smokeh 1 40 ))
+(fogb (dustb (barb ))(corp 40 42 )48 112 (smokeh 1 44 ))
+(hornc (corpb (hornd )48 )36 (barc ))(hornd (corp (horn )64 )44 (bard ))
+)(right (fogc (dustc (barc ))(corp 40 42 )48 96 (smokeh 1 36 ))
+(fogd (dustd (bard ))(corpb 40 42 )48 96 (smokeh 1 33 ))
+(horn (corpb (hornb )48 )40 (bar ))(hornb (corp (hornc )56 )44 (barb )))};parisuto
+{(jump (minor 1 (major -1 )))(lights 8 )(srate (short 20 -20 
+));tunue to a 440
+(right (horn 96 48 (bar (corp (horng (mul (hornh )32 1 )100 )-64 )))
+(hornc 96 40 (barc (corp (hornh (mul (horng )21 1 )100 )-64 )))
+;14/11
+(wave (hazec (dustc (corp 8 (short 8 8 )))(smokec )33 48 (smokeh 1 18 ))12 45 )
+(fogd (dustd (corp 8 (short 8 63 )))(smoked )33 48 (smokeh 1 22 ))
+;12/11
+;11/1
+)(left (hornd 96 36 (bard (corp (horne (mul (hornf )45 1 )100 )-64 )))
+(hornb 96 44 (barb (corp (hornf (mul (horne )43 1 )100 )-64 )))
+(waveb (haze (dust (corp 8 (short 8 13 )))(smokef )33 48 (smokeh 1 24 ))12 55 )
+(swampb (dustb (corp 8 (short 8 12 )))(smokee )33 48 (smokeh 1 20 ))
+)};cectsrik
+{(jump (minor 1 (major -1 )))(lights 16 )(srate (short 40 -40 
+));tunue to a 440
+(left (waveb (haze (dust (corp -89 (short 95 39 )))(smokef )121 22 (smokeh 124 -98 ))96 -26 )
+(swampb (dustb (corp -84 (short -114 -5 )))(smokee )12 74 (smokeh -80 -62 ))
+(hornb 88 60 (barc (corp (hornf (mul (horne )31 -5 )78 )81 )))
+(hornd 56 49 (bar (corp (horne (mul (hornf )7 108 )10 )86 )))
+)(right ;11/11
+(horn 59 -82 (barb (corp (horng (mul (hornh )-107 -29 )-114 )-100 )));14/11
+(wave (hazec (dustc (corp 92 (short 36 -70 )))(smokec )-6 -122 (smokeh -96 39 ))19 -101 )
+(fogd (dustd (corp -76 (short 93 -52 )))(smoked )117 108 (smokeh 8 22 ))
+(hornc 88 86 (bard (corp (hornh (mul (horng )-24 32 )-119 )-100 )));12/11
+;11/1
+)};nedisuto
+{(jump (minor 1 (major -1 )))(lights 32 )(srate (short 20 -20 
+));tunue to a 440
+(left (hornd 96 48 (barc (corp (horne (mul (hornf )45 1 )100 )-64 )))
+(horn 96 56 (barb (corp (horng (mul (hornh )32 1 )100 )-64 )))
+
+(waveb (haze (dust (corp 8 (short 8 13 )))(smokef )33 48 (smokeh 1 24 ))12 55 )
+(swampb (dustb (corp 8 (short 8 12 )))(smokee )33 48 (smokeh 1 22 ))
+)(right 
+(hornb 96 44 (bard (corp (hornf (mul (horne )43 1 )100 )-64 )))
+(hornc 96 64 (bar (corp (hornh (mul (horng )21 1 )100 )-64 )))
+(wave (hazec (dustc (corp 8 (short 8 8 )))(smokec )33 48 (smokeh 1 28 ))12 45 )
+(fogd (dustd (corp 8 (short 8 63 )))(smoked )33 48 (smokeh 1 32 ))
+)};nedisran
+{(jump (minor 1 (major -1 )))(lights 64 )(srate (short 40 -40 
+));tunue to a 440
+(left (fog (dust (bar ))(corpb 40 42 )48 72 (smokeh 1 48 ))
+(fogb (dustb (barb ))(corp 40 42 )48 72 (smokeh 1 44 ))
+(hornc 48 (corpb (hornd )56 )(barc ))(hornd 40 (corp (horn )44 )(bard ))
+)(right (fogc (dustc (barc ))(corp 40 42 )48 96 (smokeh 1 56 ))
+(fogd (dustd (bard ))(corpb 40 42 )48 80 (smokeh 1 44 ))
+(horn 36 (corpb (hornb )48 )(bar ))(hornb 36 (corp (hornc )44 )(barb )))};nedisoto
+{(jump (minor 1 (major -1 )))(lights -128 )(srate (short 20 -20 
+));tunue to a 440
+(left (right (horn 48 (corpb (hornb )44 )(bard ));12/11
+(hornb 44 (corp (hornc )44 )(barc ));11/11
+(hornc 40 (corpb (hornd )44 )(barb ));10/11
+(hornd 36 (corp (hornc )44 )(bar ));9/11
+)
+)}

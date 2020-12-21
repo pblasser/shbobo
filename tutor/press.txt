@@ -1,0 +1,10 @@
+;PRESS is a compressor!
+ {(left 
+ (press 
+ (add (smoke 20) (horn -78 100 (pulse (dust 10) 100)) 
+ (hornb 126 -119 (barb)) 
+ (hornc 41 -49 (barc)) 
+ (hornd 125 61 (bard))) 
+ 100 100 100) 
+)}
+doubleclick

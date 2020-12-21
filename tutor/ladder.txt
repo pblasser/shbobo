@@ -1,0 +1,25 @@
+; togo takes triggers and moves a sort of cursor.
+ ;in ladder, the cursor is simply its input.
+ ;again its designed for fingering, but can take anything. 
+ ;divides up the full range into up to 32 slots.
+ {(left 
+ (horn (ladder (finger) 
+ ;happy birthday
+ 24 24 36 36 40 40 36 36 
+ 32 32 30 30 27 27 24 24) 64))} 
+ 
+ {(left 
+ (saw 
+ (ladder (mount 64 64) 
+ ;happy birthday
+ 24 24 36 36 40 40 36 36 
+ 32 32 30 30 27 27 24 24) 
+ 128 
+ (reflect (mount) 4) 
+)) (right 
+ (fog (dust 10) 
+ (smoke) (smoke) 
+ (smoke 1 (ladder)) 4 
+))} 
+
+doubleclick

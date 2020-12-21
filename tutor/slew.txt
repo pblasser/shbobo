@@ -1,0 +1,9 @@
+;The Columbia Slough changes direction with the tide...
+ ;A SLEW is just that, it relieves sharp direction changes.
+ ;UPP is how fast to rise.
+ ;DON is how fast to fall.
+ {(left 
+ (slew (minor) 100 1 (horn 66 60 32)) 
+ (slewb (minorb) 1 100 (hornb 64 64 32)) 
+)}
+doubleclick

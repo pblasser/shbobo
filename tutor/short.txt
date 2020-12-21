@@ -1,0 +1,7 @@
+;SHORT gives you fine control over numbers.
+ ;A regular number is an 8-bit byte
+ ;But short is a 16-bit short!
+ {(left 
+ (horn (short 64 (corp)) 64))} 
+
+doubleclick

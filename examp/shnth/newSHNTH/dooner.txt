@@ -1,0 +1,117 @@
+;sidsweet
+{(jump (major 1 ))
+(pan (horn (horne (minor 20 )100 100 50 )100 )(bar ))
+(pan (hornb (hornf (minorb 20 )100 100 50 )100 )(barb ))
+(pan (hornc (horng (minorc 20 )100 100 50 )100 )(barc ))
+(pan (hornd (hornh (minord 20 )100 100 50 )100 )(bard ))};sidchos
+{(jump (major 1 ))
+(pan (horn (horne (minor 20 )100 100 50 )(corp (hornd )60 ))(bar ))
+(pan (hornb (hornf (minorb 20 )100 100 50 )(corpb (horn )60 ))(barb ))
+(pan (hornc (horng (minorc 20 )100 100 50 )(corp (hornb )60 ))(barc ))
+(pan (hornd (hornh (minord 20 )100 100 50 )(corpb (hornc )60 ))(bard ))};steveWATER
+{
+(jump (major 1 ))
+(togo (square (bar ))5 8 10 12 4 8 )
+(togob (square (barb ))10 14 8 18 16 20 )
+(togoc (square (barc ))22 28 16 18 32 27 )
+(togod (square (bard ))26 36 38 43 24 29 21 )
+(srate (toggle (minorc )110 12 ))
+(left 
+(wave (square (bar )50 10 )
+1 
+(togo ))
+(wavec (square (barc )50 10 )
+1 
+(togoc ))
+)
+(right 
+(waveb 
+(square (barb )50 10 )
+1 
+(togob ))
+(waved (square (bard )50 10 )
+1 
+(togod ))
+)
+};donkfish
+{(left (comb (swampb (dust 7 )22 (barc )(smoke )11 )3 (mountb 5 -65 44 44 )(barc )))
+(right (combb (swampc (dustb 7 )22 (barb )(smoke )11 )3 (mountd 120 -65 44 44 )(barb )))(jump (major 1 (minor -1 )))};moduTUNNEL
+{(left (hornc (horn (salsac (mount 28 3 )(smoked ))50 )46 (minorb ))
+(hornd (hornb (salsab (mountd 25 3 )(smoked ))56 )45 (minorc ))
+(smoked (barc (sawc 4 43 )))(smokee (bard (sawb 2 50 )))
+(fog (dustb (corpb ))(smokeh )(smokeh )(smokeh )(smokeh ))
+(stringb (majorb )1 12 )(stringc (major )1 12 )
+)
+(jump (major 1 ))
+(right (string (majorc )2 12 )(stringd (majord )1 57 )
+(fogb (dustc (corp ))(smokeh )(smokeh )(smokeh )(smokeh ))
+(smokef (bar (sawd 3 109 )))(smokeg (barb (sawe 4 -96 )))
+(horne (hornh (salsa (mountc 26 3 )(smokec ))50 )46 (minor ))
+(hornf (horng (smokec (mountc 26 3 8 8 ))56 )45 (minord )))};beachHEAD
+{
+(jump (major 1 ))
+(salsa (square (bar )(barb ))
+(barc ))
+(salsab (square (barc )(bard ))
+(barb ))
+(left ;-100
+(horn 
+(mul (salsa )20 21 )
+(corpb 20 20 )
+(bar ))
+)
+(right ;-100 
+(wave 
+(sawc 
+(mul (salsab )20 22 )
+(corp 20 20 )
+(barb ))
+10 
+(modo (corpb 10 20 )33 103 10 )
+)
+)
+(arab 
+(pan 
+(fog (dust 3 )
+2 83 (modo (corp 10 20 )(corpb 4 4 )200 34 )133 )
+100 
+)
+(right 
+(swoopc (minorc )1 50 (smoked 60 ))
+)
+)
+(left 
+(swoopb (minorb )1 50 (smoked 60 ))
+)
+};cadencee
+{(srate 36 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights -32 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (saw (togo (minor )(minorb )8 13 28 12 )(togo (minor )(minorb )7 12 27 12 )(add (slew )(minorb )(bard (modo (sawd )44 ))))
+(sawb (togo (minor )(minorb )12 12 12 12 )(togo (minor )(minorb )8 8 8 8 )(add (slew )(minorb )(bar (modo (saw )44 )))))
+(right (sawc (togo (minor )(minorb )8 18 22 7 )(togo (minor )(minorb )3 7 9 3 )(add (slew )(minorb )(barb (modo (sawb )44 
+))))
+(sawd (togo (minor )(minorb )14 11 23 12 )(togo (minor )(minorb )4 3 6 3 )(add (slew )(minorb )(barc (modo (sawc )44 ))))
+)};cadence
+{(srate 38 )(jump (majord 1 (minord -1 )))
+;note that one togo is used for everything.  it is reused
+(lights 128 (togo (minor )(minorb )1 2 4 8 ))(slew (minor )105 2 )
+(left (modo (left (horn (togo (minor )(minorb )4 7 13 12 )(togo (minor )(minorb )3 6 12 12 )(add (slew )(minorb )(bard (modo (hornd )44 ))))
+(hornb (togo (minor )(minorb )11 12 12 12 )(togo (minor )(minorb )6 6 8 8 )(add (slew )(minorb )(bar (modo (horn )44 )))))5 ))
+(right (modo (right (hornc (togo (minor )(minorb )12 12 8 7 )(togo (minor )(minorb )4 4 3 3 )(add (slew )(minorb )(barb (modo (hornb )44 
+))))
+(hornd (togo (minor )(minorb )13 12 11 12 )(togo (minor )(minorb )3 3 3 3 )(add (slew )(minorb )(barc (modo (hornc )44 ))))
+)5 ))
+};whineyhorse
+{
+(srate 3 );at high frequency
+(left (right 
+(horse (corpb )56 100 (horseb ))
+(horseb 55 (corp )(horse )(horsec ))
+))
+(left (right 
+(horsec (corp )54 (horseb )(horsed ))
+(horsed 10 (corpb )(horsec )-100 )
+))
+(jump (minor 1 ))
+}

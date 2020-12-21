@@ -1,0 +1,29 @@
+;WAVE [a-h] is your basic resonant filter...
+ ;A Wave equation!.... so Q is ringier when lower.
+ ;INN is obvious, so is Q, and rate is too!
+ {(left 
+ (wave 
+ (dust (bar 64) 20 
+ ;mul-attenuate input for better sound
+) 
+ 1 ;Q at 1 makes the ring done!
+ (togo 
+ (dustb) 116 89 25 5 13 -25)) 
+ (waveb 
+ (dustb (barb 64) 20) 1 
+ (togob (dust) 
+ 14 83 -25 -88 -27 -19)) 
+) (right 
+ (wavec (smoke 20) 20 
+ (barc 10 44)) 
+ (waved 
+ (saw 2 
+ (square 
+ (mount 64 64) 
+ 1 1 32)) 
+ 10 (bard 20 10)) 
+ 
+) 
+} 
+
+doubleclick

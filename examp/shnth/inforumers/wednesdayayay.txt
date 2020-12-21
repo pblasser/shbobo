@@ -1,0 +1,151 @@
+;pulsed water
+{(srate 21 )
+(left )
+(right 
+(waved (waterc (wavec (pulse (horne (corpb (bar 20 (barb 5 3 ))2 )(mul (mount (barb 5 (corp 6 (bar 6 2 )))120 127 )
+(add (barc 15 75 )(corp 15 15 )))(toggle (major )))(corp 88 5 ))
+123 (corp 88 25 ))
+(barb 55 (corp (barc 15 10 )(corpb 5 3 )))(reflect (corpb 75 25 )(corp 49 14 )51 ))
+(reflect (corpb 120 5 )(bar 12 50 )95 18 )(return (bard 80 10 )(corp 45 10 )100 8 )))
+};slipper sumb slumper
+{(srate (short 12 11 ))
+(right 
+(pan (combd (zither (slave )(mul (salsa )48 )(salsac ))(salsag )(salsah )(add (salsa )(salsab )(salsad )(salsag )))(add (salsaf )(salsab )(salsad )(salsae )))(pan (hazec (mountb )(mul (salsac )13 )(salsae )(mountc )(salsaf ))(add (salsa )(salsab )(salsad )(salsag )))
+(pan (comb (zitherb (slaveb )(mul (salsae )26 )(salsag ))(salsaf )(salsa )(add (salsah )(salsab )(salsad )(salsac )))(add (salsah )(salsa )(salsac )(salsad )))(pan (fogc (mount )(mul (salsae )24 )(salsag )(mountd )(salsaf ))(add (salsah )(salsa )(salsad )(salsac )))
+(pan (mul (haze (water )(mul (salsa )8 )(salsac )(salsah )(salsag )(pulseb (slave (waveg )(mul (salsad )5 ))(salsaf )))98 )(add (salsae )(mountb )(salsa )))(pan (mul (fog (waterb )(mul (salsac )8 )(salsab )(salsa )(salsag )(salsad ))98 )(salsah ))
+(pan (mul (hazeb (waterc )(salsaf )(salsac )(salsab )(salsad )(pulsed (slaveb (wavee )(mul (salsae )3 ))(salsah )))98 )(add (salsab )(mount )(salsag )))(pan (mul (fogb (waterd )(salsab )(salsah )(salsac )(salsae )(salsag ))98 )(salsad ))
+)
+(left 
+(pan (waterd (slavef (dusth )(mul (salsaf )4 ))(mul (salsah )8 )(salsag ))(mount (salsac )(salsad )(salsab ))(mount ))(pan (waveh (dusth 6 )(mul (salsae )6 )(salsag (dustg )(smokec ))(salsaf ))(salsac ))(pan (waveg (dustg (mul (salsae )6 ))(mul (salsad )16 )(salsaf (dustf )(smoke ))(salsag ))(salsah ))
+(pan (waterc (slavee (duste )(mul (salsac )2 ))(mul (salsab )16 )(salsae ))(mountb (salsa )(salsaf )(salsad ))(mountb ))(pan (wavef (dustf 2 )(mul (salsac )13 )(salsae (duste )(smokeb ))(salsad ))(salsab ))(pan (wavee (duste (mul (salsad )16 ))(mul (salsab )13 )(salsad (dustd )(smoke ))(salsae ))(salsa ))
+(pan (waterb (slaved (dustd )(mul (salsae )2 ))(mul (salsad )24 )(salsaf ))(mountc (salsab )(salsah )(salsag ))(mountc ))(pan (waved (dustd (salsaf ))(mul (salsa )12 )(mul (salsae )89 )(salsac (dustc )(smoke ))(salsab ))(salsad ))(pan (wavec (dustc (mul (salsab )13 ))(mul (salsah )16 )(salsab (dustb )(smokeb ))(salsac ))(salsaf ))
+(pan (water (slavec (dust )(mul (salsah )3 ))(mul (salsaf )16 )(salsa ))(mountd (salsae )(salsab )(salsac ))(mountd ))(pan (waveb (dustb (salsae ))(mul (salsab )11 )(mul (salsa )24 )(salsa (dust )(smokec ))(salsah ))(salsag ))(pan (wave (dust (mul (salsah )16 ))(mul (salsaf )8 )(salsah (dusth )(smokeb ))(salsa ))(salsae ))
+)};C
+{;C
+(srate (short 8 51 ))
+(left 
+(right 
+(horn (salsad )(salsae )(bar ))
+(hornb (salsab )(salsac )(barb ))
+(hornc (salsa )(salsah )(barc ))
+(wave (dust 1 )1 (salsah (dusth )(smokeb )))(waveb (dustb 2 )1 (salsa (dust )(smokec )))
+(wavec (dustc 2 )1 (salsab (dustb )(smokeb )))(waved (dustd 1 )1 (salsac (dustc )(smoke )))
+(wavee (duste 2 )1 (salsad (dustd )(smoke )))(wavef (dustf 2 )1 (salsae (duste )(smokeb )))
+(waveg (dustg 4 )1 (salsaf (dustf )(smoke )))(waveh (dusth 1 )1 (salsag (dustg )(smokec )))
+))
+};electronic C't belt
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))48 )(major )(short 16 102 )(short 9 55 )(short 11 112 )(short 31 91 ))
+(hornb (togob 29 (mountc 60 8 )60 96 24 120 30 48 )72 )
+(left 
+(right 
+(horn (togo 29 (mount 80 2 )48 24 96 30 120 60 )48 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb 20 4 )29 30 120 48 96 24 60 )60 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))5 (add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+)
+)
+};neletctr'ocbCitl e
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))-76 )(major )(short -125 -4 )(short -14 -96 )(short -58 -110 )(short 61 -5 ))
+(hornb (togob -12 (mountc 62 119 )-72 -111 29 102 -125 11 )-49 )
+(left 
+(right 
+(horn (togo 76 (mount -62 (mul (mountc )-84 ))39 80 13 27 -3 30 )-112 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb -74 29 )-72 -75 -10 -79 35 -93 -44 )-12 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))24 )(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+)
+)
+};ntebe rtiC'c loetcl
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))-60 )(major )(short -27 -41 )(short 52 -52 )(short 90 -54 )(short 59 70 ))
+(hornb (togob -91 (mountc 12 -33 )-6 -92 85 44 68 67 )-118 )
+(left 
+(right 
+(horn (togo 75 (mount -3 (mul (mountc )-2 ))-56 -124 -64 58 -77 -7 )74 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb -48 -99 )-49 117 61 14 -53 110 111 )102 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))77 )(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+)
+)
+};cnttlieoeCb elc rt'
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))62 )(major )(short -84 37 )(short -49 -115 )(short -109 -43 )(short 94 37 ))
+(hornb (togob 109 (mountc -128 57 )-87 -84 -41 -125 -44 -63 )-113 )
+(left 
+(right 
+(horn (togo 113 (mount 39 (mul (mountc )-49 ))49 111 123 95 97 -45 )81 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb 121 86 )100 125 39 34 60 69 37 )13 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))120 )(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+(string (slave (dust (mul (add (togob )(togoc ))(add (togo )(slewc ))))(mul 12 (mountb )))(add (togob )(mountc ))100 (add (slew )(slewb )(mount )(togod ))))
+)
+};ec nt oc'ttlbeCeilr
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))117 )(major )(short 122 34 )(short -63 -58 )(short -8 28 )(short -16 -90 ))
+(hornb (togob 52 (mountc 113 62 )-11 30 -54 30 -3 46 )80 )
+(toggleb (horn ))
+(togglec (hornc ))
+(left 
+(right 
+(horn (togo 49 (mount -98 (mul (mountc )31 ))2 0 -56 -1 20 86 )49 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb -56 -54 )-53 -35 -20 -95 10 122 45 )-79 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))-32 )(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+(comb (string (slave (toggle )(mul 42 (mountb )))
+(add (togob )(mountc ))120 (add (slew )(slewb )(mount )(togod )))(mul (slewc )(mul (togob )100 ))(mul (togoc )12 )-100 )
+(zither (slaveb (toggleb )(mountc ))(add (togob )(togo )(togoc )))
+(swamp (slavec (togglec )(togod ))(togob )(mount )(slew )(togoc ))
+(mul (mul (smokeb )(reflect (mount )(mountb )))(dustb (return (slewb )(togob ))18 ))
+)
+)
+};elc ntlt oCtc'irebe
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))-86 )(major )(short -49 45 )(short -17 -2 )(short -12 -57 )(short -127 -100 ))
+(hornb (togob -2 (mountc -102 -83 )52 -43 -90 -80 114 32 98 28 -37 -12 106 -21 )8 )
+(toggleb (horn ))
+(togglec (hornc ))
+(left 
+(right 
+(horn (togo 90 (mount -19 (mul (mountc )-70 ))14 14 117 -12 -91 -102 -41 -4 -78 -116 12 56 -17 )
+78 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb 2 121 )-12 -31 113 65 91 100 53 -94 117 -17 21 88 52 -100 13 )
+-92 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))12 )
+(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+(comb (string (slave (toggle )(mul -58 (mountb )))
+(add (togob )(mountc ))-127 (add (slew )(slewb )(mount )(togod )))
+(mul (slewc )(mul (togob )-3 ))(mul (togoc )-110 )(togo ))
+(zither (slaveb (toggleb )(mountc ))(add (togob )(togo )(togoc )))
+(swamp (slavec (togglec )(togod ))(togob )(mount )(slew )(togoc ))
+(mul (mul (smokeb )(reflect (mount )(mountb )))
+(dustb (return (slewb )(togob ))(togod )))
+)
+)
+};eelcbo n ctrCite'lt
+{
+(srate (togod ))
+(togod (square (add (togob )(togo )(togoc ))105 )(major )(short -68 -127 )(short 34 16 )(short 38 -1 )(short 37 17 ))
+(hornb (togob -113 (mountc 112 -111 )117 -41 -126 -64 -116 -23 100 -4 -104 -34 -94 13 )12 )
+(toggleb (horn ))
+(togglec (hornc ))
+(left 
+(right 
+(horn (togo -99 (mount 80 (mul (mountc )75 ))-8 121 42 29 78 -120 -15 45 93 113 -9 -22 -111 )
+-70 (slew (mountb )(togoc )(togob )))
+(hornc (togoc (mountb -49 49 )7 112 54 -69 91 111 61 124 -94 117 -3 -2 -122 -43 -24 )
+-117 (slewb (mountc )(togo )(togoc )))
+(wave (toggle (hornb ))(mul (add (slew )(slewb )(mountc ))55 )
+(add (togob )(togo )(togoc ))(slewc (mount )(togoc )(togob )))
+(comb (string (slave (toggle )(mul 65 (mountb )))
+(add (togob )(mountc ))-10 (add (slew )(slewb )(mount )(togod )))
+(mul (slewc )(mul (togob )51 ))(mul (togoc )-69 )(togo ))
+(zither (slaveb (toggleb )(mountc ))(add (togob )(togo )(togoc )))
+(swamp (slavec (togglec )(togod ))(togob )(mount )(slew )(togoc ))
+(mul (mul (smokeb )(reflect (mount )(mountb )))
+(dustb (return (slewb )(togob ))(togod )))
+)
+)
+}

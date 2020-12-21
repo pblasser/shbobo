@@ -1,0 +1,12 @@
+;WIND is the microphone on the SHNTH
+ {(left 
+ (wind))} 
+ ;MUL is multiply or VCA
+ {(left 
+ (wind (horn 64 64)))} 
+ ;ADD is for mixing others
+ {(left 
+ (wind (bar) 
+ (horn 64 64 (barb))))} 
+ doubleclick
+doubleclick

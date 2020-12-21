@@ -1,0 +1,14 @@
+;MUL is the same as the MUL that every (finite) opcode has at its tail.
+ ;MUL by 128 and you get full volume, 1 is very quiet, and 0 is silent.
+ ;Think of MIDI style, volume from 0-128.
+ ;The phollowing are all equivalent:
+ {(left 
+ (mul (horn 64 64) (bar)))} 
+ 
+ {(left 
+ (horn 64 64 (bar)))} 
+ 
+ {(left 
+ (bar (horn 64 64)))} 
+
+doubleclick

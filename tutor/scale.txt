@@ -1,0 +1,9 @@
+;SCALE converts FINGER (or anything else) into 17tet.
+ ;That is, it adapts it to the same scale as SHTAR.
+ ;(you can also use it to create a dB curve)
+ {(left 
+ (horn (scale (finger)) 22)) 
+ (right 
+ (hornb (scale (finger)) 33))} 
+
+doubleclick

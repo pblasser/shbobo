@@ -1,0 +1,148 @@
+chubby 0
+ barre
+  atrest
+ chinkwonkanater
+  inhibit 1
+  primelm 3
+  stritton 8
+  strittle 22
+ sponginger
+  rat 0 = 72 / 4
+  rat 1 = 108 / 6
+  rat 2 = 192 / 6
+  rat 3 = 48 / 192
+  bitshift 4
+  gingzgongz 1
+  quiznoquantan 0
+ royalminister
+  inhibit 0
+  kingals 0 = 0 -1 1 1 
+  queenals 0 = 0 0 0 0 
+  kingals 1 = 1 0 0 0 
+  queenals 1 = 0 0 0 0 
+  kingals 2 = 1 0 1 0 
+  queenals 2 = 1 0 0 1 
+  kingals 3 = 0 -1 0 1 
+  queenals 3 = -1 0 -1 0 
+ royalfmoutarde
+  inhibit 1
+  numals 0 = 0 1 0 -1 
+  denals 0 = 0 -1 0 0 
+  numals 1 = 0 -1 0 0 
+  denals 1 = 0 -1 0 0 
+  numals 2 = 1 0 1 0 
+  denals 2 = 0 0 0 0 
+  numals 3 = 0 -1 -1 1 
+  denals 3 = 0 -1 -1 0 
+  bitshift 6
+chubby 1
+ barre
+  atrest
+ chinkwonkanater
+  inhibit 1
+  primelm 3
+  stritton 8
+  strittle 44
+ sponginger
+  rat 0 = 72 / 162
+  rat 1 = 18 / 2
+  rat 2 = 4 / 6
+  rat 3 = 54 / 1
+  bitshift 4
+  gingzgongz 1
+  quiznoquantan 0
+ royalminister
+  inhibit 0
+  kingals 0 = -1 0 0 -1 
+  queenals 0 = 0 0 0 -1 
+  kingals 1 = -1 1 -1 0 
+  queenals 1 = -1 0 1 0 
+  kingals 2 = -1 0 -1 1 
+  queenals 2 = 0 1 0 0 
+  kingals 3 = 1 -1 0 1 
+  queenals 3 = -1 1 1 0 
+ royalfmoutarde
+  inhibit 1
+  numals 0 = 0 -1 1 0 
+  denals 0 = 0 0 0 -1 
+  numals 1 = 0 0 -1 0 
+  denals 1 = 0 0 0 -1 
+  numals 2 = 0 1 -1 1 
+  denals 2 = 0 0 0 0 
+  numals 3 = 1 0 1 0 
+  denals 3 = 0 0 -1 0 
+  bitshift 6
+chubby 2
+ barre
+  atrest
+ chinkwonkanater
+  inhibit 1
+  primelm 7
+  stritton 8
+  strittle 22
+ sponginger
+  rat 0 = 3 / 192
+  rat 1 = 225 / 27
+  rat 2 = 6 / 1
+  rat 3 = 2 / 1
+  bitshift 4
+  gingzgongz 1
+  quiznoquantan 0
+ royalminister
+  inhibit 0
+  kingals 0 = -1 1 -1 0 
+  queenals 0 = 0 1 1 0 
+  kingals 1 = -1 1 1 0 
+  queenals 1 = 1 -1 0 0 
+  kingals 2 = 1 0 -1 0 
+  queenals 2 = -1 0 1 -1 
+  kingals 3 = -1 -1 0 0 
+  queenals 3 = 0 0 -1 1 
+ royalfmoutarde
+  inhibit 1
+  numals 0 = 0 1 1 0 
+  denals 0 = 0 -1 0 0 
+  numals 1 = 0 -1 0 1 
+  denals 1 = 0 0 0 1 
+  numals 2 = 0 -1 0 0 
+  denals 2 = 0 0 1 0 
+  numals 3 = 0 -1 -1 0 
+  denals 3 = 0 0 -1 0 
+  bitshift 6
+chubby 3
+ barre
+  atrest
+ chinkwonkanater
+  inhibit 1
+  primelm 3
+  stritton 8
+  strittle 44
+ sponginger
+  rat 0 = 48 / 16
+  rat 1 = 8 / 4
+  rat 2 = 162 / 192
+  rat 3 = 1 / 2
+  bitshift 4
+  gingzgongz 1
+  quiznoquantan 0
+ royalminister
+  inhibit 0
+  kingals 0 = -1 0 -1 1 
+  queenals 0 = 0 0 -1 1 
+  kingals 1 = -1 0 -1 0 
+  queenals 1 = 0 -1 0 -1 
+  kingals 2 = -1 0 0 0 
+  queenals 2 = 0 0 0 0 
+  kingals 3 = -1 1 1 0 
+  queenals 3 = 0 0 -1 1 
+ royalfmoutarde
+  inhibit 1
+  numals 0 = 0 1 0 -1 
+  denals 0 = 0 1 1 -1 
+  numals 1 = 0 -1 -1 0 
+  denals 1 = 0 0 0 0 
+  numals 2 = 1 1 1 0 
+  denals 2 = 0 1 0 0 
+  numals 3 = 0 -1 1 0 
+  denals 3 = 0 -1 1 1 
+  bitshift 6

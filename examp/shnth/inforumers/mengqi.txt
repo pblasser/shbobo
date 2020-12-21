@@ -1,0 +1,443 @@
+;chromatic
+{
+(left (right 
+(horn 
+(add 
+;c
+(mul 
+(minor 48 )
+(xor (minor )(major )1 )
+)
+;#c
+(mul 
+(and (minor )51 )
+(square (add (minor )(major ))0 1 )
+)
+;d
+(mul 
+(mul 
+(major 54 )
+(xor (minor )(major )1 )
+)
+(xor (minord )(major )1 )
+)
+;#d
+(mul 
+(and (minord )(major )58 )
+(square (add (minord )(major ))0 1 )
+)
+;e
+(mul 
+(minord 60 )
+(xor (minord )(major )1 )
+)
+;f
+(mul 
+(majord 64 )
+(xor (minorb )(majord )1 )
+)
+;#f
+(mul 
+(and (minorb )(majord )68 )
+(square (add (minorb )(majord ))0 1 )
+)
+;g
+(mul 
+(mul 
+(minorb 72 )
+(xor (minorb )(majord )1 )
+)
+(xor (minorb )(majorb )1 )
+)
+;#g
+(mul 
+(and (minorb )(majorb )77 )
+(square (add (minorb )(majorb ))0 1 )
+)
+;a
+(mul 
+(mul 
+(majorb 80 )
+(xor (minorb )(majorb )1 )
+)
+(xor (minorc )(majorb )1 )
+)
+;#a
+(mul 
+(and (minorc )(majorb )86 )
+(square (add (minorc )(majorb ))0 1 )
+)
+;b
+(mul 
+(minorc 90 )
+(xor (minorc )(majorb )1 )
+)
+)
+(add 
+96 
+(bar -48 )
+(bard -24 )
+)
+(corpb )
+)
+))}; Stuber 
+{
+(toggle (square (wind )15 ))
+(toggleb (toggle ))
+(togglec (toggleb ))
+(toggled (togglec ))
+(togglee (toggled ))
+(togglef (togglee ))
+(toggleg (togglef ))
+(toggleh (toggleg ))
+(togo (minor )(toggle )(toggleb )(togglec )(toggled )(togglee )(togglef )(toggleg )(toggleh ))
+(togob (minorb )(toggle )(toggleb )(togglec )(toggled )(togglee )(togglef )(toggleg )(toggleh ))
+(togoc (minorc )(toggle )(toggleb )(togglec )(toggled )(togglee )(togglef )(toggleg )(toggleh ))
+(togod (minord )(toggle )(toggleb )(togglec )(toggled )(togglee )(togglef )(toggleg )(toggleh ))
+(togoe (major )()15 30 45 60 75 90 105 120 )
+(togof (majorb )()11 23 42 51 67 79 86 105 127 )
+(togog (majorc )()9 12 24 53 60 78 99 110 48 )
+(togoh (majord )()19 26 68 43 67 91 25 33 13 6 77 )
+(left 
+(wave 
+(wind )
+(add (mul (togo )(togoe ))(mul (togob )(togof ))(mul (togoc )(togog ))(mul (togod )(togoh ))(bar ))
+(add (mul (togo )(togoh ))(mul (togob )(togog ))(mul (togoc )(togof ))(mul (togod )(togoe ))(corp ))
+(barb -127 127 )
+)
+(salt 
+(wind )
+(add (mul (togo )(togoe ))(mul (togob )(togof ))(mul (togoc )(togog ))(mul (togod )(togoh ))(bar ))
+(add (mul (togo )(togoh ))(mul (togob )(togog ))(mul (togoc )(togof ))(mul (togod )(togoe ))(corp ))
+(barb 127 ())
+)
+)
+(right 
+(waveb 
+(wind )
+(add (mul (togo )(togof ))(mul (togob )(togog ))(mul (togoc )(togoe ))(mul (togod )(togoh ))(bard ))
+(add (mul (togo )(togog ))(mul (togob )(togof ))(mul (togoc )(togoh ))(mul (togod )(togoe ))(corpb ))
+(barc -127 127 )
+)
+(saltb 
+(wind )
+(add (mul (togo )(togof ))(mul (togob )(togog ))(mul (togoc )(togoe ))(mul (togod )(togoh ))(bard ))
+(add (mul (togo )(togog ))(mul (togob )(togof ))(mul (togoc )(togoh ))(mul (togod )(togoe ))(corpb ))
+(barc 127 ())
+)
+)
+};   Pentatonic Bass 
+{
+;([short] 13 190) ([short] 13 1) ([short] 12 70) ([short] 8 80)
+(arab 
+(togob 
+(add 
+(major 1 )
+(minor (negwon ))
+)
+(short 13 190 )(short 13 1 )(short 12 70 )(short 8 80 )
+)
+)
+(srate (togob ))
+
+(togoc 
+(add 
+(majorb 1 )
+(minorb (negwon ))
+)
+()-15 -31 -47 -63 -79 -95 -111 -127 
+)
+
+(togod 
+(add 
+(majorc 1 )
+(minorc (negwon ))
+)
+()-15 -31 -47 -63 -79 -95 -111 -127 
+)
+(slew 
+(add 
+54 
+(square 
+(corpb -128 )
+43 
+54 
+)
+)
+100 
+100 
+)
+
+(dust 
+(add 
+(bar 25 )
+(barb 25 )
+(barc 25 )
+(bard 25 )
+)
+)
+(swoop 
+(add 
+(square (bar )30 )
+(square (barb )30 )
+(square (barc )30 )
+(square (bard )30 )
+)
+(add 
+(bar )
+(barc )
+)
+(add 
+(barb )
+(bard )
+)
+)
+(swoopb 
+(add 
+(square (bar )30 )
+(square (barb )30 )
+(square (barc )30 )
+(square (bard )30 )
+)
+(add 
+(bar )
+(bard )
+)
+(add 
+(barb )
+(barc )
+)
+)
+(swoopc 
+(add 
+(square (bar )30 )
+(square (barb )30 )
+(square (barc )30 )
+(square (bard )30 )
+)
+(add 
+(barb )
+(bard )
+)
+(add 
+(bar )
+(barc )
+)
+)
+(swoopd 
+(add 
+(square (bar )30 )
+(square (barb )30 )
+(square (barc )30 )
+(square (bard )30 )
+)
+(add 
+(barb )
+(barc )
+)
+(add 
+(bar )
+(bard )
+)
+)
+(left (right 
+(horn 
+(corp 
+-10 
+(add 
+54 
+(mul (dust )(togoc ))
+(mul (swoop )(togod ))
+)
+)
+(slew )
+(bar )
+)
+(hornb 
+(corp 
+-8 
+(add 
+65 
+(mul (dust )(togoc ))
+(mul (swoopb )(togod ))
+)
+)
+(slew )
+(barb )
+)
+(hornc 
+(corp 
+-9 
+(add 
+72 
+(mul (dust )(togoc ))
+(mul (swoopc )(togod ))
+)
+)
+(slew )
+(barc )
+)
+(hornd 
+(corp 
+-15 
+(add 
+81 
+(mul (dust )(togoc ))
+(mul (swoopd )(togod ))
+)
+)
+(slew )
+(bard )
+)
+))
+};   dual tone
+{
+(lights (corp ))
+(srate 
+(add 
+(short 26 180 );E
+(square (corp -128 )30 (arab (short 5 10 )));C#
+(square (corp -128 )60 (arab (short 3 230 )));B
+(square (corp -128 )90 (arab (short 4 80 )));A
+(square (corp -128 )120 (arab (short 7 120 )));F#
+)
+)
+(left 
+(horn 
+100 
+(minor 50 50 )
+(bar )
+)
+(hornb 
+(add (mul (horn )(barb 85 ))100 )
+(minor 50 50 )
+(barb )
+)
+)
+(sauce 120 (barc ))
+(right 
+(hornc 
+(add 
+(short 113 58 )
+)
+(mul 
+(add 
+100 
+(square (corpb -128 )30 (short -9 -120 ))
+(square (corpb -128 )60 (short -14 -120 ))
+(square (corpb -128 )90 (short -20 -12 ))
+;([square] ([corp b] -128) 120 ([short] -20 -12))
+)
+(minord 64 64 )
+)
+(bard )
+)
+(hornd 
+100 
+(mul 
+(add 
+100 
+(square (sauce )50 -50 )
+(square (sauce )100 -25 )
+;([square] ([sauce a]) 120 ([short] -20 -12))
+)
+(minord 64 64 )
+)
+(barc )
+)
+)
+};   "Gu Qin"
+{
+(togo (minor )24 27 30 36 40 )
+(togob (minor )30 36 40 48 54 )
+(togoc (minor )40 48 54 60 72 )
+(togod (minor )54 60 72 80 96 )
+(toggle (major ))
+(toggleb (majorb ))
+(togglec (majorc ))
+(toggled (majord ))
+(left 
+(wave 
+(add 
+(zither 
+(square (bar )20 )
+(add 
+(togo )
+(horn (bar )100 (mul (toggle )(corp )))
+(dust (bar )(mul (toggleb )(corp )))
+(horse (bar )(barb )(barc )(bard )(mul (togglec )(corp )))
+(fog (smoke )(barb )(barc )(bard )(mul (toggled )(corp )))
+)
+48 
+(corpb )
+(bar )
+)
+(zitherb 
+(square (barb )20 )
+(add 
+(togob )
+(hornb (barb )100 (mul (toggle )(corp )))
+(dustb (barb )(mul (toggleb )(corp )))
+(horseb (barb )(barc )(bard )(bar )(mul (togglec )(corp )))
+(fogb (smokeb )(barc )(bard )(bar )(mul (toggled )(corp )))
+)
+48 
+(corpb )
+(barb )
+)
+(zitherc 
+(square (barc )20 )
+(add 
+(togoc )
+(hornc (barc )100 (mul (toggle )(corp )))
+(dustc (barc )(mul (toggleb )(corp )))
+(horsec (barc )(bard )(bar )(barb )(mul (togglec )(corp )))
+(fogc (smokec )(bard )(bar )(barb )(mul (toggled )(corp )))
+)
+48 
+(corpb )
+(barc )
+)
+(zitherd 
+(square (bard )20 )
+(add 
+(togod )
+(hornd (bard )100 (mul (toggle )(corp )))
+(dustd (bard )(mul (toggleb (majorb ))(corp )))
+(horsed (bard )(bar )(barb )(barc )(mul (togglec (majorc ))(corp )))
+(fogd (smoked )(bar )(barb )(barc )(mul (toggled (majord ))(corp )))
+)
+48 
+(corpb )
+(bard )
+)
+)
+20 
+(add 
+(bar 15 )
+(barb 20 )
+(barc 25 )
+(bard 30 )
+35 
+)
+)
+)
+(right 
+(waveb 
+(add 
+(zither )
+(zitherb )
+(zitherc )
+(zitherd )
+)
+20 
+(add 
+(bar 30 )
+(barb 25 )
+(barc 20 )
+(bard 15 )
+35 0 
+)
+)
+)
+}

@@ -1,0 +1,14 @@
+;ZITHER [a-d] is, like fog, a cluster of four...
+ ;Strings! 
+ ;TRIG is your plucking finger, DENO is the pitch!
+ {(left 
+ (zither (dust (bar 64)) (smoke 10 34)) 
+ (zitherb (dustb (barb 64)) (smoke 10 20)) 
+) 
+ (right 
+ (zitherc (dustc (barc 64)) (smoke 99 111)) 
+ (zitherd (dustd (bard 64)) (smoke 20 71)) 
+) 
+} 
+
+doubleclick

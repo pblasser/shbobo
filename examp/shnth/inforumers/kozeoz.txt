@@ -1,0 +1,6 @@
+;zentr5
+{(left 
+(haze (dust 1 )(bard -8 )50 79 (bar (corp 50 )20 ))
+(string (dust (salsa (dustb -1 )(corp 2 )))27 -128 30 )
+(0 (dust 1 barb 90 )(1 )-30 -20 10 )(water (dustc 3 )-125 -4 )(0 (sauceb -48 58 )(salsac -60 )-60 ))
+}

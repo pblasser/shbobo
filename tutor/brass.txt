@@ -1,0 +1,8 @@
+;BRASS [a-d] are the brass frets on SHTAR
+ {(left 
+ (horn 64 64 (brass)) 
+ (hornc 68 64 (brassc))) (right 
+ (hornb 66 64 (brassb)) 
+ (hornd 70 64 (brassd))) 
+}
+doubleclick

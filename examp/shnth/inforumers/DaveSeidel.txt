@@ -1,0 +1,293 @@
+; Harrison_8: 1/1 16/15 6/5 5/4 45/32 3/2 5/3 16/9
+{
+(jump (tar 1 ))(lights 1 )
+; 60Hz-ish
+(srate (short 36 79 ))
+(arab 
+(left (left 
+(salt 
+(mul 
+(add 
+(horn 127 127 (major ))
+(hornc 150 125 (majorc ))
+(horne 135 96 (minord ))
+(horng 210 126 (minorb ))
+)
+(slew (wind )12 3 )
+)
+127 
+(slewc (corp 65 40 )8 8 )
+)
+))
+(right (right 
+(saltb 
+(mul 
+(add 
+(hornb 128 120 (majorb ))
+(hornd 155 124 (majord ))
+(hornf 189 126 (minorc ))
+(hornh 224 126 (minor ))
+)
+(slewb (wind )12 3 )
+)
+127 
+(slewd (corpb 65 40 )8 8 )
+)
+))
+)
+}; MetaSlendro 1: 1/1 37/32 21/16 49/32 7/4 2/1
+{
+(jump (minorb 1 (minor -1 )))(lights 2 )
+; 60Hz-ish
+(srate (short 144 79 ))
+(arab 
+(pan 
+(add 
+(waterd (major )3 64 )
+(water (majorc )3 84 )
+(waterb (minord )3 112 )
+)
+80 
+)
+(pan 
+(add 
+(waterc (majorb )3 148 )
+(waterd (majord )3 98 )
+(water (minorc )3 128 )
+)
+144 
+)
+)
+}; MetaSlendro 2: 1/1 9/8 151/128 3/2 25/16 2/1
+{
+(jump (minorb 1 (minor -1 )))(lights 4 )
+; 60Hz-ish
+(srate (short 144 79 ))
+(arab 
+(pan 
+(add 
+(waterd (major )3 64 )
+(water (majorc )3 75 )
+(waterb (minord )3 100 )
+)
+80 
+)
+(pan 
+(add 
+(waterc (majorb )3 144 )
+(waterd (majord )3 96 )
+(water (minorc )3 128 )
+)
+144 
+)
+)
+}; Harrison_8: 1/1 16/15 6/5 5/4 45/32 3/2 5/3 16/9
+{
+(jump (tar 1 ))(lights 8 )
+; 60Hz-ish
+(srate (short 36 79 ))
+(arab 
+(pan 
+(add 
+(horn 127 127 (slew (major )3 3 ))
+(hornc 150 125 (slewc (majorc )3 3 ))
+(horne 135 96 (slewe (minord )3 3 ))
+(horng 210 126 (slewg (minorb )3 3 ))
+)
+80 
+)
+(pan 
+(add 
+(hornb 128 120 (slewb (majorb )3 3 ))
+(hornd 155 124 (slewd (majord )3 3 ))
+(hornf 189 126 (slewf (minorc )3 3 ))
+(hornh 224 126 (slewh (minor )3 3 ))
+)
+144 
+)
+)
+};hijaz gharib
+{(jump (tar 1 ))(lights 1 )
+(short 29 119 )
+(arab 
+(left 
+(horn (add 128 (bard 12 ))128 (slew (major 85 )120 120 ))
+(hornc (add 160 (bard 12 ))128 (slewc (majorc 85 )120 120 ))
+(horne (add 192 (bard 16 ))128 (slewe (minord 85 )120 120 ))
+(horng (add 240 (bard 16 ))135 (slewg (minorb 85 )120 120 ))
+)(right 
+(hornb (add 144 (bard 12 ))135 (slewb (majorb 85 )120 120 ))
+(hornd (add 180 (bard 16 ))135 (slewd (majord 85 )120 120 ))
+(hornf (add 216 (bard 16 ))135 (slewf (minorc 85 )120 120 ))
+(hornh (add 255 (bard 16 ))128 (slewh (minor 85 )120 120 ))))
+};hijaz shehnaz
+{(jump (tar 1 ))(lights 4 )
+(srate (short 29 119 ))
+(arab 
+(left 
+(horn (add 128 (bard 12 ))128 (slew (major 85 )120 120 ))
+(hornc (add 160 (bard 12 ))128 (slewc (majorc 85 )120 120 ))
+(horne (add 192 (bard 16 ))128 (slewe (minord 85 )120 120 ))
+(horng (add 240 (bard 16 ))128 (slewg (minorb 85 )120 120 ))
+)(right 
+(hornb (add 144 (bard 12 ))135 (slewb (majorb 85 )120 120 ))
+(hornd (add 180 (bard 16 ))135 (slewd (majord 85 )120 120 ))
+(hornf (add 216 (bard 16 ))135 (slewf (minorc 85 )120 120 ))
+(hornh (add 255 (bard 16 ))128 (slewh (minor 85 )120 120 ))))
+};maqam bayati
+{(jump (tar 1 ))(lights (toggled (tar 1 )16 ))
+(srate (short 29 119 ))
+(arab 
+(left 
+(horn (add 128 (bard 12 ))128 (slew (major 85 )120 120 ))
+(hornc (add 156 (bard 12 ))130 (slewc (majorc 85 )120 120 ))
+(horne (add 192 (bard 16 ))128 (slewe (minord 85 )120 120 ))
+(horng (add 240 (bard 16 ))135 (slewg (minorb 85 )120 120 ))
+)(right 
+(hornb (add 143 (bard 12 ))130 (slewb (majorb 85 )120 120 ))
+(hornd (add 180 (bard 16 ))135 (slewd (majord 85 )120 120 ))
+(hornf (add 216 (bard 16 ))135 (slewf (minorc 85 )120 120 ))
+(hornh (add 255 (bard 16 ))128 (slewh (minor 85 )120 120 ))))
+}; merry shnthmass
+{
+(srate (short 18 79 ))
+(mount 13 101 )
+(mountb 11 103 )
+(mountc 19 107 )
+(mountd 17 109 )
+(lights (mount ))
+(pan 
+(mount )
+(wave 
+(and 
+(saw (short 17 1 )137 )
+(sawb (short 17 11 )137 )
+)
+(mountb )
+(mountc )
+)
+)
+(pan 
+(sauce 96 (mountb ))
+(waveb 
+(and 
+(sawc (short 19 1 )137 )
+(sawd (short 19 11 )137 )
+)
+(sauceb 96 (mount ))
+(saucec 96 (mountd ))
+)
+)
+};hijaz gharib (low and dirty)
+{
+(jump (tar 1 ))(lights 1 )
+;(srate (short 29 119 ))
+(srate (short 128 1 ))
+(arab 
+(pan 
+(add 
+(modo 
+(saw (add 128 (bard 12 ))128 (slew (major 85 )120 120 ))
+(horn (add 128 (bard 12 ))128 (slew (major 85 )120 120 ))
+)
+(modo 
+(sawc (add 160 (bard 12 ))128 (slewc (majorc 85 )120 120 ))
+(hornc (add 160 (bard 12 ))128 (slewc (majorc 85 )120 120 ))
+)
+(modo 
+(sawe (add 192 (bard 16 ))128 (slewe (minord 85 )120 120 ))
+(horne (add 192 (bard 16 ))128 (slewe (minord 85 )120 120 ))
+)
+(modo 
+(sawg (add 240 (bard 16 ))135 (slewg (minorb 85 )120 120 ))
+(horng (add 240 (bard 16 ))135 (slewg (minorb 85 )120 120 ))
+)
+)
+80 
+)
+(pan 
+(add 
+(modo 
+(sawb (add 144 (bard 12 ))135 (slewb (majorb 85 )120 120 ))
+(hornb (add 144 (bard 12 ))135 (slewb (majorb 85 )120 120 ))
+)
+(modo 
+(sawd (add 180 (bard 16 ))135 (slewd (majord 85 )120 120 ))
+(hornd (add 180 (bard 16 ))135 (slewd (majord 85 )120 120 ))
+)
+(modo 
+(sawf (add 216 (bard 16 ))135 (slewf (minorc 85 )120 120 ))
+(hornf (add 216 (bard 16 ))135 (slewf (minorc 85 )120 120 ))
+)
+(modo 
+(sawh (add 255 (bard 16 ))128 (slewh (minor 85 )120 120 ))
+(hornh (add 255 (bard 16 ))128 (slewh (minor 85 )120 120 ))
+)
+)
+144 
+)
+)
+};hijaz gharib (phasey)
+{
+(jump (tar 1 ))(lights 4 )
+;(srate (short 29 119 ))
+(srate (short 16 1 ))
+(arab 
+(mount 1 2 )
+(mountb 2 2 )
+(mountc 3 2 )
+(mountd 4 2 )
+(mounte 5 2 )
+(mountf 6 2 )
+(mountg 7 2 )
+(mounth 8 2 )
+(pan 
+(comb 
+(add 
+(xor 
+(saw (add 128 (mount ))128 (slew (major 85 )120 120 ))
+(horn (add 128 (mount ))128 (slew (major 85 )120 120 ))
+)
+(xor 
+(sawc (add 160 (mountc ))128 (slewc (majorc 85 )120 120 ))
+(hornc (add 160 (mountc ))128 (slewc (majorc 85 )120 120 ))
+)
+(xor 
+(sawe (add 192 (mounth ))128 (slewe (minord 85 )120 120 ))
+(horne (add 192 (mounth ))128 (slewe (minord 85 )120 120 ))
+)
+(xor 
+(sawg (add 240 (mountf ))135 (slewg (minorb 85 )120 120 ))
+(horng (add 240 (mountf ))135 (slewg (minorb 85 )120 120 ))
+)
+)
+(mounth )(mul 100 (mounth ))200 
+)
+80 
+)
+(pan 
+(combb 
+(add 
+(xor 
+(sawb (add 144 (mountb ))135 (slewb (majorb 85 )120 120 ))
+(hornb (add 144 (mountb ))135 (slewb (majorb 85 )120 120 ))
+)
+(xor 
+(sawd (add 180 (mountd ))135 (slewd (majord 85 )120 120 ))
+(hornd (add 180 (mountd ))135 (slewd (majord 85 )120 120 ))
+)
+(xor 
+(sawf (add 216 (mountg ))135 (slewf (minorc 85 )120 120 ))
+(hornf (add 216 (mountg ))135 (slewf (minorc 85 )120 120 ))
+)
+(xor 
+(sawh (add 255 (mounte ))128 (slewh (minor 85 )120 120 ))
+(hornh (add 255 (mounte ))128 (slewh (minor 85 )120 120 ))
+)
+)
+(mounth )(mul 100 (mounth ))200 
+)
+144 
+)
+)
+}

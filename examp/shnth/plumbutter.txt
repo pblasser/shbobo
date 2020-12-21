@@ -1,0 +1,67 @@
+;created in New Jersey intl airport
+{
+(srate 28 )
+(jump (minor 1 (major (-1 ))))
+(lights 
+(mount 83 14 )
+)
+(toggle (mount ))
+(toggleb (toggle ))
+;avdog
+(left 
+(horn 34 28 
+(sauce 80 
+(wave 
+(square (mount )13 )
+8 (mul (sauceb )18 (corp 21 22 )))))
+)
+(right 
+(hornb (salsa (dust 1 )(smoke ))28 
+(sauceb 80 
+(waveb 
+(square (mount )13 )
+8 (mul (sauce )18 (corpb 21 23 )))))
+)
+(left 
+(waterc (square (mount ))2 (smoke 20 20 ))
+(string (toggle ))
+)
+(right 
+(waterd (square (mount ))2 (smoke 20 20 ))
+(stringb (toggleb )4 43 )
+)
+};elaborated with sausref @ home
+{
+(srate 28 )
+(jump (minor 1 (major (-1 ))))
+(lights 
+(mount 83 14 )
+)
+(toggle (mount ))
+(toggleb (toggle ))
+(sauce 80 
+(wave 
+(square (mount )13 )
+8 (mul (sauceb )18 (corp 81 82 ))))
+(sauceb 80 
+(waveb 
+(square (mount )13 )
+8 (mul (sauce )18 (corpb 81 83 ))))
+;avdog
+(arab (left 
+(fog (sauce )14 28 (smoke )(smoke );([sauce a] 100 50)
+)
+))
+(arab (right 
+(fogb (sauceb )(mul (horn )(sauce )15 )28 (smoke )(smoke );([sauce b] 100 50)
+)
+))
+(left 
+(waterc (square (mount ))2 (smoke 20 20 ))
+(string (toggle ))
+)
+(right 
+(waterd (square (mount ))2 (smoke 20 20 ))
+(stringb (toggleb )4 43 )
+)
+}

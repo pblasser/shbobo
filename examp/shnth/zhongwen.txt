@@ -1,0 +1,115 @@
+; 
+{
+(jump (minor 1 (major -1 )))
+(togo (major )10 15 11 23 30 )
+(togob (majorb )10 15 11 23 30 )
+(togoc (majorc )10 15 11 23 30 )
+(togod (majord )10 15 11 23 30 )
+(srate (corp 10 21 ))
+(left 
+(water (dust (bar 80 ))(smoke 10 (mul 2 2 10 ))(smoke 20 40 ));([bar] 40))
+(waterb (dustb (barb 80 ))(smoke 10 (mul 2 2 10 ))(smoke 20 40 ));([barb] 40))
+)
+(right 
+(waterc (dustc (barc 80 ))(smoke 10 (mul 2 2 10 ))(smoke 20 30 ));([barc] 40))
+(waterd (dustd (bard 80 ))(smoke 10 (mul 2 2 10 ))(smoke 20 30 ));([bard] 40))
+)}; 
+{
+(togo (major )10 15 11 23 30 )
+(togob (majorb )10 15 11 23 30 )
+(togoc (majorc )10 15 11 23 30 )
+(togod (majord )10 15 11 23 30 )
+(srate (corp 10 21 ))
+(left 
+(zither (dust (bar 40 ))(smoke )(bar 40 ))
+(zitherb (dustb (barb 40 ))(smoke )(barb 40 ))
+(left 
+(horn (togo )14 (bar ))
+(hornb (togob )11 (barb ))
+)
+)
+(right 
+(zitherc (dustc (barc 40 ))(smoke )(barc 40 ))
+(zitherd (dustd (bard 40 ))(smoke )(bard 40 ))
+(right 
+(hornc (togoc )13 (barc ))
+(hornd (togod )12 (bard ))
+)
+;([hornc] ([mountd] 120 20 20 20) 20)
+)
+(pan 
+;([hornc] ([mountd]) 20 20) ([mount] 100 2)
+)
+(arab (lights (mount 120 120 )))
+(jump (minor 1 (major -1 )))
+}; 
+{
+(togo (minor )10 15 11 23 30 )
+(togob (minorb )15 20 18 16 13 )
+(togoc (minorc )20 15 11 35 18 )
+(togod (minord )15 25 12 55 9 )
+(left 
+(wave 
+(add 
+(string (bar 60 4 )3 (corp 5 (togo ))120 )
+(stringb (barb 60 4 )4 (corpb 5 (togob ))120 )
+(stringc (barc 60 4 )3 (corp 5 (togoc ))120 )
+(stringd (bard 60 4 )4 (corpb 5 (togod ))120 )
+)
+40 (add 10 (bar 15 )(barb 20 )(barc 25 )(bard 30 ))
+)
+)
+(right 
+(waveb 
+(add 
+(string )
+(stringb )
+(stringc )
+(stringd )
+)
+40 (add 10 (bar 30 )(barb 25 )(barc 20 )(bard 15 ))
+)
+)
+(jump (minor 1 (major -1 )))
+}; 
+{
+(left 
+(horse (corp 10 40 )56 100 (horseb ))
+(horseb 55 (corp 10 40 )(horse )(horsec ))
+)
+(right 
+(horsec 25 54 (horseb )(horsed ))
+(horsed 10 26 (horsec )-100 )
+)
+(jump (minor 1 (major -1 )))
+}; 
+{
+(jump (minor 1 (major -1 )))
+(left 
+(dust (corp ))
+)}; 
+{
+(jump (minor 1 (major -1 )))
+(togo (minorb 1 (majorb (0 )))12 33 22 10 )
+(left 
+(salt (saw 20 (bar 40 (togo )))20 (corp 40 40 ))
+)}; 
+{
+(jump (minor 1 (major -1 )))
+(left 
+(water (saw 2 (bar 40 40 ))1 (corp 40 (smoke 4 40 )))
+)}; 
+{
+(jump (minor 1 (major -1 )))
+(left 
+(wave (saw 20 (bar 40 40 ))20 (corp 40 40 ))
+)}; 
+{
+(jump (minor 1 ))
+(left 
+(arab 
+(wave (dust (bar 40 )80 40 )2 20 )
+(water (dustb (barb 240 ))2 (smoke 20 20 ))
+)
+)
+}

@@ -1,0 +1,16 @@
+;TOP is the top knob on a SHTAR.
+ ;use it for pitch:
+ {(left 
+ (horn (top) 64)) 
+} 
+ ;or a filter:
+ {(left 
+ (wave (saw 12 64) 1 (top)))} 
+ ;or of course as envelope:
+ {(left 
+ (horn 64 64 (top)))} 
+ ;equivalent to:
+ {(left 
+ (top (horn 64 64)))} 
+ doubleclick
+doubleclick

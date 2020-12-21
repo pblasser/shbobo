@@ -1,0 +1,7 @@
+;PAN is like LEFT and RIGHT, a stereo output control.
+ ;PLACE makes it PAN left and RIGHT.
+ {(pan 
+ (horn 64 64) 
+ (bar))} 
+
+doubleclick

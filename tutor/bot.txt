@@ -1,0 +1,16 @@
+;BOT is the bottom knob on a SHTAR.
+ ;use it for pitch:
+ {(left 
+ (horn (bot) 64)) 
+} 
+ ;or a filter:
+ {(left 
+ (wave (saw 12 64) 1 (bot)))} 
+ ;or of course as envelope:
+ {(left 
+ (horn 64 64 (bot)))} 
+ ;equivalent to:
+ {(left 
+ (bot (horn 64 64)))} 
+ doubleclick
+doubleclick

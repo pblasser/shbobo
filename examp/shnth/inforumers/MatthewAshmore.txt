@@ -1,0 +1,161 @@
+;bc
+{(srate 70 )(jump (minor 1 ))(togo 20 44 8 )
+(sauce (slew (corp )9 15 )(left (right (wavec (salt (horn (togo 5 88 (minor (dustd -37 ))(bar (dust 1 )))80 (bar ))-7 2 )-11 33 )(waved (combb (saw 43 90 (barb ))62 53 12 )42 -114 ))))
+(left (right (combd (horn 48 (minorc (duste 20 ))115 (barc ))105 101 115 )))
+(slew (sauceb (corpb )(left (right (sawe 101 (minorb (dustf 65 ))88 (bard )))))-7 (corp ))};bd
+{(srate 6 )(jump (minor 1 ))(togo -95 -23 82 )
+(sauce (slew (corp )51 82 )(left (right (waveb (horn (togo 124 104 (bar (dust -100 )))-106 (bar ))55 38 )(wavec (saw (togo 83 -64 15 )32 (barb ))108 14 ))))(and -44 -118 )
+(srate -17 )(left (modo (right (leakb (comb ((horn 1 (wheele -69 -10 (togo 48 0 (barc )))))101 (barc 34 )-24 -18 )89 ))52 ))
+(left (right (sawe 17 -76 (bard ))))
+};Tar Corps
+{(srate 6 )(jump (minor 1 ))(togo -114 -101 -30 )
+(sauce (slew (corp )-118 -99 )(left (right (waveb (horn (togo 14 89 (bar (dust 121 )))-56 (bar ))-19 -67 )(wavec (saw (togo -56 -83 6 )-81 (barb ))-7 -91 ))))(and -34 113 )
+(srate 66 )(left (modo (right (leakb (comb ((horn -4 (wheele -120 -58 (togo 30 -102 (barc )))))-100 (barc -111 )27 5 )-16 ))-51 ))
+(left (right (sawe -102 -52 (bard ))))
+};A mess of a machine.
+{(srate (swoopg (dustc 41 )-81 34 ))(jump (minor 1 ))(togo 49 -56 -91 )
+(left (right (combc (left (right (saltc (saucec (corpb )(horn (togo 96 -10 )107 (barc )))-29 112 )))78 72 125 )(wave (horn (togo 89 -8 (bar (dust 72 )))64 (bar ))-55 -45 )(saw 91 116 (barb ))))(sauce (slew (corp )-100 -43 ))
+(saltd (slew (sauceb (corpb )(left (right (sawe 28 82 (bard )))))-121 (corp ))4 65 )};Carpal Tunnel Vision
+{(srate (short -10 -79 ))(swoop (corp )8 0 )(jump (minor 1 ))(lights 1 )(sauce (barb (corp ))(corpb ))(salsab (bard (corpb ))(corp ))
+(togo (corp )(corpb )12 30 99 )
+(left (right (haze (major )55 (corpb )5 7 )(swamp (majorb )91 (corp )9 -72 )(saltb (wave (horn (togo 30 -90 12 30 99 )7 (saucec 7 (slewc (bar (togo (togo (corp )(corpb )12 30 99 )(swoop (barb )6 127 )12 30 99 ))7 8 )))(corp (wheelc 1 -45 ))(corpb ))(mounte 30 88 (minorc ))(mountf 46 (togoe 49 -98 )2 31 (minord )))
+(saltb (wave (horn (togo 30 -90 12 30 99 )120 (saucec 7 (slewc ((minorb )(togo (togo (corp )(corpb )12 30 99 )(swoop (barb )6 9 )12 30 99 ))7 8 )))(corp (wheelc 1 -45 ))(corpb ))(mounte 30 88 (minorc ))(mountf 46 (togoe 49 -98 )2 31 (minord )))
+(saltb (wave (hornc (togo 30 -90 12 30 99 )120 (majord )(saucec 7 (slewc (bar (togo (togo (corp )(corpb )12 30 99 )(swoop (barb )6 127 )12 30 99 ))7 8 )))(corp (wheelc 1 -45 ))(corpb ))(mounte 30 88 (minorc ))(mountf 46 (togoe 49 -98 )2 31 (minord )))
+(saltb (wave (hornc (togo 30 -90 12 30 99 )120 (swooph majorc -93 8 )(saucec 7 (slewc (bar (togo (togo (corp )(corpb )12 30 99 )(swoop (barb )6 127 )12 30 99 ))7 8 )))(corp (wheelc 1 -45 ))(corpb ))
+(mounte 30 88 (minorc ))(mountf 46 (togoe 49 -98 )2 31 (minord )))
+(hornd (togob 30 -90 12 30 99 )120 (minorb )(saucec 119 (slewc (barc (togo 30 (swoop (bard )(togo 30 -90 12 30 99 )(togo 30 -90 12 30 99 ))12 30 99 ))-12 62 )))))};cc
+{(srate (short 83 7 )(sauceg (corp )(slewh (dustb (togog 73 76 -116 75 58 66 ))(swoopc (corpb )-56 122 )86 )))(jump (minor 1 ))(lights 2 )(sauce (barb (corp (mount -88 120 )))(corpb ))(salsab (bard (corpb ))(corp ))
+(left (right (sawc (togo -86 -5 100 -85 -115 )-53 (minorc ))(sawc (togo 7 88 100 -85 8 )8 (minord ))(horn (togo -86 -5 100 -85 -115 )(togob -109 106 -22 -96 57 )(saucec 7 (slewc (bar (togo 50 (swoop (barb )-113 26 )105 -2 72 ))-114 -98 )))
+(hornc (togo -86 -5 100 -85 -115 )(togob -109 106 -22 -96 57 )(major )(saucec 7 (slewc (bar (togo 50 (swoop (barb )-113 26 )105 -2 72 ))-114 -98 )))
+(hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornd (togob 66 106 8 -96 57 )7 (saucec 7 (slewc ((majorb )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))))};dd
+{(srate (short 10 122 )(dustb (togog 78 88 (modo (togo -20 -95 )-35 )7 62 -84 )))(jump (minor 1 ))(lights 4 
+)(sauce (barb (corp (mount -49 -115 )))(corpb ))(salsab (bard (corpb ))(corp ))
+(sauceh (corp )(left (right (hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(swampb (barb )6 (mountg 88 32 )88 (swoope (barb )87 122 ))(sawc (togo 7 88 100 -85 8 )8 (minord ))(sawc (togo -86 -5 100 -85 -115 )-53 (minorc ))
+(horn (togo 57 -87 -84 -41 -125 )(togob -44 -63 -113 113 39 )(saucec -49 (slewc (bar (togo 49 (swoop (barb )111 123 (minorb ))95 97 -45 ))81 121 )))
+(sawb 117 -9 (bard ))(hornb (togob 86 100 125 39 34 )60 (saucec 69 (slewc (barc (togo 37 (swoop (bard )(togo 13 120 -109 -103 78 )(togo -53 -104 12 -38 (swoopd 45 -79 -32 (minorb ))))45 67 10 ))99 -57 ))))))};ee
+{(saucef (dustc -65 )(slewg (srate (short 44 68 )(xor (sauced 5 (dustb (togog 4 -7 (smoke )-115 8 -89 )))12 ))(mountb (wheele 80 76 )-27 )(smokeb (mountc -32 -89 ))))(jump (minor 1 ))(lights 8 )(sauce (barb (corp (mount 77 124 )))(corpb ))(salsab (bard (corpb ))(corp ))
+(slewf (togo (corp )(corpb )-39 (swoopb (corpb )53 (dust 89 ))95 )-41 61 )
+(left (saltd (sawc (togo 7 88 100 -85 8 )8 (minord ))6 47 )(saltc (sawc (togo -86 -5 100 -85 -115 )-53 (minorc ))-79 22 )(saw -3 -2 (togo -56 -124 (bar )))
+(left )(right (right (hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))
+(fog (togo 77 7 14 61 117 -49 )58 -77 -7 74 ))
+(press (horn (togo 27 55 -19 97 66 )(togob 66 99 78 61 35 )(saucec 4 (slewc (bar (togo -94 (swoop (barb )66 57 )-89 110 88 ))7 104 )))77 88 122 
+)
+(salt (combb (hornb (togob -6 -89 7 -68 -82 )62 (saucec 3 (slewc (barc (togo 122 (swoop (bard )(togo 81 45 17 52 52 )(togo -84 -61 78 -59 64 ))91 -13 -60 ))-27 -41 )))99 59 70 )-118 75 )))};gg
+{(srate (short -75 74 )(sauceg (corp )(slewh (dustb (togog 8 64 3 18 82 9 ))(swoopc (corp -70 )88 71 )(corpb ))))(jump (minor 1 ))(lights -73 )
+(saltb (left (right (sawd 66 14 (bar ))(sawe -104 -61 (barb ))(hornc 55 96 (bard ))(hornb -27 -7 (corp ))(hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))(sawc (togo 7 88 100 -85 8 )8 (minord ))(sawc (togo -86 -5 100 -85 -115 )-53 (minorc ))
+(hornb (togob -109 106 -22 -96 57 )90 (saucec 88 (slewc (barc (togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))(hornd (togob 66 106 8 -96 57 )7 (saucec -9 (slewc ((majorc )(togo -122 (swoop (bard )(togo 100 55 45 -3 74 )(togo 49 3 -112 34 30 ))31 88 -71 ))-57 15 )))(horn (togo -124 101 -65 -68 3 )(togob 57 -17 118 -27 -38 )(saucec -117 (slewc (bar (togo 124 (swoop (barb )27 25 )-128 50 -46 ))-69 -117 )))
+(hornf (togo -124 101 -65 -68 3 )(togob 57 -17 118 -27 -38 )(minorb )(saucec -117 (slewc (bar (togo 124 (swoop (barb )27 25 )-128 50 -46 ))-69 -117 )))
+(horng (togo -124 101 -65 -68 3 )(mounth -2 79 )(togob 57 77 118 -27 88 )(minorc )(saucec -117 (slewc (bar (togo 124 (swoop (barb )27 25 )-128 50 -46 ))-69 -117 )))
+(horng (togo -124 101 -65 -68 3 )(mounth 77 79 )(togob 57 77 9 -27 88 )(minor )(saucec 8 (slewc (bar (togo 124 (swoop (barb )27 25 )-128 50 -46 ))-69 -117 )))
+(hornh (swoopf (togo -124 101 -65 -68 3 )37 -20 )(togob (mount 11 80 )-17 118 -27 -38 )(corpb )(saucec -117 (slewc (bar (togo 124 (swoop (barb )27 25 )-128 50 -46 ))-69 -117 )))
+(hornb (togob 10 -122 42 15 -68 )61 (saucec 74 (slewc (barc (togo 26 (swoop (bard )(togo -35 110 1 52 -33 )(togo -98 81 -54 -110 -35 ))-51 -121 68 ))56 -33 )))
+(8 (togob 10 77 42 15 -68 )61 (saucec 74 (slewc (barb (togo 26 (swoop (bard )(togo -35 110 1 52 -33 )(togo -98 81 -54 -110 -35 ))-51 -121 68 ))56 99 ))))59 )
+(pan -110 -78 )(corp )(corpb ))};gh
+{(srate (short 94 82 )(sauceg (corp )(slewh (dustb (togog -85 32 -40 89 15 35 ))(swoopc (corp 124 )-37 -104 )(corpb ))))(jump (minor 1 ))(lights -127 )
+(saltb (left (right (sawd 18 50 (bar ))(sawe 126 -67 (barb ))(hornc 79 56 (bard ))(hornb 8 98 (corp ))(hornb (togob -52 96 -94 -114 122 )-81 (saucec 68 (slewc (barc (togo -36 (swoop (bard )(togo -31 102 -56 118 -7 )(togo 51 90 -46 -14 -34 ))-20 -63 74 ))6 1 )))(hornd (togob -94 111 -74 -62 24 )-39 (saucec 21 (slewc ((majorc )(togo 34 (swoop (bard )(togo 0 -13 121 42 25 )(togo 8 -67 12 -95 6 ))-87 10 -7 ))125 -127 )))(sawc (togo -110 117 85 89 -7 )-46 (minord ))(sawc (togo 36 -112 21 103 84 )87 (minorc ))
+(hornb (togob 7 76 -26 -42 -116 )-52 (saucec 20 (slewc (barc (togo -34 (swoop (bard )(togo 53 31 122 -49 -100 )(togo 15 -30 34 -80 -10 ))-120 16 43 ))-15 48 )))(hornd (togob -114 -98 6 -107 0 )108 (saucec -59 (slewc ((majorc )(togo 71 (swoop (bard )(togo -81 63 -55 -122 -85 )(togo 80 57 50 -7 -102 ))0 64 -67 ))38 125 )))(horn (togo -115 -95 -118 -12 90 )(togob -40 -64 36 65 79 )(saucec -56 (slewc (bar (togo 0 (swoop (barb )-70 80 )-28 58 -98 ))36 -61 )))
+(hornf (togo -81 101 -117 117 -45 )(togob 115 27 -59 -43 -95 )(minorb )(saucec -23 (slewc (bar (togo 82 (swoop (barb )51 82 )124 104 -100 ))-106 83 )))
+(horng (togo -64 15 32 -44 -118 )(mounth -17 1 )(togob -69 -10 48 0 101 )(minorc )(saucec 34 (slewc (bar (togo -24 (swoop (barb )-18 89 )52 17 -76 ))-113 31 )))
+(horng (togo 99 -7 -28 -17 78 )(mounth -73 47 )(togob -41 30 122 -123 -33 )(minor )(saucec 122 (slewc (bar (togo 89 (swoop (barb )71 -60 )37 68 -118 ))-83 6 )))
+(hornh (swoopf (togo -91 -80 -55 -26 118 )-16 -104 )(togob (mount -15 -43 )6 -111 107 -8 )(corpb )(saucec -19 (slewc (bar (togo 38 (swoop (barb )-47 -114 )86 74 43 ))-40 -12 )))
+(hornb (togob 41 83 12 31 62 )50 (saucec -126 (slewc (barc (togo -122 (swoop (bard )(togo -117 -108 50 -69 14 )(togo 125 88 54 32 -99 ))-112 -109 -98 ))-10 34 )))
+(-24 (togob -9 -47 93 -22 102 )-31 (saucec 15 (slewc (barb (togo 120 (swoop (bard )(togo -88 105 53 -70 108 )(togo -102 -70 -38 -111 34 ))65 -108 60 ))30 7 )))))
+(pan -117 -97 )(corp )(corpb ))};hg
+{(srate (short 86 -80 )(sauceg (corp )(slewh (dustb (togog 110 31 113 -64 109 84 ))(swoopc (corp 120 )43 -61 )(corpb ))))(jump (minor 1 ))(lights 99 )
+(saltb (left (right (sawd 51 -72 (bar ))(sawe 41 -40 (barb ))(hornc 27 -40 (bard ))(hornb 3 93 (corp ))(hornb (togob -8 -74 -21 55 38 )-11 (saucec 108 (slewc (barc (togo 14 (swoop (bard )(togo -3 -7 -59 -15 62 )(togo 53 12 -73 91 -61 ))-62 -46 -44 ))17 -124 )))(hornd (togob 18 72 -70 -114 81 )-71 (saucec 91 (slewc ((majorc )(togo -47 (swoop (bard )(togo 11 -8 -88 -21 -36 )(togo -46 -108 -47 47 102 ))-18 113 96 ))77 -91 )))(sawc (togo -125 -8 -72 6 -41 )-42 (minord ))(sawc (togo 58 -115 77 54 -48 )-42 (minorc ))
+(hornb (togob -52 119 -74 -98 77 )-11 (saucec -20 (slewc (barc (togo 24 (swoop (bard )(togo -85 73 63 -119 -120 )(togo 42 21 17 59 -69 ))64 -65 -23 ))-25 46 )))(hornd (togob 7 113 -52 -38 71 )-87 (saucec -87 (slewc ((majorc )(togo 43 (swoop (bard )(togo 36 -28 59 65 60 )(togo 83 -40 -114 -80 65 ))-59 94 -110 ))27 41 )))(horn (togo -81 34 49 -56 -91 )(togob 96 -10 107 -29 112 )(saucec 78 (slewc (bar (togo 72 (swoop (barb )125 89 )-8 72 64 ))-55 -45 )))
+(hornf (togo 91 116 -100 -43 28 )(togob 82 -121 4 65 56 )(minorb )(saucec 33 (slewc (bar (togo 6 (swoop (barb )-114 -101 )-30 -118 -99 ))14 89 )))
+(horng (togo 121 -56 -19 -67 -56 )(mounth -83 6 )(togob -81 -7 -91 -34 113 )(minorc )(saucec 66 (slewc (bar (togo -4 (swoop (barb )-120 -58 )30 -102 -100 ))-111 27 )))
+(horng (togo 5 -16 -51 -102 -52 )(mounth 48 105 )(togob 101 115 99 -11 33 )(minor )(saucec 108 (slewc (bar (togo -37 (swoop (barb )-121 20 )65 92 42 ))-114 -8 )))
+(hornh (swoopf (togo 14 7 48 -65 -57 )0 -53 )(togob (mount -34 98 )-1 -125 -89 -2 )(corpb )(saucec 43 (slewc (bar (togo -126 (swoop (barb )47 8 )-1 -97 -40 ))-44 -58 )))
+(hornb (togob -116 -66 -107 -66 -86 )-121 (saucec 6 (slewc (barc (togo 69 (swoop (bard )(togo 47 29 -45 0 -74 )(togo -30 9 68 67 -116 ))42 -111 -1 ))-124 -114 )))
+(26 (togob -119 48 -48 -127 -102 )-96 (saucec 40 (slewc (barb (togo 17 (swoop (bard )(togo -109 123 -114 -107 -47 )(togo 30 -7 -84 -8 -65 ))23 36 17 ))-118 73 )))))
+(pan 89 -11 )(corp )(corpb ))};hi
+{(srate (short 5 58 )(sauceg (corp )(slewh (dustb (togog 41 -35 -59 73 102 121 ))(swoopc (corpb )71 102 )-103 )))(jump (minor 1 ))(lights 128 )(sauce (barb (corp (mount -70 124 )))(corpb ))(salsab (bard (corpb ))(corp ))
+(left (right (horn (togo 55 -16 86 -125 -25 )(togob 87 7 -63 -107 -11 )(saucec -23 (slewc (bar (togo -16 (swoop (barb )35 -80 )124 -27 -119 ))-68 -118 )))
+(hornf (togo 115 -46 -110 -25 121 )(togob 2 114 36 -73 86 )(minorb )(saucec -10 (slewc (bar (togo -3 (swoop (barb )82 85 )112 -63 56 ))52 68 )))
+(horng (togo 23 93 18 121 95 )(mounth 51 -86 )(togob -59 20 102 -106 -13 )(minorc )(saucec 105 (slewc (bar (togo 81 (swoop (barb )-86 17 )-78 24 67 ))-111 -42 )))
+(hornh (swoopf (togo 125 -121 -115 -84 -98 )80 -105 )(togob (mount -95 28 )102 -38 75 -53 )(corpb )(saucec -44 (slewc (bar (togo -41 (swoop (barb )73 -57 )-117 98 -49 ))91 -62 )))
+(hornb (togob 61 4 -115 6 41 )101 (saucec -85 (slewc (barc (togo 108 (swoop (bard )(togo 92 -105 24 -14 30 )(togo -84 50 -102 -96 100 ))55 106 -114 ))126 -57 )))
+(-72 (togob -46 -60 6 -115 -4 )-53 (saucec 13 (slewc (barb (togo -70 (swoop (bard )(togo -79 -117 41 -11 -49 )(togo 126 116 103 -114 -7 ))69 -13 21 ))-91 -85 )))))};hj
+{(srate (short -79 -64 )(sauceg (corp )(slewh (dustb (togog 102 95 31 -117 52 -95 ))(swoopc (corpb )24 -66 )-42 )))(jump (minor 1 ))(lights 55 )(sauce (barb (corp (mount 71 124 )))(corpb ))(salsab (bard (corpb ))(corp ))
+(left (right (horn (togo 53 32 -27 -8 -115 )(togob -6 20 96 64 106 )(saucec 92 (slewc (bar (togo -40 (swoop (barb )70 -62 )2 95 -99 ))124 -84 )))
+(hornf (togo 72 -9 -26 7 84 )(togob -34 -53 95 -6 -119 )(minorb )(saucec -103 (slewc (bar (togo -39 (swoop (barb )-17 38 )60 -113 24 ))-25 80 )))
+(horng (togo 91 125 95 -75 -54 )(mounth 28 -59 )(togob -79 82 -46 -22 -104 )(minorc )(saucec 12 (slewc (bar (togo -73 (swoop (barb )-85 -68 )59 50 60 ))-117 49 )))
+(hornh (swoopf (togo 15 33 90 -42 -51 )-114 -103 )(togob (mount 117 50 )29 -77 -39 3 )(corpb )(saucec 65 (slewc (bar (togo -41 (swoop (barb )-125 -84 )-37 10 -91 ))-90 -3 )))
+(hornb (togob -99 36 0 125 -101 )46 (saucec -81 (slewc (barc (togo -14 (swoop (bard )(togo -51 18 -20 -45 71 )(togo -13 -54 99 -14 28 ))125 -88 -80 ))35 -97 )))
+(39 (togob 69 50 -88 -42 -78 )-14 (saucec -25 (slewc (barb (togo -63 (swoop (bard )(togo 35 -124 -124 -58 93 )(togo -67 -48 54 -73 -39 ))87 -92 -39 ))-36 -94 )))))};Togo Party
+{(srate (short 6 8 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 80 53 (salsa (bar )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 )))70 (bar ))
+(sawb (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 (salsab (barc )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))53 )50 (barc ))
+(sawc (togo (barb 1 )40 60 53 51 80 27 40 53 40 (salsac (bard )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))80 53 )26 (bard ))
+(zither (minor 32 )(togob (barb 1 )6 95 9 -39 -104 83 ))((string (minorb 2 )(togob (barb 1 )67 95 9 99 90 83 )89 8 ))(hornd (togob (barb 1 )67 95 9 7 90 9 )30 (minorc ))(horne (togob (barb 1 )67 95 9 7 90 9 )45 (minord ))
+))};bb
+{(srate (short -89 -81 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )-82 62 80 122 81 45 17 52 52 -84 -61 78 (salsa (bar )(mount (togob (barb )-59 64 91 -13 -60 -27 -41 52 -52 90 -54 (dust (corp )))59 )))70 (bar ))
+(sawb (togo (barb 1 )12 -33 -6 -92 85 44 68 67 -118 75 (salsab (barc )(mount (togob (barb )-3 -2 -56 -124 -64 58 -77 -7 74 -48 -99 (dust (corp )))-49 ))117 )61 (barc ))
+(sawc (togo (barb 1 )-53 110 111 102 77 -128 103 -65 89 (salsac (bard )(mount (togob (barb )-27 80 76 -32 -89 0 -5 99 -2 -89 -65 (dust (corp )))78 ))88 71 )-99 (bard ))
+(zither (minor 62 )(togob (barb 1 )37 -49 -115 -109 -43 94 ))((string (minorb 37 )(togob (barb )-128 57 -87 -84 -41 -125 )-44 -63 ))(hornd (togob (barb 1 )113 39 -49 49 111 123 )95 (minorc ))(horne (togob (barb 1 )-45 81 121 86 100 125 )39 (minord ))
+))};bb
+{(srate (short 69 37 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )120 -109 -103 78 -53 -104 12 -38 98 45 67 10 (salsa (bar )(mount (togob (barb )99 -57 120 -2 -51 68 -90 16 91 -116 -60 (dust (corp )))29 )))92 (bar ))
+(sawb (togo (barb 1 )65 84 -62 30 -14 -65 4 11 -80 -38 (salsab (barc )(mount (togob (barb )41 117 122 34 -63 -58 -8 28 -16 -90 52 (dust (corp )))113 ))62 )90 (barc ))
+(sawc (togo (barb 1 )-54 30 -3 46 80 49 -98 31 2 (salsac (bard )(mount (togob (barb )89 -56 -1 20 86 49 -56 -54 -53 -35 -20 (dust (corp )))-95 ))10 122 )45 (bard ))
+(zither (minor -79 )(togob (barb 1 )42 -114 109 100 -100 -26 ))((string (minorb 2 )(togob (barb )-17 32 -25 87 122 55 )75 75 ))(hornd (togob (barb 18 )-118 -34 27 56 84 56 )89 (minorc ))(horne (togob (barb 89 )21 -57 -8 -19 -25 -103 )-128 (minord ))
+))};bb
+{(srate (short 12 8 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 80 53 (salsa (bar )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 )))70 (bar ))
+(sawb (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 (salsab (barc )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))53 )50 (barc ))
+(sawc (togo (barb 1 )40 60 53 51 80 27 40 53 40 (salsac (bard )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))80 53 )26 (bard ))
+(horne (togob (barb 1 )67 95 9 7 90 9 )45 (minord ))(hornd (togob (barb 1 )67 95 9 7 90 9 )30 (minorc ))((string (minorb 2 )(togob (barb 1 )67 95 9 99 90 83 )89 8 ))(zither (minor 50 )(togob (barb 1 )6 95 9 -39 -104 83 ))))};bb
+{(srate (short 5 -74 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 80 53 (salsa (bar )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 )))29 (bar ))
+(sawb (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 (salsab (barc )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))53 )-72 (barc ))
+(sawc (togo (barb 1 )40 60 53 51 80 27 40 53 40 (salsac (bard )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))80 53 )-75 (bard ))
+(horne (togob (barb 1 )67 95 9 7 90 9 49 74 -3 )45 (minord ))(hornd (togob (barb 1 )67 95 9 7 90 9 )40 (minorc ))((string (minorb 2 )(togob (barb 1 )67 95 9 99 90 83 )89 8 ))(zither (minor )(togob (barb 1 )6 95 9 -39 -104 83 ))))};bb
+{(srate (short 34 30 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 80 53 (salsa (bar )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 )))31 (bar ))
+(sawb (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 (salsab (barc )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))53 )88 (barc ))
+(sawc (togo (barb 1 )40 60 53 51 80 27 40 53 40 (salsac (bard )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))80 53 )-71 (bard ))
+(horne (togob (barb -57 )15 -6 15 -16 -41 61 16 111 108 )-33 (minord ))(hornd (togob (barb 52 )-98 -30 104 86 -75 69 )7 (minorc ))((string (minorb -46 )(togob (barb -89 )20 77 100 -45 107 53 )34 89 ))(zither (minor )(togob (barb -88 )-31 -76 -61 43 -38 89 ))))};bb
+{(srate (short -48 58 ))(jump (major 1 ))(left (right (saw (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 80 53 (salsa (bar )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 )))-75 (bar ))
+(sawb (togo (barb 1 )40 60 53 51 80 27 40 53 40 60 (salsab (barc )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))53 )-116 (barc ))
+(sawc (togo (barb 1 )40 60 53 51 80 27 40 53 40 (salsac (bard )(mount (togob (barb )40 60 53 51 80 27 40 53 40 60 80 (dust (corp )))120 ))80 53 )-52 (bard ))
+(horne (togob (barb 12 )87 71 42 -7 -81 -115 -128 -89 16 )-120 (minord ))(hornd (togob (barb -124 )-48 62 88 -5 18 -120 )27 (minorc ))((string (minorb 55 )(togob (barb -19 )97 66 -82 -109 78 61 )35 85 ))(zither (minor )(togob (barb -94 )-58 57 -89 110 -41 -88 ))))};freeball
+{(left (string (sauceb 3 (dust (bar 63 ))(square (bar )-41 ))6 (add 45 (corp )-6 )134 )(combd (waveb (xor (saw 6 (add 45 (corp )-6 ))70 )(slewb (bar -66 )-19 97 )(sauced -48 (bard -33 )))80 122 81 )(water (sauceg 153 (sawb -77 -7 ))-3 16 ))
+(right (stringb (saucec 3 (dustb (bard 63 ))(square (bard )-41 ))6 (add 45 (corp )-6 )137 )(combc (wavec (xor (sawb 24 (add 45 (corp )-6 ))-54 )(slew (barb 73 )-120 27 )(saucee 88 (bar -40 )))-81 -68 -82 )(waterb (saucef 149 (sawc 74 -48 ))-64 12 ))(srate 77 (corpb -4 ))
+(jump (minor 1 ))(jump (major -1 ))};bb
+{(left (string (sauceb -5 (dust (bar 99 ))(square (bar )-2 ))-89 (add -65 (corp )78 )88 )(combd (waveb (xor (saw 71 (add -99 (corp )62 ))-84 )(slewb (bar 37 )-49 -115 )(sauced -109 (bard -43 )))94 37 109 )(water (sauceg -128 (sawb 57 -87 ))-84 -41 ))
+(right (stringb (saucec -125 (dustb (bard -44 ))(square (bard )-63 ))-113 (add 113 (corp )39 )-49 )(combc (wavec (xor (sawb 49 (add 111 (corp )123 ))95 )(slew (barb 97 )-45 81 )(saucee 121 (bar 86 )))100 125 39 )(waterb (saucef 34 (sawc 60 69 ))37 13 ))(srate 120 (corpb -109 ))
+(jump (minor 1 ))(jump (major -1 ))};bb
+{(left (string (sauceb 98 (dust (bar 45 ))(square (bar )67 ))10 (add 99 (corp )-57 )120 )(combd (waveb (xor (saw -2 (add -51 (corp )68 ))-90 )(slewb (bar 16 )91 -116 )(sauced -60 (bard -72 )))92 29 65 )(water (sauceg 84 (sawb -62 30 ))-14 -65 ))
+(right (stringb (saucec 4 (dustb (bard 11 ))(square (bard )-80 ))-38 (add 41 (corp )117 )122 )(combc (wavec (xor (sawb 34 (add -63 (corp )-58 ))-8 )(slew (barb 28 )-16 -90 )(saucee 52 (bar 113 )))62 -11 30 )(waterb (saucef -54 (sawc 30 -3 ))46 80 ))(srate 49 (corpb -98 ))
+(jump (minor 1 ))(jump (major -1 ))};bb
+{(left (string (sauceb -56 (dust (bar -1 ))(square (bar )20 ))86 (add 49 (corp )-56 )-54 )(combd (waveb (xor (saw -53 (add -35 (corp )-20 ))-95 )(slewb (bar 10 )122 45 )(sauced -79 (bard -32 )))42 -114 109 )(water (sauceg 100 (sawb -100 -26 ))2 -98 ))
+(right (stringb (saucec -17 (dustb (bard 32 ))(square (bard )-25 ))87 (add 122 (corp )55 )75 )(combc (wavec (xor (sawb 75 (add 18 (corp )-118 ))-34 )(slew (barb 27 )56 84 )(saucee 56 (bar -124 )))89 21 -57 )(waterb (saucef -8 (sawc -19 -25 ))-103 -128 ))(srate -100 (corpb -78 ))
+(jump (sauce -3 ((smokeb (major )1 ))))(jump (sauceh -105 ((smoke (minorb )-1 ))))};bb
+{(left (string (sauceb -63 (dust (bar 7 ))(square (bar )-40 ))111 (add 126 (corp )-50 )-18 )(combd (waveb (xor (saw -123 (add -81 (corp )-65 ))-85 )(slewb (bar -126 )125 -38 )(sauced 106 (bard -8 )))-31 83 52 )(water (sauceg 73 (sawb -123 -60 ))-50 57 ))
+(right (stringb (saucec -18 (dustb (bard -81 ))(square (bard )75 ))-6 (add -6 (corp )73 )117 )(combc (wavec (xor (sawb 117 (add -9 (corp )-86 ))-102 )(slew (barb -41 )21 102 )(saucee -87 (bar -116 )))-15 -126 -98 )(waterb (saucef 11 (sawc -78 -75 ))-33 -52 ))(srate 51 (corpb -19 ))
+(jump (sauce 62 ((smokeb (major )86 ))))(jump (sauceh -40 ((smoke (minorb )-39 ))))};Icefishing
+{(srate (short -8 -19 ))
+(jump (minor 1 ))
+(left (right (waterc (dustc 3 )(barc )(mount (corpb )(corp )))))
+(left (right (combb (horn 40 88 (barb 84 ))(corp (sauceh -25 (smoke (corpb ))))(corpb )(corp 90 ))))
+(arab )(left (right (comb (hornh 33 (wavec (saucef (slewc (bar -80 )9 (slewd (bar )16 7 )68 )(bar ))(corp )(corpb ))(corpb )(bar 7 ))(corp )(corpb )41 )))};2
+{(srate 66 )
+(jump (minor 1 ))
+(left (right (reflect (horse 21 97 8 3 (bar ))121 )
+(waved (sawc 8 66 (bard ))118 -32 )))
+(left (right (hazeb (dustd (mountb 0 -56 (barc )))80 49 -98 31 )))
+(left (right (arab )(waterc (dustc 3 )(barc )(mount (corpb )(corp )))))
+(left (right (combb (horn 40 88 (barb 84 ))(corp )(corpb )(corp 77 ))))
+(arab )(left (right (comb (hornh 33 (wavec (saucef (slewc (bar -80 )9 (slewd (bar )16 7 )68 )(bar ))(corp )(corpb (slewe (bard )45 118 )))(corpb )(bar 7 ))(corp )(corpb )41 )))};3
+{(srate 21 )
+(jump (minor 1 ))
+(left (right (reflect (hornb 84 56 (bar ))8 )(waterd (mountc (corpb )(corp ))(barc )(corpb ))))
+(left (right (sawc 55 66 (bard ))))
+(left (right (hazeb (dustd (mountb 0 -56 (barc )))60 49 -98 31 )))
+(left (right (waterc (dustc 3 )(barc 56 )(mount (corpb )(corp )))))
+(left (right (combb (horn 40 88 (barb 84 ))(corp )(corpb )(corp 90 ))))
+(arab )(left (right (comb (hornh 33 (wavec (saucef (slewc (bar -80 )9 (slewd (bar )16 7 )68 )(bar ))(corp )(corpb ))(corpb )(bar 7 ))(corp )(corpb )41 )))}

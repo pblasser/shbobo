@@ -1,0 +1,15 @@
+
+<plist>
+<dict>
+
+	<key>CFBundleExecutable</key>
+	<string>justints</string>
+
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+
+
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>

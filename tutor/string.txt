@@ -1,0 +1,14 @@
+;STRING [a-d] is Karpluss-Strong
+ ;TRIG plucks it.
+ ;NUME should be 1
+ ;DENO is the pitch control (delay length)
+ ;Leave out FB for infinite feedback.
+ ;Or put FB as a high number like 120
+ {(left 
+ (string (minor) 1 64) 
+) 
+ (right 
+ (stringb (mount 64 64) 1 63) 
+)} 
+
+doubleclick

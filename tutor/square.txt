@@ -1,0 +1,8 @@
+;SQUARE makes a square by comparation.
+ ;Give it an INN and an OTH to compare to.
+ {(left 
+ (square 
+ (horn 64 64) 0 10))} 
+ ;Note, attenuate with MUL to not break ears!
+
+doubleclick

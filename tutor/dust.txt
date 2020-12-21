@@ -1,0 +1,5 @@
+;DUST [a-h] is random pulses
+ {(left 
+ (dust 4 (horn 64 64)) 
+)}
+doubleclick

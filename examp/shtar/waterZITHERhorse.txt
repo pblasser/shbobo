@@ -1,0 +1,12 @@
+;waterZITHERhorse
+{(left (waterb (dustf (corpb 32 ))4 (smokee 4 14 ))
+(zither (dustc (barc 44 ))(smoked 11 22 ))
+(zitherb (dustd (bard ))(smoked 11 99 ))
+(mul (horseb )(minor ))(horse (corpb )(corp )(horseb (corp )(corpb )(horsec (corpb )(corpb )(horsed (corp )(corp )100 (horsec ))(horseb ))(horse ))1 (minorb )))
+(srate 48 )
+
+(right (water (duste (corp 32 ))4 (smokee 4 12 ))
+
+(zitherc (dust (bar 44 ))(smoked 11 22 )(dust ))
+(zitherd (dustb (barb ))(smoked 11 111 )(dustb ))
+(mul (horsec )(minorc ))(mul (horsed )(minord )))}

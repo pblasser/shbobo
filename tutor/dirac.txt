@@ -1,0 +1,9 @@
+;DIRAC and ARAB switch from 
+ ;signed to unsigned math, respectively.
+ ;The default is DIRAC, so it is only used
+ ;To switch back...
+ {(arab 
+ (left 
+ (horn 200 64)))} 
+
+doubleclick

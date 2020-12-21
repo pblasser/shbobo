@@ -1,0 +1,8 @@
+;LEAK removes DC offset
+ ;Like a very low freq HP filter
+ {(left 
+ (horn -87 -38 (leak 
+ (corp) 
+ 10)) 
+)}
+doubleclick

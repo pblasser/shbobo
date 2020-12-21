@@ -1,0 +1,8 @@
+;FM squish
+{
+(jump (minor 1 ))(right (horn (hornb 49 125 (bar ))(corp 62 33 ))
+(hornc (hornd 66 72 (barb ))(corpb 80 40 )))(left (horne (hornf 36 96 (barc ))(corp 60 66 ))
+(horng (hornh 62 119 (bard ))(corpb 72 111 )))};FM drone
+{(jump (minor 1 ))(right (horn (hornb 60 (wheelc (barb 50 )(bar 50 )))(wheelb (bard 50 )(barc 50 ))(slew (corpb )14 15 ))
+)
+(left (hornc (hornd 60 (wheel (bar 50 )(barb 50 )))(wheeld (barc 44 )(bard 55 ))(slewb (corp )14 15 )))}

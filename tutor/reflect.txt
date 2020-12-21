@@ -1,0 +1,7 @@
+;REFLECT, a nut, processes two inputs
+ ;As named, it bounces the INN off the other.
+ ;...waveshaping.
+ {(left 
+ (reflect (horn 64 64) (corp)) 
+)}
+doubleclick

@@ -1,0 +1,9 @@
+;beach
+{(left (wave (smoke (mountb 12 12 ))-95 (mountc 11 -33 )))
+(jump (tar 1 ))
+(right (waveb (smokeb (mountd 13 12 ))-95 (mountf 14 -33 )))
+};lanterns
+{(left (arab (fogb (dustb 1 )8 84 (smokeb 3 22 )5 ))(wave (smoke (mountb 12 12 ))-95 (mountc 11 -33 )))
+(jump (tar 1 ))(srate 18 )
+(right (arab (fog (dust 1 )8 84 (smokeb 3 33 )5 ))(waveb (smokeb (mountd 13 12 ))-95 (mountf 14 -33 )))
+}

@@ -1,0 +1,17 @@
+;HEART is the middle sensor on a SHTAR.
+ ;use it for pitch:
+ {(left 
+ (horn (heart) 64)) 
+} 
+ ;or a filter:
+ {(left 
+ (wave (saw 12 64) 10 (heart)))} 
+ ;or of course as envelope:
+ {(left 
+ (horn 64 64 (heart)))} 
+ ;equivalent to:
+ {(left 
+ (heart (horn 64 64)))} 
+ 
+
+doubleclick

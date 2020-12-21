@@ -1,0 +1,9 @@
+;SWOOP [a-h] is a rise and fall envelope shape.
+ ;TRIG is its input
+ ;NUME is how fast it rises and falls
+ ;DENO is how far it rises to.
+ ;SWOOP is a double shape in DIRAC, single in ARAB
+ {(left 
+ (swoop (minor) 12 64 (horn 64 64)) 
+)}
+doubleclick

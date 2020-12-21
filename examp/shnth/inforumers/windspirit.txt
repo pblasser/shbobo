@@ -1,0 +1,9 @@
+;tetrazzi emulation
+{(left (horn (add (square (corp )0 10 )(square (corp )30 8 )(square (corp )75 10 )(square (corp )90 14 )54 )64 (bar )
+)
+(hornb (add (square (corp )0 8 )(square (corp )30 8 )(square (corp )75 12 )(square (corp )90 8 )72 )64 (barc )
+)
+(hornc (add (square (corp )0 8 )(square (corp )30 20 )(square (corp )75 8 )(square (corp )90 8 )84 )64 (barb )
+)
+(hornd (arab (add (square (corp )0 16 )(square (corp )30 4 )(square (corp )75 16 )(square (corp )90 16 )108 ))64 (bard )
+))}

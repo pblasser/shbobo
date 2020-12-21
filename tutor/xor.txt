@@ -1,0 +1,7 @@
+;XOR, a nut, processes two inputs
+ ;As named, it XORs the INN off the other.
+ ;...waveshaping.
+ {(left 
+ (xor (horn 64 64) (corp)) 
+)}
+doubleclick

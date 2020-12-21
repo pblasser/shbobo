@@ -1,0 +1,11 @@
+;neilyoung
+{(srate 28 )
+(left (saw 8 23 (horn 1 (slew (bar )100 1 )))
+(sawb 8 24 (hornb 1 (slewb (barb )100 1 )))
+(wave (major )1 (mul (horn )25 25 ))(waveb (majorb )1 (mul (hornb )8 16 ))
+(togo (square (mount 100 2 ))98 (wind )(horne 55 100 )(wind )0 (smoke (horng 11 33 ))(dustb -42 )))
+(right (sawc 7 23 (hornc 1 (slewc (barc )100 1 )))
+(sawd 7 24 (hornd 1 (slewd (bard )100 1 )))
+(wavec (majorc )1 (hornc ))(waved (majord )1 (mul (hornd )8 15 ))
+(togob (square (mount ))98 (wind )(hornf 66 100 )(wind )0 (smoke (horng 3 33 ))))
+}

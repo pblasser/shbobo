@@ -1,0 +1,48 @@
+;whineyhorse
+{
+(srate 3 );at high frequency
+(left (right 
+(horse (corpb )56 100 (horseb ))
+(horseb 55 (corp )(horse )(horsec ))
+))
+(left (right 
+(horsec (corp )54 (horseb )(horsed ))
+(horsed 10 (corpb )(horsec )-100 )
+))
+(jump (minor 1 ))
+};mare
+{
+(srate 3 );at high frequency
+(left (right 
+(horse (corpb )56 100 -100 )
+(horseb 55 (corp )100 -100 )
+))
+(left (right 
+(horsec (corp )54 100 -100 )
+(horsed 10 (corpb )100 -100 )
+))
+(jump (minor 1 ))
+};oldhorse
+{
+(srate 30 );olde horse
+(left (right 
+(horse (corpb )56 100 (horseb ))
+(horseb 55 (corp )(horse )(horsec ))
+))
+(left (right 
+(horsec (corp )54 (horseb )(horsed ))
+(horsed 10 (corpb )(horsec )-100 )
+))
+(jump (minor 1 ))
+};nitemare
+{
+(right (left 
+(horse (corp 10 40 )56 100 (horseb ))
+(horseb 55 (corp 10 40 )(horse )(horsec ))
+))
+(right (left 
+(horsec 25 54 (horseb )(horsed ))
+(horsed 10 26 (horsec )-100 )
+))
+(jump (minor 1 ))
+}

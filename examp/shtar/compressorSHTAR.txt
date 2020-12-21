@@ -1,0 +1,6 @@
+;bb
+{(left (square (slew )1 (slew (bard -126 (barb ))1 126 )))};bb
+{(left (hornc (corp 1 1 )(mount 120 88 )))(right (horn (corpb 1 1 )(mountb 120 99 )))};bb
+{(left (right (top (top ))))};bb
+{(left (right ))};bb
+{(left (hornc (modo (corp )20 )(mount 120 88 )))(right (horn (modo (corpb )22 )(mountb 120 99 )))}

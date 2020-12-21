@@ -1,0 +1,7 @@
+;SALSA is like SAUCE, but you trigger the samples.
+ ;Put it around something, and give it a TRIGGER.
+ ;It will only calculate samples on the TRIGGER.
+ {(left 
+ (horn (salsa (dust 10) (smoke)) 64) 
+)}
+doubleclick

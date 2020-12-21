@@ -1,0 +1,8 @@
+{
+<fun poop [x]
+ <print (2 3 5 <+ 3 x> x )>
+ x
+>
+<poop 1>
+<poop 2>
+}

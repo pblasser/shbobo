@@ -1,0 +1,179 @@
+; 
+{
+(srate 30 )
+(right 
+(horn 15 (wheel (bar 50 )(barb 50 )80 40 )); unslewed for comaprison
+(hornb 30 40 (slewb (minorb )2 100 ))
+(hornc 60 40 (slewc (minorc )100 2 ))
+)(left 
+(hornd 120 40 (slewd (minord )40 1 ))
+(reflect (horne 120 80 (slew (minord )1 1 ))10 )
+)
+(jump (minor 1 ))
+}; 
+{
+()
+(jump (minor 1 ))
+(left -125 (arab (horn 200 211 (bar ))
+(hornb 211 211 (barb ))
+(hornc 222 211 (barc ))
+(hornd 233 211 (bard ))
+(saw 133 211 (swoop (minor )10 200 ))
+(sawb 134 222 (swoopb (minorb )13 200 ))
+(sawc 135 233 (swoopc (minorc )11 200 ))
+(sawd 136 244 (swoopd (minord )12 200 ))
+)
+)
+(lights (corpb ))
+(srate (corpb 20 30 ))
+(right -125 (arab 
+(fog (dust (bar 150 ))
+10 
+(smoked 20 41 )
+200 
+(smoked 20 41 ))
+(fogb (dustb (barb 180 ))
+10 
+80 
+200 
+(smoked 20 41 ))
+(fogc (dustc (barc 220 ))
+10 
+(smoked 100 101 )
+200 
+(smoked 20 41 ))
+(fogd (dustd (bard 20 ))
+(smoked 140 141 )
+(smoked 140 141 )
+200 
+(smoked 20 41 ))
+)
+)
+}; 
+{
+(jump (minor 1 ))
+(togo (square (barb )20 )22 34 23 11 33 57 )
+(togob (square (barc )20 )21 34 21 12 32 57 )
+(sauce 88 (wavec (barb -10 50 )12 (corp 20 20 )))
+(left 
+(mul 
+(add 60 (fog (dust (bar 10 ))(smoke 9 20 )94 (smoke 4 100 )100 ))
+100 
+(fogb (dustb (bar 10 ))(smokeb 9 20 )94 (smokeb 4 100 )100 )
+)
+(add 
+(string (barb -100 20 )5 (togo ))
+(stringb (barc -100 20 )5 (togob ))
+)
+(swoop (minor )10 80 (horn 80 30 ))
+(swoopb (minorb )10 80 (smokec 20 ))
+)
+(right 
+(mul 
+(add 60 (fogc (dustc (barc 10 ))(smoke 9 20 )94 (smoke 4 100 )60 ))
+(stringc (bard -100 20 )6 (togo )(bard ))
+(stringd (barc -100 20 )6 (togob )(bard ))
+)
+(wave 
+(saw 10 67 (barb 40 ))
+17 
+(corp 70 (sauce )))
+)
+(srate (corpb 5 5 ))
+}; 
+{
+(jump (minor 1 ))
+(salsa (square (bar )(barb ))
+(barc ))
+(salsab (square (barc )(bard ))
+(barb ))
+(left ;-100
+(horn 
+(mul (salsa )20 21 )
+(corpb 20 20 )
+(bar ))
+)
+(right ;-100 
+(wave 
+(sawc 
+(mul (salsab )20 22 )
+(corp 20 20 )
+(barb ))
+10 
+(modo (corpb 10 20 )33 103 10 )
+)
+)
+(arab 
+(pan 
+(fog (dust 3 )
+2 83 (modo (corp 10 20 )(corpb 4 4 )200 34 )133 )
+100 
+)
+(right 
+(swoopc (minorc )1 50 (smoked 60 ))
+)
+)
+(left 
+(swoopb (minorb )1 50 (smoked 60 ))
+)
+}; 
+{
+(jump (minor 1 ))
+(togo (square (bar ))5 8 10 12 4 8 )
+(togob (square (barb ))10 14 8 18 16 20 )
+(togoc (square (barc ))22 28 16 18 32 27 )
+(togod (square (bard ))26 36 38 43 24 29 21 )
+(srate (toggle (minorc )110 12 ))
+(left 
+(wave (square (bar )50 10 )
+1 
+(togo ))
+(wavec (square (barc )50 10 )
+1 
+(togoc ))
+)
+(right 
+(waveb 
+(square (barb )50 10 )
+1 
+(togob ))
+(waved (square (bard )50 10 )
+1 
+(togod ))
+)
+}; 
+{
+(togo (dust )40 44 54 68 )
+(togob (dustb )41 45 55 69 )
+(togoc (dustc )40 43 53 67 )
+(jump (minor 1 ))
+(left -80 (arab (horn 80 88 (bar ))
+(hornb 88 88 (barb ))
+(hornc 108 88 (barc ))
+(hornd 136 88 (bard ))
+(smoked (sauced 11 (sawg 1 31 60 )))
+)
+(wave (saw 40 88 (swoop (minor )10 200 60 ))10 (swoop ))
+(waveb (sawb 44 88 (swoopb (minorb )13 200 60 ))10 (swoopb ))
+(wavec (sawc 54 88 (swoopc (minorc )11 200 60 ))10 (swoopc ))
+(waved (sawd 68 88 (swoopd (minord )12 200 60 ))10 (swoopd ))
+)
+(right (fog (dust 2 )10 58 (togo )44 )
+(fogb (dustb 3 )10 58 (togob )44 )
+(fogc (dustc 4 )10 58 (togoc )44 )
+(string (sauce 40 (horne 10 30 ))
+1 (mul 11 64 )
+128 
+)
+(stringb (sauceb 41 (hornf 10 31 ))
+1 (mul 12 64 )
+128 
+)
+(stringc (saucec 61 (horng 10 31 ))
+1 (mul 22 64 )
+128 
+)
+)
+(lights (corpb ))
+(srate (corpb 10 10 ))
+}
