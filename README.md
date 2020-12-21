@@ -51,7 +51,7 @@ and bill's requirements for connecting a usb device.
 * **shmat** is the source code for the st32f103rct6 chip inside shnth
 and shtar. type make shnth or make shtar. 
 you will need arm-none-eabi or something like it. it will also
-try to call st-link or texane to flash the st chip. 
+try to call st-link or [st-link](https://github.com/stlink-org/stlink) to flash the st chip. 
 * **sqush** is a simple shred of code to read the shnth
 and pipe granular microsound notes to csound.
 
