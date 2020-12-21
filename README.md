@@ -7,14 +7,11 @@
 it now has full language support, including barebones
 lisp interpreter on host side for scripting and generative 
 patch algorithms. like the olde program Galaxy for the DX7.
-
-*double click on **fish**. open a file from examp/shnth or
+* double click on **fish**. open a file from examp/shnth or
 examp/shtar. try "serving" it to the device.
-
 * for **justints** and **justintstoo**, have the shnth or shtar already 
 plugged in with a USB cord. You can use the keystroke
 "command-o" to open an example in examp/justints
-
 * **jish** is a new version of fish, in java. java is the future, 
 as it is also the past.
 it calls the appropriate shlisp command line from _win,
@@ -32,9 +29,6 @@ that is, if you have [java](https://www.java.com/en/download/) installed.
 you can make the sorce-level makefile if you want to try compiling
 it all for yourself. or you can do each makefile by themselves, i don't care!
 all of these may need libusb on linux.
-
-
-
 * **fish** is the source for that program, and you'll need JUCE
 to compile it. Because it's JUCE there is no makefile, sorry.
 * since JUCE is like java, it was natural to end up porting it to
@@ -54,11 +48,17 @@ the lisp it serves shbobo code to your shnth or shtar. it can also
 spit out readings from your device. compiler note: it actually
 is forced into c++ as they all do just to meet steve's 
 and bill's requirements for connecting a usb device.
-* **shmat**
- you will need
-liblua.a installed for mikey. you will need
-arm-none-eabi or something like it.
+* **shmat** is the source code for the st32f103rct6 chip inside shnth
+and shtar. type make shnth or make shtar. 
+you will need arm-none-eabi or something like it. it will also
+try to call st-link or texane to flash the st chip. 
+* **sqush** is a simple shred of code to read the shnth
+and pipe granular microsound notes to csound.
 
-the 
-Shmat is the source code for the st32f103rct6 chip inside shnth
-and shtar. 
+##thanks
+thanks to everyone who works on this or uses it. i pray that
+you have a healthy internet and a safe home. note that all the 
+shbobo code is now open source, including the device initialization
+and sexpression of the shmat.
+
+
