@@ -2,7 +2,9 @@
 
 ## programs
  go into your OS-apprpriate directory, such as _lin, _mac, or _win, 
- and execute the following programs.
+ and execute the following programs. Remember, pblasser is an unidentified
+ (secret) developer, so you may need to right-click and open on macintoshiusieses.
+* **Shlisp** is a command line to program your shnth or shtar.
 * **Shlisp** is a command line to program your shnth or shtar.
 it now has full language support, including barebones
 lisp interpreter on host side for scripting and generative 
