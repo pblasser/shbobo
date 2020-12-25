@@ -7,6 +7,7 @@
 it now has full language support, including barebones
 lisp interpreter on host side for scripting and generative 
 patch algorithms. like the olde program Galaxy for the DX7.
+
 * double click on **fish**. open a file from examp/shnth or
 examp/shtar. try "serving" it to the device.
 * for **justints** and **justintstoo**, have the shnth or shtar already 
@@ -22,6 +23,28 @@ going to this directory in console and type:
 java -jar jish.jar
 ```
 that is, if you have [java](https://www.java.com/en/download/) installed.
+
+## shlisp options
+You can upload a shlisp texte in Fish, or you can use shlisp 
+on the command line. Jish can upload too and it does by 
+calling the shlisp command line. changing cuisine is uploading
+the whole audio opcode matrix, and only needs doing once.
+changing cuisine is like upgrading audio firmware, and also
+you could potentially hack the matrix and create new sound opcodes.
+* to list all the opcodes: shlisp -h
+* to read data from the device for testing: shlisp -g
+* to upload a patch: shlisp ../examp/beachlanterns.txt
+* to change cuisine give it the appropriate bin and a texte: shlisp -b../shnth.bin ../examp/beachlanterns.txt
+
+## orange light mode
+If you happen to upload a bugged or broken shlisp, and your shnth has frozen,
+now worries, it's just the audio code spinning out. your shnth is not broken.
+you need to recover it with orange light mode:
+* disconnect device USB cord
+* turn battery switch off, away from USB port
+* hold down orange button on shnth, or hold down top fret of shtar
+* whilst holding, reconnect USB cord
+* upload a "safe" patch from examples
 
 
 
