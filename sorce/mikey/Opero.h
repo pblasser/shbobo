@@ -43,6 +43,7 @@ struct Opero {
  void broinger(lua_State *L, int step, const char * namo, shOpr*ino, float opt=0) {
   broing[namo] = ino;
   int walk = 0;
+  
   if ((step>=lua_gettop(L)) && (lua_istable(L,lua_gettop(L)))) { 
   //for (int i = 1; i <= lua_gettop(L); i++) { 
    //if (lua_istable(L,lua_gettop(L))) { 

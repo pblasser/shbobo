@@ -128,6 +128,7 @@ int mikeywarp(lua_State *L) {
 }
 
 int main( int argc, char *argv[] ) {
+  
  if( init() == false )  return 1;
  luainit();
  clean_up();

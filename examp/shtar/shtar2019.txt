@@ -1,0 +1,32 @@
+{;shtar 2019 tuning strings from top to bottom AGEA gauge numbers in mils
+ ;remember our G in 17tet is a little flatter, basically the seventh harmonic
+ (right 
+ (hornb 
+ (scale (finger)) ;unity of 128
+ 40 ;deno of 40 achieves concert A
+ (bot (mount 41 63)) ;tremolo and volume
+) ;9 string
+ ;offset for mul mode stereo panning
+ (mul (mountd) 32 (mul (mountc) 32)) 
+ (horn 
+ (scale (finger) 112) ;112 is seven eights of 128
+ 40 ;deno of 40 achieves concert A
+ (top (mountc -114 63)) ;tremolo and volume
+) ;11 string
+) 
+ 
+ (left 
+ (hornd 
+ (scale (finger) 96) ;96 is three quarters of 128
+ 40 ;deno of 40 achieves concert A
+ (bot (mountb 60 63)) ;tremolo and volume
+) ;13 string
+ ;offset for mul mode stereo panning
+ (mul (mountb) 32 (mul (mount) 32)) 
+ (hornc 
+ (scale (finger) 64) ;64 is one half of 128
+ 40 ;deno of 40 achieves concert A
+ (top (mountd -26 63)) ;tremolo and volume
+) ;22 wound string
+) 
+} {(right (horn 32 40)) (left (hornb 28 40))}

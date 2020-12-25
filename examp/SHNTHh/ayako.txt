@@ -1,0 +1,52 @@
+;for ayako using resistive flex sensor
+ [{(left (left 
+ (smoke (bard (bard 45))) 
+ (sawc 120 (bard 4 30) (swoopb (sawd 1 80) 80 80 (barc)) 
+))) 
+ (right (right 
+ (saw 120 (bard -4 30) (swoop (sawb 1 81) 80 80 (barc))) 
+ (water (dust (dustb 2 12 4)) (smoke 3 7) (smoke 20 80) 3))) 
+ (bend (minorb 1 (minorc 1 (minord 1)))) 
+} {(right (right 
+ (sawc 120 (bard 4 30) 
+ (swoopb (sawd 1 80) 80 80 (barc)) 
+) 
+ (combb (mul (salt) 80) 1 111 (barc -100 100)) 
+)) 
+ (left (left 
+ (saw 120 (bard -4 30) (swoop (sawb 1 81) 
+ 80 80 (barc))) 
+ (comb (salt (smoke (bard (bard 45))) 30 80 80) 
+ 1 100 (barc -100 100)))) 
+ (bend (minor 1 (minorc 1 (minord 1)))) 
+} 
+ 
+ {(srate (short 40 -40 
+)) (bend (minor 1 (minorb 1 (minord 1)))) 
+ (right 
+ (right 
+ (fogd (dustd (bard (bard))) (smoked 47 62) 117 108 (smokeh 8 22) (bard))) 
+) 
+ (left 
+ (left 
+ (fogb (dustc (barc (barc))) (smokec 47 62) 120 -122 (smokeh 8 39) (barc 80)))) 
+ 
+} 
+ 
+ 
+ {
+ 
+ 
+ 
+ 
+ 
+ (srate (corp 10 21)) (bend (minor 1 (minorb 1 (minorc 1)))) (bend (minor 1 (minorb 1 (minorc 1)))) 
+ (left 
+ (water (dust (bard (bard))) (smoke 10 (mul 2 2 10)) (smoke 20 40)) ;([bar] 40))
+ (waterb (dustb (barc (barc))) (smoke 10 (mul 2 2 10)) (smoke 20 40)) ;([barb] 40))
+) 
+ (right 
+ (waterc (dustc (barc (barc))) (smoke 10 (mul 2 2 10)) (smoke 20 30)) ;([barc] 40))
+ (waterd (dustd (bard (bard))) (smoke 10 (mul 2 2 10)) (smoke 20 30)) ;([bard] 40))
+)} 
+] 

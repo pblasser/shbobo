@@ -1,0 +1,13 @@
+;play along with King Crimson, Lizard, Part 2: Bolero
+ {(left (wave (saw (mount 100 100 1 (scale (finger))) 50 (top) 
+ (sawb (scale (finger)) 49 (top) (sawe (scale (finger)) 50 (top) 
+) 
+)) 30 123 
+ 
+)) 
+ 
+ 
+ (right (waveb (sawc (mountb 99 100 1 (scale (finger))) 50 (top) 
+ (sawd (scale (finger)) 50 (top) (sawf (scale (finger)) 49 (top)))) 30 122 
+ 
+))}

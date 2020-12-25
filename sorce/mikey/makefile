@@ -22,6 +22,17 @@ compilLinux=g++
 compil=$(compil$(OS))
 
 
+#### look man...
+#### first of all hard to compile on win and lin so i gave up
+#### works on osx because opengl is embraced there
+
+#### now, end of 2020, i found that lua breaks after about 5.2,
+### whenever they added auxgetstr
+#### if anyone can help with making auxgetstr work inside lua_getfield,
+#### thats where the problem is when they added auxgetstr.
+### thanks if you can help with that!!!
+
+
 main:
 
 ifeq ($(OS),Darwin)
@@ -32,9 +43,11 @@ ifeq ($(OS),Darwin)
 	mkdir Mikey.app/Contents
 	mkdir Mikey.app/Contents/MacOS
 	echo "<plist><dict><key>CFBundleExecutable</key><string>Mikey</string><key>CFBundlePackageType</key><string>APPL</string><key>NSPrincipalClass</key><string>NSApplication</string></dict></plist>" > Mikey.app/Contents/Info.plist
-	#mv Mikey.mac Mikey.app/Contents/MacOS/Mikey
-	#-rm -r ../../_mac/Mikey.app
-	#mv Mikey.app ../../_mac
+	mv Mikey.mac Mikey.app/Contents/MacOS/Mikey
+	cp main.lua Mikey.app/
+	cp -r luals Mikey.app/
+	-rm -r ../../_mac/Mikey.app
+	mv Mikey.app ../../_mac
 endif
 
 oldemac:

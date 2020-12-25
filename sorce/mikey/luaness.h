@@ -42,15 +42,14 @@ lunar_register<Trigg>(l);
  lunar_register<Space>(l);
  lunar_register<Chube>(l);
  lunar_register<Golem>(l);
-
 #if defined(STEVEJOBS)
 	char path[PATH_MAX];
 	char luapath[PATH_MAX];
 	CFURLRef res = CFBundleCopyBundleURL(CFBundleGetMainBundle());
 	CFURLGetFileSystemRepresentation(res, true, (UInt8 *)path, PATH_MAX);
 	strcpy(luapath,path);
-	strcat(luapath,"/../luals/?.lua");
-	strcat(path,"/../main.lua");
+	strcat(luapath,"/luals/?.lua");
+	strcat(path,"/main.lua");
 	char supapath[PATH_MAX+PATH_MAX];
 	sprintf(supapath,"package.path=package.path..\";%s\"",luapath);
 	luaL_dostring(l,supapath);

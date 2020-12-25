@@ -1,0 +1,12 @@
+;play along with King Crimson, Lizard, Part 2: Bolero
+ {(left (wave (saw (mount 100 100 1 (togo)) 50 (corp) 
+ (sawb (togo) 49 (corp) (sawe (togo) 50 (corp) 
+) 
+)) 30 123 
+ 
+)) 
+ (togo (minor) 1 64 60 48 42 32) 
+ (right (waveb (sawc (mountb 99 100 1 (togo)) 50 (corp) 
+ (sawd (togo) 50 (corp) (sawf (togo) 49 (corp)))) 30 122 
+ 
+))}

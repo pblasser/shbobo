@@ -1,0 +1,62 @@
+;for ayako using resistive flex sensor
+ [{(bend (minorb 1 (minorc 1 (minord 1 (major 1))))) 
+ (left 
+ (left 
+ (smoke (bard (bard 45))) 
+ (sawc 120 30 
+ (swoopb (sawd 1 80) 80 80 (barc (barc))) 
+))) 
+ (right (right 
+ (saw 120 30 
+ (swoop (sawb 1 81) 80 80 (barc (barc)))) 
+ (water (dust (dustb 2 12 4)) (smoke 3 7) (smoke 20 80) 3))) 
+ 
+} 
+ 
+ {(srate (short 18 79)) 
+ (bend (minor 1 (minorc 1 (minord 1 (major 1))))) 
+ 
+ (pan (modo (bard (bard)) 4) 
+ 
+ (wave 
+ (and 
+ (horn (short 17 1) 60) 
+ (hornb (short 17 11) 60) 
+) 
+ 60 
+ (bard -60) 
+) 
+) 
+ (pan 
+ (modo (barc (barc)) 4) 
+ 
+ (waveb 
+ (and 
+ (hornc (short 19 1) 60) 
+ (hornd (short 19 11) 60) 
+) 
+ 60 
+ (barc -60) 
+) 
+) 
+} 
+ 
+ {(bend (minor 1 (minorb 1 (minord 1 (major 1))))) 
+ (left (wave (smoke (barc (barc (dust (barc (barc 64)))))) 84 (mountb 115 -50 -54 50))) 
+ (right (waveb (smoke (bard (bard (dustb (bard (barc 64)))))) -81 (mountd -24 -106 -11 50)))} 
+ 
+ 
+ 
+ 
+ {(bend (minor 1 (minorb 1 (minorc 1 (major 1))))) 
+ (left 
+ (water (dust (bard (bard 32))) (smoke 10 10) (smoke 20 40) (bard))) 
+ (right 
+ (waterc (dustc (barc (barc 32))) (smoke 10 10) (smoke 20 30) (barc)))} 
+ {(bend (minor 1 (minorb 1 (minorc 1 (minord 1))))) (srate 18) 
+ (left (comb (swampb (dust (barc)) 15 (barc (barc)) (smoke) -32) 84 (mountb 115 -50 -54 -32) (barc))) 
+ (right (combb (swampc (dustb (bard)) 75 (bard (bard)) (smoke) 110) -81 (mountd -24 -106 -11 19) (bard))) 
+} 
+ 
+ 
+] 

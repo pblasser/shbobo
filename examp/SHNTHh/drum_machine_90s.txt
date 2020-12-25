@@ -1,0 +1,6 @@
+{(left (modo (pulsec (bard -100 -10) 20 (smoke)) (bard 12)) 
+ (modo (pulseb (bar -100 -10) 20 (hornc (smoke 100 50) -78)) (bar 12)) 
+) (bend (tar)) 
+ (right (dust (barc (barc)) (dustb (barc (barc)))) 
+ 
+ (modo (pulse (barb -100 -10) 30 (horn (hornb 40 -88 20 20) (smoke 10 80))) (barb 12)))}

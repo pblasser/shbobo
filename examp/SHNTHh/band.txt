@@ -1,0 +1,2 @@
+{(left (horn 77 36 (bar)) (hornb 77 34 (barb)) (hornc 77 32 (barc)) (hornd 77 27 (bard))) (srate 64)} 
+ {(left (horn 77 36 (bar)) (hornb 77 34 (barb)) (hornc 77 32 (barc)) (hornd 77 27 (bard)))}

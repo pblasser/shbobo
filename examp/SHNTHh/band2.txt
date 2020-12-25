@@ -1,0 +1,101 @@
+; 
+ {
+ (left (right 0)) 
+ (jump (minor 1 (minorb 3 (minorc 5 (minord 7 (major 2 (majorb 4 (majorc 6 (majord 8))))))))) 
+ 
+} 
+ {
+ (srate 17) ;hijaz gharib (low and dirty)
+ 
+ (bend (tar)) 
+ 
+ (pan 
+ (corp (corp)) 
+ (wave 
+ (add ;or xor
+ (saw 17 (bar 20 137)) 
+ (sawb 17 137) 
+) 
+ (barb 44 80) 
+ (corp) 
+) 
+) 
+ (pan 
+ (corpb (corpb)) 
+ (waveb 
+ (add 
+ (sawc 19 (barc 20 137)) 
+ (sawd 19 137) 
+) 
+ (bard 44 80) 
+ (corpb) 
+) 
+) 
+} {(srate 17) 
+ (bend (tar)) ;hijaz gharib (low and dirty)
+ 
+ (pan 
+ (corp (corp)) 
+ (wave 
+ (and 
+ (saw 17 137) 
+ (sawb 17 137) 
+) 
+ 60 
+ (corp -60) 
+) 
+) 
+ (pan 
+ (corpb (corpb)) 
+ (waveb 
+ (and 
+ (sawc 19 137) 
+ (sawd 19 137) 
+) 
+ 60 
+ (corpb -60) 
+) 
+) 
+} 
+ {(left (wave (smoke (corp (corp (dust (corp))))) 84 (mountb 115 -50 -54 50))) (bend (tar)) 
+ (right (waveb (smoke (corpb (corpb (dustb (corpb))))) -81 (mountd -24 -106 -11 50)))} 
+ {(left (smoke (corp (corp 44)))) (bend (tar)) 
+ (right (smoke (corpb (corpb 44))))} 
+ 
+ {(left 
+ (bar (hornc (smoke 44 84) 47)) (minor (horng 42 94)) (barc (horn 84 40)) (minorc (horne 42 80)) 
+) 
+ (right 
+ 
+ (barb (hornb 84 44)) (minorb (hornh 42 88)) (bard (hornd 84 33)) (minord (hornf 21 33))) 
+ (srate 27) (bend (tar))} 
+ {(left 
+ (bar (hornc 84 47)) (minor (horng 42 94)) (barc (horn 84 40)) (minorc (horne 42 80)) 
+) 
+ (right 
+ 
+ (barb (hornb 84 44)) (minorb (hornh 42 88)) (bard (hornd 84 33)) (minord (hornf 21 33))) 
+ (srate 27) (bend (tar))} 
+ 
+ {(left (waveb (wind) 50 (corp (corp)))) 
+ (right (wave (wind) 50 (corpb (corpb)))) 
+ (srate 27) (bend (tar))} {(left (horn (wind) 50 (corp (corp)))) 
+ (right (hornb 50 (wind) (corpb (corpb)))) 
+ (srate 27) (bend (tar))} {(left (horn (wind) 50 (corp (corp)))) 
+ (right (hornb 50 (wind) (corpb (corpb)))) 
+ (srate 27) (bend (tar))} 
+ 
+ 
+ {(srate (corp 10 21)) (bend (tar)) 
+ (left 
+ (water (dust (bard (bard))) (smoke 10 10) (smoke 20 40) (bard)) ;([bar] 40))
+ (waterb (dustb (barc (barc))) (smoke 10 10) (smoke 20 40) (barc)) ;([barb] 40))
+) 
+ (right 
+ (waterc (dustc (barc (barc))) (smoke 10 10) (smoke 20 30) (barc)) ;([barc] 40))
+ (waterd (dustd (bard (bard))) (smoke 10 10) (smoke 20 30) (bard)) ;([bard] 40))
+)} 
+ 
+ 
+ 
+ ; 
