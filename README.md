@@ -53,8 +53,10 @@ you needs to use terminal to go to fish directory and run "sudo fish"
 or, you can give permission for shnth by putting a file named "shnth.rules" inside the 
 /etc/udev/rules.d/ directory.
 the shnth.rules file should contain the following text:
+```
 SUBSYSTEM=="usb", ATTR{idVendor}=="6666", ATTR{idProduct}=="6666", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="6666", ATTR{idProduct}=="7777", MODE="0666"
+```
 
 ## sorce
 you can make the sorce-level makefile if you want to try compiling
