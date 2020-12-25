@@ -7,7 +7,6 @@
 it now has full language support, including barebones
 lisp interpreter on host side for scripting and generative 
 patch algorithms. like the olde program Galaxy for the DX7.
-
 * double click on **fish**. open a file from examp/shnth or
 examp/shtar. try "serving" it to the device.
 * for **justints** and **justintstoo**, have the shnth or shtar already 
@@ -38,7 +37,7 @@ you could potentially hack the matrix and create new sound opcodes.
 
 ## orange light mode
 If you happen to upload a bugged or broken shlisp, and your shnth has frozen,
-now worries, it's just the audio code spinning out. your shnth is not broken.
+no worries, it's just the audio code spinning out. your shnth is not broken.
 you need to recover it with orange light mode:
 * disconnect device USB cord
 * turn battery switch off, away from USB port
@@ -46,7 +45,14 @@ you need to recover it with orange light mode:
 * whilst holding, reconnect USB cord
 * upload a "safe" patch from examples
 
-
+## linux
+usb on linux does not connect to device unless you have permission.
+you needs to use terminal to go to fish directory and run "sudo fish"
+or, you can give permission for shnth by putting a file named "shnth.rules" inside the 
+/etc/udev/rules.d/ directory.
+the shnth.rules file should contain the following text:
+SUBSYSTEM=="usb", ATTR{idVendor}=="6666", ATTR{idProduct}=="6666", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="6666", ATTR{idProduct}=="7777", MODE="0666"
 
 ## sorce
 you can make the sorce-level makefile if you want to try compiling
@@ -62,6 +68,12 @@ which are for reading the shnth in a game-like fashion. **justints**
 also only uses ints, and it is a manifesto for integer/fixed-point synthesis.
 * **justintstoo** is for the shtar but it actually works with shnth too.
 this uses SDL2, so get that installed.
+```
+JUSTINtS FOR SHNTH
+FOUR CARDS TO THE BARRE
+JUSTINTS FOR SHTAR
+32 DOMINOES TO THE CARRE
+```
 * **mikey** uses SDL2, as well as openGL. it also uses lua for scripting,
 so get that installed too. this only compiles on mac
 * **shlisp** is a command line, programmed in c, that interprets

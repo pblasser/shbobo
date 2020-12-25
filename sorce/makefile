@@ -11,8 +11,8 @@ endif
 	cd jish && $(MAKE)
 	cd justints && $(MAKE)
 	cd justintstoo && $(MAKE)
-	#cd mikey && $(MAKE)
-	#zip -r ../../shbobo.zip ../ -x "*.git*" -x "*.DS_Store*"
+	cd mikey && $(MAKE)
+	zip -r ../../shbobo.zip ../ -x "*.git*" -x "*.DS_Store*"
 	$(MAKE) clean
 clean:
 	-rm -rf *.app *.*~ makefile~ *.o *.exe 
