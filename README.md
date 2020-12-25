@@ -88,7 +88,9 @@ and shtar. type make shnth or make shtar.
 you will need arm-none-eabi or something like it. it will also
 try to call st-link or [st-link](https://github.com/stlink-org/stlink) to flash the st chip. 
 ```
-ALL ASSEMBLY, NO RULES!
+@ALL ASSEMBLY, NO RULES!
+@ACTUALLY THE MAIN RULE IS HOW THE REGISTERS ARE USED
+@AND WHERE THE FIXED POINT IS
 ```
 * **sqush** is a simple shred of code to read the shnth
 and pipe granular microsound notes to csound.
