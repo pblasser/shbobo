@@ -10,8 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#ifndef BILLGATES
 #include <unistd.h>
-
+#endif
 #include "chub.h" 
 #include "situations.h"
 
@@ -791,7 +792,7 @@ int main(int argc, char * argv[]) {
   filefish = fopen(inputfile,"rb");
   if (filefish) {
    while (masterbytesz < 0x10000)
-    write_bytez(0);
+    write_bytez(0);
    int c;
    if (0 == fseek (filefish , 0x20000 , SEEK_SET)) {
     c = fgetc (filefish);
