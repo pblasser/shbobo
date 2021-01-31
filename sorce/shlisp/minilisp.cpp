@@ -299,7 +299,7 @@ static Obj *read(void) {
             return make_int(read_number(c - '0'));
         if (c == '-')
             return make_int(-read_number(0));
-        if (isalpha(c) || strchr("+=!@#$%^&*", c))
+        if (isalpha(c) || strchr("|+=!@#$%^&*", c))
             return read_symbol(c);
         error("Don't know how to handle %c", c);
     }
@@ -511,7 +511,7 @@ static Obj *eval(Obj *env, Obj *obj) {
 #define primmertypes(subn,tipe) \
  static Obj *prim_##subn(Obj *env, Obj *list) { \
     if (list_length(list) != 2) \
-        error("Malformed #subn"); \
+        error("Malformed " #subn); \
     Obj *cell = eval_list(env, list); \
     cell->cdr = cell->cdr->car; \
     cell->type = tipe; \
@@ -572,26 +572,24 @@ static Obj *prim_setq(Obj *env, Obj *list) {
     return value;
 }
 
-static Obj *prim_add(Obj *env, Obj *list) {
-    int sum = 0;
-    for (Obj *args = eval_list(env, list); args; args = args->cdr) {
-        if (args->car->type != TINT)
-            error("+ takes only numbers");
-        sum += args->car->value;
-    }
-    return make_int(sum);
-}
 
-static Obj *prim_mul(Obj *env, Obj *list) {
-    int sum = 1;
-    for (Obj *args = eval_list(env, list); args; args = args->cdr) {
-        if (args->car->type != TINT)
-            error("* takes only numbers");
-        sum *= args->car->value;
-    }
-    return make_int(sum);
+#define primmermath(subn,summ,oper) \
+ static Obj *prim_##subn(Obj *env, Obj *list) { \
+    int sum = summ; \
+    for (Obj *args = eval_list(env, list); args; args = args->cdr) { \
+        if (args->car->type != TINT) \
+            error("+ takes only numbers"); \
+        sum = sum oper args->car->value;\
+    }\
+    return make_int(sum);\
 }
-
+primmermath(and, -1, &)
+primmermath(orr, 0, |)
+primmermath(xor, 0, ^)
+primmermath(not, -1, ^)
+primmermath(add, 0, +)
+primmermath(mul, 1, *)
+primmermath(mod, 1, %)
 
 static Obj *prim_rand(Obj *env, Obj *list) {
     int sum = rand();
@@ -602,8 +600,6 @@ static Obj *prim_rand(Obj *env, Obj *list) {
     }
     return make_int(sum);
 }
-
-
 
 static Obj *prim_print(Obj *env, Obj *list) {
     print(env, eval(env, list->car));    
@@ -682,6 +678,10 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "cdr", prim_cdr);
     add_primitive(env, "+", prim_add);
     add_primitive(env, "*", prim_mul);
+    add_primitive(env, "&", prim_and);
+    add_primitive(env, "|", prim_orr);
+    add_primitive(env, "^", prim_xor);
+        add_primitive(env, "!", prim_not);
     add_primitive(env, "rand", prim_rand);
     add_primitive(env, "def", prim_def);
     add_primitive(env, "fun", prim_fun);
