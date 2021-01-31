@@ -1,4 +1,4 @@
-;MAJOR [a-d] are the lower buttons on SHNTH
+;MAJOR [a-d] are the upper buttons on SHNTH
  {(left 
  (horn 64 64 (major)) 
  (hornc 68 64 (majorc))) (right 
