@@ -92,7 +92,7 @@ static HANDLE open_device(const char *path)
   FILE_ATTRIBUTE_NORMAL,//FILE_FLAG_OVERLAPPED,//FILE_ATTRIBUTE_NORMAL,
   0);
  if (handle == INVALID_HANDLE_VALUE) {
-  printf("cooked\n");
+//  printf("cooked\n");
   handle = CreateFileA(path,
    GENERIC_WRITE |GENERIC_READ,
    FILE_SHARE_READ|FILE_SHARE_WRITE, /*share mode*/
@@ -142,7 +142,7 @@ hid_device * hid_open_path(const char *path) {
  dev = new_hid_device();
  dev->device_handle = open_device(path);
  if (dev->device_handle == INVALID_HANDLE_VALUE) {
-  wprintf(L"ErroeurCreateFile");
+  //wprintf(L"ErroeurCreateFile");
   goto err;
  }
  res = HidD_GetPreparsedData(dev->device_handle, &pp_data);
@@ -212,12 +212,12 @@ struct hid_device_info * hid_enumerate(unsigned short vendor_id, unsigned short 
    &device_interface_data, device_interface_detail_data,
    required_size, NULL, NULL);
   if (!res) goto cont;
-  wprintf(L"HandleName: %s\n", device_interface_detail_data->DevicePath);
+  //wprintf(L"HandleName: %s\n", device_interface_detail_data->DevicePath);
   write_handle = open_device(device_interface_detail_data->DevicePath);
   if (write_handle == INVALID_HANDLE_VALUE)  goto cont_close;
   attrib.Size = sizeof(HIDD_ATTRIBUTES);
   HidD_GetAttributes(write_handle, &attrib);
-  wprintf(L"Product/Vendor: %x %x\n", attrib.ProductID, attrib.VendorID);
+  //wprintf(L"Product/Vendor: %x %x\n", attrib.ProductID, attrib.VendorID);
   if ((vendor_id == 0x0 && product_id == 0x0) || 
    (attrib.VendorID == vendor_id && attrib.ProductID == product_id)) {
    #define WSTR_LEN 512
@@ -257,11 +257,11 @@ struct hid_device_info * hid_enumerate(unsigned short vendor_id, unsigned short 
    res = HidD_GetManufacturerString(write_handle, wstr, sizeof(wstr));
    wstr[WSTR_LEN-1] = 0x0000;
    if (res)  cur_dev->manufacturer_String = wcsdup(wstr);
-   wprintf(L"Manu: %s\n", cur_dev->manufacturer_String);
+   //wprintf(L"Manu: %s\n", cur_dev->manufacturer_String);
    res = HidD_GetProductString(write_handle, wstr, sizeof(wstr));
    wstr[WSTR_LEN-1] = 0x0000;
    if (res)  cur_dev->product_String = wcsdup(wstr);
-   wprintf(L"Prod: %s\n", cur_dev->manufacturer_String);
+   //wprintf(L"Prod: %s\n", cur_dev->manufacturer_String);
    cur_dev->vendor_id = attrib.VendorID;
    cur_dev->product_id = attrib.ProductID;
    cur_dev->release_number = attrib.VersionNumber;
@@ -329,8 +329,8 @@ void chubOPEN(){
  
  if (path_to_open) {
   handhold = hid_open_path(path_to_open);
-  wprintf(L"pathto %s\n", path_to_open);
-  wprintf(L"pathto %d\n", handhold->input_report_length);
+  //wprintf(L"pathto %s\n", path_to_open);
+  //wprintf(L"pathto %d\n", handhold->input_report_length);
  } 
  hid_free_enumeration(devs);
  

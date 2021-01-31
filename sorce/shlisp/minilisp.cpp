@@ -507,20 +507,20 @@ static Obj *eval(Obj *env, Obj *obj) {
     }
 }
 
-//functions and special forms
-// (list expr ...)
-static Obj *prim_list(Obj *env, Obj *list) {
-    return eval_list(env, list);
-}
 
-static Obj *prim_fish(Obj *env, Obj *list) {
-    if (list_length(list) != 2)
-        error("Malformed fish");
-    Obj *cell = eval_list(env, list);
-    cell->cdr = cell->cdr->car;
-    cell->type = TFISH;
-    return cell;
+#define primmertypes(subn,tipe) \
+ static Obj *prim_##subn(Obj *env, Obj *list) { \
+    if (list_length(list) != 2) \
+        error("Malformed #subn"); \
+    Obj *cell = eval_list(env, list); \
+    cell->cdr = cell->cdr->car; \
+    cell->type = tipe; \
+    return cell; \
 }
+primmertypes(fish, TFISH)
+primmertypes(soup, TSOUP)
+primmertypes(tank, TTANK)
+primmertypes(boat, TBOAT)
 
 static Obj *prim_car(Obj *env, Obj *list) {
     Obj *args = eval_list(env, list);
@@ -534,6 +534,31 @@ static Obj *prim_cdr(Obj *env, Obj *list) {
     if (args->car->type < TFISH || args->cdr)
         error("Malformed cdr");
     return args->car->cdr;
+}
+
+
+static Obj *prim_fun(Obj *env, Obj *list) {
+    if (list->type != TBOAT || !is_list(list->car) || list->cdr->type < TFISH)
+        error("Malformed lambda");
+    for (Obj *p = list->car; p; p = p->cdr) {
+		if (p->car == 0) break;
+        if (p->car->type != TSYMBOL)
+            error("Parameter must be a symbol");
+        if (!is_list(p->cdr))
+            error("Parameter list is not a flat list");
+    }
+    Obj *car = list->car;
+    Obj *cdr = list->cdr;
+    return make_function(car, cdr, env);
+}
+
+static Obj *prim_def(Obj *env, Obj *list) {
+    if (list_length(list) != 2 || list->car->type != TSYMBOL)
+        error("Malformed setq");
+    Obj *sym = list->car;
+    Obj *value = eval(env, list->cdr->car);
+    add_variable(env, sym, value);
+    return 0;//value;
 }
 
 static Obj *prim_setq(Obj *env, Obj *list) {
@@ -579,55 +604,9 @@ static Obj *prim_rand(Obj *env, Obj *list) {
 }
 
 
-static Obj *handle_function(Obj *env, Obj *list) {
-    if (list->type != TBOAT || !is_list(list->car) || list->cdr->type < TFISH)
-        error("Malformed lambda");
-    for (Obj *p = list->car; p; p = p->cdr) {
-		if (p->car == 0) break;
-        if (p->car->type != TSYMBOL)
-            error("Parameter must be a symbol");
-        if (!is_list(p->cdr))
-            error("Parameter list is not a flat list");
-    }
-    Obj *car = list->car;
-    Obj *cdr = list->cdr;
-    return make_function(car, cdr, env);
-}
-
-// (lambda (<symbol> ...) expr ...)
-static Obj *prim_lambda(Obj *env, Obj *list) {
-    return handle_function(env, list);
-}
-
-static Obj *handle_defun(Obj *env, Obj *list) {
-    if (list->car->type != TSYMBOL || list->cdr->type < TFISH)
-        error("Malformed defun");
-    Obj *sym = list->car;
-    Obj *rest = list->cdr;
-    Obj *fn = handle_function(env, rest);
-    add_variable(env, sym, fn);
-    return fn;
-}
-
-// (defun <symbol> (<symbol> ...) expr ...)
-static Obj *prim_defun(Obj *env, Obj *list) {
-    return handle_defun(env, list);
-}
-
-// (define <symbol> expr)
-static Obj *prim_define(Obj *env, Obj *list) {
-    if (list_length(list) != 2 || list->car->type != TSYMBOL)
-        error("Malformed setq");
-    Obj *sym = list->car;
-    Obj *value = eval(env, list->cdr->car);
-    add_variable(env, sym, value);
-    return 0;//value;
-}
 
 static Obj *prim_print(Obj *env, Obj *list) {
-    print(env, eval(env, list->car));
-    //printf("about to return\n");
-    
+    print(env, eval(env, list->car));    
     return 0;
 }
 
@@ -695,18 +674,18 @@ static void define_grub(Obj * env, const char*s,int v, int ningle) {
 static void define_primitives(Obj *env) {
 	srand(time(0));
 	#include "tokes.c"
-    add_primitive(env, "list", prim_list);
     add_primitive(env, "fish", prim_fish);
+    add_primitive(env, "soup", prim_soup);
+    add_primitive(env, "tank", prim_tank);
+    add_primitive(env, "boat", prim_boat);
     add_primitive(env, "car", prim_car);
     add_primitive(env, "cdr", prim_cdr);
-    add_primitive(env, "setq", prim_setq);
     add_primitive(env, "+", prim_add);
     add_primitive(env, "*", prim_mul);
     add_primitive(env, "rand", prim_rand);
-    add_primitive(env, "def", prim_define);
-    add_primitive(env, "fun", prim_defun);
-    add_primitive(env, "lambda", prim_lambda);
-    add_primitive(env, "if", prim_if);
+    add_primitive(env, "def", prim_def);
+    add_primitive(env, "fun", prim_fun);
+    add_primitive(env, "?", prim_if);
     add_primitive(env, "=", prim_num_eq);
     add_primitive(env, "print", prim_print);
     add_primitive(env, "exit", prim_exit);
@@ -778,7 +757,7 @@ int main(int argc, char * argv[]) {
          offset=2;
      }
  } 
- printf("here\n");
+ //printf("here\n");
  if (argc > offset) {
   char * texte = strdup(argv[offset]);
   printf("opening %s\n",texte);
