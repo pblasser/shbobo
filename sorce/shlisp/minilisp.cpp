@@ -299,7 +299,7 @@ static Obj *read(void) {
             return make_int(read_number(c - '0'));
         if (c == '-')
             return make_int(-read_number(0));
-        if (isalpha(c) || strchr("|+=!@#$%^&*", c))
+        if (isalpha(c) || strchr("?|+=!@#$%^&*", c))
             return read_symbol(c);
         error("Don't know how to handle %c", c);
     }
@@ -600,6 +600,8 @@ static Obj *prim_rand(Obj *env, Obj *list) {
     }
     return make_int(sum);
 }
+
+
 
 static Obj *prim_print(Obj *env, Obj *list) {
     print(env, eval(env, list->car));    
