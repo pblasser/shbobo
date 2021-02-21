@@ -6,7 +6,7 @@
 CC=gcc 
 OS:=$(shell uname -s | cut -f1 -d_ )
 flagsLinux = -xc++ -DLINUSTORWALDS -lusb-1.0 -o
-flagsDarwin = -m32 -DSTEVEJOBS -framework IOKit  -framework Foundation -ObjC++ -lstdc++ -o 
+flagsDarwin =  -DSTEVEJOBS -framework IOKit  -framework Foundation -ObjC++ -lstdc++ -o 
 flagsCYGWIN = /D"BILLGATES" "setupapi.lib" /Fe
 #flagsCYGWIN = -xc++ -DBILLGATES -lsetupapi -o
 flags = $(flags$(OS))
