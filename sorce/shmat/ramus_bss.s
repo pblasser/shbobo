@@ -50,7 +50,7 @@ zithtrig: .space 1
 watertrig: .space 1
 foursgwonz: .space 1
 rectrig: .space 1
-slavetrig: .space 1
+geartrig: .space 1
 pulsetrig: .space 1
 salsatrig: .space 1
 vodertrig: .space 1
@@ -99,7 +99,7 @@ foursesVALE: .space 8
 slewVALE: .space 16
 wheelVALE: .space 16 @mex2pow, w2w
 
-slaveVALE: .space 8 @mex3pow b
+gearVALE: .space 8 @mex3pow b
 pulseVALE: .space 16
 @july 4th 2013, made twice as much sauce and salsa
 sauceVALE: .space 16 @mex3pow h1w

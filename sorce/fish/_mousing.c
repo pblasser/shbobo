@@ -26,7 +26,7 @@ void Stub::mouseDrag(const MouseEvent &evnt) {
  DragAndDropContainer::findParentDragContainerFor(this);
  if (!dragC->isDragAndDropActive()) {
   fudge=scoot=true;
-  dragC->startDragging(var("flesh") ,this, Image::null, true );
+  dragC->startDragging(var("flesh") ,this, Image(), true );
  }
 }
 

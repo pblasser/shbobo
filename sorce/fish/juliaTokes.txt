@@ -76,7 +76,7 @@ JEXPTOKE("steel","mul add","steel marked frets",0x0C,4)
 //MEXPTOKE("轮","昇 降 乘 加","return",0x98)
 //MEXPTOKE("輪","昇 降 乘 加","return",0x98)
 
-   MEXPTOKE("slave","trig deno mul add","count pulses by variable integer amount",0xA0,8)
+   MEXPTOKE("gear","trig deno mul add","count pulses by variable integer amount",0xA0,8)
    MEXPTOKE("pulse","trig deno mul add","trigger a pulse and decay with variable height",0xA8,8)
 
    MEXPTOKE("sauce","per inn mul add","slow down an input by a period",0xB0,8)

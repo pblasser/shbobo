@@ -72,7 +72,7 @@ struct Grub : public Atom, public TooltipClient {
   DragAndDropContainer* dragC =
   DragAndDropContainer::findParentDragContainerFor(this);
   if (!dragC->isDragAndDropActive()) {
-   dragC->startDragging(var("flesh") ,getFlesh(),Image::null, true );
+   dragC->startDragging(var("flesh") ,getFlesh(),Image(), true );
    //dragC->startDragging(var("flesh") ,this,Image::null, true );
   }
  }

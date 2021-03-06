@@ -28,7 +28,7 @@
  (water 111 100 19) (salt 39 18 68) 
  (horse -27 -121 -110 126) 
  (slew -44 96 -104) (wheel -118 124) 
- (slave 118 15) (pulse -72 -85) 
+ (gear 118 15) (pulse -72 -85) 
  (sauce 43 14) (salsa 98 -19) 
  (melody -42 -69 -43) (worm -98) 
  (scale -88) (ladder -16) 

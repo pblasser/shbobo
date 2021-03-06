@@ -6,7 +6,7 @@
 #include "_chubbing.c"
 
 #include "../JuceLibraryCode/JuceHeader.h"
-
+using namespace juce;
 
 #include "Chubbalyzer.h"
 #include "Chubagwonzer.h"

@@ -25,7 +25,7 @@ void JuliaChild::gwonzer() {
 }
 
 void JuliaChild::uploadBinar() {
- FileChooser chooser ("Choose binary",File::nonexistent,"*.bin");
+ FileChooser chooser ("Choose binary",File(),"*.bin");
  if (!(chooser.browseForFileToOpen ())) return;
  File curBin = chooser.getResult ();
  if (!(curBin.existsAsFile ())) return;

@@ -16,7 +16,7 @@ void JuliaChild::visibleAreaChanged(const juce::Rectangle<int> &nva) {
  void Zelda::framerei() {
   JuliaChild * jc = findParentComponentOfClass<JuliaChild>();
   if (jc==nullptr) return;
-  Point<int> pos = jc->getViewPosition();
+     juce::Point<int> pos = jc->getViewPosition();
   juce::Rectangle<int> are = jc->getViewArea();
   juce::Rectangle<int> max = jc->getViewedComponent()->getBounds();
   float x = (float)getWidth() / (float)(max.getWidth());

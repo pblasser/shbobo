@@ -13,19 +13,20 @@ void JuliaChild::copyToClippo() {
 
 
 void JuliaChild::saveFileFromEditor () {
-  if (currentFile == File::nonexistent) {
+  if (currentFile.getFullPathName()=="") {
    chooseFileToSave () ;
    return;
   }
   if (currentFile.existsAsFile ())
    currentFile.deleteFile ();
-  currentFile.create ();
-  FileOutputStream * fos = currentFile.createOutputStream();
- // printtar(fos);
- fos->writeText(r->printe(),false,false,nullptr);
- 
-  fos->flush();
-  delete(fos);
+   currentFile.create ();
+   FileOutputStream fos(currentFile);
+   if (fos.openedOk()) {
+    fos.writeText(r->printe(),false,false,nullptr);
+    fos.flush();
+   }
+
+  //delete(fos);
  }
 
 
@@ -67,14 +68,17 @@ void JuliaChild::printoBouillo () {
   if (imageFile.existsAsFile ())
    imageFile.deleteFile ();
   imageFile.create ();
-  PNGImageFormat * pingu = new PNGImageFormat();
+
+
+  PNGImageFormat pingu;
   Image imago;
   imago = r->createComponentSnapshot (r->getLocalBounds());
-  FileOutputStream* fos = imageFile.createOutputStream ();
-  pingu->writeImageToStream (imago,*fos);
-  fos->flush();
-  delete (fos);
-  delete (pingu);
+
+   FileOutputStream fos(imageFile);
+   if (fos.openedOk()) {
+    pingu.writeImageToStream (imago,fos);
+    fos.flush();
+   }
  }
 };
 

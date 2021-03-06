@@ -62,7 +62,7 @@ struct Chubbalyzer : public Chub, public ThreadWithProgressWindow {
  
  void binarify() {
   unsigned char c;
-  FileInputStream * fis = binary.createInputStream();
+ //    FileInputStream * fis = binary.createInputStream().get();
   situsb();
   while (masterbytesz < 0x10000) {
    if (threadShouldExit()) {
@@ -71,16 +71,17 @@ struct Chubbalyzer : public Chub, public ThreadWithProgressWindow {
    }
    write_bytez(0);
   }
-  fis->setPosition(0x20000);
-  fis->read(&c,1);
-  while (!fis->isExhausted()) {
-   if (threadShouldExit()) {
-    //chubSENDEND();
-    return;
-   }
-   write_bytez(c);
-   fis->read(&c,1);
-   //c = fgetc (filefish);
+  FileInputStream fis(binary);
+  if (fis.openedOk()) {
+    fis.setPosition(0x20000);
+    fis.read(&c,1);
+  //fis->setPosition(0x20000);
+  //fis->read(&c,1);
+    while (!fis.isExhausted()) {
+     if (threadShouldExit()) return;
+     write_bytez(c);
+     fis.read(&c,1);
+    }
   }
   chubSENDEND();
  }

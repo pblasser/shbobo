@@ -3,9 +3,9 @@
 
 ORIGINATE
 
-.macro SLAVE   @inn ceremony mul add
+.macro GEAR   @inn ceremony mul add
  and lispMEX, lispMEX, 7
- SYNTHLOADER lispWOR,slaveVALE
+ SYNTHLOADER lispWOR,gearVALE
  .ifeq ARAB 
  ldrsb lispACC, [lispWOR, lispMEX]
  .else
@@ -13,7 +13,7 @@ ORIGINATE
  .endif
  lsl lispACC, 0x8
  POPSEX
- TRIG_IDEE_TOO lispRET, workONE, slavetrig, workTRI
+ TRIG_IDEE_TOO lispRET, workONE, geartrig, workTRI
  ittt ne
  addne lispACC, 0x100
  asrne workONE, lispACC, 0x8
@@ -33,8 +33,8 @@ ORIGINATE
  strbge workONE, [lispWOR, lispMEX]
  LISPMULADD
 .endm
-INSTORG SLAVE, 0
-INSTORG SLAVE, 4
+INSTORG GEAR, 0
+INSTORG GEAR, 4
 
 .macro PULSEDHIGHRAMP
  RAMP

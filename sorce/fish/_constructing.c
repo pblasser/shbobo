@@ -2,8 +2,8 @@
 Garcon::Garcon() : sizico(4) {
  f = Font(16);
  sf = Font(8);
- currentBinar = File::nonexistent;
- currentFile = File::nonexistent;
+ currentBinar = File();
+ currentFile = File();
  
  setApplicationCommandManagerToWatch(this);
  //addListener(this);
