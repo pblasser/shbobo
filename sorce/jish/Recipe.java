@@ -41,7 +41,9 @@ public class Recipe extends Stub implements LayoutManager,ContainerListener {
    }
   } 
  }
-
+ public void stubbornTake() {
+  //um.addEdit(new UndoTake(this));
+ }
  public String toString() {
  	String s = "";
   for (int i =0; i<getComponentCount(); i++) {
@@ -74,15 +76,15 @@ public class Recipe extends Stub implements LayoutManager,ContainerListener {
 	 paintComponents(g);
  }
 
-
+ 
  public void componentAdded(ContainerEvent e){
 
 e.getChild().validate();
-validate();
+//validate();
  }
 
  public void componentRemoved(ContainerEvent e) {
- 	   validate();
+ //	   validate();
 //validate to remove dragdrop frame to frame
  }
 

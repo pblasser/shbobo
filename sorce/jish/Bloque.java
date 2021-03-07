@@ -44,6 +44,9 @@ public class Bloque extends Recipe {
  		um.addEdit(new UndoPutin(s,this));
   else um.addEdit(new UndoFudge(s,this));
  }
+ public void stubbornTake() {
+  um.addEdit(new UndoTake(this));
+ }
   public String toString() {
    return openers[type]+super.toString()+closers[type];
   }

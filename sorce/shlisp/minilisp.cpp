@@ -752,6 +752,8 @@ int main(int argc, char * argv[]) {
 		 printarsimp();return 0;}
     if (argv[1][1] == 'g') {
          chubRUN();return 0;}
+    if (argv[1][1] == 'o') {
+         chubONE();return 0;}
 	 if (argv[1][1] == 'z') {
 		 printar();return 0;}
 	 if (argv[1][1] == 'b') {

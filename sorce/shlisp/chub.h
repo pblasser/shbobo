@@ -2,6 +2,7 @@
 
 void chubOPEN();
 void chubRUN();
+void chubONE();
 void chubCALL(signed char * gwonz);
 void chubSEND(unsigned char * rept, int amt);
 

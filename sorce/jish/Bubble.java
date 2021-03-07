@@ -64,8 +64,13 @@ implements TextListener, ComponentListener, LayoutManager {
     return;
   }
   if (c>=32) chng((first?""+c:txt+c));
-  if (c==8) 
-   chng(txt.substring(0,Math.max(0,txt.length()-1)));
+  if (c==8) {
+   if (txt.length()<=0) 
+    um.addEdit(new UndoTake(this));
+   else
+    chng(txt.substring(0,txt.length()-1));
+  }
+   
   if (e.getKeyCode()==KeyEvent.VK_ESCAPE) {
     chng(lastext); editing = false;
   }

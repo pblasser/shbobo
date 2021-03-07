@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 
 public class Zelda extends Panel 
-implements MouseMotionListener, MouseListener {
+implements MouseMotionListener, MouseListener, AdjustmentListener {
 Point point;
 boolean resizing;
 Image im;
@@ -22,23 +22,26 @@ float reduction;
 
 	public void imago(Image i) {
 		 im = i;
+   repaint();
 	}
-
-	 public void paint(Graphics g) {
+ public void 	adjustmentValueChanged(AdjustmentEvent e) {
+  //repaint();
+ }
+	 public void update(Graphics ggg) {
 	
 
 	// im.getScaledInstance(getWidth(),getHeight());
 	framerei();
-	 g.drawImage(im, 0, 0, (int)(reduction*(float)im.getWidth(null)),(int)(reduction*(float)im.getHeight(null)), null);
-	 //super.paint(g);
-
-    AffineTransform l = AffineTransform.
-     getScaleInstance(reduction,reduction);
-    Graphics2D g2d = (Graphics2D)g;
-    g2d.setColor(Color.YELLOW);
+ Image doppel = createImage(getWidth(), getHeight());
+// im.getScaledInstance(getWidth(),getHeight(),Image.SCALE_FAST);
+ Graphics g  = doppel.getGraphics();
+	g.drawImage(im, 0, 0, (int)(reduction*(float)im.getWidth(null)),(int)(reduction*(float)im.getHeight(null)), null);
+	AffineTransform l = AffineTransform.getScaleInstance(reduction,reduction);
+ Graphics2D g2d = (Graphics2D)g;
+ g2d.setColor(Color.YELLOW);
     g2d.setStroke(new BasicStroke(1));
     g2d.draw(l.createTransformedShape(frame));
-
+   ggg.drawImage(doppel, 0, 0, this);
  }
 
 
@@ -47,8 +50,8 @@ public void framerei() {
  if (j==null) return;
  frame = new Rectangle(j.sp.getScrollPosition(),
   j.sp.getViewportSize());
- System.out.println(j.sp.getScrollPosition());
- System.out.println(j.sp.getVAdjustable().getValue());
+ //System.out.println(j.sp.getScrollPosition());
+ //System.out.println(j.sp.getVAdjustable().getValue());
  Rectangle max = j.gg.getBounds();
  float dx = (float)getWidth() / (float)(max.width);
  float dy = (float)getHeight() / (float)(max.height);

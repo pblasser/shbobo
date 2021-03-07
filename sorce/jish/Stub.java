@@ -185,11 +185,14 @@ FocusListener, MouseListener {
    if (c>32) return new Guts(c);
    return null;
   }
+ public void stubbornTake() {
+  um.addEdit(new UndoTake(this));
+ }
  public void keyTyped(KeyEvent e) {
   	char c = e.getKeyChar();
    Stub s = parze(c);
    if (s!=null) visitInsert(s);
-   if (c==8) um.addEdit(new UndoTake(this));
+   if (c==8) stubbornTake();
  }
 
  public void parze(PushbackReader pr) {}
@@ -204,9 +207,10 @@ FocusListener, MouseListener {
 public void  componentHidden(ComponentEvent e) {}
 public void  componentMoved(ComponentEvent e) {}
  public void  componentResized(ComponentEvent e) {
+//  System.out.println("cres");
    Julia j = getJulia();
-   if (j!=null) j.validate();
-
+  if (j!=null) j.validate();
+//getParent().validate();
  }
  public Julia getJulia() {
  	Container verse=this;

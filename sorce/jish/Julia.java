@@ -10,9 +10,11 @@ import java.nio.file.*;
 
 
 public class Julia extends Frame 
-implements LayoutManager, ActionListener, WindowListener {
+implements LayoutManager, ActionListener, WindowListener ,
+Runnable {
   public ScrollPane sp;
   public Recipe gg;
+  public boolean loadung;
   Zelda z;
   //ArrayList<Julia> windows;
   static int sz_julia;
@@ -21,8 +23,18 @@ implements LayoutManager, ActionListener, WindowListener {
   gar=new Garcon();
   sz_julia=0;
 }
+public void run() {
+ 
+ try {
+  while (true) {
+   imago();
+   Thread.currentThread().sleep(300);
+  }
+ } catch (Exception e) {}
+}
  Julia() {
   super("JISH");
+  loadung = false;
   setFont(new Font("TimesRoman", Font.PLAIN, 20));
   setSize(400,400);
   z = new Zelda();
@@ -30,6 +42,8 @@ implements LayoutManager, ActionListener, WindowListener {
   add(z);
   sp = new ScrollPane();
   add(sp);
+  sp.getHAdjustable().addAdjustmentListener(z);
+   sp.getVAdjustable().addAdjustmentListener(z);
   gg = new Recipe();
   sp.add(gg);
   gg.add(new Guts('c'));
@@ -39,8 +53,12 @@ implements LayoutManager, ActionListener, WindowListener {
   setVisible(true);
   sz_julia++;
   addWindowListener(this);
+  new Thread(this).start();
  }
-
+ public void validate() {
+  super.validate();
+//  imago();
+ }
 
  public void neww() {
   new Julia();
@@ -71,7 +89,7 @@ implements LayoutManager, ActionListener, WindowListener {
   if (e.getActionCommand()=="Zoom out") zoomOut();
   if (e.getActionCommand()=="Serve") serve("");
   if (e.getActionCommand()=="Change Cuisine") serve("-bshnbth.bin");
-  if (e.getActionCommand()=="Gwonz") serve("-g");
+  if (e.getActionCommand()=="Gwonz") serve("-o");
  }
 
  public void menuu() {
@@ -119,8 +137,9 @@ implements LayoutManager, ActionListener, WindowListener {
 
   setMenuBar(m);
  }
-
+ 
  public void imago() {
+  if (loadung) return;
    BufferedImage i = new BufferedImage(gg.getWidth(),gg.getHeight(),
      BufferedImage.TYPE_INT_ARGB);
     Graphics ggg  = i.createGraphics();
@@ -148,11 +167,17 @@ public void open() {
   if (result == JFileChooser.APPROVE_OPTION) {
     fileplacer = chooser.getSelectedFile();
     try { 
+    loadung=true;
     sp.remove(gg);
+      sp.getHAdjustable().removeAdjustmentListener(z);
+   sp.getVAdjustable().removeAdjustmentListener(z);
     gg = new Recipe();
     gg.parze(new PushbackReader(new FileReader(fileplacer)));
     sp.add(gg);
     gg.validate();
+    sp.getHAdjustable().addAdjustmentListener(z);
+    sp.getVAdjustable().addAdjustmentListener(z);
+    loadung = false;
     } catch (Exception e) { e.printStackTrace(); }
   }
 }

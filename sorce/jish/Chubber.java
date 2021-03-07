@@ -27,7 +27,7 @@ public class Chubber extends TextArea implements TextListener {
    else if (System.getProperty("os.name").startsWith("Windows")) {
    oss ="_win"+File.separator; cmd=cmd+".exe";}
    cmd=new File(Julia.class.getProtectionDomain()
-   .getCodeSource().getLocation().toURI()).getParent()+File.separator+oss+cmd;
+   .getCodeSource().getLocation().toURI()).getParent()+File.separator+oss+cmd+" "+flg;
    append(cmd+"\n");
    Process child = Runtime.getRuntime().exec(cmd);
    InputStream lsOut = child.getInputStream();

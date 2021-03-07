@@ -356,6 +356,18 @@ void chubRUN() {
  }
  
 }
+void chubONE() {
+ DWORD bytes_read = 0;
+ BOOL res;
+ res = ReadFile(handhold->device_handle, gwonz, handhold->input_report_length, &bytes_read, NULL);
+ if (res)
+  wprintf(L"%+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d\n",
+   gwonz[1],
+  gwonz[2], gwonz[3],
+  gwonz[4], gwonz[5],
+  gwonz[6], gwonz[7], gwonz[8]
+  ); 
+}
 
 void chubSENDATE(unsigned char * rept)  {
  static unsigned char quonz[9]; DWORD bytes_written;
