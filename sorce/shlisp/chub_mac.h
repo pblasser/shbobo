@@ -153,3 +153,19 @@ void chubOPEN() {
 void chubRUN() {
 	CFRunLoopRun();
 }
+void chubONE() {
+	 static uint8_t inReport[8];
+ CFIndex sizzle = 8;
+ while (mydev) 
+  if(IOHIDDeviceGetReport(mydev, kIOHIDReportTypeFeature,
+		0,inReport,&sizzle)==kIOReturnSuccess) {
+   printf("%+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d\n",
+    (signed char)inReport[0], (signed char)inReport[1],
+    (signed char)inReport[2], (signed char)inReport[3],
+    (signed char)inReport[4], (signed char)inReport[5],
+    (signed char)inReport[6], (signed char)inReport[7]
+   );
+   return;
+   }
+	
+}
