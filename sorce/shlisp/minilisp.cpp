@@ -482,8 +482,10 @@ static Obj *eval(Obj *env, Obj *obj) {
     case TFUNCTION:
     case TSPECIAL:
     case TTANK:
+     return obj;
     case TFISH:
     case TSOUP:
+     return eval_list(env, obj);
         // Self-evaluating objects
         return obj;
     case TSYMBOL: {
@@ -589,7 +591,20 @@ primmermath(xor, 0, ^)
 primmermath(not, -1, ^)
 primmermath(add, 0, +)
 primmermath(mul, 1, *)
-primmermath(mod, 1, %)
+//primmermath(mod, -1, %)
+
+static Obj *prim_mod(Obj *env, Obj *list) {
+ int sum = 0;
+ bool furst = true;
+ for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("* takes only numbers");
+  if (furst) sum = args->car->value;
+  else sum %= args->car->value;
+  furst = false;
+ }
+ return make_int(sum);
+}
 
 static Obj *prim_rand(Obj *env, Obj *list) {
     int sum = rand();
@@ -684,6 +699,7 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "|", prim_orr);
     add_primitive(env, "^", prim_xor);
         add_primitive(env, "!", prim_not);
+         add_primitive(env, "%", prim_mod);
     add_primitive(env, "rand", prim_rand);
     add_primitive(env, "def", prim_def);
     add_primitive(env, "fun", prim_fun);

@@ -1,0 +1,25 @@
+
+ 
+ <def ranmaker 
+ <fun [a] 
+ <fun [] <def a <+ a 23>> a>> 
+> 
+ <def horny 
+ <fun [i] 
+ <print (<+ horn i> <+ 1 <rand 20>> <+ 1 <rand 20>>)> 
+ <? <= i 0> <> <horny <+ i -1>>> 
+> 
+> 
+ <def patch [{(srate <+ 4 <rand 60>>) 
+ (left <horny 7>) 
+ (jump (square (mount 10 2) 1 1)) 
+}] 
+> 
+ <def ndo 
+ <fun [amt func] 
+ <? <= amt 0> <> <ndo <+ amt -1> func>> 
+ <print func>> 
+ 
+> 
+ 
+ <ndo 13 patch>

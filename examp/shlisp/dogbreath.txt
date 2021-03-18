@@ -1,0 +1,9 @@
+
+ 
+ <def poop 
+ <fun [aaa] 
+ <print 
+ {(left (horn (corp aaa 66) (hornb) (hornc 1 88)) 
+ (hornb (corpb aaa 66) (horn) (hornc)))}> 
+>> 
+ <poop 88> <poop 77> 

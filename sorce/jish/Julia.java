@@ -35,12 +35,14 @@ public void run() {
  Julia() {
   super("JISH");
   loadung = false;
-  setFont(new Font("TimesRoman", Font.PLAIN, 20));
+   menuu();
+  
   setSize(400,400);
   z = new Zelda();
   z.setBounds(200,200,50,50);
   add(z);
   sp = new ScrollPane();
+  sp.setFont(new Font("TimesRoman", Font.PLAIN, 10));
   add(sp);
   sp.getHAdjustable().addAdjustmentListener(z);
    sp.getVAdjustable().addAdjustmentListener(z);
@@ -49,7 +51,7 @@ public void run() {
   gg.add(new Guts('c'));
   gg.validate();
   imago();
-  menuu();
+ 
   setVisible(true);
   sz_julia++;
   addWindowListener(this);
@@ -64,16 +66,16 @@ public void run() {
   new Julia();
  }
  public void zoomInn() {
-  float snew = getFont().getSize()+1;
+  float snew = sp.getFont().getSize()+1;
   if (snew<1) snew = 1;
-  setFont(getFont().deriveFont(snew));
-  System.out.println("zoijoijfdsa");
+  sp.setFont(getFont().deriveFont(snew));
+  //System.out.println("zoijoijfdsa");
   validate();
  }
  public void zoomOut() {
-  float snew = getFont().getSize()-1;
+  float snew = sp.getFont().getSize()-1;
   if (snew<1) snew = 1;
-  setFont(getFont().deriveFont(snew));
+  sp.setFont(getFont().deriveFont(snew));
   validate();
  }
  public void serve(String flg) {
@@ -94,8 +96,12 @@ public void run() {
 
  public void menuu() {
   MenuBar m = new MenuBar();
+  //m.setFont(getFont());
+  
   Menu mm = new Menu("File");
+  //mm.setFont(getFont());
   MenuItem mn = new MenuItem("New", new MenuShortcut(KeyEvent.VK_N));
+  //mn.setFont(getFont());
   mn.addActionListener(this);
   mm.add(mn);
   mn = new MenuItem("Open...", new MenuShortcut(KeyEvent.VK_O));
@@ -130,7 +136,6 @@ public void run() {
   mn.addActionListener(this);
   mm.add(mn);
   m.add(mm);
-
 
 
 
