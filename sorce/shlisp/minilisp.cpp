@@ -178,8 +178,10 @@ static Obj *read(void);
 static void error(const char *fmt, ...) {
     va_list ap;
     va_start(ap, fmt);
-    vfprintf(stderr, fmt, ap);
-    fprintf(stderr, "\n");
+    vfprintf(stdout, fmt, ap);
+    fprintf(stdout, "\n");
+    //vfprintf(stderr, fmt, ap);
+    //fprintf(stderr, "\n");
     va_end(ap);
     exit(1);
 }
@@ -298,8 +300,10 @@ static Obj *read(void) {
         if (isdigit(c))
             return make_int(read_number(c - '0'));
         if (c == '-')
-            return make_int(-read_number(0));
-        if (isalpha(c) || strchr("?|+=!@#$%^&*", c))
+         if (isdigit(peek()))
+          return make_int(-read_number(0));
+         else return read_symbol(c);
+        if (isalpha(c) || strchr("~`?,':|+=_!@#$%^&*", c))
             return read_symbol(c);
         error("Don't know how to handle %c", c);
     }
@@ -563,7 +567,7 @@ static Obj *prim_def(Obj *env, Obj *list) {
     return 0;//value;
 }
 
-static Obj *prim_setq(Obj *env, Obj *list) {
+static Obj *prim_set(Obj *env, Obj *list) {
     if (list_length(list) != 2 || list->car->type != TSYMBOL)
         error("Malformed setq");
     Obj *bind = find(env, list->car);
@@ -601,6 +605,20 @@ static Obj *prim_mod(Obj *env, Obj *list) {
    error("* takes only numbers");
   if (furst) sum = args->car->value;
   else sum %= args->car->value;
+  furst = false;
+ }
+ return make_int(sum);
+}
+
+
+static Obj *prim_minus(Obj *env, Obj *list) {
+ int sum = 0;
+ bool furst = true;
+ for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("* takes only numbers");
+  if (furst) sum = args->car->value;
+  else sum -= args->car->value;
   furst = false;
  }
  return make_int(sum);
@@ -648,6 +666,26 @@ static Obj *prim_num_eq(Obj *env, Obj *list) {
     return x->value == y->value ? True : 0;
 }
 
+
+#define primmercomp(subn,oper) \
+ static Obj *prim_##subn(Obj *env, Obj *list) { \
+    if (list_length(list) != 2) \
+        error("Malformed comparison"); \
+    Obj *values = eval_list(env, list); \
+    Obj *x = values->car; \
+    Obj *y = values->cdr->car; \
+    if (x->type != TINT || y->type != TINT) \
+        error("= only takes numbers"); \
+    return x->value oper y->value ? True : 0; \
+}
+
+primmercomp(eq, ==)
+primmercomp(gt, >)
+primmercomp(lt, <)
+
+
+
+
 // (exit)
 
 static Obj *prim_exit(Obj *env, Obj *list) {
@@ -694,17 +732,21 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "car", prim_car);
     add_primitive(env, "cdr", prim_cdr);
     add_primitive(env, "+", prim_add);
+    add_primitive(env, "-", prim_minus);
     add_primitive(env, "*", prim_mul);
     add_primitive(env, "&", prim_and);
     add_primitive(env, "|", prim_orr);
     add_primitive(env, "^", prim_xor);
         add_primitive(env, "!", prim_not);
          add_primitive(env, "%", prim_mod);
-    add_primitive(env, "rand", prim_rand);
+    add_primitive(env, "~", prim_rand);
     add_primitive(env, "def", prim_def);
+        add_primitive(env, "set", prim_set);
     add_primitive(env, "fun", prim_fun);
     add_primitive(env, "?", prim_if);
-    add_primitive(env, "=", prim_num_eq);
+    add_primitive(env, "=", prim_eq);
+    add_primitive(env, ",", prim_lt);
+    add_primitive(env, "'", prim_gt);
     add_primitive(env, "print", prim_print);
     add_primitive(env, "exit", prim_exit);
 }
