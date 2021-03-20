@@ -1,16 +1,16 @@
-<def randmaker 
- <fun [start] 
- <fun [] 
- <def start <% <+ start 13> 16>> 
+<@ randmaker 
+ <# [start] 
+ <# [] 
+ <@ start <% <+ start 13> 16>> 
  start>>> 
  
- <def f1 <randmaker 2>> 
- <def weirdpatch 
- <fun [] 
+ <@ f1 <randmaker 2>> 
+ <@ weirdpatch 
+ <# [] 
  {(left (horn <f1> 15)) 
  (jump (mount 3 88 15))}>> 
- <def ndo 
- <fun [amt func] 
- <? <= amt 0> <> <ndo <+ amt -1> func>> 
- <print <func>>>> 
+ <@ ndo 
+ <# [amt func] 
+ <? <' amt 0> <ndo <- amt 1> func>> 
+ <$ <func>>>> 
  <ndo 13 weirdpatch> 

@@ -11,9 +11,14 @@ DragSourceListener, LayoutManager {
  DragGestureRecognizer dgr;
  DropTarget dt;
  String skull;
- 	
- Grub(String s) {
+ String[] args;
+ String toolt;
+ public int code;
+ Grub(String s, String ar, String tt, int c, int n) {
  	skull = s;
+  args = ar.split(" ");
+  code = c;
+   
 	 dgr = DragSource.getDefaultDragSource()
 	  .createDefaultDragGestureRecognizer(this,
 	  DnDConstants.ACTION_MOVE, this);
@@ -23,7 +28,17 @@ DragSourceListener, LayoutManager {
   setVisible(true);
   setBackground(new Color(0,0,0,0));
  }	
-
+ public void tutor(){}
+ int ribs;
+ void resetRibs() {ribs=0;}
+ String getRib() { 
+  if (ribs<args.length)  
+   return args[ribs++];
+  return "";
+ }
+ int getRibCount() { return args.length; }
+ int getGillCount() { return getRibCount();}
+ Stub getFlesh() { return new Guts(); }
  public void addNotify() {
 	 super.addNotify();
 	 //dt = new DropTarget(this, DnDConstants.ACTION_MOVE, this, true);
@@ -47,7 +62,8 @@ DragSourceListener, LayoutManager {
 
  //DragGestureListener
 	public void dragGestureRecognized(DragGestureEvent dge) {
-		Stub s = new Stub();
+		Guts s = new Guts();
+  s.chng(skull);
 		BufferedImage i = new BufferedImage(s.getWidth(),s.getHeight(),
 		 BufferedImage.TYPE_INT_ARGB);
 		Graphics g  = i.createGraphics();

@@ -86,7 +86,8 @@ implements TextListener, ComponentListener, LayoutManager {
   //g.setFont(fi);
   g.setFont(f.deriveFont(Font.ITALIC));
   g.setColor(Color.black);
-  g.drawString(txt,(f.getSize())>>2,g.getFontMetrics().getAscent());   
+  g.drawString(txt,(f.getSize())>>2,g.getFontMetrics().getAscent());  
+  //drawSubtext(g);  
  }	
 
  public void visitAlnum(char c) {
@@ -98,6 +99,9 @@ implements TextListener, ComponentListener, LayoutManager {
 
   super.boundsVisit(r);
  }
+ 
+ public void gruberVisit(Grub g) {}
+ 
  public void boundsVisit(Rectangle r) {
   //validate();
   stubbornVisit(r);

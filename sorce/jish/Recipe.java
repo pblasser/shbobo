@@ -72,8 +72,9 @@ public class Recipe extends Stub implements LayoutManager,ContainerListener {
    g2D.setColor(getPastry(true));
    //g2D.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC,0.25f));
    g2D.fill(r);
-	
+ //drawSubtext(g);
 	 paintComponents(g);
+ 
  }
 
  
@@ -95,11 +96,25 @@ validate();
 	public void stubbornLayout(Rectangle r) {
   int siz = getFont().getSize();
   cumulopasty=0;
-  for (int i =0; i<getComponentCount(); i++) {
-  	((Stub)getComponent(i)).boundsVisit(r);
-  	((Stub)getComponent(i)).visitPastry(this);
+  int childro = getComponentCount();
+  Grub gg = Julia.gar.evilGrub;
+  if (childro>0) {
+   Stub g = (Stub)getComponent(0);
+   if (g instanceof Guts) {
+    //System.out.println(g.txt);
+    gg = Julia.gar.lookup(((Guts)g).txt);
+    //System.out.println(gg.skull);
+   }
+   gg.resetRibs();
+   cumulopasty+=gg.code;
   }
-  setSize(r.width+siz,r.height+r.y+(siz>>2));
+  for (int i =0; i<getComponentCount(); i++) {
+  	Stub s = ((Stub)getComponent(i));
+   if (i>0) s.gruberVisit(gg);
+   s.boundsVisit(r);
+  	s.visitPastry(this);
+  }
+  setSize(r.width+siz,r.height+r.y+(siz>>1));
 
 	}
  public void layoutContainer(Container p){ 

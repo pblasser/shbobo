@@ -25,7 +25,8 @@ public class Guts extends Bubble {
     g2d.fill(new Rectangle(getSize()));
   g.setFont(f);
   g.setColor(Color.black);
-  g.drawString(txt,f.getSize()>>2,g.getFontMetrics().getAscent());   
+  g.drawString(txt,f.getSize()>>2,g.getFontMetrics().getAscent());
+ drawSubtext(g,true);  
  }  
 
  public boolean breakers(int c) {
@@ -55,6 +56,9 @@ public class Guts extends Bubble {
   } chng(txt);
  }
  public String toString() { return txt; }
+  public void gruberVisit(Grub g) {
+   stubbornGruber(g);
+ }
  public void boundsVisit(Rectangle r) {
   //validate();
   stubbornVisit(r); 

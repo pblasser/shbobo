@@ -729,8 +729,8 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "soup", prim_soup);
     add_primitive(env, "tank", prim_tank);
     add_primitive(env, "boat", prim_boat);
-    add_primitive(env, "car", prim_car);
-    add_primitive(env, "cdr", prim_cdr);
+    add_primitive(env, "\"", prim_car);
+    add_primitive(env, ":", prim_cdr);
     add_primitive(env, "+", prim_add);
     add_primitive(env, "-", prim_minus);
     add_primitive(env, "*", prim_mul);
@@ -740,14 +740,14 @@ static void define_primitives(Obj *env) {
         add_primitive(env, "!", prim_not);
          add_primitive(env, "%", prim_mod);
     add_primitive(env, "~", prim_rand);
-    add_primitive(env, "def", prim_def);
-        add_primitive(env, "set", prim_set);
-    add_primitive(env, "fun", prim_fun);
+    add_primitive(env, "@", prim_def);
+        //add_primitive(env, "set", prim_set);
+    add_primitive(env, "#", prim_fun);
     add_primitive(env, "?", prim_if);
     add_primitive(env, "=", prim_eq);
     add_primitive(env, ",", prim_lt);
     add_primitive(env, "'", prim_gt);
-    add_primitive(env, "print", prim_print);
+    add_primitive(env, "$", prim_print);
     add_primitive(env, "exit", prim_exit);
 }
 

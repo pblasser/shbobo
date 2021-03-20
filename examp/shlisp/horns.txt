@@ -1,24 +1,26 @@
 
  
- <def ranmaker 
- <fun [a] 
- <fun [] <def a <+ a 23>> a>> 
+ <@ ranmaker 
+ <# [a] 
+ <# [] <@ a <+ a 23>> a>> 
 > 
- <def horny 
- <fun [i] 
- <print (<+ horn i> <+ 1 <~ 20>> <+ 1 <~ 20>>)> 
- <? <= i 0> <> <horny <- i 1>>> 
+ <@ myrand  <ranmaker 11>> 
+ <@ horny ;define horny
+ <# [i] ;lambda params etc
+ <$ ;print
+ (<+ horn i> <+ 1 <~ 20>>  <+ 1 <~ 20>>)> 
+ <? <' i 0> <horny <- i 1>>> ;if i gt 0 then do horny
 > 
 > 
- <def patch [{(srate <+ 4 <~ 60>>) 
+ <@ patch [{(srate <+ 4 <~ 60>>) 
  (left <horny 7>) 
  (jump (square (mount 10 2) 1 1)) 
 }] 
 > 
- <def ndo 
- <fun [amt func] 
- <? <= amt 0> <> <ndo <- amt 1> func>> 
- <print func>> 
+ <@ ndo 
+ <# [amt func] 
+ <? <' amt 0> <ndo <- amt 1> func>> 
+ <$ func>> 
  
 > 
  

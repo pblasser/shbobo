@@ -18,7 +18,7 @@ Runnable {
   Zelda z;
   //ArrayList<Julia> windows;
   static int sz_julia;
-  static Garcon gar;
+  public static Garcon gar;
  static {
   gar=new Garcon();
   sz_julia=0;

@@ -19,6 +19,8 @@ public class Garcon extends Frame
  ArrayList<Grub> ecole;
  GrubFactory gf;
 	Container c;
+ public static Grub evilGrub;
+ static { evilGrub = new Grub("","","",0,0); }
 	Garcon() {
 	 super();
 	 ecole = new ArrayList<Grub>();
@@ -29,7 +31,7 @@ public class Garcon extends Frame
 	 setFocusableWindowState(true);
 	 //setAlwaysOnTop(true);
 	 //pane = new Ecole();
-	 gf = new GrubFactory();
+	 gf = new GrubFactory(); //Perspex Stabile
 	 Iterator<Grub> foreach = gf.ecole.iterator();
   while (foreach.hasNext()) add(foreach.next());
   add(chub);
@@ -39,7 +41,16 @@ public class Garcon extends Frame
 	 chub.addMouseMotionListener(this);
   validate();
 	}
-
+ public Grub lookup(String s) {
+  Iterator<Grub> foreach = gf.ecole.iterator();
+  while (foreach.hasNext()) {
+   Grub g = foreach.next();
+  // System.out.println(s+" "+g.skull);
+   if (s.startsWith(g.skull)) return g;
+  } 
+  //System.out.println("evil");
+  return evilGrub;
+ }
 public void mouseEntered(MouseEvent e) {}
 public void mouseExited(MouseEvent e) {}
 public void mouseReleased(MouseEvent e) {}

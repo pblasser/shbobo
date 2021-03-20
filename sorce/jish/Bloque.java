@@ -86,7 +86,8 @@ public class Bloque extends Recipe {
 	 g2d.setColor(Color.BLACK);
    g2d.draw(l.createTransformedShape(gp[type]));
    g2d.draw(r.createTransformedShape(gp[type]));
-paintComponents(g);
+ drawSubtext(g,false);
+   paintComponents(g);
  }
 
 

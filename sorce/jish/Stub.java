@@ -28,7 +28,7 @@ FocusListener, MouseListener {
 	 setVisible(true);
 	 setSize(new Dimension(20,50));
 	 //setLayout(this);//new FlowLayout());
-	 
+	  setName("");
 	 addKeyListener(this);
 	 setFocusable(true);
 	 addFocusListener(this);
@@ -65,14 +65,29 @@ FocusListener, MouseListener {
 
 
  public void stubbornPaint(Graphics g) {
-	 Graphics2D g2D = (Graphics2D) g;
-	 if (isFocusOwner()) {
-	 	TexturePaint tp = new TexturePaint(imago(), new Rectangle(0,0,(int)(Math.random()*10+1),10));
+
+	 
+  if (isFocusOwner()) {
+   Graphics2D g2D = (Graphics2D) g; 
+   TexturePaint tp = new TexturePaint(imago(), new Rectangle(0,0,(int)(Math.random()*10+1),10));
    g2D.setPaint(tp);
    //g2D.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,0.25f));
   // g2D.fill(r);
 	 }
 	 
+ }
+ 
+ public void drawSubtext(Graphics g,boolean xmod) {
+    g.setColor(Color.black);
+  Font f = getFont();
+  f = f.deriveFont((float)(f.getSize()>>1));
+  g.setFont(f);
+  int deeptext = g.getFontMetrics().getDescent();
+  deeptext = getHeight()- deeptext;
+  if (xmod)
+   g.drawString(getName(),(f.getSize())>>1,deeptext);
+  else
+   g.drawString(getName(),(f.getSize())<<1,deeptext);
  }
 
  //DragGestureListener
@@ -154,8 +169,14 @@ FocusListener, MouseListener {
  public boolean isDataFlavorSupported(DataFlavor flavor) { return true; }
 
 
-
-
+ public void stubbornGruber(Grub g) {
+  setName(g.getRib());
+  //System.out.println(getName());
+ }
+ public void gruberVisit(Grub g) {
+  stubbornGruber(g);
+ }
+ 
  public void boundsVisit(Rectangle r) {
  	validate();
   if (getHeight()>r.y) r.y=getHeight();
@@ -167,7 +188,7 @@ FocusListener, MouseListener {
    um.addEdit(new UndoFudge(s,this));
   }
   public void visitAlnum(char c) {
-   System.out.println("nothere");
+   
   }
   public void keyPressed(KeyEvent e) { }
   public void keyReleased(KeyEvent e) {}

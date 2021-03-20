@@ -7,11 +7,11 @@ public class GrubFactory {
       ecole = new ArrayList<Grub>();
       make();
    }
-   private void MEXPTOKE(String name,String args, String tooltip, int code, int n) {
-      ecole.add(new Grub(name));
+ private void MEXPTOKE(String name,String args, String tt, int code, int n) {
+   ecole.add(new Grub(name, args, tt, code, n));
    }
-   private void JEXPTOKE(String name,String args, String tooltip, int code, int n) {
-      ecole.add(new Grub(name));
+   private void JEXPTOKE(String name,String args, String tt, int code, int n) {
+      ecole.add(new Grub(name, args, tt, code, n));
    }
    public ArrayList<Grub> make() {
 
