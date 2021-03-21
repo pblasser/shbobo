@@ -113,6 +113,12 @@ static Obj *make_int(int value) {
     r->value = value;
     return r;
 }
+static Obj *make_int(double x) {
+    x =((x)>=0?(int)((x)+0.5):(int)((x)-0.5));
+    Obj *r = alloc(TINT, sizeof(int));
+    r->value = x;
+    return r;
+}
 
 static Obj *make_symbol(const char *name) {
     Obj *sym = alloc(TSYMBOL, strlen(name) + 1);
@@ -303,7 +309,7 @@ static Obj *read(void) {
          if (isdigit(peek()))
           return make_int(-read_number(0));
          else return read_symbol(c);
-        if (isalpha(c) || strchr("~`?,':|+=_!@#$%^&*", c))
+        if (isalpha(c) || strchr("~`?,':|+=_!@#$%^&*€", c))
             return read_symbol(c);
         error("Don't know how to handle %c", c);
     }
@@ -584,7 +590,7 @@ static Obj *prim_set(Obj *env, Obj *list) {
     int sum = summ; \
     for (Obj *args = eval_list(env, list); args; args = args->cdr) { \
         if (args->car->type != TINT) \
-            error("+ takes only numbers"); \
+            error(#subn "takes only numbers"); \
         sum = sum oper args->car->value;\
     }\
     return make_int(sum);\
@@ -602,7 +608,7 @@ static Obj *prim_mod(Obj *env, Obj *list) {
  bool furst = true;
  for (Obj *args = eval_list(env, list); args; args = args->cdr) {
   if (args->car->type != TINT)
-   error("* takes only numbers");
+   error("mod takes only numbers");
   if (furst) sum = args->car->value;
   else sum %= args->car->value;
   furst = false;
@@ -616,12 +622,28 @@ static Obj *prim_minus(Obj *env, Obj *list) {
  bool furst = true;
  for (Obj *args = eval_list(env, list); args; args = args->cdr) {
   if (args->car->type != TINT)
-   error("* takes only numbers");
+   error("minus takes only numbers");
   if (furst) sum = args->car->value;
   else sum -= args->car->value;
   furst = false;
  }
  return make_int(sum);
+}
+
+#define TRIPART(uj) \
+ if (args->car->type != TINT) error(" takes only numbers"); \
+ double uj = args->car->value; \
+ args = args->cdr;
+
+
+static Obj *prim_euro(Obj *env, Obj *list) {
+ if (list_length(list) != 4) error("Malformed euro");
+ Obj *args = eval_list(env, list);
+ TRIPART(a)
+ TRIPART(b)
+ TRIPART(c)
+ TRIPART(d)
+ return make_int(d*pow(a,((double)b/(double)c)));
 }
 
 static Obj *prim_rand(Obj *env, Obj *list) {
@@ -748,6 +770,7 @@ static void define_primitives(Obj *env) {
     add_primitive(env, ",", prim_lt);
     add_primitive(env, "'", prim_gt);
     add_primitive(env, "$", prim_print);
+    add_primitive(env, "`", prim_euro);
     add_primitive(env, "exit", prim_exit);
 }
 

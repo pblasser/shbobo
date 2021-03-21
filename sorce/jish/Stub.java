@@ -194,6 +194,7 @@ FocusListener, MouseListener {
   public void keyReleased(KeyEvent e) {}
 
   public static Stub parze(int c) {
+
    if (c=='(') return new Bloque(0);
    if (c=='{') return new Bloque(1);
    if (c=='[') return new Bloque(2);
@@ -204,6 +205,7 @@ FocusListener, MouseListener {
    	return null;
    if (c==32) return new Guts();
    if (c>32) return new Guts(c);
+   //if (c==5) return new Guts(5);
    return null;
   }
  public void stubbornTake() {
@@ -211,6 +213,7 @@ FocusListener, MouseListener {
  }
  public void keyTyped(KeyEvent e) {
   	char c = e.getKeyChar();
+    // System.out.println(c);
    Stub s = parze(c);
    if (s!=null) visitInsert(s);
    if (c==8) stubbornTake();

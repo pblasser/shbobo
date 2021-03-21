@@ -58,12 +58,14 @@ implements TextListener, ComponentListener, LayoutManager {
    return;
   }
   char c = e.getKeyChar();
+  // System.out.println((int)e.getKeyChar());
   if ((c=='\n') || (c=='\r')) {
     um.addEdit(new UndoString(this,txt,lastext));
     editing = false;
     return;
   }
   if (c>=32) chng((first?""+c:txt+c));
+  //if (c==5) chng((first?""+c:txt+"€"));
   if (c==8) {
    if (txt.length()<=0) 
     um.addEdit(new UndoTake(this));
