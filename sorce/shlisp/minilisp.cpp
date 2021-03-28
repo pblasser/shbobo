@@ -343,9 +343,13 @@ static void print(Obj * env, Obj *obj) {
 		printf("<>");return;}
     switch (obj->type) {
     case TINT:
-     insituate(obj->value);
-        printf("%d", obj->value);
-        return;
+     if (obj->value == 0) {
+      insituate(0xFF);insituate(0);
+     } else if ((obj->value&0xFF)==0xFF) {
+      insituate(0xFF);insituate(242);insituate(0);
+     } else insituate(obj->value);
+     printf("%d", obj->value);
+     return;
     case TFISH:
      insituate(0xFF);
      gutsprinter("(",")",env,obj);
@@ -496,7 +500,7 @@ static Obj *eval(Obj *env, Obj *obj) {
      return obj;
     case TFISH:
     case TSOUP:
-     return eval_list(env, obj);
+     //return eval_list(env, obj);
         // Self-evaluating objects
         return obj;
     case TSYMBOL: {

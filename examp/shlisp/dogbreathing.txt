@@ -1,0 +1,16 @@
+<@ randmaker 
+ <# [start] 
+ <# [] 
+ <@ start <% <+ start 13> 16>> 
+ start>>> 
+ 
+ <@ f1 <randmaker 2>> 
+ <@ weirdpatch 
+ <# [] 
+ {(left (horn <f1> 15)) 
+ (jump (hornb 100 48 15))}>> 
+ <@ ndo 
+ <# [amt func] 
+ <? <' amt 0> <ndo <- amt 1> func>> 
+ <$ <func>>>> 
+ <ndo 13 weirdpatch> 
