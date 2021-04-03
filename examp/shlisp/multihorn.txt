@@ -1,18 +1,20 @@
- <@ rm 
+<@ rm 
  <# [a] 
  <# [] 
  <@ a <% <+ a 135> 99>> 
  <+ a 1> 
- >>> 
+>>> 
  <@ f1 <rm 45>> 
+ <@ f2 <# [] 47>> 
  <@ ndo 
- <#  [a] 
- <$ (<+  <? <' <~ 10> 0> horn saw> a> <f1> 47 
+ <# [a denofunc] 
+ <$ (<+ <? <' <~ 10> 0> horn saw> a> <f1> <denofunc> ;was a deno of 47
  (<+ mount a> <~ 47> <~ 47>))> 
- <? <' a 0> <ndo <- a 1>>> 
+ <? <' a 0> <ndo <- a 1> denofunc>> 
  
  
 >> 
- <@ d {(left <ndo 7>) (jump (minor 1)) (srate 18) 
+ <@ d {(left <ndo 7 f1>) (jump (minor 1)) (srate 18) 
 }> 
- d d d d d d d 
+ <@ dd {(left <ndo 7 f2>) (jump (minor 1)) (srate 18)}> 
+ d dd d d d d d 

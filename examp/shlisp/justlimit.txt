@@ -1,0 +1,38 @@
+<@ limit [2 2 3 3 5 7]> 
+ <@ lismul 
+ <# [l n b] 
+  <? l 
+ <? <' <& n b> 0> 
+ <* <lismul <: l> n <'' b 1>> <" l>> 
+ <lismul <: l> n <'' b 1>>> 
+ 1>>> 
+ <@ lischeck 
+ <# [n] 
+ <@ r <lismul limit <& n 127> 1>> 
+ <? <' r 127> <> r>>> 
+ <@ ratter 
+ <# [n] 
+ <@ nume <lischeck n>> 
+ <@ deno <lischeck  <,, n 7>>> 
+ <? nume 
+ <? deno 
+  <tank </ <* nume 30000> deno> 
+ <tank nume deno>>>>>> 
+ <@ ndo 
+ <# [n] 
+ <? <' n 0> <ndo <- n 1>>> 
+ <insertio arr <ratter n>>>> 
+ 
+ <@ arr []> 
+ <@ insertio 
+ <# [a v] 
+ <? <" a> 
+ <? <: a> 
+ <? <' <" v> <" <" <: a>>>> 
+ <insertio <: a> v> 
+ <@: a <tank v <: a>> >> 
+ <@: a <tank v <>>> 
+> 
+ <@" a v>>>> 
+ <ndo 123> 
+ arr

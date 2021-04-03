@@ -264,11 +264,15 @@ static int read_number(int val) {
 
 #define SYMBOL_MAX_LEN 200
 
+static bool sympars(char c) {
+ return strchr("/~`?,':\"|+=_!@#$%^&*-", c);
+}
+
 static Obj *read_symbol(char c) {
     char buf[SYMBOL_MAX_LEN + 1];
     int len = 1;
     buf[0] = c;
-    while (isalnum(peek()) || peek() == '-') {
+    while (isalnum(peek()) || sympars(peek())) {
         if (SYMBOL_MAX_LEN <= len)
             error("Symbol name too long");
         buf[len++] = getchar();
@@ -310,7 +314,7 @@ static Obj *read(void) {
          if (isdigit(peek()))
           return make_int(-read_number(0));
          else return read_symbol(c);
-        if (isalpha(c) || strchr("~`?,':|+=_!@#$%^&*€", c))
+        if (isalpha(c) || sympars(c))
             return read_symbol(c);
         error("Don't know how to handle %c", c);
     }
@@ -396,7 +400,8 @@ static int list_length(Obj *list) {
     for (;;) {
         if (list == 0)
             return len;
-        if (list->car == 0) return len;
+        if ((list->car == 0)&&(list->cdr==0)) return len;
+        /////wwhat happens in empty list head?
         if (list->type < TFISH)
             error("length: cannot handle dotted list");
         list = list->cdr;
@@ -416,6 +421,7 @@ static void add_variable(Obj *env, Obj *sym, Obj *val) {
 
 // Returns a newly created environment frame.
 static Obj *push_env(Obj *env, Obj *vars, Obj *values) {
+    //printf("%d %d llengs", list_length(vars), list_length(values));
     if (list_length(vars) != list_length(values))
         error("Cannot apply function: number of argument does not match");
     if (list_length(vars)==0) return env;
@@ -553,6 +559,26 @@ static Obj *prim_cdr(Obj *env, Obj *list) {
     return args->car->cdr;
 }
 
+static Obj *prim_setcdr(Obj *env, Obj *list) {
+    Obj *args = eval_list(env, list);
+    if (args->car->type < TFISH)
+        error("Malformed cdr");
+    if (args->cdr == 0) error("no settable");
+    args->car->cdr = args->cdr->car;
+    return 0;
+}
+
+static Obj *prim_setcar(Obj *env, Obj *list) {
+    Obj *args = eval_list(env, list);
+    if (args->car->type < TFISH)
+        error("Malformed cdr");
+    if (args->cdr == 0) error("no settable");
+    args->car->car = args->cdr->car;
+    return 0;
+}
+
+
+
 
 static Obj *prim_fun(Obj *env, Obj *list) {
     if (list->type != TBOAT || !is_list(list->car) || list->cdr->type < TFISH)
@@ -630,6 +656,45 @@ static Obj *prim_minus(Obj *env, Obj *list) {
    error("minus takes only numbers");
   if (furst) sum = args->car->value;
   else sum -= args->car->value;
+  furst = false;
+ }
+ return make_int(sum);
+}
+
+
+static Obj *prim_divide(Obj *env, Obj *list) {
+ int sum = 0;
+ bool furst = true;
+ for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("divide takes only numbers");
+  if (furst) sum = args->car->value;
+  else sum /= args->car->value;
+  furst = false;
+ }
+ return make_int(sum);
+}
+
+static Obj *prim_shill(Obj *env, Obj *list) {
+ int sum = 0;
+ bool furst = true;
+ for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("divide takes only numbers");
+  if (furst) sum = args->car->value;
+  else sum <<= args->car->value;
+  furst = false;
+ }
+ return make_int(sum);
+}
+static Obj *prim_shirr(Obj *env, Obj *list) {
+ int sum = 0;
+ bool furst = true;
+ for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("divide takes only numbers");
+  if (furst) sum = args->car->value;
+  else sum >>= args->car->value;
   furst = false;
  }
  return make_int(sum);
@@ -757,15 +822,19 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "tank", prim_tank);
     add_primitive(env, "boat", prim_boat);
     add_primitive(env, "\"", prim_car);
+    add_primitive(env, "@\"", prim_setcar);
+
     add_primitive(env, ":", prim_cdr);
+    add_primitive(env, "@:", prim_setcdr);
     add_primitive(env, "+", prim_add);
     add_primitive(env, "-", prim_minus);
+    add_primitive(env, "/", prim_divide);
     add_primitive(env, "*", prim_mul);
     add_primitive(env, "&", prim_and);
     add_primitive(env, "|", prim_orr);
     add_primitive(env, "^", prim_xor);
-        add_primitive(env, "!", prim_not);
-         add_primitive(env, "%", prim_mod);
+    add_primitive(env, "!", prim_not);
+    add_primitive(env, "%", prim_mod);
     add_primitive(env, "~", prim_rand);
     add_primitive(env, "@", prim_def);
         //add_primitive(env, "set", prim_set);
@@ -774,6 +843,9 @@ static void define_primitives(Obj *env) {
     add_primitive(env, "=", prim_eq);
     add_primitive(env, ",", prim_lt);
     add_primitive(env, "'", prim_gt);
+
+    add_primitive(env, "''", prim_shill);
+    add_primitive(env, ",,", prim_shirr);
     add_primitive(env, "$", prim_print);
     add_primitive(env, "`", prim_euro);
     add_primitive(env, "exit", prim_exit);
