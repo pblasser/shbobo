@@ -1,0 +1,7 @@
+{(left 
+ (wave 
+ (dust <+ 1 <~ 12>> (sauce (mount 34 <~ 36>) (smoke)) 
+) 
+ 100 
+ (mountb <~ 33> 100 (horn <~ 23> 89))))} 
+ ;just keep uploading this patch to hear random variations
