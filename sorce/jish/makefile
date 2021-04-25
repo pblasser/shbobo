@@ -2,7 +2,7 @@
 
 main:
 	$(MAKE) clean
-	javac Julia.java
+	javac --release 8 Julia.java
 	#echo "Manifest-Version: 1.0\nMain-Class: Julia\n\n" > manifest.mf
 	jar cmf manifest.mf jish.jar *.class
 	mv jish.jar ../../
