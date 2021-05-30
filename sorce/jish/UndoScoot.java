@@ -2,12 +2,12 @@
 import java.awt.*;
 import javax.swing.undo.*;
 
-public class UndoFudge
+public class UndoScoot
  extends AbstractUndoableEdit {
  Stub who;
  Stub whom;
  Container where;
- UndoFudge(Stub w, Stub m) {
+ UndoScoot(Stub w, Stub m) {
  	super();
  	who = w;whom=m;
  	doo();
@@ -15,7 +15,7 @@ public class UndoFudge
  private void doo() {
  	where = whom.getParent();
  	int indo = where.getComponentZOrder(whom);
- 	where.add(who,indo+1);
+ 	where.add(who,indo);
  	who.requestFocusInWindow();
  }
  public void redo() {
@@ -26,6 +26,5 @@ public class UndoFudge
  	super.undo();
  	//if (!where) return;
  	where.remove(who);
- }
- public boolean isSignificant(){return true;}
+ }public boolean isSignificant(){return true;}
 }

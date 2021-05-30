@@ -78,13 +78,22 @@ implements TextListener, ComponentListener, LayoutManager {
   }
   //if c==esc no edit, editing = false;
  }
-
+ public void stubbornPaint(Graphics g) {
+  super.stubbornPaint(g);
+  int siz = getFont().getSize();
+  Graphics2D g2d = (Graphics2D)g;
+  if (isFocusOwner() && (fudge==scoot))
+    g2d.fill(new Rectangle(getSize()));
+  if (scoot && !fudge)
+    g2d.fill(new Rectangle(0,0,siz,getHeight()));
+  if (fudge && !scoot)
+    g2d.fill(new Rectangle(getWidth()-siz,0,siz,getHeight()));
+ }
  public void paint(Graphics g) {
+  
   stubbornPaint(g);
   Font f = getFont();
-  Graphics2D g2d = (Graphics2D)g;
-  if (isFocusOwner())
-    g2d.fill(new Rectangle(getSize()));
+  
   //g.setFont(fi);
   g.setFont(f.deriveFont(Font.ITALIC));
   g.setColor(Color.black);

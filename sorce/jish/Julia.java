@@ -58,7 +58,9 @@ public void run() {
   new Thread(this).start();
  }
  public void validate() {
+  Point p = sp.getScrollPosition();
   super.validate();
+  sp.setScrollPosition(p);
 //  imago();
  }
 
@@ -87,6 +89,11 @@ public void run() {
   if (e.getActionCommand()=="New") neww();
   if (e.getActionCommand()=="Open...") open();
   if (e.getActionCommand()=="Save...") save();
+    if (e.getActionCommand()=="Undo") undo();
+  if (e.getActionCommand()=="Redo") redo();
+  if (e.getActionCommand()=="Copy") copy();
+  if (e.getActionCommand()=="Cut") cut();
+  if (e.getActionCommand()=="Paste") paste();
   if (e.getActionCommand()=="Zoom inn") zoomInn();
   if (e.getActionCommand()=="Zoom out") zoomOut();
   if (e.getActionCommand()=="Serve") serve("");
@@ -112,7 +119,22 @@ public void run() {
   mm.add(mn);
   m.add(mm);
 
-  mm = new Menu("Edit");
+  mm = new Menu("Edit");  
+  mn = new MenuItem("Undo", new MenuShortcut(KeyEvent.VK_Z));
+  mn.addActionListener(this);
+  mm.add(mn);
+  mn = new MenuItem("Redo", new MenuShortcut(KeyEvent.VK_Y));
+  mn.addActionListener(this);
+  mm.add(mn);
+    mn = new MenuItem("Copy", new MenuShortcut(KeyEvent.VK_C));
+  mn.addActionListener(this);
+  mm.add(mn);
+      mn = new MenuItem("Cut", new MenuShortcut(KeyEvent.VK_X));
+  mn.addActionListener(this);
+  mm.add(mn);
+      mn = new MenuItem("Paste", new MenuShortcut(KeyEvent.VK_V));
+  mn.addActionListener(this);
+  mm.add(mn);
   m.add(mm);
 
   mm = new Menu("View");
@@ -204,13 +226,38 @@ public void save() {
   }
 }
 
+public void undo() {
+  try{Stub.um.undo();}
+  catch(Exception e){}
+
+}
+public void redo() {
+  try{Stub.um.redo();}
+  catch(Exception e){}
+  
+}
+static Stub copzman;
+public void copy() {
+  Component c = getFocusOwner();
+  copzman = (Stub)c;
+}
+public void cut() {
+  Component c = getFocusOwner();
+}
+public void paste() {
+  Component c = getFocusOwner();
+}
   public void addLayoutComponent(String name, Component comp) {}
   public void removeLayoutComponent(Component comp) {}
   public Dimension minimumLayoutSize(Container p) { return getSize();}
   public Dimension preferredLayoutSize(Container p) { return getSize();}
  public void layoutContainer(Container p){ 
   Insets i = getInsets();
+    //Point pp = sp.getScrollPosition();
+
   sp.setBounds(i.left, i.top, getWidth()-i.left-i.right, getHeight()-i.top-i.bottom);
+
+  //sp.setScrollPosition(pp);
   //pane.setBounds(i.left, i.top, getWidth()-i.left-i.right, getHeight()-i.top-i.bottom);
  }
 

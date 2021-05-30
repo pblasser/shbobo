@@ -26,5 +26,5 @@ public class UndoTake
  	super.undo();
  	//if (!where) return;
  	where.add(who,which);
- }
+ }public boolean isSignificant(){return true;}
 }

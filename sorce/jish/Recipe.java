@@ -85,7 +85,7 @@ validate();
  }
 
  public void componentRemoved(ContainerEvent e) {
- 	   validate();
+validate();
 //validate to remove dragdrop frame to frame
  }
 

@@ -10,9 +10,9 @@ public class Stub extends Container
 implements DragGestureListener,DropTargetListener,
 DragSourceListener,Transferable,
 KeyListener , ComponentListener,
-FocusListener, MouseListener { 
- static Stub draggerman;
- static UndoManager um;
+FocusListener, MouseListener, Cloneable { 
+ public static Stub draggerman;
+ public static UndoManager um;
  boolean scoot, fudge;
  static {
  	um = new UndoManager();
@@ -37,7 +37,11 @@ FocusListener, MouseListener {
 	 //requestFocusInWindow();
 
  }	
-
+public Stub clone() throws CloneNotSupportedException {
+       Stub clonedMyClass = (Stub)super.clone();
+       // if you have custom object, then you need create a new one in here
+       return clonedMyClass ;
+}
  public void addNotify() {
 	 super.addNotify();
 	 dt = new DropTarget(this, DnDConstants.ACTION_NONE, this, true);
@@ -146,6 +150,7 @@ FocusListener, MouseListener {
 	public void drop(DropTargetDropEvent dtde) {
 		Stub s = null;
 		s = draggerman;
+    
 	//	try { s
 	//		=(Stub)(dtde.getDropTargetContext().getComponent());
 			// = (Stub)(dtde.getTransferable().getTransferData(new DataFlavor(this.getClass(),"stub")));
@@ -153,11 +158,21 @@ FocusListener, MouseListener {
 	//		}
 	//		 catch (Exception e) {System.out.println(e.getMessage());}
 		if ((s==null)||s.isParentOf(this)) {dtde.rejectDrop(); return;}
-		System.out.println("stub"+s.cumulopasty);
-		um.addEdit(new UndoTake(s));
-	dtde.acceptDrop(DnDConstants.ACTION_MOVE);
+    CompoundEdit c = new CompoundEdit();
+    c.addEdit(new UndoTake(s));
+    int xer = dtde.getLocation().x;
+    if (xer<getWidth()/3)
+     c.addEdit(new UndoScoot(s,this));
+    else if (xer>getWidth()*2/3)
+        c.addEdit(new UndoFudge(s,this));
+    else {
+	    c.addEdit(new UndoFudge(s,this));
+      c.addEdit(new UndoTake(this));
+    }
+    c.end();
+  um.addEdit(c);
+  dtde.acceptDrop(DnDConstants.ACTION_MOVE);
 		
-		um.addEdit(new UndoFudge(s,this));
 		fudge = scoot = true;
 		validate();
 

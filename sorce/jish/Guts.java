@@ -19,10 +19,7 @@ public class Guts extends Bubble {
  }  
   public void paint(Graphics g) {
   stubbornPaint(g);
-  Graphics2D g2d = (Graphics2D)g;
   Font f = getFont();
-  if (isFocusOwner())
-    g2d.fill(new Rectangle(getSize()));
   g.setFont(f);
   g.setColor(Color.black);
   g.drawString(txt,f.getSize()>>2,g.getFontMetrics().getAscent());

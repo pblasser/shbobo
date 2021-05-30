@@ -23,5 +23,5 @@ public class UndoPutin
  	super.undo();
  	//if (!where) return;
  	whom.remove(who);
- }
+ }public boolean isSignificant(){return true;}
 }
