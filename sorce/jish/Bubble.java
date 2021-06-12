@@ -22,6 +22,11 @@ implements TextListener, ComponentListener, LayoutManager {
   editing = v;
   setLayout(this);
  }
+ public Stub clone()  {
+       Bubble clonedMyClass = new Bubble();
+       clonedMyClass.chng(txt);
+       return clonedMyClass ;
+}
  public boolean breakers(int c) {
   if ((c=='\n') || (c=='\r')) return true;
   return false;

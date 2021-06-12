@@ -1,9 +1,11 @@
 import java.io.*;
 import java.awt.geom.*;
 import java.awt.*;
+import javax.swing.undo.*;
+import java.awt.dnd.*;
 
 public class Bloque extends Recipe { 
- int type;
+ public int type;
  static GeneralPath gp[];
  static char[] openers = {'(','{','[','<'};
  static char[] closers = {')','}',']','>'};
@@ -38,15 +40,23 @@ public class Bloque extends Recipe {
 	 type = t%4;
 	 repaint();
 	}
-
+public Stub clone() {
+  Bloque clonedMyClass = new Bloque(type);
+  for (int i =0; i<getComponentCount(); i++) {
+    Stub s = ((Stub)getComponent(i));
+    clonedMyClass.add(s.clone());
+  }
+  return clonedMyClass ;
+ }
  public void visitInsert(Stub s) {
  	if (getComponentCount()<1) 
  		um.addEdit(new UndoPutin(s,this));
   else um.addEdit(new UndoFudge(s,this));
  }
- public void stubbornTake() {
-  um.addEdit(new UndoTake(this));
- }
+
+    public void drop(DropTargetDropEvent dtde) {
+     stubbornDrop(dtde);
+  }
   public String toString() {
    return openers[type]+super.toString()+closers[type];
   }

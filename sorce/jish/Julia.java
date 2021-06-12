@@ -94,6 +94,7 @@ public void run() {
   if (e.getActionCommand()=="Copy") copy();
   if (e.getActionCommand()=="Cut") cut();
   if (e.getActionCommand()=="Paste") paste();
+  if (e.getActionCommand()=="Duplicate") duplicate();
   if (e.getActionCommand()=="Zoom inn") zoomInn();
   if (e.getActionCommand()=="Zoom out") zoomOut();
   if (e.getActionCommand()=="Serve") serve("");
@@ -133,6 +134,9 @@ public void run() {
   mn.addActionListener(this);
   mm.add(mn);
       mn = new MenuItem("Paste", new MenuShortcut(KeyEvent.VK_V));
+  mn.addActionListener(this);
+  mm.add(mn);
+  mn = new MenuItem("Duplicate", new MenuShortcut(KeyEvent.VK_D));
   mn.addActionListener(this);
   mm.add(mn);
   m.add(mm);
@@ -239,13 +243,24 @@ public void redo() {
 static Stub copzman;
 public void copy() {
   Component c = getFocusOwner();
+  if (c==null) return;
   copzman = (Stub)c;
 }
 public void cut() {
   Component c = getFocusOwner();
+  if (c==null) return;
+  copzman = (Stub)c;
+  Stub.um.addEdit(new UndoTake(copzman));
 }
 public void paste() {
-  Component c = getFocusOwner();
+  Stub c = (Stub)getFocusOwner();
+  if ((copzman==null)||(c==null)) return;
+  c.visitInsert(copzman.clone());
+}
+public void duplicate() {
+  Stub c = (Stub)getFocusOwner();
+  if (c==null) return;
+  c.visitInsert(c.clone());
 }
   public void addLayoutComponent(String name, Component comp) {}
   public void removeLayoutComponent(Component comp) {}

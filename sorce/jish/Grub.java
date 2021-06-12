@@ -62,16 +62,22 @@ DragSourceListener, LayoutManager {
 
  //DragGestureListener
 	public void dragGestureRecognized(DragGestureEvent dge) {
+		Bloque b = new Bloque(0);
 		Guts s = new Guts();
-  s.chng(skull);
-		BufferedImage i = new BufferedImage(s.getWidth(),s.getHeight(),
+    	
+    	
+    	b.setFont(new Font("TimesRoman", Font.PLAIN, 10));
+    	b.add(s);
+    	s.chng(skull);
+    	System.out.println("draggest");
+		BufferedImage i = new BufferedImage(b.getWidth(),b.getHeight(),
 		 BufferedImage.TYPE_INT_ARGB);
 		Graphics g  = i.createGraphics();
-		s.paint(g);
+		b.paint(g);
 		g.dispose();
 		DragSource ds = dge.getDragSource();
 		ds.startDrag(dge,Cursor.getPredefinedCursor(Cursor.MOVE_CURSOR),
-		 i, new Point(10,10), s, this); 
+		 i, new Point(10,10), b, b); 
 	}
  public boolean isOpaque() {return false;}
 

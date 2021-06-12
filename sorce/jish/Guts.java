@@ -17,6 +17,11 @@ public class Guts extends Bubble {
   super(true); 
   txt="";
  }  
+  public Stub clone()  {
+       Guts clonedMyClass = new Guts();
+       clonedMyClass.chng(txt);
+       return clonedMyClass ;
+}
   public void paint(Graphics g) {
   stubbornPaint(g);
   Font f = getFont();

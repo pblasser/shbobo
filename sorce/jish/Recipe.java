@@ -26,7 +26,14 @@ public class Recipe extends Stub implements LayoutManager,ContainerListener {
 	 setLayout(this);
 	 addContainerListener(this);
 	}
-
+public Stub clone() {
+  Recipe clonedMyClass = new Recipe();
+  for (int i =0; i<getComponentCount(); i++) {
+    Stub s = ((Stub)getComponent(i));
+    clonedMyClass.add(s.clone());
+  }
+  return clonedMyClass ;
+ }
  public void parze(PushbackReader pr) {
  	int c = 0;
  	while (c>-1) {
@@ -44,6 +51,14 @@ public class Recipe extends Stub implements LayoutManager,ContainerListener {
  public void stubbornTake() {
   //um.addEdit(new UndoTake(this));
  }
+  public void drop(DropTargetDropEvent dtde) {
+            Stub s = null;
+    s = draggerman;
+    visitInsert(s);
+  }
+  public void stubbornTake(CompoundEdit c) {
+   //c.addEdit(new UndoTake(this));
+  }
  public String toString() {
  	String s = "";
   for (int i =0; i<getComponentCount(); i++) {

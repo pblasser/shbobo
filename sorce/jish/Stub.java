@@ -10,7 +10,7 @@ public class Stub extends Container
 implements DragGestureListener,DropTargetListener,
 DragSourceListener,Transferable,
 KeyListener , ComponentListener,
-FocusListener, MouseListener, Cloneable { 
+FocusListener, MouseListener {//, Cloneable { 
  public static Stub draggerman;
  public static UndoManager um;
  boolean scoot, fudge;
@@ -37,8 +37,8 @@ FocusListener, MouseListener, Cloneable {
 	 //requestFocusInWindow();
 
  }	
-public Stub clone() throws CloneNotSupportedException {
-       Stub clonedMyClass = (Stub)super.clone();
+public Stub clone()  {
+       Stub clonedMyClass = new Stub();
        // if you have custom object, then you need create a new one in here
        return clonedMyClass ;
 }
@@ -144,20 +144,17 @@ public Stub clone() throws CloneNotSupportedException {
    }
    return false;
 	}
-	public void stubbornDrop(Stub s) {
-
-	}
-	public void drop(DropTargetDropEvent dtde) {
-		Stub s = null;
-		s = draggerman;
+	public void stubbornDrop(DropTargetDropEvent dtde) {
+        Stub s = null;
+    s = draggerman;
     
-	//	try { s
-	//		=(Stub)(dtde.getDropTargetContext().getComponent());
-			// = (Stub)(dtde.getTransferable().getTransferData(new DataFlavor(this.getClass(),"stub")));
+  //  try { s
+  //    =(Stub)(dtde.getDropTargetContext().getComponent());
+      // = (Stub)(dtde.getTransferable().getTransferData(new DataFlavor(this.getClass(),"stub")));
 
-	//		}
-	//		 catch (Exception e) {System.out.println(e.getMessage());}
-		if ((s==null)||s.isParentOf(this)) {dtde.rejectDrop(); return;}
+  //    }
+  //     catch (Exception e) {System.out.println(e.getMessage());}
+    if ((s==null)||s.isParentOf(this)) {dtde.rejectDrop(); return;}
     CompoundEdit c = new CompoundEdit();
     c.addEdit(new UndoTake(s));
     int xer = dtde.getLocation().x;
@@ -166,15 +163,22 @@ public Stub clone() throws CloneNotSupportedException {
     else if (xer>getWidth()*2/3)
         c.addEdit(new UndoFudge(s,this));
     else {
-	    c.addEdit(new UndoFudge(s,this));
+      c.addEdit(new UndoFudge(s,this));
       c.addEdit(new UndoTake(this));
     }
     c.end();
   um.addEdit(c);
   dtde.acceptDrop(DnDConstants.ACTION_MOVE);
-		
-		fudge = scoot = true;
-		validate();
+    
+    fudge = scoot = true;
+    validate();
+
+	}
+  public void stubbornTake(CompoundEdit c) {
+   c.addEdit(new UndoTake(this));
+  }
+	public void drop(DropTargetDropEvent dtde) {
+		stubbornDrop(dtde);
 
 	}
 
