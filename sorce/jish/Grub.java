@@ -14,6 +14,12 @@ DragSourceListener, LayoutManager {
  String[] args;
  String toolt;
  public int code;
+ static Container skullholder;
+ static {
+ 	skullholder = new Container();
+ 	skullholder.setFont(new Font("TimesRoman", Font.PLAIN, 10));
+ 	skullholder.setVisible(true);
+ }
  Grub(String s, String ar, String tt, int c, int n) {
  	skull = s;
   args = ar.split(" ");
@@ -61,14 +67,17 @@ DragSourceListener, LayoutManager {
  public void dropActionChanged(DragSourceDragEvent dsde) {}
 
  //DragGestureListener
+
 	public void dragGestureRecognized(DragGestureEvent dge) {
 		Bloque b = new Bloque(0);
-		Guts s = new Guts();
+		add(b);
+    	b.add(new Guts(skull));
+		for (int i=0;i<args.length;i++) {
+          b.add(new Guts(""+i));
+		}
+
     	
-    	
-    	b.setFont(new Font("TimesRoman", Font.PLAIN, 10));
-    	b.add(s);
-    	s.chng(skull);
+    	Stub.draggerman=b;
     	System.out.println("draggest");
 		BufferedImage i = new BufferedImage(b.getWidth(),b.getHeight(),
 		 BufferedImage.TYPE_INT_ARGB);

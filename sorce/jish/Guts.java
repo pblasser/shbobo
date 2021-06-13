@@ -7,7 +7,11 @@ import javax.swing.undo.*;
 import java.io.*;
 
 public class Guts extends Bubble {	
-
+ Guts(String s) {
+  super(true); 
+  txt=s;
+  first=false;
+ }
  Guts(int c) { 
   super(true); 
   txt=""+(char)c;
