@@ -98,7 +98,7 @@ public void run() {
   if (e.getActionCommand()=="Zoom inn") zoomInn();
   if (e.getActionCommand()=="Zoom out") zoomOut();
   if (e.getActionCommand()=="Serve") serve("");
-  if (e.getActionCommand()=="Change Cuisine") serve("-bshnbth.bin");
+  if (e.getActionCommand()=="Change Cuisine") serve("-bshnth.bin");
   if (e.getActionCommand()=="Gwonz") serve("-o");
  }
 
