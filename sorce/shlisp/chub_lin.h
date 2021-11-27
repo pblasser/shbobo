@@ -104,7 +104,7 @@ void chubONE() {
  int i;
  if (devh){
   i = libusb_interrupt_transfer(devh,ENDPOINT_INT_IN,
-    (unsigned char *)gwonz,8,NULL,0)
+    (unsigned char *)gwonz,8,NULL,0);
   if (i==0) 
      printf("%+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d\n",
       gwonz[0], gwonz[1],
