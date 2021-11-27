@@ -471,17 +471,24 @@ static Obj *apply(Obj *env, Obj *fn, Obj *args) {
 	//if (args==0) return 0;
     if (!is_list(args))
         error("argument must be a list");
+    Obj*res=0;
     if (fn->type == TPRIMITIVE)
     //printf("inside apply\n");
-        return fn->fn(env, args);
+        res = fn->fn(env, args);
+        talloc_steal(res,0);
+        return res;
     if (fn->type == TFUNCTION) {
         Obj *body = fn->body;
         Obj *params = fn->params;
         Obj *eargs = eval_list(env, args);
         Obj *newenv = push_env(fn->env, params, eargs);
         
-        return progn(newenv, body);
-    }
+        res= progn(newenv, body);
+        talloc_steal(res,0);
+        tfree(eargs);
+        tfree(newenv);
+        return res;
+    } 
     error("not supported");
 }
 
