@@ -16,19 +16,20 @@
 #endif
 #include "chub.h" 
 #include "situations.h"
+#include "talloc.c"
 
 enum {
-    TINT=0,
+	TINT=0,
     TSYMBOL,
     TPRIMITIVE,
     TFUNCTION,
     TSPECIAL,
     TENV,
     
-    TFISH,
-    TSOUP,
-    TTANK,
-    TBOAT
+	TFISH,
+	TSOUP,
+	TTANK,
+	TBOAT
 
 };
 
@@ -99,42 +100,42 @@ static void error(const char *fmt, ...) ;//__attribute((noreturn));
 // Constructors
 //======================================================================
 
-static Obj *alloc(int type, size_t size) {
+static Obj *alloc(int type, size_t size, Obj*par) {
     // Add the size of the type tag.
     size += offsetof(Obj, value);
 
     // Allocate the object.
-    Obj *obj = (Obj*)malloc(size);
+    Obj *obj = (Obj*)talloc(size, par);
     obj->type = type;
     return obj;
 }
 
-static Obj *make_int(int value) {
-    Obj *r = alloc(TINT, sizeof(int));
+static Obj *make_int(int value,Obj*par) {
+    Obj *r = alloc(TINT, sizeof(int),par);
     r->value = value;
     return r;
 }
-static Obj *make_intd(double x) {
+static Obj *make_intd(double x,Obj*par) {
     x =((x)>=0?(int)((x)+0.5):(int)((x)-0.5));
-    Obj *r = alloc(TINT, sizeof(int));
+    Obj *r = alloc(TINT, sizeof(int),par);
     r->value = x;
     return r;
 }
 
-static Obj *make_symbol(const char *name) {
-    Obj *sym = alloc(TSYMBOL, strlen(name) + 1);
+static Obj *make_symbol(const char *name,Obj*par) {
+    Obj *sym = alloc(TSYMBOL, strlen(name) + 1,par);
     strcpy(sym->name, name);
     return sym;
 }
 
-static Obj *make_primitive(Primitive *fn) {
-    Obj *r = alloc(TPRIMITIVE, sizeof(Primitive *));
+static Obj *make_primitive(Primitive *fn,Obj*par) {
+    Obj *r = alloc(TPRIMITIVE, sizeof(Primitive *),par);
     r->fn = fn;
     return r;
 }
 
-static Obj *make_function(Obj *params, Obj *body, Obj *env) {
-    Obj *r = alloc(TFUNCTION, sizeof(Obj *) * 3);
+static Obj *make_function(Obj *params, Obj *body, Obj *env,Obj*par) {
+    Obj *r = alloc(TFUNCTION, sizeof(Obj *) * 3,par);
     r->params = params;
     r->body = body;
     r->env = env;
@@ -148,36 +149,36 @@ static Obj *make_special(int subtype) {
     return r;
 }
 
-struct Obj *make_env(Obj *vars, Obj *up) {
-    Obj *r = alloc(TENV, sizeof(Obj *) * 2);
+struct Obj *make_env(Obj *vars, Obj *up,Obj*par) {
+    Obj *r = alloc(TENV, sizeof(Obj *) * 2,par);
     r->vars = vars;
     r->up = up;
     return r;
 }
 
-static Obj *cons(int type, Obj *car, Obj *cdr) {
-    Obj *cell = alloc(type, sizeof(Obj *) * 2);
+static Obj *cons(int type, Obj *car, Obj *cdr,Obj*par) {
+    Obj *cell = alloc(type, sizeof(Obj *) * 2,par);
     cell->car = car;
     cell->cdr = cdr;
     return cell;
 }
 
-static Obj *fish(Obj *car, Obj *cdr) {
-    return cons(TFISH, car, cdr);
+static Obj *fish(Obj *car, Obj *cdr,Obj*par) {
+    return cons(TFISH, car, cdr,par);
 }
-static Obj *soup(Obj *car, Obj *cdr) {
-    return cons(TSOUP, car, cdr);
+static Obj *soup(Obj *car, Obj *cdr,Obj*par) {
+    return cons(TSOUP, car, cdr,par);
 }
-static Obj *tank(Obj *car, Obj *cdr) {
-    return cons(TTANK, car, cdr);
+static Obj *tank(Obj *car, Obj *cdr,Obj*par) {
+    return cons(TTANK, car, cdr,par);
 }
-static Obj *boat(Obj *car, Obj *cdr) {
-    return cons(TBOAT, car, cdr);
+static Obj *boat(Obj *car, Obj *cdr,Obj*par) {
+    return cons(TBOAT, car, cdr,par);
 }
 
 // Returns ((x . y) . a)
-static Obj *acons(Obj *x, Obj *y, Obj *a) {
-    return tank(tank(x, y), a);
+static Obj *acons(Obj *x, Obj *y, Obj *a,Obj*par) {
+    return tank(tank(x, y,par), a,par);
 }
 //parser
 static Obj *readhui(void);
@@ -222,14 +223,14 @@ static Obj *readhui_list(int type) {
     if (obj == Dot)
         error("Stray dot");
     if (obj == Cparen)
-        return cons(type,0,0);
+        return cons(type,0,0,0);
     Obj *head, *tail;
-    head = tail = cons(type,obj,0);
+    head = tail = cons(type,obj,0,0);
 
     for (;;) {
         Obj *obj = readhui();
 //        if (!obj)
-            
+			
  //           return 0;//error("Unclosed parenthesis");
         if (obj == Cparen)
             return head;
@@ -239,8 +240,8 @@ static Obj *readhui_list(int type) {
                 error("Closed parenthesis expected after dot");
             return head;
         }
-        if (obj) tail->cdr = cons(type,obj,0);
-        else tail->cdr = cons(type,0,0);
+        if (obj) tail->cdr = cons(type,obj,0,0);
+        else tail->cdr = cons(type,0,0,0);
         tail = tail->cdr;
     }
 }
@@ -252,7 +253,7 @@ static Obj *intern(const char *name) {
         if (strcmp(name, p->car->name) == 0)
             return p->car;
     Obj *sym = make_symbol(name);
-    Symbols = tank(sym, Symbols);
+    Symbols = tank(sym, Symbols,0);
     return sym;
 }
 
@@ -291,7 +292,7 @@ static Obj *readhui(void) {
         if (c == EOF) {
            looper = 0;
             return 0;
-        }
+		}
         if (c == ';') {
             skip_line();
             continue;
@@ -309,10 +310,10 @@ static Obj *readhui(void) {
         if (c == '.')
             return Dot;
         if (isdigit(c))
-            return make_int(readhui_number(c - '0'));
+            return make_int(readhui_number(c - '0'),0);
         if (c == '-')
          if (isdigit(peek()))
-          return make_int(-readhui_number(0));
+          return make_int(-readhui_number(0),0);
          else return readhui_symbol(c);
         if (isalpha(c) || sympars(c))
             return readhui_symbol(c);
@@ -322,9 +323,9 @@ static Obj *readhui(void) {
 
 static void print(Obj*env,Obj*obj);
 static void gutsprinter(const char* s,const char*e,Obj*env,Obj *obj) {
-        printf(s);
+	    printf(s);
         for (;;) {
-            if (obj->car == 0) break;
+			if (obj->car == 0) break;
             print(env,obj->car);
             if (obj->cdr == 0)
                 break;
@@ -338,13 +339,13 @@ static void gutsprinter(const char* s,const char*e,Obj*env,Obj *obj) {
         }
         printf(e);
        }
-    
-static Obj *eval(Obj*env,Obj*obj);  
+	
+static Obj *eval(Obj*env,Obj*obj);	
 // Prints the given object.
 //needs symbolprinter/byter
 static void print(Obj * env, Obj *obj) {
-    if (obj==0) {
-        printf("<>");return;}
+	if (obj==0) {
+		printf("<>");return;}
     switch (obj->type) {
     case TINT:
      if (obj->value == 0) {
@@ -369,7 +370,7 @@ static void print(Obj * env, Obj *obj) {
         gutsprinter("[","]",env,obj);
         return;
     case TBOAT:
-        print(env, eval(env, obj));
+		print(env, eval(env, obj));
         //gutsprinter("<",">",obj);
         return;
     case TSYMBOL:
@@ -416,7 +417,7 @@ static int list_length(Obj *list) {
 static Obj *eval(Obj *env, Obj *obj);
 
 static void add_variable(Obj *env, Obj *sym, Obj *val) {
-    env->vars = acons(sym, val, env->vars);
+    env->vars = acons(sym, val, env->vars, env);
 }
 
 // Returns a newly created environment frame.
@@ -426,12 +427,13 @@ static Obj *push_env(Obj *env, Obj *vars, Obj *values) {
         error("Cannot apply function: number of argument does not match");
     if (list_length(vars)==0) return env;
     Obj *map = 0;
+    Obj *nev = make_env(map, env,0);
     for (Obj *p = vars, *q = values; p != 0; p = p->cdr, q = q->cdr) {
         Obj *sym = p->car;
         Obj *val = q->car;
-        map = acons(sym, val, map);
-    }
-    return make_env(map, env);
+        map = acons(sym, val, map, nev);
+    } nev->vars=map;
+    return nev;
 }
 
 // Evaluates the list elements from head and returns the last return value.
@@ -449,9 +451,9 @@ static Obj *eval_list(Obj *env, Obj *list) {
     for (Obj *lp = list; lp; lp = lp->cdr) {
         Obj *tmp = eval(env, lp->car);
         if (head == 0) {
-            head = tail = cons(list->type,tmp, 0);
+            head = tail = cons(list->type,tmp, 0,0);
         } else {
-            tail->cdr = cons(list->type,tmp, 0);
+            tail->cdr = cons(list->type,tmp, 0,head);
             tail = tail->cdr;
         }
     }
@@ -466,7 +468,7 @@ static bool is_list(Obj *obj) {
 
 // Apply fn with args.
 static Obj *apply(Obj *env, Obj *fn, Obj *args) {
-    //if (args==0) return 0;
+	//if (args==0) return 0;
     if (!is_list(args))
         error("argument must be a list");
     if (fn->type == TPRIMITIVE)
@@ -496,7 +498,7 @@ static Obj *find(Obj *env, Obj *sym) {
 }
 
 static Obj *eval(Obj *env, Obj *obj) {
-    if (obj==0) return 0;
+	if (obj==0) return 0;
     switch (obj->type) {
     case TINT:
     case TPRIMITIVE:
@@ -517,8 +519,8 @@ static Obj *eval(Obj *env, Obj *obj) {
         return bind->cdr;
     }
     case TBOAT: {        
-        Obj *fn = eval(env, obj->car);
-        if (fn==0) return 0;
+		Obj *fn = eval(env, obj->car);
+		if (fn==0) return 0;
         Obj *args = obj->cdr;
         if (fn->type != TPRIMITIVE && fn->type != TFUNCTION)
             error("The head of a list must be a function");
@@ -584,7 +586,7 @@ static Obj *prim_fun(Obj *env, Obj *list) {
     if (list->type != TBOAT || !is_list(list->car) || list->cdr->type < TFISH)
         error("Malformed lambda");
     for (Obj *p = list->car; p; p = p->cdr) {
-        if (p->car == 0) break;
+		if (p->car == 0) break;
         if (p->car->type != TSYMBOL)
             error("Parameter must be a symbol");
         if (!is_list(p->cdr))
@@ -592,7 +594,7 @@ static Obj *prim_fun(Obj *env, Obj *list) {
     }
     Obj *car = list->car;
     Obj *cdr = list->cdr;
-    return make_function(car, cdr, env);
+    return make_function(car, cdr, env,0);
 }
 
 static Obj *prim_def(Obj *env, Obj *list) {
@@ -624,7 +626,7 @@ static Obj *prim_set(Obj *env, Obj *list) {
             error(#subn "takes only numbers"); \
         sum = sum oper args->car->value;\
     }\
-    return make_int(sum);\
+    return make_int(sum,0);\
 }
 primmermath(and, -1, &)
 primmermath(orr, 0, |)
@@ -816,8 +818,8 @@ static void define_grub(Obj * env, const char*s,int v, int ningle) {
 
  
 static void define_primitives(Obj *env) {
-    srand(time(0));
-    #include "tokes.c"
+	srand(time(0));
+	#include "tokes.c"
     add_primitive(env, "fish", prim_fish);
     add_primitive(env, "soup", prim_soup);
     add_primitive(env, "tank", prim_tank);
@@ -906,17 +908,17 @@ int main(int argc, char * argv[]) {
  chubOPEN();
  int offset=1;
  if ((argc > offset) && (argv[1][0] == '-')) {
-     if (argv[1][1] == 'h') {
+	 if (argv[1][1] == 'h') {
 
-         printarsimp();return 0;}
+		 printarsimp();return 0;}
     if (argv[1][1] == 'g') {
          chubRUN();return 0;}
     if (argv[1][1] == 'o') {
          chubONE();return 0;}
-     if (argv[1][1] == 'z') {
-         printar();return 0;}
-     if (argv[1][1] == 'b') {
-         inputfile = strdup(argv[1]+2);
+	 if (argv[1][1] == 'z') {
+		 printar();return 0;}
+	 if (argv[1][1] == 'b') {
+		 inputfile = strdup(argv[1]+2);
          offset=2;
      }
  } 
