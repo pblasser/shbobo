@@ -100,6 +100,23 @@ void chubRUN() {
  }
 }
 
+void chubONE() {
+ int i;
+ if (devh){
+  i = libusb_interrupt_transfer(devh,ENDPOINT_INT_IN,
+    (unsigned char *)gwonz,8,NULL,0)
+  if (i==0) 
+     printf("%+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d %+.3d\n",
+      gwonz[0], gwonz[1],
+     gwonz[2], gwonz[3],
+      gwonz[4], gwonz[5],
+      gwonz[6], gwonz[7]);
+   }
+
+}
+
+
+
 
 void chubOPEN() {
  libusb_init(NULL); 
