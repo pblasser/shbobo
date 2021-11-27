@@ -1,0 +1,39 @@
+
+ 
+ <@ zoot <# [a b] 
+ 
+ <? a <tank  <` 2 a 7 b> <zoot <- a 1> b>>>>> 
+ 
+ 
+ {(srate 100) 
+ (left (arab (saw 
+ (ladder (mount 128 127) 
+ ;happy birthday
+ 
+ <zoot 16 50> 
+) 
+ 
+ 200 (reflect (mount) 4) ;tried this with squared by modo but something more sincere,tender about linear env
+ 
+ 
+) 
+ (fog (dust 10) 
+ (smoke 100) (smoke 50) 
+ (smoke 1 (ladder)) 100) (fogb (dustb 10) 
+ (smoke 100) (smoke 50) 
+ (smoke 1 (ladderb)) 102) 
+ 
+ 
+ (sawb 
+ (ladderb (mountb 127 127) 
+ ;happy birthday
+ 
+ <zoot 16 51> 
+) 
+ 
+ 204 (reflect (mountb) 4) 
+ 
+)) 
+)} 
+ 
+ 
