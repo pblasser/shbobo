@@ -57,6 +57,10 @@ public Stub clone() {
     public void drop(DropTargetDropEvent dtde) {
      stubbornDrop(dtde);
   }
+ public void stubbornTake() {
+  um.addEdit(new UndoTake(this));
+ }
+
   public String toString() {
    return openers[type]+super.toString()+closers[type];
   }

@@ -738,11 +738,12 @@ static Obj *prim_if(Obj *env, Obj *list) {
     if (list_length(list) < 2)
         error("Malformed if");
     Obj *cond = eval(env, list->car);
-    if (cond) {
-        Obj *then = list->cdr->car;
-        return eval(env, then);
-    }
     Obj *els = list->cdr->cdr;
+    if (cond) {
+     if ((cond->type==TINT) && (cond->value==0))
+      return els == 0 ? 0 : progn(env, els);
+     else return eval(env, list->cdr->car);
+    }
     return els == 0 ? 0 : progn(env, els);
 }
 
