@@ -5,8 +5,8 @@
 
 CC=gcc 
 OS:=$(shell uname -s | cut -f1 -d_ )
-flagsLinux = -xc++ -DLINUSTORWALDS -lusb-1.0 -lm -o
-flagsDarwin =  -DSTEVEJOBS -framework IOKit  -framework Foundation -ObjC++ -lstdc++ -o 
+flagsLinux =  -DLINUSTORWALDS -lusb-1.0 -lm -o
+flagsDarwin =  -DSTEVEJOBS -framework IOKit  -framework Foundation   -o 
 flagsCYGWIN = /D"BILLGATES" "setupapi.lib" /Fe
 #flagsCYGWIN = -xc++ -DBILLGATES -lsetupapi -o
 flags = $(flags$(OS))
@@ -31,7 +31,7 @@ main:
 ifeq ($(OS),CYGWIN)
 	$(call "%VS100COMNTOOLS%vsvars32.bat")
 endif
-	$(compil) minilisp.cpp $(flags)$(target)
+	$(compil) minilisp.c $(flags)$(target)
 	chmod a+x $(target)
 	mv $(target) ../../$(deer)
 	$(MAKE) clean
