@@ -68,7 +68,7 @@ static void Handle_IOHIDDeviceIOHIDReportCallback(
 
 void chubSENDATE(uint8_t * outReport)  {
  while (mydev) 
-  if(IOHIDDeviceSetReport(mydev, kIOHIDReportTypeOutput,
+  if(IOHIDDeviceSetReport(mydev, kIOHIDReportTypeFeature,
    0,outReport,8)==kIOReturnSuccess) return;
 }
 void chubSENDEND()  {
