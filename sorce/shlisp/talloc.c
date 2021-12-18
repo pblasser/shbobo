@@ -75,42 +75,15 @@ static void *talloc_init(void *mem, void *parent) {
     return mem;
 }
 
-/**
- * Allocate a (contiguous) memory chunk.
- *
- * @param size    amount of memory requested (in bytes).
- * @param parent  pointer to previously talloc'ed memory chunk from which this
- *                chunk depends, or NULL.
- *
- * @return pointer to the allocated memory chunk, or NULL if there was an error.
- */
+
 void *talloc(size_t size, void *parent) {
-
-    return talloc_init(malloc(size + HEADER_SIZE), parent);
+ return talloc_init(malloc(size + HEADER_SIZE), parent);
 }
 
-/**
- * Allocate a zeroed (contiguous) memory chunk.
- *
- * @param size    amount of memory requested (in bytes).
- * @param parent  pointer to previously talloc'ed memory chunk from which this
- *                chunk depends, or NULL.
- *
- * @return pointer to the allocated memory chunk, or NULL if there was an error.
- */
-void *tzalloc(size_t size, void *parent) {
-
-    return talloc_init(calloc(1, size + HEADER_SIZE), parent);
+void *tzalloc(size_t size, void *parent) { //zero allocd
+ return talloc_init(calloc(1, size + HEADER_SIZE), parent);
 }
 
-/**
- * Modify the size of a talloc'ed memory chunk.
- *
- * @param usr   pointer to previously talloc'ed memory chunk.
- * @param size  amount of memory requested (in bytes).
- *
- * @return pointer to the allocated memory chunk, or NULL if there was an error.
- */
 void *trealloc(void *usr, size_t size) {
 
     void *mem = realloc(usr ? usr2raw(usr) : NULL, size + HEADER_SIZE);
@@ -210,75 +183,37 @@ void *talloc_get_parent(void *mem) {
  *                chunk depends, or NULL.
  */
 void talloc_set_parent(void *mem, void *parent) {
-
-    if (!mem)
-        return;
-
-    if (!is_root(mem)) {
-
-        /* Remove node from old tree. */
-
-        if (next(mem))
-            prev(next(mem)) = prev(mem);
-
-        if (!is_first(mem))
-            next(prev(mem)) = next(mem);
-        else
-            child(parent(mem)) = next(mem);
-    }
-
-    next(mem) = prev(mem) = NULL;
-
-    if (parent) {
-
-        /* Insert node into new tree. */
-
-        if (child(parent)) {
-            next(mem) = child(parent);
-            prev(child(parent)) = mem;
-        }
-
-        parent(mem) = parent;
-        child(parent) = mem;
-    }
+ if (!mem) return;
+ if (!is_root(mem)) { /* Remove node from old tree. */
+  if (next(mem)) prev(next(mem)) = prev(mem);
+  if (!is_first(mem)) next(prev(mem)) = next(mem);
+  else child(parent(mem)) = next(mem);
+ }
+ next(mem) = prev(mem) = NULL;
+ if (parent) { /* Insert node into new tree. */
+  if (child(parent)) {
+   next(mem) = child(parent);
+   prev(child(parent)) = mem;
+  }
+  parent(mem) = parent;
+  child(parent) = mem;
+ }
 }
 
-/**
- * Remove a talloc'ed memory chunk from the dependency tree, taking care of its
- * children (they will depend on parent).
- *
- * @param mem     pointer to previously talloc'ed memory chunk.
- * @param parent  pointer to previously talloc'ed memory chunk from which this
- *                chunk's children will depend, or NULL.
- */
+// Remove a talloc'ed memory chunk from the dependency tree, taking care of its children (they will depend on parent).
 void talloc_steal(void *mem, void *parent) {
-
-    if (!mem)
-        return;
-
-    talloc_set_parent(mem, NULL);
-
-    if (!child(mem))
-        return;
-
-    if (parent) {
-
-        /* Insert mem children in front of the list of parent children. */
-
-        if (child(parent)) {
-
-            void *last = child(mem);
-
-            while (next(last))
-                last = next(last);
-
-            prev(child(parent)) = last;
-            next(last) = child(parent);
-        }
-
-        child(parent) = child(mem);
-    }
-
-    parent(child(mem)) = parent;
-    child(mem) = NULL;
+ if (!mem) return;
+ talloc_set_parent(mem, NULL);
+ if (!child(mem)) return;
+ if (parent) {/* Insert mem children in front of the list of parent children. */
+  if (child(parent)) {
+   void *last = child(mem);
+   while (next(last)) last = next(last);
+   prev(child(parent)) = last;
+   next(last) = child(parent);
+  }
+  child(parent) = child(mem);
+ }
+ parent(child(mem)) = parent;
+ child(mem) = NULL;
 }

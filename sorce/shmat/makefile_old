@@ -1,7 +1,7 @@
 
 #SHNTH ASSEMBLAGE 
 #COPYRIGHT SHBOBO
-STUTIL = "C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility/ST-LINK_CLI.exe"
+STUTIL = "/cygdrive/c/Program Files/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/ST-LINK_CLI.exe"
 ST32MAP = -Ttext 0x0 -Tbss 0x20000000
 OS:=$(shell uname -s | cut -f1 -d_)
 assFlags=-W -mthumb-interwork -mapcs-32 -march=armv7 -mcpu=cortex-m3
@@ -13,10 +13,9 @@ objLinux=arm-none-eabi-objcopy
 assDarwin=arm-none-eabi-as
 lnkDarwin=arm-none-eabi-ld
 objDarwin=arm-none-eabi-objcopy
-pathWIN:="C:/Program Files (x86)\GNU Arm Embedded Toolchain\9 2020-q2-update\bin/"
-assCYGWIN=$(pathWIN)$(assLinux)
-lnkCYGWIN=$(pathWIN)$(lnkLinux)
-objCYGWIN=$(pathWIN)$(objLinux)
+assCYGWIN=arm-elf-as
+lnkCYGWIN=arm-elf-ld
+objCYGWIN=arm-elf-objcopy
 export ass = $(ass$(OS)) $(assFlags)
 export lnk = $(lnk$(OS)) $(lnkFlags)
 export obj = $(obj$(OS)) $(objFlags)
@@ -40,7 +39,7 @@ main:
 
 CYGWIN: main
 	$(STUTIL) -c SWD UR -OB WRP=0xFFFFFFFF RDP=0
-	$(STUTIL) -c SWD UR -ME -P ../../$(oto).bin  0x08000000
+	$(STUTIL) -c SWD UR -ME -P ../$(oto).bin  0x08000000
 	$(STUTIL) -c SWD UR -OB WRP=0xFFFF0000 RDP=0
 	
 Linux: main
