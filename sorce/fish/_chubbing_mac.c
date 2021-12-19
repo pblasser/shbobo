@@ -107,7 +107,7 @@ void Chub::chubCLOZ() {
 
 void Chub::chubSENDATE(uint8_t * outReport)  {
  while (mydev) {
-  int returno = IOHIDDeviceSetReport(mydev, kIOHIDReportTypeOutput,
+  int returno = IOHIDDeviceSetReport(mydev, kIOHIDReportTypeFeature,
                                      0,outReport,8);
   if (returno==kIOReturnSuccess) return;
   if (chubShouldEnd()) return;
