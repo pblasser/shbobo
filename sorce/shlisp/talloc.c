@@ -122,18 +122,13 @@ void *trealloc(void *usr, size_t size) {
  * @param mem  pointer to previously talloc'ed memory chunk.
  */
 static void __tfree(void *mem) {
-
-    if (!mem)
-        return;
-
-    /* Fail if the tree hierarchy has cycles. */
-
-    assert(prev(mem));
-    prev(mem) = NULL;
-
-    __tfree(child(mem));
-    __tfree(next(mem));
-    free(usr2raw(mem));
+ if (!mem) return;
+ //Fail if the tree hierarchy has cycles.
+ assert(prev(mem));
+ prev(mem) = NULL;
+ __tfree(child(mem));
+ __tfree(next(mem));
+ free(usr2raw(mem));
 }
 
 /**
@@ -144,16 +139,11 @@ static void __tfree(void *mem) {
  * @return always NULL, can be safely ignored.
  */
 void *tfree(void *mem) {
-
-    if (!mem)
-        return NULL;
-
-    talloc_set_parent(mem, NULL);
-
-    __tfree(child(mem));
-    free(usr2raw(mem));
-
-    return NULL;
+ if (!mem) return NULL;
+ talloc_set_parent(mem, NULL);
+ __tfree(child(mem));
+ free(usr2raw(mem));
+ return NULL;
 }
 
 /**
@@ -164,14 +154,9 @@ void *tfree(void *mem) {
  * @return pointer to the parent memory chunk (could be NULL).
  */
 void *talloc_get_parent(void *mem) {
-
-    if (!mem || is_root(mem))
-        return NULL;
-
-    while (!is_first(mem))
-        mem = prev(mem);
-
-    return parent(mem);
+ if (!mem || is_root(mem)) return NULL;
+ while (!is_first(mem)) mem = prev(mem);
+ return parent(mem);
 }
 
 /**

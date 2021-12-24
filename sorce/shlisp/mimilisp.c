@@ -44,7 +44,7 @@ enum {
 struct Obj;
 
 // Typedef for the primitive function.
-typedef struct Obj *Primitive(struct Obj *env, struct Obj *args);
+typedef struct Obj *Primitive(struct Obj *env, struct Obj*args, struct Obj*par);
 
 // The object type
 typedef struct Obj {
@@ -96,36 +96,30 @@ static Obj *Symbols;
 
 static void error(const char *fmt, ...) ;//__attribute((noreturn));
 
-//======================================================================
-// Constructors
-//======================================================================
-
+//constructors
 static Obj *alloc(int type, size_t size, Obj*par) {
-    // Add the size of the type tag.
-    size += offsetof(Obj, value);
-
-    // Allocate the object.
-    Obj *obj = (Obj*)talloc(size, par);
-    obj->type = type;
-    return obj;
+ size += offsetof(Obj, value);
+ Obj *obj = (Obj*)talloc(size, par);
+ obj->type = type;
+ return obj;
 }
 
 static Obj *make_int(int value,Obj*par) {
-    Obj *r = alloc(TINT, sizeof(int),par);
-    r->value = value;
-    return r;
+ Obj *r = alloc(TINT, sizeof(int),par);
+ r->value = value;
+ return r;
 }
 static Obj *make_intd(double x,Obj*par) {
-    x =((x)>=0?(int)((x)+0.5):(int)((x)-0.5));
-    Obj *r = alloc(TINT, sizeof(int),par);
-    r->value = x;
-    return r;
+ x =((x)>=0?(int)((x)+0.5):(int)((x)-0.5));
+ Obj *r = alloc(TINT, sizeof(int),par);
+ r->value = x;
+ return r;
 }
 
 static Obj *make_symbol(const char *name,Obj*par) {
-    Obj *sym = alloc(TSYMBOL, strlen(name) + 1,par);
-    strcpy(sym->name, name);
-    return sym;
+ Obj *sym = alloc(TSYMBOL, strlen(name) + 1,par);
+ strcpy(sym->name, name);
+ return sym;
 }
 
 static Obj *make_primitive(Primitive *fn,Obj*par) {
@@ -142,25 +136,25 @@ static Obj *make_function(Obj *params, Obj *body, Obj *env,Obj*par) {
     return r;
 }
 
-static Obj *make_special(int subtype) {
-    Obj *r = (Obj*)malloc(sizeof(void *) * 2);
-    r->type = TSPECIAL;
-    r->subtype = subtype;
-    return r;
+static Obj *make_special(int subtype, Obj*par) {
+ Obj *r = (Obj*)alloc(TSPECIAL,sizeof(void*)*2,par);
+ //r->type = TSPECIAL;
+ r->subtype = subtype;
+ return r;
 }
 
 struct Obj *make_env(Obj *vars, Obj *up,Obj*par) {
-    Obj *r = alloc(TENV, sizeof(Obj *) * 2,par);
-    r->vars = vars;
-    r->up = up;
-    return r;
+ Obj *r = alloc(TENV, sizeof(Obj *) * 2,par);
+ r->vars = vars;
+ r->up = up;
+ return r;
 }
 
 static Obj *cons(int type, Obj *car, Obj *cdr,Obj*par) {
-    Obj *cell = alloc(type, sizeof(Obj *) * 2,par);
-    cell->car = car;
-    cell->cdr = cdr;
-    return cell;
+ Obj *cell = alloc(type, sizeof(Obj *) * 2,par);
+ cell->car = car;
+ cell->cdr = cdr;
+ return cell;
 }
 
 static Obj *fish(Obj *car, Obj *cdr,Obj*par) {
@@ -176,28 +170,26 @@ static Obj *boat(Obj *car, Obj *cdr,Obj*par) {
     return cons(TBOAT, car, cdr,par);
 }
 
-// Returns ((x . y) . a)
-static Obj *acons(Obj *x, Obj *y, Obj *a,Obj*par) {
-    return tank(tank(x, y,par), a,par);
+//Returns [[x.y].a]
+static Obj *acons(Obj*x,Obj*y,Obj*a,Obj*par) {
+ return tank(tank(x,y,par),a,par);
 }
 //parser
 static Obj *readhui(void);
 
 static void error(const char *fmt, ...) {
-    va_list ap;
-    va_start(ap, fmt);
-    vfprintf(stdout, fmt, ap);
-    fprintf(stdout, "\n");
-    //vfprintf(stderr, fmt, ap);
-    //fprintf(stderr, "\n");
-    va_end(ap);
-    exit(1);
+ va_list ap;
+ va_start(ap, fmt);
+ vfprintf(stdout, fmt, ap);
+ fprintf(stdout, "\n");
+ va_end(ap);
+ exit(1);
 }
 
 static int peek(void) {
-    int c = getchar();
-    ungetc(c, stdin);
-    return c;
+ int c = getchar();
+ ungetc(c, stdin);
+ return c;
 }
 
 // Skips the input until newline is found. Newline is one of \r, \r\n or \n.
@@ -248,13 +240,13 @@ static Obj *readhui_list(int type) {
 
 // May create a new symbol. If there's a symbol with the same name, it will not create a new symbol
 // but return the existing one.
-static Obj *intern(const char *name) {
-    for (Obj *p = Symbols; p; p = p->cdr)
-        if (strcmp(name, p->car->name) == 0)
-            return p->car;
-    Obj *sym = make_symbol(name);
-    Symbols = tank(sym, Symbols,0);
-    return sym;
+static Obj *intern(const char *name, Obj*par) {
+ for (Obj *p = Symbols; p; p = p->cdr)
+  if (strcmp(name, p->car->name) == 0)
+   return p->car;
+ Obj *sym = make_symbol(name,par);
+ Symbols = tank(sym, Symbols,par);
+ return sym;
 }
 
 static int readhui_number(int val) {
@@ -268,7 +260,8 @@ static int readhui_number(int val) {
 static bool sympars(char c) {
  return strchr("/~`?,':\"|+=_!@#$%^&*-", c);
 }
-
+//alright we gonna do a read without garbage collectrion
+//that is talloc will do a null parent for everythting now
 static Obj *readhui_symbol(char c) {
     char buf[SYMBOL_MAX_LEN + 1];
     int len = 1;
@@ -279,7 +272,7 @@ static Obj *readhui_symbol(char c) {
         buf[len++] = getchar();
     }
     buf[len] = '\0';
-    return intern(buf);
+    return intern(buf,0);
 }
 
 int looper = 1;
@@ -323,22 +316,21 @@ static Obj *readhui(void) {
 
 static void print(Obj*env,Obj*obj);
 static void gutsprinter(const char* s,const char*e,Obj*env,Obj *obj) {
-	    printf(s);
-        for (;;) {
-			if (obj->car == 0) break;
-            print(env,obj->car);
-            if (obj->cdr == 0)
-                break;
-            if (obj->cdr->type < TFISH) {
-                printf(" . ");
-                print(env,obj->cdr);
-                break;
-            }
-            printf(" ");
-            obj = obj->cdr;
-        }
-        printf(e);
-       }
+	printf(s);
+ for (;;) {
+		if (obj->car == 0) break;
+  print(env,obj->car);
+  if (obj->cdr == 0) break;
+  if (obj->cdr->type < TFISH) {
+   printf(" . ");
+   print(env,obj->cdr);
+   break;
+  }
+  printf(" ");
+  obj = obj->cdr;
+ }
+ printf(e);
+}
 	
 static Obj *eval(Obj*env,Obj*obj);	
 // Prints the given object.
@@ -346,7 +338,7 @@ static Obj *eval(Obj*env,Obj*obj);
 static void print(Obj * env, Obj *obj) {
 	if (obj==0) {
 		printf("<>");return;}
-    switch (obj->type) {
+   switch (obj->type) {
     case TINT:
      if (obj->value == 0) {
       insituate(0xFF);insituate(0);
@@ -414,52 +406,51 @@ static int list_length(Obj *list) {
 // Evaluator
 //======================================================================
 
-static Obj *eval(Obj *env, Obj *obj);
+static Obj *eval(Obj*env,Obj*obj,Obj*par);
 
-static void add_variable(Obj *env, Obj *sym, Obj *val) {
-    env->vars = acons(sym, val, env->vars, env);
+static void add_variable(Obj*env,Obj*sym,Obj*val,Obj*par) {
+ env->vars = acons(sym, val, env->vars,par);
 }
 
 // Returns a newly created environment frame.
-static Obj *push_env(Obj *env, Obj *vars, Obj *values) {
+static Obj *push_env(Obj *env, Obj *vars, Obj *values,Obj*par) {
     //printf("%d %d llengs", list_length(vars), list_length(values));
-    if (list_length(vars) != list_length(values))
-        error("Cannot apply function: number of argument does not match");
-    if (list_length(vars)==0) return env;
-    Obj *map = 0;
-    Obj *nev = make_env(map, env,0);
-    for (Obj *p = vars, *q = values; p != 0; p = p->cdr, q = q->cdr) {
-        Obj *sym = p->car;
-        Obj *val = q->car;
-        map = acons(sym, val, map, nev);
-    } nev->vars=map;
-    return nev;
+ if (list_length(vars) != list_length(values))
+  error("Cannot apply function: number of argument does not match");
+ if (list_length(vars)==0) return env;
+ Obj *map = 0;
+ Obj *nev = make_env(map, env,par);
+ for (Obj *p = vars, *q = values; p != 0; p = p->cdr, q = q->cdr) {
+  Obj *sym = p->car;
+  Obj *val = q->car;
+  map = acons(sym, val, map, par);
+ } nev->vars=map;
+ return nev;
 }
 
 // Evaluates the list elements from head and returns the last return value.
-static Obj *progn(Obj *env, Obj *list) {
-    Obj *r = 0;
-    for (Obj *lp = list; lp; lp = lp->cdr)
-        r = eval(env, lp->car);
-    return r;
+static Obj *progn(Obj*env,Obj*list,Obj*par) {
+ Obj *r = 0;
+ for (Obj*lp=list;lp;lp=lp->cdr)
+  r = eval(env,lp->car,par);
+ return r;
 }
 
 // Evaluates all the list elements and returns their return values as a new list.
-static Obj *eval_list(Obj *env, Obj *list) {
-    Obj *head = 0;
-    Obj *tail = 0;
-    for (Obj *lp = list; lp; lp = lp->cdr) {
-        Obj *tmp = eval(env, lp->car);
-        if (head == 0) {
-            head = tail = cons(list->type,tmp, 0,0);
-        } else {
-            tail->cdr = cons(list->type,tmp, 0,head);
-            tail = tail->cdr;
-        }
-    }
-    if (head == 0)
-        return 0;
-    return head;
+static Obj *eval_list(Obj *env, Obj *list,Obj*par) {
+ Obj *head = 0;
+ Obj *tail = 0;
+ for (Obj *lp = list; lp; lp = lp->cdr) {
+  Obj *tmp = eval(env, lp->car,par);
+  if (head == 0) {
+   head = tail = cons(list->type,tmp, 0,par);
+  } else {
+   tail->cdr = cons(list->type,tmp, 0,head);
+   tail = tail->cdr;
+  }
+ }
+ if (head == 0) return 0;
+ return head;
 }
 
 static bool is_list(Obj *obj) {
@@ -467,173 +458,161 @@ static bool is_list(Obj *obj) {
 }
 
 // Apply fn with args.
-static Obj *apply(Obj *env, Obj *fn, Obj *args) {
+static Obj *apply(Obj*env,Obj*fn,Obj*args,Obj*par) {
 	//if (args==0) return 0;
-    if (!is_list(args))
-        error("argument must be a list");
-    Obj*res=0;
-    if (fn->type == TPRIMITIVE)
-    //printf("inside apply\n");
-        res = fn->fn(env, args);
-        talloc_steal(res,0);
-        return res;
-    if (fn->type == TFUNCTION) {
-        Obj *body = fn->body;
-        Obj *params = fn->params;
-        Obj *eargs = eval_list(env, args);
-        Obj *newenv = push_env(fn->env, params, eargs);
-        
-        res= progn(newenv, body);
-        talloc_steal(res,0);
-        tfree(eargs);
-        tfree(newenv);
-        return res;
-    } 
-    error("not supported");
+ if (!is_list(args))
+  error("argument must be a list");
+ Obj*res=0;
+ if (fn->type == TPRIMITIVE)
+  return fn->fn(env, args,par);
+ if (fn->type == TFUNCTION) {
+  Obj*body=fn->body;
+  Obj*params=fn->params;
+  Obj*eargs=eval_list(env, args,par);
+  Obj*newenv=push_env(fn->env, params, eargs,par);
+  res=progn(newenv, body,par);
+  return res;
+ } 
+ error("not supported");
 }
 
 // Searches for a variable by symbol. Returns null if not found.
 static Obj *find(Obj *env, Obj *sym) {
-    for (Obj *p = env; p; p = p->up) {
-        for (Obj *cell = p->vars; cell != Nil; cell = cell->cdr) {
-            Obj *bind = cell->car;
-            if (sym == bind->car)
-                return bind;
-        }
-    }
-    return 0;
+ for (Obj *p = env; p; p = p->up) {
+  for (Obj *cell = p->vars; cell != Nil; cell = cell->cdr) {
+   Obj *bind = cell->car;
+   if (sym == bind->car)
+    return bind;
+  }
+ }
+ return 0;
 }
 
-static Obj *eval(Obj *env, Obj *obj) {
+static Obj *eval(Obj *env, Obj *obj, Obj*par) {
 	if (obj==0) return 0;
-    switch (obj->type) {
-    case TINT:
-    case TPRIMITIVE:
-    case TFUNCTION:
-    case TSPECIAL:
-    case TTANK:
-     return obj;
-    case TFISH:
-    case TSOUP:
-     //return eval_list(env, obj);
-        // Self-evaluating objects
-        return obj;
-    case TSYMBOL: {
-        // Variable
-        Obj *bind = find(env, obj);
-        if (!bind)
-            error("Undefined symbol: %s", obj->name);
-        return bind->cdr;
-    }
-    case TBOAT: {        
-		Obj *fn = eval(env, obj->car);
-		if (fn==0) return 0;
-        Obj *args = obj->cdr;
-        if (fn->type != TPRIMITIVE && fn->type != TFUNCTION)
-            error("The head of a list must be a function");
-            //printf(" to aply\n");
-        return apply(env, fn, args);
-    }
-    default:
-        error("Bug: eval: Unknown tag type: %d", obj->type);
-    }
+ switch (obj->type) {
+  case TINT:
+  case TPRIMITIVE:
+  case TFUNCTION:
+  case TSPECIAL:
+  case TTANK:
+   return obj;
+  case TFISH:
+  case TSOUP:
+   return obj;
+  case TSYMBOL: {
+   Obj *bind = find(env, obj);
+   if (!bind)
+    error("Undefined symbol: %s", obj->name);
+   return bind->cdr;
+  }
+  case TBOAT: {        
+		 Obj *fn = eval(env, obj->car,par);
+		 if (fn==0) return 0;
+   Obj *args = obj->cdr;
+   if (fn->type != TPRIMITIVE && fn->type != TFUNCTION)
+    error("The head of a list must be a function");
+   return apply(env, fn, args,par);
+  }
+  default:
+   error("Bug: eval: Unknown tag type: %d", obj->type);
+ }
 }
 
 
 #define primmertypes(subn,tipe) \
- static Obj *prim_##subn(Obj *env, Obj *list) { \
-    if (list_length(list) != 2) \
-        error("Malformed " #subn); \
-    Obj *cell = eval_list(env, list); \
-    cell->cdr = cell->cdr->car; \
-    cell->type = tipe; \
-    return cell; \
+static Obj *prim_##subn(Obj *env, Obj *list,Obj*par) { \
+ if (list_length(list) != 2) \
+  error("Malformed " #subn); \
+ Obj *cell = eval_list(env, list,par); \
+ cell->cdr = cell->cdr->car; \
+ cell->type = tipe; \
+ return cell; \
 }
 primmertypes(fish, TFISH)
 primmertypes(soup, TSOUP)
 primmertypes(tank, TTANK)
 primmertypes(boat, TBOAT)
 
-static Obj *prim_car(Obj *env, Obj *list) {
-    Obj *args = eval_list(env, list);
-    if (args->car->type < TFISH || args->cdr )
-        error("Malformed car");
-    return args->car->car;
+static Obj *prim_car(Obj *env, Obj *list,Obj*par) {
+ Obj *args = eval_list(env, list,par);
+ if (args->car->type < TFISH || args->cdr )
+  error("Malformed car");
+ return args->car->car;
 }
 
-static Obj *prim_cdr(Obj *env, Obj *list) {
-    Obj *args = eval_list(env, list);
-    if (args->car->type < TFISH || args->cdr)
-        error("Malformed cdr");
-    return args->car->cdr;
+static Obj *prim_cdr(Obj *env, Obj *list,Obj*par) {
+ Obj *args = eval_list(env, list,par);
+ if (args->car->type < TFISH || args->cdr)
+  error("Malformed cdr");
+ return args->car->cdr;
 }
 
-static Obj *prim_setcdr(Obj *env, Obj *list) {
-    Obj *args = eval_list(env, list);
-    if (args->car->type < TFISH)
-        error("Malformed cdr");
-    if (args->cdr == 0) error("no settable");
-    args->car->cdr = args->cdr->car;
-    return 0;
+//tricky zone garbage-wise
+static Obj *prim_setcdr(Obj*env,Obj*list,Obj*par) {
+ Obj *args = eval_list(env, list,par);
+ if (args->car->type < TFISH)
+  error("Malformed cdr");
+ if (args->cdr == 0) error("no settable");
+ args->car->cdr = args->cdr->car;
+ return 0;
 }
 
-static Obj *prim_setcar(Obj *env, Obj *list) {
-    Obj *args = eval_list(env, list);
-    if (args->car->type < TFISH)
-        error("Malformed cdr");
-    if (args->cdr == 0) error("no settable");
-    args->car->car = args->cdr->car;
-    return 0;
+static Obj *prim_setcar(Obj*env,Obj*list,Obj*par) {
+ Obj *args = eval_list(env, list,par);
+ if (args->car->type < TFISH)
+  error("Malformed cdr");
+ if (args->cdr == 0) error("no settable");
+ args->car->car = args->cdr->car;
+ return 0;
 }
 
-
-
-
-static Obj *prim_fun(Obj *env, Obj *list) {
-    if (list->type != TBOAT || !is_list(list->car) || list->cdr->type < TFISH)
-        error("Malformed lambda");
-    for (Obj *p = list->car; p; p = p->cdr) {
+static Obj *prim_fun(Obj*env,Obj*list,Obj*par) {
+ if (list->type!=TBOAT||!is_list(list->car)||list->cdr->type<TFISH)
+  error("Malformed lambda");
+ for (Obj *p = list->car; p; p = p->cdr) {
 		if (p->car == 0) break;
-        if (p->car->type != TSYMBOL)
-            error("Parameter must be a symbol");
-        if (!is_list(p->cdr))
-            error("Parameter list is not a flat list");
-    }
-    Obj *car = list->car;
-    Obj *cdr = list->cdr;
-    return make_function(car, cdr, env,0);
+  if (p->car->type != TSYMBOL)
+   error("Parameter must be a symbol");
+  if (!is_list(p->cdr))
+   error("Parameter list is not a flat list");
+ }
+ Obj*car=list->car;
+ Obj*cdr=list->cdr;
+ return make_function(car,cdr,env,par);
 }
 
-static Obj *prim_def(Obj *env, Obj *list) {
-    if (list_length(list) != 2 || list->car->type != TSYMBOL)
-        error("Malformed setq");
-    Obj *sym = list->car;
-    Obj *value = eval(env, list->cdr->car);
-    add_variable(env, sym, value);
-    return 0;//value;
+//tricky garbage-wise
+static Obj *prim_def(Obj*env,Obj*list,Obj*par) {
+ if (list_length(list)!= 2||list->car->type!=TSYMBOL)
+  error("Malformed setq");
+ Obj *sym = list->car;
+ Obj *value = eval(env,list->cdr->car,par);
+ add_variable(env,sym,value,par);
+ return 0;//value;
 }
 
-static Obj *prim_set(Obj *env, Obj *list) {
-    if (list_length(list) != 2 || list->car->type != TSYMBOL)
-        error("Malformed setq");
-    Obj *bind = find(env, list->car);
-    if (!bind)
-        error("Unbound variable %s", list->car->name);
-    Obj *value = eval(env, list->cdr->car);
-    bind->cdr = value;
-    return value;
+static Obj *prim_set(Obj *env, Obj *list,Obj*par) {
+ if (list_length(list) != 2 || list->car->type != TSYMBOL)
+  error("Malformed setq");
+ Obj *bind = find(env, list->car);
+ if (!bind)
+  error("Unbound variable %s", list->car->name);
+ Obj *value = eval(env, list->cdr->car,par);
+ bind->cdr = value;
+ return value;
 }
 
 
 #define primmermath(subn,summ,oper) \
- static Obj *prim_##subn(Obj *env, Obj *list) { \
-    int sum = summ; \
-    for (Obj *args = eval_list(env, list); args; args = args->cdr) { \
-        if (args->car->type != TINT) \
-            error(#subn "takes only numbers"); \
-        sum = sum oper args->car->value;\
-    }\
-    return make_int(sum,0);\
+ static Obj *prim_##subn(Obj *env, Obj *list,Obj*par) { \
+ int sum = summ; \
+ for (Obj *args = eval_list(env, list,par); args; args = args->cdr) { \
+  if (args->car->type != TINT) \
+   error(#subn "takes only numbers"); \
+  sum = sum oper args->car->value;\
+ }\
+ return make_int(sum,par);\
 }
 primmermath(and, -1, &)
 primmermath(orr, 0, |)
@@ -643,70 +622,69 @@ primmermath(add, 0, +)
 primmermath(mul, 1, *)
 //primmermath(mod, -1, %)
 
-static Obj *prim_mod(Obj *env, Obj *list) {
+static Obj *prim_mod(Obj*env,Obj*list,Obj*par) {
  int sum = 0;
  bool furst = true;
- for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+ for (Obj *args = eval_list(env, list,par); args; args = args->cdr) {
   if (args->car->type != TINT)
    error("mod takes only numbers");
   if (furst) sum = args->car->value;
   else sum %= args->car->value;
   furst = false;
  }
- return make_int(sum);
+ return make_int(sum,par);
 }
 
 
-static Obj *prim_minus(Obj *env, Obj *list) {
+static Obj *prim_minus(Obj*env,Obj*list,Obj*par) {
  int sum = 0;
  bool furst = true;
- for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+ for (Obj *args = eval_list(env,list,par); args; args = args->cdr) {
   if (args->car->type != TINT)
    error("minus takes only numbers");
   if (furst) sum = args->car->value;
   else sum -= args->car->value;
   furst = false;
  }
- return make_int(sum);
+ return make_int(sum,par);
 }
 
-
-static Obj *prim_divide(Obj *env, Obj *list) {
+static Obj *prim_divide(Obj *env, Obj *list,Obj*par) {
  int sum = 0;
  bool furst = true;
- for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+ for (Obj *args = eval_list(env,list,par); args; args = args->cdr) {
   if (args->car->type != TINT)
    error("divide takes only numbers");
   if (furst) sum = args->car->value;
   else sum /= args->car->value;
   furst = false;
  }
- return make_int(sum);
+ return make_int(sum,par);
 }
 
-static Obj *prim_shill(Obj *env, Obj *list) {
+static Obj *prim_shill(Obj*env,Obj*list,Obj*par) {
  int sum = 0;
  bool furst = true;
- for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+ for (Obj *args = eval_list(env,list,par); args; args = args->cdr) {
   if (args->car->type != TINT)
    error("divide takes only numbers");
   if (furst) sum = args->car->value;
   else sum <<= args->car->value;
   furst = false;
  }
- return make_int(sum);
+ return make_int(sum,par);
 }
-static Obj *prim_shirr(Obj *env, Obj *list) {
+static Obj *prim_shirr(Obj *env, Obj *list,Obj*par) {
  int sum = 0;
  bool furst = true;
- for (Obj *args = eval_list(env, list); args; args = args->cdr) {
+ for (Obj *args = eval_list(env, list,par); args; args = args->cdr) {
   if (args->car->type != TINT)
    error("divide takes only numbers");
   if (furst) sum = args->car->value;
   else sum >>= args->car->value;
   furst = false;
  }
- return make_int(sum);
+ return make_int(sum,par);
 }
 
 #define TRIPART(uj) \
@@ -715,70 +693,68 @@ static Obj *prim_shirr(Obj *env, Obj *list) {
  args = args->cdr;
 
 
-static Obj *prim_euro(Obj *env, Obj *list) {
+static Obj *prim_euro(Obj *env, Obj *list,Obj*par) {
  if (list_length(list) != 4) error("Malformed euro");
- Obj *args = eval_list(env, list);
+ Obj *args = eval_list(env, list,par);
  TRIPART(a)
  TRIPART(b)
  TRIPART(c)
  TRIPART(d)
- return make_intd(d*pow(a,((double)b/(double)c)));
+ return make_intd(d*pow(a,((double)b/(double)c)),par);
 }
 
-static Obj *prim_rand(Obj *env, Obj *list) {
-    int sum = rand();
-    for (Obj *args = eval_list(env, list); args; args = args->cdr) {
-        if (args->car->type != TINT)
-            error("* takes only numbers");
-        sum %= args->car->value;
-    }
-    return make_int(sum);
+static Obj *prim_rand(Obj *env, Obj *list,Obj*par) {
+ int sum = rand();
+ for (Obj *args = eval_list(env,list,par); args; args = args->cdr) {
+  if (args->car->type != TINT)
+   error("* takes only numbers");
+  sum %= args->car->value;
+ }
+ return make_int(sum,par);
 }
 
-
-
-static Obj *prim_print(Obj *env, Obj *list) {
-    print(env, eval(env, list->car));    
-    return 0;
+static Obj *prim_print(Obj *env, Obj *list,Obj*par) {
+ print(env, eval(env,list->car,par));    
+ return 0;
 }
 
 // (if expr expr expr ...)
-static Obj *prim_if(Obj *env, Obj *list) {
-    if (list_length(list) < 2)
-        error("Malformed if");
-    Obj *cond = eval(env, list->car);
-    Obj *els = list->cdr->cdr;
-    if (cond) {
-     if ((cond->type==TINT) && (cond->value==0))
-      return els == 0 ? 0 : progn(env, els);
-     else return eval(env, list->cdr->car);
-    }
-    return els == 0 ? 0 : progn(env, els);
+static Obj *prim_if(Obj *env, Obj *list,Obj*par) {
+ if (list_length(list) < 2)
+  error("Malformed if");
+ Obj*cond=eval(env,list->car,par);
+ Obj*els=list->cdr->cdr;
+ if (cond) {
+  if ((cond->type==TINT) && (cond->value==0))
+   return els == 0 ? 0 : progn(env,els,par);
+  else return eval(env, list->cdr->car,par);
+ }
+ return els==0?0:progn(env,els,par);
 }
 
 // (= <integer> <integer>)
-static Obj *prim_num_eq(Obj *env, Obj *list) {
-    if (list_length(list) != 2)
-        error("Malformed =");
-    Obj *values = eval_list(env, list);
-    Obj *x = values->car;
-    Obj *y = values->cdr->car;
-    if (x->type != TINT || y->type != TINT)
-        error("= only takes numbers");
-    return x->value == y->value ? True : 0;
+static Obj *prim_num_eq(Obj*env,Obj*list,Obj*par) {
+ if (list_length(list) != 2)
+  error("Malformed =");
+ Obj *values = eval_list(env,list,par);
+ Obj *x = values->car;
+ Obj *y = values->cdr->car;
+ if (x->type != TINT || y->type != TINT)
+  error("= only takes numbers");
+ return x->value == y->value ? True : 0;
 }
 
 
 #define primmercomp(subn,oper) \
- static Obj *prim_##subn(Obj *env, Obj *list) { \
-    if (list_length(list) != 2) \
-        error("Malformed comparison"); \
-    Obj *values = eval_list(env, list); \
-    Obj *x = values->car; \
-    Obj *y = values->cdr->car; \
-    if (x->type != TINT || y->type != TINT) \
-        error("= only takes numbers"); \
-    return x->value oper y->value ? True : 0; \
+ static Obj *prim_##subn(Obj*env,Obj*list,Obj*par) { \
+ if (list_length(list) != 2) \
+  error("Malformed comparison"); \
+ Obj *values = eval_list(env, list,par); \
+ Obj *x = values->car; \
+ Obj *y = values->cdr->car; \
+ if (x->type != TINT || y->type != TINT) \
+  error("= only takes numbers"); \
+ return x->value oper y->value ? True : 0; \
 }
 
 primmercomp(eq, ==)
@@ -786,24 +762,20 @@ primmercomp(gt, >)
 primmercomp(lt, <)
 
 
-
-
-// (exit)
-
-static Obj *prim_exit(Obj *env, Obj *list) {
-    looper = 0;//exit(0);
-    return 0;
+static Obj *prim_exit(Obj *env, Obj *list,Obj*par) {
+ looper = 0;//exit(0);
+ return 0;
 }
 
 static void add_primitive(Obj *env, const char *name, Primitive *fn) {
-    Obj *sym = intern(name);
-    Obj *prim = make_primitive(fn);
-    add_variable(env, sym, prim);
+ Obj *sym = intern(name,0);
+ Obj *prim = make_primitive(fn,0);
+ add_variable(env, sym, prim,0);
 }
 
 static void define_constants(Obj *env) {
-    Obj *sym = intern("t");
-    add_variable(env, sym, True);
+ Obj *sym = intern("t",0);
+ add_variable(env, sym, True,0);
 }
 
 static void define_grub(Obj * env, const char*s,int v, int ningle) {
@@ -813,7 +785,7 @@ static void define_grub(Obj * env, const char*s,int v, int ningle) {
   char c = 'a'+i;
   strncat(toke,&c,(i>0?1:0));
   //printf("%s\n",toke);
-  add_variable(env,intern(toke),make_int(v+i));\
+  add_variable(env,intern(toke,0),make_int(v+i,0),0);\
  }
 }
 
@@ -888,27 +860,25 @@ if (simian!=v) \
 
 
 void pooler(Obj*env) {
-      for (;looper;) {    
-   Obj *expr = readhui();
-   if (!expr) continue;
-   if (expr == Cparen)
-    error("Stray close parenthesis");
-   if (expr == Dot)
-    error("Stray dot");
-   print(env,eval(env, expr));
-   printf("\n");
-   
-  //situsb();
-  }  
+ for (;looper;) {    
+  Obj *expr = readhui();
+  if (!expr) continue;
+  if (expr == Cparen)
+   error("Stray close parenthesis");
+  if (expr == Dot)
+   error("Stray dot");
+  print(env,eval(env, expr,0));
+  printf("\n");
+ }  
 }
 
 
 int main(int argc, char * argv[]) {
- Dot = make_special(TDOT);
- Cparen = make_special(TCPAREN);
- True = make_special(TTRUE);
+ Dot = make_special(TDOT,0);
+ Cparen = make_special(TCPAREN,0);
+ True = make_special(TTRUE,0);
  Symbols = 0;
- Obj *env = make_env(0, 0);
+ Obj *env = make_env(0, 0,0);
  define_constants(env);
  define_primitives(env);
  char * inputfile=0;

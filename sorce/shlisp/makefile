@@ -36,6 +36,16 @@ endif
 	mv $(target) ../../$(deer)
 	$(MAKE) clean
 
+talloc:
+ifeq ($(OS),CYGWIN)
+	$(call "%VS100COMNTOOLS%vsvars32.bat")
+endif
+	$(compil) mimilisp.c $(flags)$(target)
+	chmod a+x $(target)
+	mv $(target) ../../$(deer)
+	$(MAKE) clean 
+ 
+ 
 clean:
 	-@rm -rf *.*~ makefile~ *.o *.obj *.exe *.app shlisp lispshlisp 
 
