@@ -1,0 +1,46 @@
+
+ <@ oc 
+ [[48 48] [57 54] [60 55] [63 56] [57 48] [81 66] [81 64] 
+ [64 48] [76 54] [72 51] [80 55] [72 48] 
+ [95 60] [90 55] [81 48] [96 54] [96 51] [64 33] [96 48]]> <@ doon 
+ <# [o l] 
+ 
+ <? l 
+ <? o <doon  <: o>  <- l 1>> o> 
+ o>>> 
+ <@ car 
+ <# [o s] 
+ <? o <tank <" <" o>> <car <doon o s> s>> o >> 
+> <@ cadr 
+ <# [o s] 
+ 
+ <? o <tank <" <: <" o>>> <cadr <doon o s> s>> o>> 
+> 
+ 
+ 
+ {(left (horn 
+ (ladder (mount) <car oc 4> <car oc 3>) 
+ (ladder (mount) <cadr oc 4> <cadr oc 3>) 
+ (reflect (mount (mountb) 100) 16)) 
+ (hornb 
+ (ladderb (mountb) <car oc 3> <car oc 5>) 
+ (ladderb (mountb) <cadr oc 3> <cadr oc 5>) 
+ 
+ 
+ (reflect (mountb (add (mount) 1) 101) 16)) 
+ 
+ 
+) 
+ (srate 30)} 
+ {(left (horn 
+ (ladder (mount) 57 60 63 57 81 81 64 76 72 80 72 95 90 81 96 96 128 96) 
+ (ladder (mount) 54 55 56 48 66 64 48 54 51 55 48 60 55 48 54 51 66 48) 
+ (modo (reflect (mount (mountb) 100) 4) (reflect (mount (mountb) 100) 4))) 
+ (hornb 
+ (ladderb (mountb) 57 60 63 57 81 81 64 76 72 80 72 95 90 81 96 96 128 96) 
+ (ladderb (mountb) 54 55 56 48 66 64 48 54 51 55 48 60 55 48 54 51 66 48) 
+ (modo (reflect (mountb (mount) 90) 4) (reflect (mountb (mount) 90) 4)) 
+ (mount 1 111)) 
+ 
+) 
+ (srate 30)}
