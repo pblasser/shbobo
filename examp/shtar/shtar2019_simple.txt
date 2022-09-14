@@ -1,0 +1,33 @@
+{;shtar drone fifths, for tuing with chorused bridge
+ ;very simple, but listen to inharmonics in mulmode
+ (right 
+ (hornb 
+ 128 40 (bot (mount 41 63))) 
+ (horn 
+ 64 40 (top (mountc -114 63))) 
+) 
+ 
+ (left 
+ (hornd 
+ 48 40 (bot (mountb 60 63))) 
+ (hornc 
+ 24 40 (top (mountd -26 63))) 
+) 
+ 
+} {;shtar drone fifths, for tuing with chorused bridge
+ ;very simple, but listen to inharmonics in mulmode
+ (right 
+ (hornb 
+ 128 40 (bot)) 
+ (horn 
+ 64 40 (top)) 
+) 
+ 
+ (left 
+ (hornd 
+ 48 40 (bot)) 
+ (hornc 
+ 24 40 (top)) 
+) 
+ 
+}
