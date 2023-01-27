@@ -2,7 +2,7 @@
  
  
  
- (wave (square (horn) (hornb) 33 (-48)) 3 (corp (-48) (corpb)) 4 
+ (wave (square (horn) (hornb) 10 (mul (-48) 3)) 4 (corp (-48) (corpb)) 10 
  
  
  
@@ -11,20 +11,44 @@
  
  
 ) 
- (horn (bar (-48) 64) 100 8) 
- (hornb (barb (-48) 64) 101 4) 
+ (horn (bar (-48) 64) (togo (minor) 1 100 90 89 75) 8) 
+ (hornb (barb (-48) 64) (togob (minorb) 1 101 91 33 76) 4) 
  
  
  
  (lights (-48 (horn) (square (hornb)) 32)) 
  
-} {(left 
+} 
+ {(left 
+ 
+ 
+ 
+ (wave (square (horn) (hornb) (bard 40 20) (mul (-48) 3)) (bard 40 1) (corp (and (-48) -32) (barc (horn) (corpb))) 10 
+ 
+ 
+ 
+ 
+) 
+ 
+ 
+) 
+ (srate 19) 
+ 
+ (horn (bar (and (-48) -32 8) (major 80 4)) (togo (minor) 1 100 90 89 21 75) 8) 
+ (hornb (barb (and (-48) -32 16) (majorb 100 64)) (togob (minorb) 1 101 22 91 33 76) 4) 
+ 
+ 
+ 
+ (lights (-48 (horn) (square (hornb)) 32)) 
+ 
+} 
+ {(left 
  
  
  
  (wave (square (horn) (hornb) 33 (-48)) 3 (corp (-48) (corpb)) 4 
  
- (waveb (square (horn) (hornb) 33 (-48)) 3 (corpb (-48) (corp)) -4) 
+ (waveb (square (horn) (hornb) 33 (-48)) 3 (barc (-48) (bard)) -4) 
  
  
 ) 

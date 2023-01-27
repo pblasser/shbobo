@@ -269,6 +269,15 @@ public void  componentShown(ComponentEvent e) {}
   public void 	mouseClicked(MouseEvent e) {
   	fudge = scoot = true;
   	requestFocusInWindow();
+   
+   if (e.getClickCount() == 2 
+    && e.getButton() == MouseEvent.BUTTON1) {
+    Julia j = getJulia();
+    if (j!=null) j.gar.chub.jish("", toString());
+    //System.out.println("double clicked"+MouseEvent.BUTTON1);
+    //System.out.println("double clicked"+e.getButton());
+   }
+   
   	//System.out.println("hutslabelclick");
   }
   public void 	mouseEntered(MouseEvent e) {}
