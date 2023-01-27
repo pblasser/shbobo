@@ -26,6 +26,8 @@ ORGASM 0xB0, wanillaB0sauce.s
 ORGASM 0xC0, wanillaC0shtar.s
 
 @ORGASM 0xD0, wanillaD0voder.s
+ORGASM 0xD0, wanillaD0rungler.s
+
 ORGASM 0xE0, wanillaE0dynamo.s
 ORGASM 0xF0, wanillaF0nuts.s
 .end

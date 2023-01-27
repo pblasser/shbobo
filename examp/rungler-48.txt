@@ -1,0 +1,15 @@
+{(left 
+ 
+ 
+ 
+ (wave (square (horn) (hornb) 33 (-48)) 3 (corp (-48) (corpb)) 4) 
+ 
+) 
+ (horn (bar (-48) 64) 100 8) 
+ (hornb (barb (-48) 64) 101 4) 
+ 
+ 
+ 
+ (lights (-48 (horn) (square (hornb)) 32)) 
+ 
+}

@@ -53,8 +53,10 @@ rectrig: .space 1
 geartrig: .space 1
 pulsetrig: .space 1
 salsatrig: .space 1
+runglertrig: 
 vodertrig: .space 1
 jumpsrattrig: .space 1
+
 
 trangoes: .space 16
 transaws: .space 16
@@ -110,6 +112,9 @@ meloPLACZ: .space 16
 meloPULSZ: .space 16
 wormVALES: .space 8
 ladderVALES: .space 8
+
+
+runglerVALES: .space 8
 
 .ifeq 1
 voderVALE: .space 8
