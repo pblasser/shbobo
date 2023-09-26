@@ -400,12 +400,15 @@ static int list_length(Obj *list) {
     for (;;) {
         if (list == 0)
             return len;
+        //printf("listlength%d",list);
+        len++;
+        //this is what happens in empty list head! get a onelength
         if ((list->car == 0)&&(list->cdr==0)) return len;
         /////wwhat happens in empty list head?
         if (list->type < TFISH)
             error("length: cannot handle dotted list");
         list = list->cdr;
-        len++;
+        
     }
 }
 

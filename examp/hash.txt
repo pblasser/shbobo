@@ -1,0 +1,28 @@
+;HAZE [a-d] is four sawtooth grains:
+ 
+ ;A simple granular synthesis.
+ 
+ ;TRIG fires off another one.
+ 
+ ;SWNU is the speed of envelopes
+ 
+ ;SWDE is the width of envelopes
+ 
+ ;HONU is the speed of horns
+ 
+ ;HODE is the DENO of horns.
+ 
+ {(left 
+ (wave (haze (dust 10) 
+ 5 40 ;constant envelopes
+ 
+ (scale (bot) ) (smoke 1 40) ;random pitch
+ 
+) 
+ 
+ (mount 10 10 100 10) (mountb 11 20 100 40)) 
+ (horn (scale (finger)) 40 (mountc 80 100 (top 64 64))) 
+ (hornb (scale (finger)) 20 (mountd 90 100 (top -64 64))) 
+)} 
+ doubleclick
+￿
