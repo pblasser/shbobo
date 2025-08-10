@@ -1,0 +1,50 @@
+<@ oc 
+ [[12 81] [13 82] [11 80] [9 90] 
+ 
+]> 
+ 
+ <@ doon 
+ <# [o l] 
+ 
+ <? l 
+ <? o <doon <: o> <- l 1>> o> 
+ o>>> 
+ 
+ 
+ <@ car 
+ <# [o s] 
+ <? o <tank <" <" o>> <car <doon o s> s>> o>> 
+> 
+ 
+ 
+ 
+ <@ cadr 
+ <# [o s] 
+ 
+ <? o <tank <" <: <" o>>> <cadr <doon o s> s>> o>> 
+> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {(left (wave (saw (ladder (mount 12 100) <car oc 1> <car oc 1>) 
+ (ladder (mountb 1213 100) <cadr oc 1> <cadr oc 1>) (barc)) 20 (bard)) 
+ (waveb (sawb (mount) (mountb) (bard)) 20 (barc)) 
+ 
+ 
+)} 
+ 
+ 
+ 
+ {(left (wave (saw (ladder (mount) <car oc 4> <car oc 3>) 
+ (ladder (mountb) <cadr oc 4> <cadr oc 3>) (barc)) (mount 12 100 20 23) (bard)) 
+ (waveb (sawb 10 89 (bard)) (mountb 1213 100) (barc)))} 
+ 
+ 
+ {(left (wave (saw 12 81 
+) (mount 12 100) (bard)) 
+ (waveb (sawb 10 89 (bard)) (mountb 1213 100) (barc)))}
