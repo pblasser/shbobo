@@ -1,0 +1,76 @@
+{
+ (left (right 0)) 
+ (jump (minor 1 (minorb 2 (minorc 3 (minord 4 (major 5 (majorb 4 (majorc 6 (majord 8))))))))) 
+ 
+} 
+ {(srate 17) ;hijaz gharib (low and dirty)
+ (bend (tar)) 
+ (left 
+ 
+ (wave 
+ (xor ;or xor
+ (saw 17 (bard 20 137)) 
+ (sawb 17 137) 
+) 
+ (bard 44 80) 
+ (barc) 50 
+) 
+) (left 
+ 
+ (waveb 
+ (xor 
+ (sawc 19 (barc 20 137)) 
+ (sawd 19 137) 
+) 
+ (barc 44 80) 
+ (bard) 50 
+) 
+) 
+} {(srate 17) 
+ (bend (tar)) ;hijaz gharib (low and dirty)
+ 
+ (left 
+ (wave 
+ (xor 
+ (saw (salsa (barc) (smoke 34)) 137) 
+ (sawb 17 137) 
+) 
+ 60 
+ (barc -60) 50 
+) 
+) (left 
+ (waveb 
+ (xor 
+ (sawc (salsab (bard) (smoke 34)) 137) 
+ (sawd 19 137) 
+) 
+ 60 
+ (bard -60) 50 
+) 
+) 
+} 
+ {(left (wave (smoke (barc 60)) 84 (bard))) 
+ (bend (tar)) 
+ (left (waveb (smoke (bard 60)) -81 (barc)))} {(left 
+ (barc (hornc (salsa (barc) (smoke 80)) 47)) 
+ (barc (horn (salsab (barc -120) (smoke 84)) 40)) 
+) 
+ (left 
+ (bard (hornb (salsac (bard) (smoke 84)) 44)) 
+ (bard (hornd (salsad (bard -120) (smoke 80)) 33))) 
+ (srate 27) (bend (tar))} {
+ (left (swoop (barc) (barc) 50 (smoke)) 
+ (swoopb (barc -120) (barc) 50 (smoke)) 
+ (swamp (bard 10) (smoke 10 10) (smoke) (smoke) (smoke))) (arab 
+) 
+ (srate 5) (bend (tar))} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ; 

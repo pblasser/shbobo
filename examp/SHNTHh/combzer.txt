@@ -1,0 +1,14 @@
+
+ {(left (wave (smoke) (bard) (salsa (barc) (smoke) (horn (mul (salsab) 20) 100 (barc)))) 
+ (wave (smoke) (bard) (salsa (barc) (smoke) (horn (mul (salsab) 20) 100 (barc)))) 
+ (hornb (salsab (bard) (smoke)) (salsa) (bard)) 
+)} 
+ 
+ {(left (horn (salsa (barc) (smoke)) (salsab) (barc)) 
+ (hornb (salsab (bard) (smoke)) (salsa) (bard)) 
+)} 
+ 
+ 
+ 
+ 
+ 
