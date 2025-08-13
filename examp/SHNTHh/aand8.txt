@@ -1,6 +1,6 @@
 {
  (left (right 0)) 
- (jump (minor 1 (minorb 2 (minorc 3 (minord 4 (major 5 (majorb 4 (majorc 6 (majord 8))))))))) 
+ (jump (minor 1 (minorb 2 (minorc 3 (minord 4 (major 5 (majorb 6 (majorc 7 (majord 8))))))))) 
  
 } 
  {(srate 17) ;hijaz gharib (low and dirty)
@@ -58,12 +58,20 @@
  (left 
  (bard (hornb (salsac (bard) (smoke 84)) 44)) 
  (bard (hornd (salsad (bard -120) (smoke 80)) 33))) 
- (srate 27) (bend (tar))} {
+ (srate 27) (bend (tar))} {(left 
+ (wave 1 0 (sauce (barc 10) (saltb (bard) 1 1 12 (salsab (bard) (smoke 30 20)))) 50)) 
+ (left 
+ (waved 1 0 (saucec (bard 10) (saltc (barc) 1 1 12 (salsad (barc) (smoke 30 20)))) 50)) 
+ 
+ 
+ 
+ 
+ (bend (tar))} 
+ {
  (left (swoop (barc) (barc) 50 (smoke)) 
  (swoopb (barc -120) (barc) 50 (smoke)) 
- (swamp (bard 10) (smoke 10 10) (smoke) (smoke) (smoke))) (arab 
-) 
- (srate 5) (bend (tar))} 
+ (swamp (bard 10) (smoke 10 10) (smoke) (smoke) (smoke))) 
+ (srate 10) (bend (tar))} 
  
  
  
