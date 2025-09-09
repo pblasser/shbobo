@@ -15,7 +15,7 @@
  (bard 44 80) 
  (barc) 50 
 ) 
-) (left 
+) (right 
  
  (waveb 
  (xor 
@@ -32,26 +32,26 @@
  (left 
  (wave 
  (xor 
- (saw (salsa (barc) (smoke 34)) 137) 
+ (saw (slewb (salsa (barc) (smoke 34)) 1 1) 137) 
  (sawb 17 137) 
 ) 
  60 
- (barc -60) 50 
+ (barc -60) (bard 50) 
 ) 
-) (left 
+) (right 
  (waveb 
  (xor 
- (sawc (salsab (bard) (smoke 34)) 137) 
+ (sawc (slew (salsab (bard) (smoke 34)) 1 1) 137) 
  (sawd 19 137) 
 ) 
  60 
- (bard -60) 50 
+ (bard -60) (barc 50) 
 ) 
 ) 
 } 
  {(left (wave (smoke (barc 60)) 84 (bard))) 
  (bend (tar)) 
- (left (waveb (smoke (bard 60)) -81 (barc)))} {(left 
+ (right (waveb (smoke (bard 60)) -81 (barc)))} {(left 
  (barc (hornc (salsa (barc) (smoke 80)) 47)) 
  (barc (horn (salsab (barc -120) (smoke 84)) 40)) 
 ) 
@@ -59,19 +59,23 @@
  (bard (hornb (salsac (bard) (smoke 84)) 44)) 
  (bard (hornd (salsad (bard -120) (smoke 80)) 33))) 
  (srate 27) (bend (tar))} {(left 
- (wave 1 0 (sauce (barc 10) (saltb (bard) 1 1 12 (salsab (bard) (smoke 30 20)))) 50)) 
- (left 
- (waved 1 0 (saucec (bard 10) (saltc (barc) 1 1 12 (salsad (barc) (smoke 30 20)))) 50)) 
+ (wave 1 0 (sauce (barc 10) (saltb (bard) 1 1 12 (salsab (bard) (smoke 30 20)))) (bard 50))) 
+ (right 
+ (waved 1 0 (saucec (bard 10) (saltc (barc) 1 1 12 (salsad (barc) (smoke 30 20)))) (barc 50))) 
  
  
  
  
  (bend (tar))} 
  {
- (left (swoop (barc) (barc) 50 (smoke)) 
- (swoopb (barc -120) (barc) 50 (smoke)) 
- (swamp (bard 10) (smoke 10 10) (smoke) (smoke) (smoke))) 
- (srate 10) (bend (tar))} 
+ (left (swoop (barc) (barc) 50 (smoke (bard 50))) 
+ 
+ 
+ (swamp (bard 10) (smoke 10 10) (smoke) (smoke) (smoke) (barc  50))) (right (swoopb (barc -120) (barc) 50 (smoke (barc 50))) 
+ (swampb (barc 10) (smoke 10 10) (smoke) (smoke) (smoke) (bard 50)) 
+ 
+) 
+ (srate 100) (bend (tar))} 
  
  
  

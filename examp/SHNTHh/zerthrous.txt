@@ -1,0 +1,9 @@
+ {(left (wave (zither (dust (barc 10)) (barc 120 -100)) 100 (dust)) 
+ 
+ (slew (saw 10 (barc 10 80)) (barc) (bard))) 
+ 
+ 
+ 
+ (right (waveb (zitherb (dustb (bard 10)) (bard 120 -100)) 100 (dustb)) 
+ (slewb (sawb 10 (bard 11 81)) (barc) (bard))) 
+}

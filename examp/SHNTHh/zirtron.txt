@@ -1,0 +1,12 @@
+ {(left (wave (string (mount (barc) 10 100 -5) 1 (bard 12 -10)) 
+ 100 (add (mount) 20)) 
+ (fog (dust (mountb)) 10 80 10 (bard (barc)) (bard (barc) -120))) 
+ (srate 20) 
+ 
+ 
+ 
+ 
+ (right (waveb (stringb (mountb (bard) 10 100 -5) 1 (barc 12 -10)) 
+ 100 (add (mountb) 20)) 
+ (fogb (dustb (mount)) 10 80 10 (barc (bard)) (barc (bard) -120)) 
+)}
