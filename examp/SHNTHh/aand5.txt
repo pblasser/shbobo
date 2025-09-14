@@ -1,0 +1,134 @@
+;for ayako using resistive flex sensor
+ [{
+ (left (combb (wind (barc)) 1 21)) (right (comb (wind (barc)) 1 20)) 
+ (srate (barc 20 30)) 
+ (jump (minor 1 (minorb 3 (minorc 5 (minord 7 (major 2 (majorb 4 (majorc 6 (majord 8))))))))) 
+ 
+} 
+ 
+ {(left 
+ (left 
+ (smoke (bard (bard 45))) 
+ (sawc 120 30 
+ (swoopb (sawd 1 80) 80 80 (barc (barc))) 
+))) 
+ (right (right 
+ (saw 120 30 
+ (swoop (sawb 1 81) 80 80 (barc (barc)))) 
+)) 
+ (bend (tar)) 
+} {(left (wave (smoke (barc 10)) -95 (bard)) 
+ (arab (fogb (dustb 1) 8 (bard) (smokeb 3 100) 25))) 
+ ; 
+ 
+ (right (waveb (smoke (bard 10)) -95 (barc)) 
+ 
+ 
+ 
+ (arab (fog (dust 1) 8 (barc) (smokeb 3 120) 25)) 
+ 
+) 
+ 
+ (bend (tar))} 
+ 
+ 
+ {(left (wave (zither (dust (barc 10)) (barc 30 -50)) 100 (dust)) 
+ 
+ (slew (saw 10 (barc 10 80)) (barc) (bard))) 
+ 
+ (bend (tar)) 
+ 
+ 
+ 
+ (right (waveb (zitherb (dustb (bard 10)) (bard 30 -50)) 100 (dustb)) 
+ (slewb (sawb 10 (bard 11 81)) (barc) (bard))) 
+} {(left 
+ (wave 100 0 (sauce (barc 10) (saltb (bard) 1 1 12 (salsab (bard) (smoke 30 20)))) (bard))) 
+ (right 
+ (waved 100 0 (saucec (bard 10) (saltc (barc) 1 1 12 (salsad (barc) (smoke 30 20)))) (barc))) 
+ 
+ 
+ 
+ 
+ (bend (tar))} 
+ 
+ 
+ {(srate 17) 
+ (bend (tar)) ;hijaz gharib (low and dirty)
+ 
+ (left 
+ (wave 
+ (xor 
+ (saw (slewb (salsa (bard) (smoke 34)) 1 1) 137) 
+ (sawb 17 137) 
+) 
+ 60 
+ (barc -60) (bard 50) 
+) 
+) 
+ (right 
+ (waveb 
+ (xor 
+ (sawc (slew (salsab (barc) (smoke 34)) 1 1) 137) 
+ (sawd 19 137) 
+) 
+ 60 
+ (bard -60) (barc 50) 
+) 
+) 
+} {(left 
+ (barc (hornc (salsa (barc) (smoke 80)) 47)) 
+ (barc (horn (salsab (barc -120) (smoke 84)) 40)) 
+) 
+ (left 
+ (bard (hornb (salsac (bard) (smoke 84)) 44)) 
+ (bard (hornd (salsad (bard -120) (smoke 80)) 33))) 
+ (srate 27) (bend (tar))} ; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {(left (comb (swampb (dust 76) 15 (barc (barc)) (smoke) -32) 84 (mountb 115 -50 -54 -32) (barc))) 
+ (right (combb (swampc (dustb -67) 75 (bard (bard)) (smoke) 110) -81 (mountd -24 -106 -11 19) (bard))) 
+ (bend (tar))} 
+ 
+ 
+ 
+ {
+ (srate 18) ;hijaz gharib (low and dirty)
+ 
+ (bend (tar)) 
+ 
+ (pan 
+ (bard (bard)) 
+ (wave 
+ (xor 
+ (saw 17 (barc 20 137)) 
+ (sawb 17 137) 
+) 
+ (barc 44 80) 
+ (bard) 
+) 
+) 
+ (pan 
+ (sauce 96 (barc (barc))) 
+ (waveb 
+ (xor 
+ (sawc 19 (bard 20 137)) 
+ (sawd 19 137) 
+) 
+ (sauceb 96 (bard 44 80)) 
+ (saucec 96 (barc)) 
+) 
+) 
+} 
+ 
+ 
+]
