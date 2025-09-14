@@ -22,6 +22,20 @@ export lnk = $(lnk$(OS)) $(lnkFlags)
 export obj = $(obj$(OS)) $(objFlags)
 progger = $(OS)
 
+thumb: assFlags += --defsym SHBOBO=0 
+thumb: assFlags += --defsym THUMB=1 
+thumb: oto=thumb
+thumb:
+	-$(ass) -o $(oto).o mainth.s
+	-$(lnk) -o $(oto).elf $(oto).o
+	-$(obj) $(oto).elf $(oto).bin
+	mv $(oto).bin ../../
+	-@rm -f *.lst *.o *.elf *.*~ *.bin *.stackdump a.out makefile~
+	$(STUTIL) -c SWD UR -OB WRP=0xFFFFFFFF RDP=0
+	$(STUTIL) -c SWD UR -ME -P ../../$(oto).bin  0x08000000
+	$(STUTIL) -c SWD UR -OB WRP=0xFFFF0000 RDP=0
+	
+
 shnth: assFlags += --defsym SHBOBO=0 
 shnth: oto=shnth
 #--defsym SHNTH=1

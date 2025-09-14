@@ -142,10 +142,10 @@ public void run() {
   m.add(mm);
 
   mm = new Menu("View");
-  mn = new MenuItem("Zoom inn", new MenuShortcut(KeyEvent.VK_PLUS));
+  mn = new MenuItem("Zoom inn", new MenuShortcut(KeyEvent.VK_PERIOD));
   mn.addActionListener(this);
   mm.add(mn);
-  mn = new MenuItem("Zoom out", new MenuShortcut(KeyEvent.VK_MINUS));
+  mn = new MenuItem("Zoom out", new MenuShortcut(KeyEvent.VK_COMMA));
  mn.addActionListener(this);
   mm.add(mn);
   m.add(mm);

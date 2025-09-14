@@ -1,0 +1,10 @@
+{(left (wave (smoke (barc 10)) -95 (bard)) 
+ (arab (fogb (dustb 1) 8 (bard) (smokeb 3 (toggle (minorb) 12 100) ) 25))) ; 
+ 
+ (right (waveb (smoke (bard 10)) -95 (barc)) 
+ 
+ 
+ 
+ (arab (fog (dust 1) 8 (barc) (smokeb 3 (toggle (minor) 12 120) ) 25)) 
+ 
+)} 

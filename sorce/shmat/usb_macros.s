@@ -226,13 +226,40 @@
  .endif
 .endm
 
+
+.macro THUMBUS plaz
+ ldrb r2, [r0], 1
+ cmp r2, 0
+ it eq
+ bfceq r3, \plaz, 1
+.endm
+
+
+.endm
+.macro THUMBULATE broker @broke
+ SYNTHLOAD r1, \broker
+ SYNTHLOAD r0, GPIOB_IDR
+ ldrh r0, [r0]
+ strh r0, [r1]
+.endm
+
+
+
 .macro GWONZULATE1
+ .ifne THUMB
+ THUMBULATE USB_1_TX
+ .else
  GWONZULATE USB_1_TX
+ .endif
 .endm
 
 .macro GWONZULATE0
  LODESTRA USB_COUNT0_TX, 8
+ .ifne THUMB
+ THUMBULATE USB_1_TX
+ .else
  GWONZULATE USB_0_TX
+ .endif
 .endm
 
 .macro STALLEP0
@@ -251,7 +278,7 @@
 .macro CHECKLOKD
  SYNTHLOAD r0, FLASH_CR
  ldr r0, [r0]
- tst r0, 0x80 @is lokd?
+ tst r0, 0x80 @is lokd
 .endm
 
 .macro CHEKBUSY

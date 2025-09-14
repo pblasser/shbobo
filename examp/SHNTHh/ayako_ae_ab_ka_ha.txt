@@ -14,7 +14,7 @@
  (right (right 
  (saw 120 30 
  (swoop (sawb 1 81) 80 80 (barc (barc)))) 
- (water (dust (dustb 2 12 4)) (smoke 3 7) (smoke 20 80) 3))) 
+)) 
  (bend (tar)) 
 } {(right 
  (right 

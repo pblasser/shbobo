@@ -31,19 +31,35 @@ public class Chubber extends TextArea implements TextListener {
    append(cmd+"\n");
    Process child = Runtime.getRuntime().exec(cmd);
    InputStream lsOut = child.getInputStream();
+    InputStream lsErr = child.getErrorStream();
    OutputStream os = child.getOutputStream();
    OutputStreamWriter osw = new OutputStreamWriter(os);
    osw.write(txt,0,txt.length());
    osw.close();
    //osw.flush();
+
    InputStreamReader r = new InputStreamReader(lsOut);
    BufferedReader in = new BufferedReader(r);
    String line;
-
    while ((line=in.readLine())!=null) {
 	   append(line+"\n");
 	   setCaretPosition(getText().length());
    }
+   lsOut.close();
+   
+   r = new InputStreamReader(lsErr);
+   in = new BufferedReader(r);
+   
+   while ((line=in.readLine())!=null) {
+	   append(line+"\n");
+	   setCaretPosition(getText().length());
+   }
+   lsErr.close();
+   
+   
+   
+   
+   
   } catch (Exception e) {}
  }
 

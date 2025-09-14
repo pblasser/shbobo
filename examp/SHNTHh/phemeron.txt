@@ -1,16 +1,16 @@
- {(left (wave 1 50) (horn (barc 5 80) 
- (toggle (minor) 10 (toggleb (minorb) 20 5)) 
+{(left (wave 1 50) (horn (barc 5 80) 
+ (toggle (minor) 1 (toggleb (minorb) 2 5)) 
  (bard (square (bard 100 3)))) 
  
  
  (wavec (smoke (barc (square (barc -100 -3)))) 
- 100 (dust (barc 10)))) 
+ 100 (dust (barc 10) (barc)))) 
  (srate 20) 
  
  
  (right (hornb (bard 5 82) 
- (togglec (minorc) 10 (toggled (minord) 20 5)) 
+ (togglec (minorc) 1 (toggled (minord) 2 5)) 
  (barc (square (barc 100 3)))) 
- (waved (smoke (bard (square (bard -100 -3)))) 100 (dustb (bard 10)))) 
+ (waved (smoke (bard (square (bard -100 -3)))) 100 (dustb (bard 10) (bard)))) 
  
 }
